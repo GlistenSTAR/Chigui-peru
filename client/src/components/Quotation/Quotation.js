@@ -3,22 +3,44 @@ import { Link, withRouter } from 'react-router-dom';
 import HorizonalStep from '../common/Step';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import Spinner from '../common/Spinner';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faMapMarker, faAngleDoubleDown} from "@fortawesome/free-solid-svg-icons";
 import './quotation.css';
+
+import { getCars } from '../../actions/carActions';
 
 class Quotation extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      open:false
+      open:false,
+      loading:true
     };
     // this.onChange = this.onChange.bind(this);
     // this.onSubmit = this.onSubmit.bind(this);
     // this.onCheck = this.onCheck.bind(this);
   }
 
+  componentDidMount(){
+    this.props.getCars();
+  }
+
   render() {
+    const { cars, loading } = this.props.car;
+    let carItems;
+
+    if (cars === null || loading) {
+      carItems = <Spinner />;
+    } else {
+      if(typeof cars !=="undefined"){
+        if (cars.length > 0) {
+        carItems = cars.map(car => (
+          <li>{car.name}</li>
+        ));
+      }
+      }
+    }
 
     return (
       <div className="quotation">
@@ -58,23 +80,23 @@ class Quotation extends Component {
             <div className="col-md-2"></div>
           </div>
         </div>
-        
+        {carItems}
       </div>
     );
   }
 }
 
 Quotation.propTypes = {
-  // addEducation: PropTypes.func.isRequired,
+  getCars: PropTypes.func.isRequired,
   // profile: PropTypes.object.isRequired,
   // errors: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
-  // profile: state.profile,
+  car: state.car,
   // errors: state.errors
 });
 
-export default connect(mapStateToProps, {  })(
+export default connect(mapStateToProps, { getCars })(
   withRouter(Quotation)
 );
