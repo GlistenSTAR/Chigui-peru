@@ -23,7 +23,8 @@ class Quotation extends Component {
 
     return (
       <div className="add-quotation">
-        <nav className="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        
+        {/* <nav className="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
           <div className="navbar-brand"></div>
           <ul className="navbar-nav" align="left">
             <li className="nav-item input-group">
@@ -42,7 +43,7 @@ class Quotation extends Component {
           <div className="navbar-right nav">
             <button className="btn btn-default" align="right">asd</button>
           </div>
-        </nav>
+        </nav> */}
       </div>
     );
   }
