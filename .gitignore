@@ -1,0 +1,4 @@
+/node_modules
+package-lock.json
+autolabdb
+yarn.lock

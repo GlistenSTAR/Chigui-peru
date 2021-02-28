@@ -1,0 +1,181 @@
+@font-face {
+  font-family: myfont;
+  src: url('./font/adventpro-bold.ttf');
+}
+body {
+  margin: 0;
+  font-family: myfont;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+.logo{
+  width: 200px;
+}
+.navbar{
+  background-color: rgb(46,56,71)!important;
+  opacity: 0.9;
+}
+.navbar-nav{
+  padding-right: 50px;
+  font-size: 18px;
+}
+.navbar-light .navbar-nav .nav-link {
+  margin-left: 40px;
+  color:white!important;
+}
+.landing {
+  position: absolute;
+  background: url('./img/client-landing.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  top:0;
+  left:0;
+  height: 80vh;
+  width: 100%;
+  z-index: -1;
+}
+.empty{
+  height: 2000px!important;
+}
+img{
+  width: 100%;
+}
+.landing-inner {
+  padding-top: 10%;
+}
+.card-form {
+  opacity: 0.9;
+}
+.latest-profiles-img {
+  width: 40px;
+  height: 40px;
+}
+.form-control::placeholder {
+  color: #bbb !important;
+}
+hr{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-top: 3px solid rgb(179,226,1)!important;
+  text-align: center;
+  width: 60%;
+}
+.landing-letter{
+  position: absolute;
+  top: 30%;
+  left: 0;
+  text-align: center;
+  width: 100%;
+}
+.landing-letter h1{
+  font-style: bold;
+}
+.landing-letter .lead{
+  font-style: italic;
+  font-size: 34px;
+  padding-left: 23%;
+  padding-right: 23%;
+}
+.line-third-of-web-form{
+  border-top:5px solid black;
+} 
+.line-second-of-web-form{
+  border-top:5px solid rgb(179,226,1);
+}
+.line-one-of-web-form{
+  border-top:5px solid grey;
+}
+.button-group a{
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 200px;
+  height: 70px;
+}
+.button-group{
+  vertical-align: middle;
+}
+.btn-lg:first-child{
+  padding-top:1em;
+}
+.mybtn{
+  background-color: rgba(179,226,1,0.9);
+  border: none;
+  color:white;
+}
+.mybtn:hover{
+  background-color: rgba(179,226,1,0.5);
+  border: none;
+  color:white;
+}
+
+
+@media only screen and (max-width: 1120px) {
+  .navbar-nav{
+    padding-right: 20px;
+    font-size: 18px;
+  }
+  .ml-4, .mx-4 {
+    margin-left: 0rem!important;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .navbar-toggler{
+    position:absolute;
+    top:5px;
+    right:5px;
+  }
+  .navbar{
+    padding-left: 0;
+  }
+  .navbar-brand{
+    padding: 0;
+  }
+  .col-12{
+    padding-left: 0px;
+  }
+  hr{
+    width: 95%;
+  }
+  .navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")!important;
+    border: #fff;
+  }
+  .navbar-light .navbar-toggler {
+    border-color: white;
+    padding: 2px 5px 2px 5px;
+  }
+  .landing-letter{
+    top:20%;
+  }
+  .landing-letter h1{
+    font-style: normal;
+    font-size: 32px;
+  }
+  .landing-letter .lead{
+    font-style: italic;
+    font-size: 20px;
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    text-align: center;
+    font-size: 24px;
+  }
+  .landing{
+    /* background: url("./img/mobile/client-landing-mobile.jpg") no-repeat; */
+    height: 100%;
+  }
+  .button-group a{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+  }
+  .button-group a:first-child{
+    height: auto;
+    padding: 0.4em;
+  }
+}
