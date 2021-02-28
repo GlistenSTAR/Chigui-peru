@@ -15,6 +15,7 @@ class Navbar extends Component {
   render() {
 
     return (
+      <div className="mainnav">
       <nav className="navbar navbar-expand-lg md-none navbar-light ">
         <div className="col-lg-2 col-md-12 col-sm-12 col-12 d-lg-block d-md-block">
           <Link className="navbar-brand ml-4" to="/">
@@ -65,6 +66,7 @@ class Navbar extends Component {
           </ul>
         </div>
       </nav>
+      </div>
     );
   }
 }

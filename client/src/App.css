@@ -15,15 +15,15 @@ body {
 .logo{
   width: 200px;
 }
-.navbar{
+.mainnav .navbar{
   background-color: rgb(46,56,71)!important;
   opacity: 0.9;
 }
-.navbar-nav{
+.mainnav .navbar-nav{
   padding-right: 50px;
   font-size: 18px;
 }
-.navbar-light .navbar-nav .nav-link {
+.mainnav .navbar-light .navbar-nav .nav-link {
   margin-left: 40px;
   color:white!important;
 }
@@ -114,7 +114,7 @@ hr{
 
 
 @media only screen and (max-width: 1120px) {
-  .navbar-nav{
+  .mainnav .navbar-nav{
     padding-right: 20px;
     font-size: 18px;
   }
@@ -123,15 +123,15 @@ hr{
   }
 }
 @media only screen and (max-width: 992px) {
-  .navbar-toggler{
+  .mainnav .navbar-toggler{
     position:absolute;
     top:5px;
     right:5px;
   }
-  .navbar{
+  .mainnav .navbar{
     padding-left: 0;
   }
-  .navbar-brand{
+  .mainnav .navbar-brand{
     padding: 0;
   }
   .col-12{
@@ -140,13 +140,17 @@ hr{
   hr{
     width: 95%;
   }
-  .navbar-light .navbar-toggler-icon {
+  .mainnav .navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")!important;
     border: #fff;
   }
-  .navbar-light .navbar-toggler {
+  .mainnav .navbar-light .navbar-toggler {
     border-color: white;
     padding: 2px 5px 2px 5px;
+  }
+  .mainnav .navbar-light .navbar-nav .nav-link {
+    text-align: center;
+    font-size: 24px;
   }
   .landing-letter{
     top:20%;
@@ -160,10 +164,6 @@ hr{
     font-size: 20px;
     padding-left: 7%;
     padding-right: 7%;
-  }
-  .navbar-light .navbar-nav .nav-link {
-    text-align: center;
-    font-size: 24px;
   }
   .landing{
     /* background: url("./img/mobile/client-landing-mobile.jpg") no-repeat; */
