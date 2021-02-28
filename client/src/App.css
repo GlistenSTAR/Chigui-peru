@@ -18,8 +18,9 @@ body {
 .navbar{
   background-color: rgb(46,56,71)!important;
   opacity: 0.9;
+  padding: 0 20px 0 20px;
 }
-.navbar-nav{
+.mainnavbar .navbar-nav{
   padding-right: 50px;
   font-size: 18px;
 }
@@ -110,11 +111,51 @@ hr{
   background-color: rgba(179,226,1,0.5);
   border: none;
   color:white;
+}  
+.add-quotation .container{
+  align-content: center;
+}
+.add-quotation nav{
+  width: 60%;
+  border-bottom-right-radius: 2em;
+  border-bottom-left-radius: 2em;
+}
+.add-quotation .fixed-top {
+  position: fixed;
+  top: 0;
+  left: auto;
+  right: auto;
+  z-index: 1030;
+}
+.add-quotation .navbar-brand{
+  background: url('./img/sign.png') no-repeat;
+  background-position: 0 0;
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
+}
+.add-quotation li select{
+  width: 120px;
+}
+.add-quotation .input-group-prepend{
+  height: calc(2.1rem);  
+}
+.add-quotation select.form-control:not([size]):not([multiple]) {
+  height: calc(2.1rem);
+}
+.add-quotation .navbar-right{
+  position: absolute;
+  right: 7%;
+}
+.add-quotation .btn-default{
+  text-align: right;
+  position: relative;
+  right:0;
 }
 
 
 @media only screen and (max-width: 1120px) {
-  .navbar-nav{
+  .mainnavbar .navbar-nav{
     padding-right: 20px;
     font-size: 18px;
   }
@@ -177,5 +218,24 @@ hr{
   .button-group a:first-child{
     height: auto;
     padding: 0.4em;
+  }
+  .add-quotation nav{
+    width: 90%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  .add-quotation .navbar-brand{
+    margin-left: 10px;
+  }
+  .add-quotation .navbar-nav{
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+  }
+  .add-quotation .input-group-prepend{
+    height: calc(2.1rem);  
+  }
+  .add-quotation .select{
+    font-size: 16px;
   }
 }
