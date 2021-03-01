@@ -1,5 +1,5 @@
 {
-  "name": "Autolab-client",
+  "name": "Chiqui",
   "version": "1.0.0",
   "description": "This project for driver",
   "main": "server.js",
@@ -8,7 +8,7 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
-    "db": "start mongod --dbpath 'E:/projects/workana/autolab(peru)/autolab/autolabdb'",
+    "db": "start mongod --dbpath 'E:/projects/workana/autolab(peru)/Chigui/Chiguidb'",
     "dev": "concurrently -n Server,Client,DB \"npm run server\" \"npm run client\" \"npm run db\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },

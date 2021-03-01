@@ -44,7 +44,7 @@ class Quotation extends Component {
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <button className="btn btn-default">
-                  <FontAwesomeIcon icon={faAngleDoubleDown} color="rgb(179,226,1)" size="24px"/>{' '}Descuentos
+                  <FontAwesomeIcon icon={faAngleDoubleDown} color="rgb(179,226,1)" size="1x"/>{' '}Descuentos
                 </button>
               </li>     
             </ul>
@@ -64,14 +64,14 @@ class Quotation extends Component {
 }
 
 Quotation.propTypes = {
-  addEducation: PropTypes.func.isRequired,
-  profile: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequired
+  // addEducation: PropTypes.func.isRequired,
+  // profile: PropTypes.object.isRequired,
+  // errors: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
-  profile: state.profile,
-  errors: state.errors
+  // profile: state.profile,
+  // errors: state.errors
 });
 
 export default connect(mapStateToProps, {  })(
