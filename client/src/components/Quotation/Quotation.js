@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
+import HorizonalStep from '../common/Step';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -40,7 +40,6 @@ class Quotation extends Component {
               </select>
             </li>
           </div>
-            
           <div className="collapse navbar-collapse">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
@@ -51,6 +50,14 @@ class Quotation extends Component {
             </ul>
           </div>
         </nav>
+
+        <div className="container">
+          <div className="row" align="center">
+            <div className="col-md-2"></div>
+            <div className="col-md-8"><HorizonalStep/></div>
+            <div className="col-md-2"></div>
+          </div>
+        </div>
       </div>
     );
   }

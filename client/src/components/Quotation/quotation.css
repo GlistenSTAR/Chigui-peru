@@ -1,4 +1,4 @@
-.navbar {
+.quotation .navbar {
     display: flex;
     align-items: center;
     color: white;
@@ -26,7 +26,7 @@
 }
 
 @media only screen and (max-width: 992px) {
-  .navbar {
+  .quotation .navbar {
     width: 100%;
     height: 40px;
   }
@@ -54,7 +54,7 @@
     width: 100px;
     float: left;
   }
-  .collapse:not(.show){
+  .quotation .collapse:not(.show){
     display: block;
   }
   .quotation .collapse.navbar-collapse li .btn{
@@ -64,5 +64,20 @@
     right: 20px;    
     height: 30px;
     padding-top: 5px;
+  }
+  .quotation .makeStyles-root-1 {
+    width: 100%;
+    padding-left: 0;
+  }
+  .quotation .container .row .col-md-8{
+    padding-left:0;
+    padding-right:0
+  }
+  .quotation .container .row .col-md-8 .MuiPaper-root.MuiStepper-root.MuiStepper-horizontal.MuiStepper-alternativeLabel.MuiPaper-elevation0{
+    padding-left:0px;
+    padding-right:0;
+  }
+  .quotation .container .row .col-md-8 .MuiStepLabel-labelContainer span{
+    font-size: 12px;
   }
 }
