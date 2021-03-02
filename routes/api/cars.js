@@ -48,10 +48,12 @@ router.post(
     // }
     const addYear = { data: req.body.date }
     const newModel = { modelName: req.body.modelName, year: addYear };
-    Car.find({name:req.body.name})
-      .then(car=>{
-        if(car.length>0){
-          car.model.unshift(newModel);
+    Car.findOne({name:req.body.name})
+      .then(car => {
+        if(car){
+          car.findOne({modelName: req.body.modelName}).then(res => console.log(res));
+          // car.model.unshift(newModel);
+          // car.save().then(car => res.json(car));
         } else {
           let newCar = new Car({
             name: req.body.name,
