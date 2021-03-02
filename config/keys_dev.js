@@ -1,4 +1,4 @@
 module.exports = {
-  mongoURI: "mongodb://localhost/AutoLab",//your cloud mongodb uri write here  
+  mongoURI: "mongodb://localhost/Chiqui",//your cloud mongodb uri write here  
     secretOrKey: "PBFPVYFBQXZTYFPBFEQJHDXXQVAPTPQJKTOYQWIPBVWLXTOXBTFXQ!^#WAXBVCXQWAXFQJVWLEQNTOZQGGQLFXQWAKVWLXQWAEBIPBFXF!QVXGTVJVWLBTPQWAEBFPBFHCVLXBQUFEVWLXGDP"
   };
