@@ -16,10 +16,10 @@ router.get('/test', (req, res) => res.json({ msg: 'Car Works' }));
 
 // @route   GET api/cars
 // @desc    Get cars
-// @access  Public
+// @access  Public 
 router.get('/', (req, res) => {
   Car.find()
-    .then(posts => res.json(posts))
+    .then(cars => res.json(cars))
     .catch(err => res.status(404).json({ nopostsfound: 'No posts found' }));
 });
 
@@ -39,13 +39,15 @@ router.get('/:id', (req, res) => {
 // @access  Private
 router.post(
   '/',  (req, res) => {
-    const { errors, isValid } = validateCarInput(req.body);
+    // const { errors, isValid } = validateCarInput(req.body);
+    // console.log(!isValid);
+    // // Check Validation
+    // if (!isValid) {
+    //   // If any errors, send 400 with errors object
+    //   console.log(errors);
+    //   return res.status(400).json(errors);
+    // }
 
-    // Check Validation
-    if (!isValid) {
-      // If any errors, send 400 with errors object
-      return res.status(400).json(errors);
-    }
     const addYear = { date: req.body.date }
     const newModel = { modelName: req.body.modelName, year: addYear };
     Car.findOne({name:req.body.name})
@@ -62,7 +64,7 @@ router.post(
                   // console.log(4);
                   date_flag = true;
                   console.log("there is same data");
-                  return res.status(400).json(errors);
+                  // return res.status(400).json(errors);
                 }
               });
               if(!date_flag){

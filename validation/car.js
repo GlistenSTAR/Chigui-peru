@@ -4,7 +4,7 @@ const isEmpty = require('./is-empty');
 module.exports = function validateCarInput(data) {
   let errors = {};
 
-  data.name = !isEmpty(data.text) ? data.text : '';
+  data.name = !isEmpty(data.name) ? data.text : '';
   data.mark = !isEmpty(data.mark) ? data.text : '';
   data.modelName = !isEmpty(data.modelName) ? data.text : '';
   data.date = !isEmpty(data.date) ? data.text : '';
@@ -22,7 +22,7 @@ module.exports = function validateCarInput(data) {
     errors.date = 'Date field is required.';
   }
 
-  if(Validator.isDate(data.date)){
+  if(Validator.isNumber(data.date)){
     errors.date = 'Please input product year.';
   }
 
