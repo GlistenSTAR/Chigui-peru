@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const passport = require('passport');
+const isEmpty = require('../../validation/is-empty');
 
 const Car = require('../../models/Car');
 // const Profile = require('../../models/Profile');
@@ -39,32 +40,28 @@ router.get('/:id', (req, res) => {
 // @access  Private
 router.post(
   '/',  (req, res) => {
-    // const { errors, isValid } = validateCarInput(req.body);
-    // console.log(!isValid);
-    // // Check Validation
-    // if (!isValid) {
-    //   // If any errors, send 400 with errors object
-    //   console.log(errors);
-    //   return res.status(400).json(errors);
-    // }
+    const { errors, isValid } = validateCarInput(req.body);
+    // Check Validation
+    if (!isValid) {
+      // If any errors, send 400 with errors object
+      return res.status(400).json(errors);
+    }
 
     const addYear = { date: req.body.date }
     const newModel = { modelName: req.body.modelName, year: addYear };
     Car.findOne({name:req.body.name})
       .then(car => {
-        if(car){
+        if(!isEmpty(car)){
           let Model = car.model, test_flag = false, date_flag = false, count1=-1, count2=-1;
           Model.map(item=>{
             count1++;
-            test_flag = true;
             if(item.modelName == req.body.modelName){
-              // console.log(1);
+              test_flag = true;
               item.year.map(date=>{
                 if(date.date == req.body.date){
-                  // console.log(4);
                   date_flag = true;
-                  console.log("there is same data");
-                  // return res.status(400).json(errors);
+                  errors.message = "there is same data";
+                  return res.status(400).json(errors);
                 }
               });
               if(!date_flag){
@@ -74,12 +71,10 @@ router.post(
             } 
           });
           if(!test_flag){
-            // console.log(2);
             car.model.unshift(newModel);
             car.save().then(car => res.json(car));
           } 
         } else {
-          // console.log(3);
           let newCar = new Car({
             name: req.body.name,
             mark: req.body.mark,

@@ -163,18 +163,18 @@ function getSteps() {
   return ['ELIGE TU VEHÍCULO', 'ELIGE TUS SERVICIOS', 'AGENDA TU CITA', 'DATOS DE CONTACTO'];
 }
 
-function getStepContent(step) {
-  switch (step) {
-    case 0:
-      return 'ELIGE TU VEHÍCULO';
-    case 1:
-      return 'ELIGE TUS SERVICIOS';
-    case 2:
-      return 'AGENDA TU CITA';
-    case 3:
-      return 'DATOS DE CONTACTO';
-  }
-}
+// function getStepContent(step) {
+//   switch (step) {
+//     case 0:
+//       return 'ELIGE TU VEHÍCULO';
+//     case 1:
+//       return 'ELIGE TUS SERVICIOS';
+//     case 2:
+//       return 'AGENDA TU CITA';
+//     case 3:
+//       return 'DATOS DE CONTACTO';
+//   }
+// }
 
 export default function HorizonalStep() {
   const classes = useStyles();
