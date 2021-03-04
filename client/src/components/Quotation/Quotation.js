@@ -10,12 +10,15 @@ import './quotation.css';
 
 import { getCars } from '../../actions/carActions';
 
+import Accordian from '../common/Accordian';
+
 class Quotation extends Component {
   constructor(props) {
     super(props);
     this.state = {
       open:false,
-      loading:true
+      loading:true,
+      height:0
     };
     // this.onChange = this.onChange.bind(this);
     // this.onSubmit = this.onSubmit.bind(this);
@@ -26,18 +29,26 @@ class Quotation extends Component {
     this.props.getCars();
   }
 
+  onClick=(e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  }
+
   render() {
     const { cars, loading } = this.props.car;
-    let carItems;
+    let carItems, listdata=[], data=[];
 
     if (cars === null || loading) {
       carItems = <Spinner />;
     } else {
       if(typeof cars !=="undefined"){
         if (cars.length > 0) {
-        carItems = cars.map(car => (
-          <li>{car.name}</li>
-        ));
+        cars.map(car => {
+          listdata.push(car.name);
+          data.push(car);
+        });
+        carItems = (
+          <Accordian title="Marca" listdata={listdata} data={data} onClick={this.onClick}/>
+        )
       }
       }
     }

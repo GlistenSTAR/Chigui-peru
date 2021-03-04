@@ -2,6 +2,9 @@
   font-family: myfont;
   src: url('./fonts/PFDinDisplayPro-Black_35371.ttf');
 }
+h1, h2, h3, h4, h5, h6, div, span, input, li, ul, select, a, p{
+  font-family: myfont;
+}
 body {
   margin: 0;
   font-family: myfont;

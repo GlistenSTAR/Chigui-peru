@@ -1,3 +1,7 @@
+@font-face {
+  font-family: myfont;
+  src: url('../../fonts/PFDinDisplayPro-Black_35371.ttf');
+}
 .quotation .navbar {
     display: flex;
     align-items: center;
@@ -23,6 +27,50 @@
     margin-left: 40px;
     margin-right:40px;
     margin-top:6px
+}
+.quotation .fa-caret-right{
+  margin-left: auto;
+}
+.quotation .MuiAccordionSummary-root.Mui-expanded {
+    min-height: 50px!important;
+}
+
+.quotation .MuiTypography-root.MuiTypography-body1{
+  width: 100%;
+}
+.quotation .MuiAccordionSummary-content .MuiTypography-root.makeStyles-heading-12.MuiTypography-body1{
+  font-size: 18px;
+}
+.quotation .MuiButtonBase-root.MuiAccordionSummary-root{
+  background-color: rgb(179,226,1);
+}
+.quotation .MuiTypography-root.MuiTypography-body1 li {
+  font-size: 16px;
+  padding:0px;
+  height: 50px;
+}
+.quotation .MuiTypography-root.MuiTypography-body1 li img{
+  padding-top:8px;
+  padding-bottom: 8px;
+}
+.quotation .MuiTypography-root li:nth-last-child(){
+  margin-top: 15px;
+}
+.quotation .MuiPaper-root.MuiAccordion-root.MuiAccordion-rounded.MuiPaper-elevation1.MuiPaper-rounded{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.quotation .MuiAccordionSummary-content.Mui-expanded{
+  padding:none;
+  margin:0;
+}
+.quotation .mark_sign{
+  width: 80px;
+  height: 50px;
+}
+.MuiAccordionDetails-root {
+  padding: 0px 16px 0px 16px!important;
 }
 
 @media only screen and (max-width: 992px) {
@@ -81,5 +129,11 @@
   }
   .quotation .container .row .col-md-8 .MuiStepLabel-labelContainer span{
     font-size: 12px;
+  }
+  .quotation .MuiTypography-root.MuiTypography-body1 li{
+    font-size: 16px;
+  }
+  .quotation .MuiPaper-root.MuiAccordion-root.MuiAccordion-rounded.MuiPaper-elevation1.MuiPaper-rounded{
+    width: 100%;
   }
 }
