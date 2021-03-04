@@ -25,8 +25,8 @@ const Accordian = ({ title, 	listdata, data, onClick }) =>{
 			return (
 				<li className="list-group-item" key={key} onClick={onClick}>
 					<img src={url} align="left" className="mark_sign"/>
-					<span style={spanstyle}>{value}</span>
-					{/* <i className="fa fa-caret-right" align="right"/> */}
+					{value}
+					<i className="fa fa-angle-right" align="right"/>
 				</li>
 		)});
 		return (

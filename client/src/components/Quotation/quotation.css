@@ -1,6 +1,6 @@
 @font-face {
-  font-family: myfont;
-  src: url('../../fonts/PFDinDisplayPro-Black_35371.ttf');
+  font-family: myfont1;
+  src: url('../../fonts/PFDinDisplayPro-Regular_35382.ttf');
 }
 .quotation .navbar {
     display: flex;
@@ -44,14 +44,19 @@
 .quotation .MuiButtonBase-root.MuiAccordionSummary-root{
   background-color: rgb(179,226,1);
 }
-.quotation .MuiTypography-root.MuiTypography-body1 li {
-  font-size: 16px;
-  padding:0px;
+.quotation .MuiTypography-root.MuiTypography-body1 li{
+  font-size: 22px;
+  padding-top:auto;
+  padding-bottom:auto;
   height: 50px;
+  font-family: myfont1;
 }
 .quotation .MuiTypography-root.MuiTypography-body1 li img{
-  padding-top:8px;
-  padding-bottom: 8px;
+  position: absolute;
+  top:10%; 
+  left:2%;
+  width: 70px;
+  height: 40px;
 }
 .quotation .MuiTypography-root li:nth-last-child(){
   margin-top: 15px;
@@ -71,6 +76,12 @@
 }
 .MuiAccordionDetails-root {
   padding: 0px 16px 0px 16px!important;
+}
+.quotation .MuiTypography-root.MuiTypography-body1 li svg{
+  position:absolute!important;
+  right:3%;
+  top:auto;
+  bottom: auto;
 }
 
 @media only screen and (max-width: 992px) {
@@ -131,7 +142,18 @@
     font-size: 12px;
   }
   .quotation .MuiTypography-root.MuiTypography-body1 li{
-    font-size: 16px;
+    font-size: 20px;
+  }
+  .quotation .MuiTypography-root.MuiTypography-body1 li svg{
+    position:absolute!important;
+    right:3%;
+    top:35%
+  }
+  .quotation .MuiTypography-root.MuiTypography-body1 li img{
+    width: 60px;
+    height: 30px;
+    top:20%;
+    margin-right: 20px;
   }
   .quotation .MuiPaper-root.MuiAccordion-root.MuiAccordion-rounded.MuiPaper-elevation1.MuiPaper-rounded{
     width: 100%;
