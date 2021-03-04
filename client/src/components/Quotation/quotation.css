@@ -187,4 +187,12 @@
   .quotation .MuiPaper-root.MuiAccordion-root.MuiAccordion-rounded.MuiPaper-elevation1.MuiPaper-rounded{
     width: 100%;
   }
+  .quotation .confirm button{
+    margin-left: 10px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+  .quotation .confirm button:first-child{
+    width: 227px;
+  }
 }

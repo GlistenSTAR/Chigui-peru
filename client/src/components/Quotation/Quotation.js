@@ -39,6 +39,9 @@ class Quotation extends Component {
   onClick2 = (e) => {
     this.setState({show3 : e.target.getAttribute('data')});
   }
+  onClick3 = (e) => {
+    this.setState({show4 : e.target.getAttribute('data')});
+  }
 
   render() {
     const { cars, loading } = this.props.car;
@@ -60,9 +63,9 @@ class Quotation extends Component {
         })
         if(this.state.show1 && this.state.show2){
           cars.map(car =>{
-            if(car.name === this.state.show1 && car.model.length>0){
+            if(car.name === this.state.show1 && car.model.length > 0){
               carItems3 = car.model.map((model)=>{
-                if(model.modelName === this.state.show2 && model.year.length>0){
+                if(model.modelName === this.state.show2 && model.year.length > 0){
                   return (
                     <Accordian key="2" title="AÑO" data={model.year} shownName="date" onclick={this.onClick2} />
                   );
@@ -73,11 +76,11 @@ class Quotation extends Component {
         }
         if(this.state.show1 && this.state.show2 && this.state.show3){
           cars.map(car =>{
-            if(car.name === this.state.show1 && car.model.length>0){
+            if(car.name === this.state.show1 && car.model.length > 0){
               car.model.map((model)=>{
-                if(model.modelName === this.state.show2 && model.year.length>0){
-                  carItems3 = model.year.map(year=>{
-                    if(year.date === this.state.show3){
+                if(model.modelName === this.state.show2 && model.year.length > 0){
+                  carItems4 = model.year.map(year=>{
+                    if(year.date === this.state.show3 && year.cylinder.length > 0){
                       return (
                         <Accordian key="3" title="CILINDRAJE" data={year.cylinder} shownName="cylinderName" onclick={this.onClick3}/>
                       );
