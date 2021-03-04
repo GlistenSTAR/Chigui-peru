@@ -1,13 +1,13 @@
 import axios from 'axios';
 
 import {
-  ADD_POST,
-  GET_ERRORS,
+  // ADD_POST,
+  // GET_ERRORS,
   CLEAR_ERRORS,
   GET_CARS,
-  GET_POST,
+  // GET_POST,
   POST_LOADING,
-  DELETE_POST
+  // DELETE_POST
 } from './types';
 
 // Add Post

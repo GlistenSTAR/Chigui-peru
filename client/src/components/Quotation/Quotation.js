@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import HorizonalStep from '../common/Step';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -18,7 +18,11 @@ class Quotation extends Component {
     this.state = {
       open:false,
       loading:true,
-      height:0
+      height:0,
+      show1:"",
+      show2:"",
+      show3:"",
+      show4:"",
     };
     // this.onChange = this.onChange.bind(this);
     // this.onSubmit = this.onSubmit.bind(this);
@@ -29,27 +33,61 @@ class Quotation extends Component {
     this.props.getCars();
   }
 
-  onClick=(e) => {
-    this.setState({ [e.target.name]: e.target.value });
+  onClick = (e) => {
+    this.setState({show1 : e.target.getAttribute('data')});
+  }
+  onClick1 = (e) => {
+    this.setState({show2 : e.target.getAttribute('data')});
+  }
+  onClick2 = (e) => {
+    this.setState({show3 : e.target.getAttribute('data')});
   }
 
   render() {
     const { cars, loading } = this.props.car;
-    let carItems, listdata=[], data=[];
+    let carItems1, carItems2, carItems3, carItems4;
 
     if (cars === null || loading) {
-      carItems = <Spinner />;
+      carItems1 = <Spinner />;
     } else {
       if(typeof cars !=="undefined"){
-        if (cars.length > 0) {
-        cars.map(car => {
-          listdata.push(car.name);
-          data.push(car);
-        });
-        carItems = (
-          <Accordian title="Marca" listdata={listdata} data={data} onClick={this.onClick}/>
+        carItems1 = (
+          <Accordian key="0" title="MARCA" data={cars} shownName="name" onclick={this.onClick} visible={true}/>
         )
-      }
+        carItems2 = cars.map(car =>{
+          if(car.name === this.state.show1){
+            return (
+              <Accordian key="1" title="MODELO" data={car.model} shownName="modelName" onclick={this.onClick1} visible={true}/>
+            );
+          }
+        })
+        if(this.state.show1 && this.state.show2){
+          cars.map(car =>{
+            if(car.name === this.state.show1){
+              carItems3 = car.model.map((model, key)=>{
+                if(model.modelName === this.state.show2){
+                  return (
+                    <Accordian key="2" title="AÑO" data={model.year} shownName="date" onclick={this.onClick2} visible={true}/>
+                  );
+                }
+              });
+            }
+          })
+        }
+        // if(this.state.show1 && this.state.show2 && this.state.show3){
+        //   cars.map(car =>{
+        //     if(car.name === this.state.show1){
+        //       carItems3 = car.model.map((model, key)=>{
+        //         if(model.modelName === this.state.show2){
+        //           model.map()
+        //           return (
+        //             <Accordian title="CILINDRAJE" data={model.year} shownName="date" onclick={this.onClick2} visible={true}/>
+        //           );
+        //         }
+        //       });
+        //     }
+        //   })
+        // }
       }
     }
 
@@ -91,7 +129,10 @@ class Quotation extends Component {
             <div className="col-md-2"></div>
           </div>
         </div>
-        {carItems}
+        {carItems1}
+        {this.state.show1?carItems2:''}
+        {this.state.show2?carItems3:''}
+        {this.state.show3?carItems4:''}
       </div>
     );
   }

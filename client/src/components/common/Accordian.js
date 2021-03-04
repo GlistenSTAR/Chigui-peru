@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
@@ -7,28 +7,47 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import PropTypes from 'prop-types';
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
   },
   heading: {
-    fontSize: theme.typography.pxToRem(15),
+    fontSize: theme.typography.pxToRem(1),
     fontWeight: theme.typography.fontWeightRegular,
   },
 }));
-const Accordian = ({ title, 	listdata, data, onClick }) =>{
+
+const Accordian = ({ title,  data, onclick, visible, shownName}) =>{
 		const classes = useStyles();
 		let content;
-		content = listdata.map((value, key)=>{
-			let url = data[key].mark;
-			return (
-				<li className="list-group-item" key={key} onClick={onClick}>
-					<img src={url} align="left" className="mark_sign"/>
-					{value}
-					<i className="fa fa-angle-right" align="right"/>
-				</li>
-		)});
+
+		const [subtitle, setSubtitle] = useState("");
+		// const [display, setDisplay] = useState('true');
+
+		const liClick = (e) => {
+			setSubtitle(e.target.getAttribute('data'));
+			onclick(e);
+			// setDisplay(false);
+		}
+
+		// const headClick = (e) => {
+		// 	console.log("adsf");
+		// 	setDisplay(true);
+		// }
+		
+		if(visible){
+			content = data.map((value, key)=>{
+					// if(display){
+						return (
+							<li className="list-group-item" key={data[key][shownName]+"_"+key} name={data[key][shownName]} data={data[key][shownName]} onClick={liClick}>
+								{data[key].mark?(<img src={data[key].mark} align="left" className="mark_sign" alt="mark"/>):''}
+									{data[key][shownName]}
+								<i className="fa fa-angle-right"  align="right"/>
+							</li>
+						);
+					// }
+			});
+		}
 		return (
 			<div className={classes.root}>
 				<div className="container">
@@ -38,7 +57,7 @@ const Accordian = ({ title, 	listdata, data, onClick }) =>{
 							aria-controls="panel1a-content"
 							id="panel1a-header"
 						>
-							<Typography className={classes.heading}>{title}</Typography>
+							<Typography className={classes.heading} >{title} <span className="mt-5 pt-5">{subtitle}</span></Typography>
 						</AccordionSummary>
 						<AccordionDetails>
 							<Typography>
@@ -54,15 +73,9 @@ const Accordian = ({ title, 	listdata, data, onClick }) =>{
 }
 
 Accordian.propTypes = {
-  name: PropTypes.string,
-  listdata: PropTypes.array,
+  shownName: PropTypes.string,
 	data: PropTypes.array,
-	onClick:PropTypes.func.isRequired
 };
-
-const spanstyle = {
-	paddingBottom:20
-}
 
 export default Accordian;
 
