@@ -24,9 +24,6 @@ class Quotation extends Component {
       show3:"",
       show4:"",
     };
-    // this.onChange = this.onChange.bind(this);
-    // this.onSubmit = this.onSubmit.bind(this);
-    // this.onCheck = this.onCheck.bind(this);
   }
 
   componentDidMount(){
@@ -52,42 +49,45 @@ class Quotation extends Component {
     } else {
       if(typeof cars !=="undefined"){
         carItems1 = (
-          <Accordian key="0" title="MARCA" data={cars} shownName="name" onclick={this.onClick} visible={true}/>
+          <Accordian key="0" title="MARCA" data={cars} shownName="name" onclick={this.onClick} />
         )
         carItems2 = cars.map(car =>{
           if(car.name === this.state.show1){
             return (
-              <Accordian key="1" title="MODELO" data={car.model} shownName="modelName" onclick={this.onClick1} visible={true}/>
+              <Accordian key="1" title="MODELO" data={car.model} shownName="modelName" onclick={this.onClick1} />
             );
           }
         })
         if(this.state.show1 && this.state.show2){
           cars.map(car =>{
-            if(car.name === this.state.show1){
-              carItems3 = car.model.map((model, key)=>{
-                if(model.modelName === this.state.show2){
+            if(car.name === this.state.show1 && car.model.length>0){
+              carItems3 = car.model.map((model)=>{
+                if(model.modelName === this.state.show2 && model.year.length>0){
                   return (
-                    <Accordian key="2" title="AÑO" data={model.year} shownName="date" onclick={this.onClick2} visible={true}/>
+                    <Accordian key="2" title="AÑO" data={model.year} shownName="date" onclick={this.onClick2} />
                   );
                 }
               });
             }
           })
         }
-        // if(this.state.show1 && this.state.show2 && this.state.show3){
-        //   cars.map(car =>{
-        //     if(car.name === this.state.show1){
-        //       carItems3 = car.model.map((model, key)=>{
-        //         if(model.modelName === this.state.show2){
-        //           model.map()
-        //           return (
-        //             <Accordian title="CILINDRAJE" data={model.year} shownName="date" onclick={this.onClick2} visible={true}/>
-        //           );
-        //         }
-        //       });
-        //     }
-        //   })
-        // }
+        if(this.state.show1 && this.state.show2 && this.state.show3){
+          cars.map(car =>{
+            if(car.name === this.state.show1 && car.model.length>0){
+              car.model.map((model)=>{
+                if(model.modelName === this.state.show2 && model.year.length>0){
+                  carItems3 = model.year.map(year=>{
+                    if(year.date === this.state.show3){
+                      return (
+                        <Accordian key="3" title="CILINDRAJE" data={year.cylinder} shownName="cylinderName" onclick={this.onClick3}/>
+                      );
+                    }
+                  })
+                }
+              });
+            }
+          })
+        }
       }
     }
 
@@ -133,20 +133,22 @@ class Quotation extends Component {
         {this.state.show1?carItems2:''}
         {this.state.show2?carItems3:''}
         {this.state.show3?carItems4:''}
-      </div>
+
+        <div className="mt-5 confirm" align="center">
+          <button className="btn btn-success1">SIGUIENTE</button>
+          <button className="btn btn-default">¿No encuentras tu vehículo?</button>
+        </div>
+      </div>  
     );
   }
 }
 
 Quotation.propTypes = {
   getCars: PropTypes.func.isRequired,
-  // profile: PropTypes.object.isRequired,
-  // errors: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
   car: state.car,
-  // errors: state.errors
 });
 
 export default connect(mapStateToProps, { getCars })(

@@ -20,7 +20,14 @@ const CarSchema = new Schema({
         {
           date:{
             type:String,
-          }
+          },
+          cylinder:[
+            {
+              cylinderName:{
+                type : String
+              }
+            }
+          ]
         }
       ]
     },

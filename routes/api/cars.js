@@ -47,21 +47,32 @@ router.post(
       return res.status(400).json(errors);
     }
 
-    const addYear = { date: req.body.date }
+    const addCylinder = { cylinderName : req.body.cylinderName};
+    const addYear = { date: req.body.date, cylinder:addCylinder };
     const newModel = { modelName: req.body.modelName, year: addYear };
     Car.findOne({name:req.body.name})
       .then(car => {
         if(!isEmpty(car)){
-          let Model = car.model, test_flag = false, date_flag = false, count1=-1, count2=-1;
+          let Model = car.model, test_flag = false, date_flag = false, cylinder_flag = false, count1=-1, count2=-1;
           Model.map(item=>{
             count1++;
             if(item.modelName == req.body.modelName){
               test_flag = true;
               item.year.map(date=>{
+                count2++;
                 if(date.date == req.body.date){
                   date_flag = true;
-                  errors.message = "there is same data";
-                  return res.status(400).json(errors);
+                  date.cylinder.map(cylinder=>{
+                    if(cylinder.cylinderName == req.body.cylinderName){
+                      cylinder_flag = true;
+                      errors.message = "there is same data";
+                      return res.status(400).json(errors);  
+                    }
+                  });
+                  if(!cylinder_flag){
+                    car.model[count1].year[count2].cylinder.unshift(addCylinder);
+                    car.save().then(car => res.json(car));
+                  }
                 }
               });
               if(!date_flag){
