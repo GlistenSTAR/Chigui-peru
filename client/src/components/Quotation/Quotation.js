@@ -23,6 +23,7 @@ class Quotation extends Component {
       show2:"",
       show3:"",
       show4:"",
+      step:0
     };
   }
 
@@ -96,7 +97,7 @@ class Quotation extends Component {
 
     return (
       <div className="quotation">
-        <nav className="navbar navbar-expand-lg bg-dark md-none navbar-light ">
+        <nav className="navbar navbar-expand-lg bg-dark navbar-light navbar-fixed-top">
           <div className="d-lg-block d-md-block">
             <div className="navbar-brand"></div>
           </div>
@@ -128,7 +129,7 @@ class Quotation extends Component {
         <div className="container">
           <div className="row" align="center">
             <div className="col-md-2"></div>
-            <div className="col-md-8"><HorizonalStep/></div>
+            <div className="col-md-8"><HorizonalStep step={this.state.step}/></div>
             <div className="col-md-2"></div>
           </div>
         </div>
@@ -138,7 +139,7 @@ class Quotation extends Component {
         {this.state.show3?carItems4:''}
 
         <div className="mt-5 confirm" align="center">
-          <button className="btn btn-success1">SIGUIENTE</button>
+          <button className="btn btn-success1" onClick={()=>{this.setState({step: this.state.step+1})}}>SIGUIENTE</button>
           <button className="btn btn-default">¿No encuentras tu vehículo?</button>
         </div>
       </div>  

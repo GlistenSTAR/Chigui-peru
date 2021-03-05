@@ -1,6 +1,6 @@
 
 
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
@@ -9,7 +9,7 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Check from '@material-ui/icons/Check';
 import StepConnector from '@material-ui/core/StepConnector';
-// import Button from '@material-ui/core/Button';
+import Button from '@material-ui/core/Button';
 // import Typography from '@material-ui/core/Typography';
 
 
@@ -163,21 +163,10 @@ function getSteps() {
   return ['ELIGE TU VEHÍCULO', 'ELIGE TUS SERVICIOS', 'AGENDA TU CITA', 'DATOS DE CONTACTO'];
 }
 
-// function getStepContent(step) {
-//   switch (step) {
-//     case 0:
-//       return 'ELIGE TU VEHÍCULO';
-//     case 1:
-//       return 'ELIGE TUS SERVICIOS';
-//     case 2:
-//       return 'AGENDA TU CITA';
-//     case 3:
-//       return 'DATOS DE CONTACTO';
-//   }
-// }
 
-export default function HorizonalStep() {
+const HorizonalStep = ({step}) => {
   const classes = useStyles();
+  useEffect(()=>{setActiveStep(step);},[step])
   const [activeStep, setActiveStep] = React.useState(0);
   const steps = getSteps();
 
@@ -193,6 +182,8 @@ export default function HorizonalStep() {
   //   setActiveStep(0);
   // };
 
+  
+
   return (
     <div className={classes.root}>
       <Stepper alternativeLabel activeStep={activeStep} connector={<ColorlibConnector />}>
@@ -202,21 +193,13 @@ export default function HorizonalStep() {
           </Step>
         ))}
       </Stepper>
-      {/* <div>
-        <div>
-          <Button disabled={activeStep === 0} onClick={handleBack} className={classes.button}>
-            Back
-          </Button>
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={handleNext}
-            className={classes.button}
-          >
-            {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
-          </Button>
-        </div>
-      </div> */}
+    
     </div>
   );
 }
+
+HorizonalStep.propTypes = {
+  step: PropTypes.number,
+};
+
+export default HorizonalStep;

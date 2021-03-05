@@ -36,19 +36,19 @@ const Accordian = ({
 			}
 					
 			content = data.map((value, key)=>{
-						return (
-							<li 
-								className="list-group-item" 
-								key={data[key][shownName]+"_"+key} 
-								name={data[key][shownName]} 
-								data={data[key][shownName]} 
-								onClick={liClick}
-							>
-								{data[key].mark?(<img src={data[key].mark} align="left" className="mark_sign" alt="mark"/>):''}
-									{data[key][shownName]}
-								<i className="fa fa-angle-right"  align="right"/>
-							</li>
-						);
+				return (
+					<li 
+						className="list-group-item" 
+						key={data[key][shownName]+"_"+key} 
+						name={data[key][shownName]} 
+						data={data[key][shownName]} 
+						onClick={liClick}
+					>
+						{data[key].mark?(<img src={data[key].mark} align="left" className="mark_sign" alt="mark"/>):''}
+							{data[key][shownName]}
+						<i className="fa fa-angle-right"  align="right"/>
+					</li>
+				);
 			});
 
 			return (
@@ -85,8 +85,9 @@ const Accordian = ({
 }
 
 Accordian.propTypes = {
-  shownName: PropTypes.string,
-	data: PropTypes.array,
+  shownName: PropTypes.string.isRequired,
+	data: PropTypes.array.isRequired,
+	onclick: PropTypes.func.isRequired
 };
 
 export default Accordian;
