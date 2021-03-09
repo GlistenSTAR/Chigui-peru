@@ -9,7 +9,6 @@ import { Provider } from 'react-redux';
 import store from './store';
 
 // import PrivateRoute from './components/common/PrivateRoute';
-
 // import Footer from './components/layout/Footer';
 import Landing from './components/layout/Landing';
 import Register from './components/auth/Register';

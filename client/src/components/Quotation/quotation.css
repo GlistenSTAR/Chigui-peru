@@ -35,15 +35,17 @@
 .quotation .MuiAccordionSummary-root.Mui-expanded {
     min-height: 50px!important;
 }
-
 .quotation .MuiTypography-root.MuiTypography-body1{
   width: 100%;
 }
-.quotation .MuiAccordionSummary-content .MuiTypography-root.makeStyles-heading-12.MuiTypography-body1{
+.quotation .MuiAccordionSummary-content .MuiTypography-root.makeStyles-heading-12{
   font-size: 16px;
 }
 .quotation .MuiButtonBase-root.MuiAccordionSummary-root{
   background-color: rgb(179,226,1);
+}
+.quotation .MuiTypography-root{
+  font-size: 16px;
 }
 .btn-success1{
   background-color: rgb(179,226,1);
@@ -114,6 +116,10 @@
   margin-right: 20px;
 }
 
+.quotation .col-md-6 div , .quotation .col-md-6 a{
+  font-family: myfont1!important;
+}
+
 @media only screen and (max-width: 992px) {
   .quotation .navbar {
     width: 100%;
@@ -156,21 +162,6 @@
     padding-right: auto;
     width: 100px;
   }
-  .quotation .makeStyles-root-1 {
-    width: 100%;
-    padding-left: 0;
-  }
-  .quotation .container .row .col-md-8{
-    padding-left:0;
-    padding-right:0
-  }
-  .quotation .container .row .col-md-8 .MuiPaper-root.MuiStepper-root.MuiStepper-horizontal.MuiStepper-alternativeLabel.MuiPaper-elevation0{
-    padding-left:0px;
-    padding-right:0;
-  }
-  .quotation .container .row .col-md-8 .MuiStepLabel-labelContainer span{
-    font-size: 12px;
-  }
   .quotation .MuiTypography-root.MuiTypography-body1 li{
     font-size: 20px;
   }
@@ -199,5 +190,12 @@
   .quotation .MuiTypography-root.MuiTypography-body1 li:hover{
     background-color: azure;
     cursor: hand;
+  }
+  .quotation .col-md-6 div{
+    font-size: 14px!important;
+  }
+  .quotation .col-md-6{
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }

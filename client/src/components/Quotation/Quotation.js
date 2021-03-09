@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 // import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faMapMarker, faAngleDoubleDown} from "@fortawesome/free-solid-svg-icons";
+import Stepper from 'react-stepper-horizontal';
 
 import HorizonalStep from '../common/Step';
 import SelectMoto from './SelectMoto';
@@ -54,13 +55,28 @@ class Quotation extends Component {
 
         <div className="container">
           <div className="row" align="center">
-            <div className="col-md-2"></div>
-            <div className="col-md-8"><HorizonalStep step={this.state.step}/></div>
-            <div className="col-md-2"></div>
+            <div className="col-md-3"></div>
+            <div className="col-md-6 mb-5">
+              <Stepper 
+                steps={ [
+                  {title: 'ELIGE TU VEHÍCULO'}, 
+                  {title: 'ELIGE TUS SERVICIOS'}, 
+                  {title: 'AGENDA TU CITA'}, 
+                  {title: 'DATOS DE CONTACTO'}
+                ] } 
+                activeStep={ this.state.step } 
+                activeColor="rgb(179,226,1)" 
+                completeColor="rgba(179,226,1,0.5)"
+                titleFontSize={16}
+                size={50}
+                />
+
+              </div>
+            <div className="col-md-3"></div>
           </div>
         </div>
-        {this.state.step===0?(<SelectMoto nextclick={()=>{this.setState({step: 1})}}/>):''}
-        {this.state.step===1?(<SelectService/>):''}
+        {this.state.step===0?(<SelectMoto nextclick={()=>{this.setState({step: this.state.step+1})}}/>):''}
+        {this.state.step===1?(<SelectService nextclick={()=>{this.setState({step: this.state.step+1})}}/>):''}
         {/* {this.state.step==1?(<SelectMoto nextclick={()=>{this.setState({step: 1})}}/>):''} */}
       </div>  
     );

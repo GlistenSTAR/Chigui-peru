@@ -39,7 +39,6 @@ const useQontoStepIconStyles = makeStyles({
 function QontoStepIcon(props) {
   const classes = useQontoStepIconStyles();
   const { active, completed } = props;
-
   return (
     <div
       className={clsx(classes.root, {
@@ -127,17 +126,8 @@ function ColorlibStepIcon(props) {
 }
 
 ColorlibStepIcon.propTypes = {
-  /**
-   * Whether this step is active.
-   */
   active: PropTypes.bool,
-  /**
-   * Mark the step as completed. Is passed to child components.
-   */
   completed: PropTypes.bool,
-  /**
-   * The label displayed in the step icon.
-   */
   icon: PropTypes.node,
 };
 
@@ -153,10 +143,17 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(1),
   },
 }));
+
 function getSteps() {
   return ['ELIGE TU VEHÍCULO', 'ELIGE TUS SERVICIOS', 'AGENDA TU CITA', 'DATOS DE CONTACTO'];
 }
 
+function setArea(step){
+  // if(e.target.getAttribute('class')==="makeStyles-root-4 makeStyles-completed-6" || e.target.getAttribute('class')==="makeStyles-root-4 makeStyles-active-5"){
+    
+  // }
+  console.log(step);
+}
 
 const HorizonalStep = ({step}) => {
   const classes = useStyles();
@@ -176,14 +173,12 @@ const HorizonalStep = ({step}) => {
   //   setActiveStep(0);
   // };
 
-  
-
   return (
     <div className={classes.root}>
       <Stepper alternativeLabel activeStep={activeStep} connector={<ColorlibConnector />}>
         {steps.map((label) => (
-          <Step key={label}>
-            <StepLabel StepIconComponent={ColorlibStepIcon} >{label}</StepLabel>
+          <Step key={label} onClick={() => setArea(step)}>
+            <StepLabel StepIconComponent={ColorlibStepIcon} value={label}>{label}</StepLabel>
           </Step>
         ))}
       </Stepper>
