@@ -1,6 +1,6 @@
 
 
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
@@ -9,7 +9,7 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Check from '@material-ui/icons/Check';
 import StepConnector from '@material-ui/core/StepConnector';
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 // import Typography from '@material-ui/core/Typography';
 
 
@@ -52,13 +52,7 @@ function QontoStepIcon(props) {
 }
 
 QontoStepIcon.propTypes = {
-  /**
-   * Whether this step is active.
-   */
   active: PropTypes.bool,
-  /**
-   * Mark the step as completed. Is passed to child components.
-   */
   completed: PropTypes.bool,
 };
 
@@ -189,7 +183,7 @@ const HorizonalStep = ({step}) => {
       <Stepper alternativeLabel activeStep={activeStep} connector={<ColorlibConnector />}>
         {steps.map((label) => (
           <Step key={label}>
-            <StepLabel StepIconComponent={ColorlibStepIcon}>{label}</StepLabel>
+            <StepLabel StepIconComponent={ColorlibStepIcon} >{label}</StepLabel>
           </Step>
         ))}
       </Stepper>

@@ -28,7 +28,6 @@ const Accordian = ({
 			let content;
 
 			const [subtitle, setSubtitle] = useState("");
-			//const [display, setDisplay] = useState('true');
 
 			const liClick = (e) => {
 				setSubtitle(e.target.getAttribute('data'));
