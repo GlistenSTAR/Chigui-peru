@@ -103,9 +103,10 @@ class SelectMoto extends Component {
         {this.state.show3?carItems4:''}
 
         <div className="mt-5 confirm" align="center">
-          <button className="btn btn-success1" onClick={this.props.nextclick}>SIGUIENTE</button>
+          <button className="btn btn-success1"  onClick={this.props.nextclick}>SIGUIENTE</button>
           <button className="btn btn-default">¿No encuentras tu vehículo?</button>
         </div>
+        {/* disabled={this.state.show3?false:true} */}
      </div>
     );
   }

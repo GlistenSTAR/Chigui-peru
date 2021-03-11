@@ -201,3 +201,68 @@
     padding-right: 0px;
   }
 }
+
+
+
+
+/* services */
+.quotation .services{
+
+}
+.quotation .services .row:first-child{
+  width: 80%;
+}
+
+.quotation .services img{
+  width: 50px;
+  height: 50px;
+}
+.quotation .services .horizal-card{
+  border: 2px solid rgba(179,226,1, 0.6);
+  border-radius: 15px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1;
+  padding-top:10px;
+  padding-bottom: 10px;
+}
+.quotation .services .text-default{
+  text-align: left;
+}
+.quotation .services hr{
+  border-top: 2px solid gainsboro!important;
+  width: 100%;
+  margin-top: -8px;
+}
+
+@media only screen and (max-width: 992px) {
+  .quotation .services .row:first-child{
+    width: 100%;
+  }
+  .quotation .services .horizal-card{
+    width: 100%;
+    font-size: 15px;
+  }
+  .quotation .services .recommand{
+    width: 100%;
+  }
+  .quotation .services .col-4{
+    padding:10px;
+  }
+  .quotation .services .col-4 .card{
+    border-radius: 10px;
+  }
+  .quotation .services .card-body{
+    padding:0;
+    font-size: 14px;
+    font-style: unset;
+  }
+  .quotation .services .card-body p{
+    line-height: 1;
+  }
+  .quotation .services img{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faMapMarker, faAngleDoubleDown} from "@fortawesome/free-solid-svg-icons";
 import Stepper from 'react-stepper-horizontal';
 
-import HorizonalStep from '../common/Step';
+// import HorizonalStep from '../common/Step';
 import SelectMoto from './SelectMoto';
 import SelectService from './SelectService';
 
@@ -65,8 +65,10 @@ class Quotation extends Component {
                   {title: 'DATOS DE CONTACTO'}
                 ] } 
                 activeStep={ this.state.step } 
-                activeColor="rgb(179,226,1)" 
-                completeColor="rgba(179,226,1,0.5)"
+                activeColor="rgba(179,226,1,0.5)" 
+                completeColor="rgb(179,226,1)"
+                activeBorderColor="rgb(0,0,0)"
+                circleFontColor="rgb(0,0,0)"
                 titleFontSize={16}
                 size={50}
                 />
