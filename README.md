@@ -26,7 +26,6 @@ npm run client
 ### Author
 
 GlistenSTAR
-[Traversy Media](http://www.traversymedia.com)
 
 ### Version
 
