@@ -8,6 +8,10 @@ import Spinner from '../common/Spinner';
 import { getCars } from '../../actions/carActions';
 import Accordian from '../common/Accordian';
 
+const mapStateToProps = state => ({
+  car: state.car,
+});
+
 class SelectMoto extends Component {
   constructor(props){
     super(props);
@@ -97,16 +101,15 @@ class SelectMoto extends Component {
 
     return (
      <div>
-       {carItems1}
+        {carItems1}
         {this.state.show1?carItems2:''}
         {this.state.show2?carItems3:''}
         {this.state.show3?carItems4:''}
 
         <div className="mt-5 confirm" align="center">
-          <button className="btn btn-success1"  onClick={this.props.nextclick}>SIGUIENTE</button>
+          <button className="btn btn-success1" disabled={this.state.show3?false:true} onClick={this.props.nextclick}>SIGUIENTE</button>
           <button className="btn btn-default">¿No encuentras tu vehículo?</button>
         </div>
-        {/* disabled={this.state.show3?false:true} */}
      </div>
     );
   }
@@ -115,10 +118,6 @@ class SelectMoto extends Component {
 SelectMoto.propTypes = {
   getCars: PropTypes.func.isRequired,
 };
-
-const mapStateToProps = state => ({
-  car: state.car,
-});
 
 export default connect(mapStateToProps, { getCars })(
   withRouter(SelectMoto)

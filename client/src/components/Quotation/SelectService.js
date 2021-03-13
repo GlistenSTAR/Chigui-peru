@@ -77,6 +77,10 @@ class SelectService extends Component {
             <h6>Revisiones</h6><hr/>
             <RecommandedCarsel/>
           </div>
+
+          <div className="row mt-4 mb-4">
+            <button className="btn form-control" style={{background:'rgb(179,226,1)', color:'black'}} onClick={this.props.nextclick}>RESERVAR CITA</button>
+          </div>
         </div>
        </div>
      </div>

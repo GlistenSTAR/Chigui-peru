@@ -17,7 +17,7 @@ class Quotation extends Component {
   constructor(props){
     super(props);
     this.state = {
-      step:2
+      step : 0  
     }
   }
 
@@ -80,7 +80,7 @@ class Quotation extends Component {
         </div>
         {this.state.step===0?(<SelectMoto nextclick={()=>{this.setState({step: this.state.step+1})}}/>):''}
         {this.state.step===1?(<SelectService nextclick={()=>{this.setState({step: this.state.step+1})}}/>):''}
-        {this.state.step===2?(<SelectData nextclick={()=>{this.setState({step: 3})}}/>):''}
+        {this.state.step===2?(<SelectData nextclick={()=>{this.setState({step: this.state.step+1})}}/>):''}
       </div>  
     );
   }

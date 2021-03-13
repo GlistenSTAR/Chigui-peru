@@ -286,12 +286,24 @@
     border-top: 1px solid rgb(179,226,1)!important;
     text-align: center;
     width: 60%;
+    margin-top: -8px;
 }
 .quotation .SelectData .react-datepicker.my-react-datepicker{
   font-size:24px; 
   width:600px
 }
-
+.quotation .SelectData img{
+  width: 50px!important;
+}
+.quotation .SelectData .MuiDialog-root .MuiButtonBase-root.MuiIconButton-root:focus, .quotation .SelectData .MuiDialog-root .MuiButtonBase-root.MuiIconButton-root:active{
+  outline: 0!important;
+}
+.MuiDialog-root .MuiPickersToolbar-toolbar {
+  background-color: rgb(179,226,1)!important;
+}
+.MuiDialog-root .MuiPickersTimePickerToolbar-hourMinuteLabel h2, .MuiDialog-root h6, .MuiDialog-root span{
+  color:black!important
+}
 @media only screen and (max-width: 992px) {
   .quotation .services .row:first-child{
     width: 100%;
@@ -331,6 +343,12 @@
     padding:0px
   }
   .quotation .SelectData .react-datepicker.my-react-datepicker{
+    width: 100%!important;
+  }
+  .quotation .SelectData .locationGroup{
+    width: 93%;
+  }
+  .quotation .SelectData h4{
     width: 100%!important;
   }
 }

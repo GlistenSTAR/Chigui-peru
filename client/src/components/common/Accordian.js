@@ -28,10 +28,12 @@ const Accordian = ({
 			let content;
 
 			const [subtitle, setSubtitle] = useState("");
+			const [expand, setExpand] = useState(true);
 
 			const liClick = (e) => {
 				setSubtitle(e.target.getAttribute('data'));
 				onclick(e);
+				setExpand(false);
 			}
 					
 			content = data.map((value, key)=>{
@@ -51,9 +53,9 @@ const Accordian = ({
 			});
 
 			return (
-				<div className={classes.root}>
+				<div className={classes.root} >
 					<div className="container">
-						<Accordion>
+						<Accordion defaultExpanded={true} expanded={expand}>
 							<AccordionSummary
 								expandIcon={<ExpandMoreIcon />}
 								aria-controls="panel1a-content"
