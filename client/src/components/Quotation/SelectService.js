@@ -40,7 +40,7 @@ class SelectService extends Component {
         </div>
         <div className="recommand mt-4" align="left">
           <h6>Destacados</h6><hr/>
-          <div className = "row" style={{background:'#F3F3F3', borderRadius:'10px'}}>
+          <div className = "row" style={{background:'#F3F3F3', borderRadius:'10px', padding:'10px'}}>
             <div className="col-md-4 col-4" align="center">
               <Card>
               <Card.Img variant="top" src={require('../../img/icons/escaner.png')} />
