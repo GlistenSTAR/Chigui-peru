@@ -92,4 +92,3 @@ Accordian.propTypes = {
 };
 
 export default Accordian;
-
