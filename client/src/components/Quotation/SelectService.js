@@ -23,7 +23,7 @@ class SelectService extends Component {
   }
 
   handleShow1 = () =>{
-    console.log("blablblaa")
+    console.log("123");
     this.setState({ modal1 : true });
   }
 
