@@ -17,7 +17,7 @@ class Quotation extends Component {
   constructor(props){
     super(props);
     this.state = {
-      step : 0  
+      step : 1  
     }
   }
 
@@ -57,7 +57,7 @@ class Quotation extends Component {
         <div className="container">
           <div className="row" align="center">
             <div className="col-md-3"></div>
-            <div className="col-md-6 mb-5">
+            <div className="col-md-6 mb-4">
               <Stepper 
                 steps={ [
                   {title: 'ELIGE TU VEHÍCULO'}, 

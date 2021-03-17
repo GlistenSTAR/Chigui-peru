@@ -33,7 +33,7 @@ const Accordian = ({
 			const liClick = (e) => {
 				setSubtitle(e.target.getAttribute('data'));
 				onclick(e);
-				setExpand(false);
+				setExpand(!expand);
 			}
 					
 			content = data.map((value, key)=>{
@@ -53,7 +53,7 @@ const Accordian = ({
 			});
 
 			return (
-				<div className={classes.root} >
+				<div className={classes.root}>
 					<div className="container">
 						<Accordion defaultExpanded={true} expanded={expand}>
 							<AccordionSummary
@@ -63,9 +63,10 @@ const Accordian = ({
 							>
 								<Typography 
 									className={classes.heading} 
+									style={{fontSize:'14px'}}
 								>
 									{title}{' '}
-									<span className="mt-5 pt-5">{subtitle}</span>
+									<span className="mt-5 pt-5" style={{fontSize:'22px', color:'#007bff'}}>{' '}{subtitle}</span>
 								</Typography>
 							</AccordionSummary>
 

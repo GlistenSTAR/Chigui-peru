@@ -2,12 +2,17 @@ import React, { Component } from "react";
 import InputGroup from "../common/InputGroup";
 import {Card} from 'react-bootstrap'
 import RecommandedCarsel from './RecommandedCarsel';
+import RecommandedCarsel1 from './RecommandedCarsel1';
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingBasket, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 class SelectService extends Component {
   constructor(props){
     super(props);
     this.state ={
-      search:''
+      search:'',
+      price:0
     }
   }
 
@@ -28,35 +33,25 @@ class SelectService extends Component {
         />
         <div className="horizal-card row">
           <div className="col-md-3 col-sm-3 col-3 mt-auto mb-auto" align="right">
-            <img className="img-rounded" alt="" src={require('../../img/icons/diagnostico.png')}/>
+            <img className="img-rounded" alt="" src={require('../../img/icons/diagnostico.png')} style={{visibility: 'visible', border: '2px solid rgb(179, 226, 1)', borderRadius: '50%'}}/>
           </div>
           <div className="col-md-6 col-sm-6 col-6 text text-default mt-auto mb-auto">
             <span>Diagnosticar una falla</span><br/>
             <small>¿No sabes la falla? Descubrámosla</small>
           </div>
           <div className="col-md-3 col-sm-3 col-3 mt-auto mb-auto" align="center">
-              <button className="btn btn-sm btn-success">Aqui!</button>
+              <button className="btn btn-sm" style={{backgroundColor:'rgb(179,226,1)'}}>Aqui!</button>
           </div>
         </div>
         <div className="recommand mt-4" align="left">
-          <h6>Destacados</h6><hr/>
+          <h6>DESTACADOS</h6><hr/>
           <div className = "row" style={{background:'#F3F3F3', borderRadius:'10px', padding:'10px'}}>
             <div className="col-md-4 col-4" align="center">
               <Card>
               <Card.Img variant="top" src={require('../../img/icons/escaner.png')} />
               <Card.Body>
                 <Card.Text>
-                  Servicio de Escáner
-                </Card.Text>
-              </Card.Body>
-              </Card>
-            </div>
-            <div className="col-md-4 col-4" align="center">
-              <Card>
-              <Card.Img variant="top" src={require('../../img/icons/latoneria_y_pintura.png')} />
-              <Card.Body>
-                <Card.Text>
-                Latoneria y Pintura
+                  Servicio de escáner
                 </Card.Text>
               </Card.Body>
               </Card>
@@ -71,17 +66,105 @@ class SelectService extends Component {
               </Card.Body>
               </Card>
             </div>
+            <div className="col-md-4 col-4" align="center">
+              <Card>
+              <Card.Img variant="top" src={require('../../img/icons/cambio_de_aceite.png')} />
+              <Card.Body>
+                <Card.Text>
+                  Cambio de aceite
+                </Card.Text>
+              </Card.Body>
+              </Card>
+            </div>
           </div>
           
           <div className="review mt-3">
-            <h6>Revisiones</h6><hr/>
+            <h6>REVISIONES</h6><hr/>
             <RecommandedCarsel/>
           </div>
-
-          <div className="row mt-4 mb-4">
-            <button className="btn form-control" style={{background:'rgb(179,226,1)', color:'black'}} onClick={this.props.nextclick}>RESERVAR CITA</button>
+          
+          <div className="review mt-3">
+            <h6>SERVICIOS EXPRESS</h6><hr/>
+            <RecommandedCarsel1/>
           </div>
         </div>
+        <div className="mechine mt-3" align="center">
+            <h6 align="left">MECANICA</h6><hr/>
+            <div className="row" style={{backgroundColor:'#F3F3F3',borderRadius:'10px', fontSize:'13px'}}>
+              <div className="col-6 col-md-4">
+                <div className="item row" style={{borderRadius:'20px'}}>
+                  <div className="col-5"><img src={require('../../img/icons/frenos.png')} alt="icon"/></div>
+                  <div className="col-7 mt-2" align="left" style={{fontSize:'14px'}}>Pastilla de frenos</div>
+                </div>
+              </div>
+              <div className="col-6 col-md-4">
+                <div className="item row" style={{borderRadius:'20px'}}>
+                  <div className="col-5"><img src={require('../../img/icons/cambio_bateria.png')} alt="icon"/></div>
+                  <div className="col-7 mt-2" align="left">Cambio de Bateria</div>
+                </div>
+              </div>
+              <div className="col-6 col-md-4">
+                <div className="item row" style={{borderRadius:'20px'}}>
+                  <div className="col-5"><img src={require('../../img/icons/frenos.png')} alt="icon"/></div>
+                  <div className="col-7 mt-2" align="left">Mantenimiento General</div>
+                </div>
+              </div>
+              <div className="col-6 col-md-4">
+                <div className="item row" style={{borderRadius:'20px'}}>
+                  <div className="col-5"><img src={require('../../img/icons/frenos.png')} alt="icon"/></div>
+                  <div className="col-7 mt-2" align="left">Mantenimiento premiun</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="recommand mt-4 clone" align="left">
+          <h6>ELECTRICIDAD</h6><hr/>
+          <div className = "row" style={{background:'#F3F3F3', borderRadius:'10px', padding:'10px'}}>
+            <div className="col-md-4 col-4" align="center">
+              <Card>
+              <Card.Img variant="top" src={require('../../img/icons/escaner.png')} />
+              <Card.Body>
+                <Card.Text>
+                CARGA DE BATERIA
+                </Card.Text>
+              </Card.Body>
+              </Card>
+            </div>
+            <div className="col-md-4 col-4" align="center">
+              <Card align="center">
+                <Card.Img variant="top" src={require('../../img/icons/revision_por_kilometraje.png')}/>
+              <Card.Body>
+                <Card.Text>
+                SOLO BATERIA
+                </Card.Text>
+              </Card.Body>
+              </Card>
+            </div>
+            <div className="col-md-4 col-4" align="center">
+              <Card>
+              <Card.Img variant="top" src={require('../../img/icons/cambio_de_aceite.png')} />
+              <Card.Body>
+                <Card.Text style={{fontSize:'11px'}}>
+                CARGA DE BATERIA CON VEHICULO
+                </Card.Text>
+              </Card.Body>
+              </Card>
+            </div>
+          </div>
+          </div>
+          <div style={{width:'100%'}} align="cener">
+            <div className="row mt-4 mb-5" style={{width:'100%', paddingLeft:'auto', paddingRight:'auto'}} align="center">
+              <button className="btn form-control" style={{background:'rgb(179,226,1)', color:'black'}} onClick={this.props.nextclick}>RESERVAR CITA</button>
+            </div>
+          </div>
+          <div className="bucket" align="left">
+            <div className="bucketIcon pl-4 pr-5 pt-2" style={{color:'white'}}>
+              <FontAwesomeIcon icon={faShoppingCart} size="2x" color="white" style={{float:'left', marginRight:'35px'}}/>
+              <h6 align="center" className="mt-1 pl-5" style={{ float:'left'}}>Ver la motocicleta</h6>
+              <h4 align="right">{this.state.price}</h4>
+            </div>
+          </div>
        </div>
      </div>
     );
