@@ -5,7 +5,7 @@ import RecommandedCarsel from './RecommandedCarsel';
 import RecommandedCarsel1 from './RecommandedCarsel1';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleRight, faShoppingCart, faLongArrowAltLeft, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight, faShoppingCart, faAngleLeft,  faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 
 class SelectService extends Component {
   constructor(props){
@@ -35,6 +35,9 @@ class SelectService extends Component {
     this.setState({ onEngineModal : true });
   }
   onEngineModalClose = () =>{
+    this.setState({ onEngineModal : false });
+  }
+  onEngineBack = () =>{
     this.setState({modal1:true});
     this.setState({ onEngineModal : false });
   }
@@ -144,37 +147,61 @@ class SelectService extends Component {
           keyboard={false}
         >
           <Modal.Header closeButton style={{background:'rgb(179,226,1)'}}>
-            <Modal.Title style={{fontSize:'20px'}}><FontAwesomeIcon icon={faAngleLeft}/>{' '}Diagnósticos En el motor</Modal.Title>
+            <Modal.Title style={{fontSize:'20px'}}><FontAwesomeIcon icon={faAngleLeft} onClick={this.onEngineBack}/>{' '}Diagnósticos En el motor</Modal.Title>
           </Modal.Header>
             <Modal.Body>
-              <div className="row mt-2 mb-3" onClick={this.onEngine}>
-                <div className="col-md-9 col-9">
-                  Diagnósticos En el motor
-                </div>
-                <div className="col-md-3 col-3" align="right">
-                  <FontAwesomeIcon icon={faAngleRight}/>
+              <div className="row mt-2 mb-3">
+                <div className="model-card">
+                  <Card style={{width:'100%'}}>
+                    <div className="row">
+                      <div className="col-8">
+                        <h5 align="left" style={{ textTransform :'uppercase'}}>Diagnostico fallo de motor</h5>
+                      </div>
+                      <div className="col-4" style={{height:'50px'}}>
+                        <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px', paddingTop:'10px', borderRadius:'20px'}}>
+                          <span>3000$ {' '}</span>
+                          <FontAwesomeIcon icon={faPlusCircle} color='green'/>
+                        </h6>
+                      </div>
+                      <hr style={{marginTop:'-10px'}}/>
+                    </div>
+                    <Card.Body>
+                      <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
+                        <span style={{fontStyle:'italic', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
+                        <li>Aceleracion y desaceleracion</li>
+                        <li>Apaga repentinamente</li>
+                        <li>Sale humo</li>
+                        <li>Pierde fuerza</li>
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
                 </div>
               </div>
               <div className="row mt-2 mb-3">
-                <div className="col-md-9 col-9">
-                  En el sistema electrico
-                </div>
-                <div className="col-md-3 col-3" align="right">
-                  <FontAwesomeIcon icon={faAngleRight}/>
-                </div>
-              </div>
-              <div className="row mt-2 mb-3">
-                <div className="col-md-9 col-9">
-                  Liquidos/fugas
-                </div>
-                <div className="col-md-3 col-3" align="right">
-                  <FontAwesomeIcon icon={faAngleRight}/>
+              <div className="model-card">
+                  <Card style={{width:'100%'}}>
+                    <div className="row">
+                      <div className="col-8">
+                        <h5 align="left" style={{ textTransform :'uppercase'}}>Diagnostico encendido</h5>
+                      </div>
+                      <div className="col-4" style={{height:'50px'}}>
+                        <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px', paddingTop:'10px', borderRadius:'20px'}}>
+                          <span>3000$ {' '}</span>
+                          <FontAwesomeIcon icon={faPlusCircle} color='green'/>
+                        </h6>
+                      </div>
+                      <hr style={{marginTop:'-10px'}}/>
+                    </div>
+                    <Card.Body>
+                      <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
+                        <span style={{fontStyle:'italic', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
+                        <li>No enciende</li>
+                        </Card.Text>
+                    </Card.Body>
+                  </Card>
                 </div>
               </div>
             </Modal.Body>
-            <Modal.Footer align="center">
-              <button className="btn btn-default">¿No encuentras las fallas que necesitas?</button>
-            </Modal.Footer>
         </Modal>
 
         <div className="recommand mt-4" align="left">
