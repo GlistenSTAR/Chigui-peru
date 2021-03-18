@@ -1,0 +1,475 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"order",
+				"orderArray"
+			],
+			[
+				"fr",
+				"fromToResult"
+			],
+			[
+				"from",
+				"fromToResult"
+			],
+			[
+				"checked",
+				"checkedResult"
+			],
+			[
+				"to",
+				"toString"
+			],
+			[
+				"fromto",
+				"fromToResult"
+			],
+			[
+				"c",
+				"citationValTo"
+			],
+			[
+				"N",
+				"NaN"
+			],
+			[
+				"cita",
+				"citationValFrom"
+			],
+			[
+				"l",
+				"log"
+			],
+			[
+				"cit",
+				"citationValFrom"
+			],
+			[
+				"fro",
+				"fromTo"
+			],
+			[
+				"citation",
+				"citationValTo"
+			],
+			[
+				"check",
+				"checkedArray"
+			],
+			[
+				"r",
+				"return"
+			],
+			[
+				"HT",
+				"HT"
+			],
+			[
+				"get",
+				"getJSON"
+			],
+			[
+				"mar",
+				"margin-top\tproperty"
+			],
+			[
+				"font",
+				"font-size\tproperty"
+			],
+			[
+				"margin",
+				"margin-right\tproperty"
+			],
+			[
+				"td",
+				"tbody\tTag"
+			],
+			[
+				"padding",
+				"padding-left\tproperty"
+			],
+			[
+				"ba",
+				"background-color\tproperty"
+			],
+			[
+				"print",
+				"print_r"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 1093,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"react",
+				"HTML: Wrap Selection With Tag"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 386.0,
+		"history":
+		[
+			"clear",
+			"git -v",
+			"yarn install",
+			"npm start"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/E/projects/workana/autolab(peru)/Chigui"
+	],
+	"file_history":
+	[
+		"/E/projects/workana/autolab(peru)/Chigui/client/src/components/common/InputGroup.js",
+		"/E/projects/workana/QR code/Project/InHouse/InHouse/app/screens/Login.js",
+		"/D/xampp/htdocs/mercadofree/.git/config",
+		"/E/projects/workana/QR code/Project/InHouse/InHouse/app/screens/Register.js",
+		"/D/xampp/htdocs/Stocks/.git/config",
+		"/D/xampp/htdocs/git all/symfony-heroku/symfony.lock",
+		"/D/xampp/htdocs/git all/symfony-heroku/composer.json",
+		"/D/xampp/htdocs/mercadofree/Procfile",
+		"/D/xampp/htdocs/stock/index.php",
+		"/D/xampp/htdocs/whispering-sea-43915/whispering-sea-43915/index.php",
+		"/D/xampp/htdocs/stock/twitter.php",
+		"/E/git/nextapp/package.json",
+		"/E/fullstack-candidate-testing/package.json",
+		"/E/fullstack-candidate-testing/.git/config",
+		"/C/Users/kms/OneDrive/Desktop/getting-started/app/.dockerignore",
+		"/E/git/package.json",
+		"/E/fullstack-candidate-testing/pages1/components/content.js",
+		"/E/fullstack-candidate-testing/pages1/components/header.js",
+		"/E/projects/workana/php migration(brazil)/www/.git/logs/HEAD",
+		"/D/Programing tools/DATABASE/SQL/Navicat_Premium_12.1.18/Crack/PublicKey.pem",
+		"/E/projects/workana/autolab(peru)/Chigui/client/package.json",
+		"/E/workspace/view themes/react-metronic-dashboard/package.json",
+		"/E/projects/workana/autolab(peru)/autolab/.git/config",
+		"/D/xampp/htdocs/table/index.html",
+		"/E/projects/Freelancer/4project(turkey)/ExamSystem/config/keys_dev.js",
+		"/E/projects/Freelancer/4project(turkey)/ExamSystem/config/keys_prod.js",
+		"/E/projects/Freelancer/4project(turkey)/ExamSystem/config/database.js",
+		"/E/projects/Freelancer/4project(turkey)/ExamSystem/config/passport.js",
+		"/E/projects/Freelancer/4project(turkey)/ExamSystem/config/keys.js",
+		"/D/xampp/htdocs/table/script.js",
+		"/D/xampp/htdocs/table/my.js",
+		"/E/script.js",
+		"/D/xampp/htdocs/table/aa.html",
+		"/D/table/my.html",
+		"/D/table/my.js",
+		"/D/xampp/htdocs/mercadofree/.git/index",
+		"/D/xampp/htdocs/mercadofree/.git/HEAD",
+		"/D/xampp/htdocs/mercadofree/.git/description",
+		"/C/Users/kms/Downloads/work-7.html",
+		"/D/my.html",
+		"/D/my.json",
+		"/E/projects/Freelancer/4project(turkey)/devconnector-master/client/src/actions/postActions.js",
+		"/E/projects/Freelancer/4project(turkey)/devconnector-master/client/src/actions/profileActions.js",
+		"/E/projects/workana/QR code/Project/InHouse/InHouse/app/screens/Profile.js",
+		"/E/projects/workana/QR code/Project/InHouse/InHouse/app/screens/SubmitRequest.js",
+		"/E/projects/workana/QR code/Project/InHouse/InHouse/app/screens/Portfolio.js",
+		"/E/projects/workana/QR code/Project/InHouse/InHouse/app/screens/Information.js",
+		"/D/xampp/htdocs/db/www/inicio.php",
+		"/D/xampp/htdocs/db/www/inc/config.php",
+		"/D/xampp/htdocs/db/www/inc/es.php",
+		"/D/xampp/htdocs/db/www/index.php",
+		"/E/projects/workana/QR code/Project/InHouse/InHouse/app/navigation/tab.js",
+		"/D/xampp/htdocs/db/NextwebDBSQL/db1.sql",
+		"/D/xampp/htdocs/www/index.html",
+		"/E/projects/workana/QR code/Project/PagoFree/.git/logs/refs/remotes/origin/main",
+		"/E/projects/workana/QR code/Project/PagoFree/.git/logs/refs/remotes/origin/HEAD",
+		"/E/projects/workana/QR code/Project/PagoFree/.git/logs/refs/heads/main",
+		"/E/projects/workana/QR code/Project/PagoFree/.git/logs/HEAD",
+		"/D/New folder/server.js",
+		"/C/Users/kms/OneDrive/Documents/index.html",
+		"/E/projects/workana/QR code/Project/PagoFree/app/navigation/index.js",
+		"/E/workspace/React-Native/react-native-eraser-tool-with-canvas/App.js",
+		"/E/workspace/React-Native/react-native-eraser-tool-with-canvas/package.json",
+		"/E/projects/workana/QR code/Project/InHouse/InHouse/package.json",
+		"/C/Users/kms/OneDrive/Desktop/React-native/project/App.js",
+		"/D/xampp/htdocs/www/index.php",
+		"/D/xampp/htdocs/www/login/inc/config.php",
+		"/D/xampp/htdocs/www/login/inc/cm.php",
+		"/C/Program Files/PostgreSQL/13/share/pg_hba.conf.sample",
+		"/D/xampp/htdocs/www/login/inc/css.css",
+		"/D/xampp/htdocs/www/login/index.php",
+		"/D/xampp/htdocs/www/login/login.php",
+		"/C/Program Files/PostgreSQL/13/data/pg_hba.conf",
+		"/D/xampp/htdocs/www/.git/config",
+		"/D/xampp/htdocs/www/inc/config.php",
+		"/D/xampp/htdocs/www/inc/scripts/funcoes_0.1.4.js",
+		"/D/xampp/htdocs/www/inc/config-perplug.php",
+		"/E/New folder (2)/node-js-getting-started/index.js",
+		"/E/New folder (2)/node-js-getting-started/package.json",
+		"/G/workspace/4project(turkey)/devconnector-master/routes/api/profile.js",
+		"/D/xampp/htdocs/Final_Single_Food/app/Http/Controllers/AuthController.php",
+		"/E/Study data/virtuallondonuk_danielafilipescu/index.html",
+		"/E/workspace/5kichen(Estonia)/DecorStone/.git/config",
+		"/D/Final_Single_Food/.git/config",
+		"/D/xampp/htdocs/New folder (2)/SingleFoodApp/.env",
+		"/C/Users/kms/Desktop/New folder/my-app/src/ScreenRecordPreviewModal.js",
+		"/C/Users/kms/Desktop/New folder/my-app/src/App.css",
+		"/C/Users/kms/Desktop/New folder/my-app/src/ScreenRecording.js",
+		"/C/Users/kms/Desktop/New folder/my-app/src/App.js",
+		"/C/Users/kms/Desktop/New folder/my-app/src/Router.js",
+		"/C/Users/kms/Desktop/New folder/my-app/package-lock.json",
+		"/C/Users/kms/Desktop/New folder/my-app/package.json",
+		"/C/Users/kms/Desktop/AwesomeTSProject/package.json",
+		"/C/Users/kms/Desktop/MyFirstApp/package-lock.json",
+		"/G/workspace/second project/Human-Resources-Management-System-master/resources/views/welcome.blade.php",
+		"/C/Users/kms/Desktop/laravelproject/.env.example",
+		"/E/New folder/Lab4-PartA/complexLoginCheck-PartOfTask2.php",
+		"/C/Users/kms/Desktop/APIAuthController.php",
+		"/D/xampp/htdocs/laravel8/composer.json",
+		"/E/New folder/Lab4-PartA/registerationFormCheck-PartOfTask2.php",
+		"/E/New folder/Lab4-PartA/task1.php",
+		"/D/xampp/htdocs/index.php",
+		"/E/New folder/Lab4-PartA/task3.php",
+		"/E/New folder/Lab4-PartA/task4.php"
+	],
+	"find":
+	{
+		"height": 31.0
+	},
+	"find_in_files":
+	{
+		"height": 114.0,
+		"where_history":
+		[
+			"my.js",
+			"",
+			"E:\\projects\\workana\\QR code\\Project\\InHouse\\InHouse\\app",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"AsyncStorage",
+			"master",
+			"checkbox",
+			"Radio",
+			"checkbox",
+			"text",
+			"HT",
+			"append",
+			"ES",
+			"ISE",
+			"ICS",
+			"HT",
+			"ES",
+			"ISE",
+			"ICS",
+			"Citations",
+			"HT",
+			"Ascending",
+			"HT",
+			"Citations",
+			"mb-3",
+			"Citations",
+			"\n        ",
+			"form-control",
+			"value=\"HT\"",
+			"checkbox",
+			" class=\"column0 style8 s\"",
+			"H_Index",
+			"i10-Index",
+			"H-Index",
+			"i10-Index",
+			"Last Name",
+			"null",
+			"td",
+			"padding",
+			"HT",
+			"2",
+			" style=\"width:40%;\"",
+			"useeffect",
+			"useEffect",
+			"Select * from noticias where ativo=1 order by id DESC limit 1 OFFSET 0",
+			"db4",
+			"db3",
+			"N�o foi poss�vel estabelecer uma conex�o com o banco de dados",
+			"N�o foi poss�vel estabelecer uma conex�o com o banco de dados\nN�o foi poss�vel estabelecer uma conex�o com o banco de dados\n N�o foi poss�vel estabelecer uma conex�o com o banco de dados\nN�o foi poss�vel estabelecer uma conex�o com o banco de dados\nN�o foi poss�vel estabelecer uma conex�o com o banco de dados\nN�o foi poss�vel estabelecer uma conex�o com o banco de dados\nN�o foi poss�vel estabelecer uma conex�o com o banco de dados",
+			"session_destroy",
+			"es.php",
+			"function Acha(",
+			"Acha"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"HIndex",
+			"i10_Index",
+			"H_Index"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1093,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								941,
+								941
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 198.4,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 44.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "package.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"Adiciona"
+			]
+		],
+		"width": 592.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 281.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

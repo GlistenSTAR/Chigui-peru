@@ -4,7 +4,7 @@ import ItemsCarousel from 'react-items-carousel';
 
 export default () => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
-  const chevronWidth = 40;
+  const chevronWidth = 20;
   const { innerWidth: width} = window;
   return (
     <div style={{ padding: `0 20px`,paddingTop:'13px', paddingBottom:'13px', marginLeft:'-15px', marginRight:'-15px',  backgroundColor:'rgb(243, 243, 243)', borderRadius:'10px' }}>

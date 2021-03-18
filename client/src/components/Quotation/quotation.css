@@ -384,8 +384,8 @@
   position:fixed;
   bottom:0;
   right:10px; 
-  width: 30%;  
-  background-color: rgb(118, 154, 0);
+  width: 35%;  
+  background-color: rgba(118, 154, 0, 0.8);
   min-height:45px;
   border-top-left-radius:15px;
   border-top-right-radius:15px
@@ -398,3 +398,17 @@
     left:0; 
   }
 }
+
+
+
+/* modal */
+.modal-footer {
+  justify-content: center!important;
+} 
+.modal-footer .btn{
+  background-color: rgb(247, 250, 239);
+  border-color:rgb(204, 204, 204);
+}
+.modal-body{
+  font-size: 16px;
+} 

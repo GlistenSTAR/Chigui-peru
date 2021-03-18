@@ -1,23 +1,34 @@
 import React, { Component } from "react"; 
 import InputGroup from "../common/InputGroup";
-import {Card} from 'react-bootstrap'
+import {Card, Modal, Button} from 'react-bootstrap'
 import RecommandedCarsel from './RecommandedCarsel';
 import RecommandedCarsel1 from './RecommandedCarsel1';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingBasket, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faLongArrowAltLeft, faLongArrowAltRight, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 class SelectService extends Component {
   constructor(props){
     super(props);
     this.state ={
-      search:'',
-      price:0
+      search : '',
+      price : 1,
+      count : 0,
+      modal1 : false
     }
   }
 
   onChange = (e) =>{
     console.log(e); 
+  }
+
+  handleShow1 = () =>{
+    console.log("blablblaa")
+    this.setState({ modal1 : true });
+  }
+
+  handleClose1 = () =>{
+    this.setState({modal1:false});
   }
 
   render() {
@@ -31,18 +42,92 @@ class SelectService extends Component {
           value={this.state.search}
           placeholder="Búsqueda..."
         />
-        <div className="horizal-card row">
-          <div className="col-md-3 col-sm-3 col-3 mt-auto mb-auto" align="right">
-            <img className="img-rounded" alt="" src={require('../../img/icons/diagnostico.png')} style={{visibility: 'visible', border: '2px solid rgb(179, 226, 1)', borderRadius: '50%'}}/>
+        <div className="horizal-card row"  onClick={this.handleShow1}>
+          <div className="col-md-3 col-sm-3 col-3 mt-auto mb-auto" align="right" >
+            <img className="img-rounded" alt="" src={require('../../img/icons/diagnostico.png')} style={{visibility: 'visible', border: '2px solid rgb(179, 226, 1)', borderRadius: '50%'}} />
           </div>
-          <div className="col-md-6 col-sm-6 col-6 text text-default mt-auto mb-auto">
-            <span>Diagnosticar una falla</span><br/>
-            <small>¿No sabes la falla? Descubrámosla</small>
+          <div className="col-md-6 col-sm-6 col-6 text text-default mt-auto mb-auto" >
+            <span >Diagnosticar una falla</span><br/>
+            <small >¿No sabes la falla? Descubrámosla</small>
           </div>
-          <div className="col-md-3 col-sm-3 col-3 mt-auto mb-auto" align="center">
-              <button className="btn btn-sm" style={{backgroundColor:'rgb(179,226,1)'}}>Aqui!</button>
+          <div className="col-md-3 col-sm-3 col-3 mt-auto mb-auto" align="center" >
+              <button className="btn btn-sm" style={{backgroundColor:'rgb(179,226,1)'}} >Aqui!</button>
           </div>
         </div>
+
+         {/* Diagnosticar una falla modal */}
+         <Modal
+            show={this.state.modal1}
+            onHide={this.handleClose1}
+            backdrop="static"
+            keyboard={false}
+          >
+            <Modal.Header closeButton style={{background:'rgb(179,226,1)'}}>
+              <Modal.Title style={{fontSize:'20px'}}>¿Donde se presentan las fallas?</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <div className="row mt-2 mb-3">
+                <div className="col-md-9 col-9">
+                  En el motor
+                </div>
+                <div className="col-md-3 col-3" align="right">
+                  <FontAwesomeIcon icon={faLongArrowAltRight}/>
+                </div>
+              </div>
+              <div className="row mt-2 mb-3">
+                <div className="col-md-9 col-9">
+                  En el sistema electrico
+                </div>
+                <div className="col-md-3 col-3" align="right">
+                  <FontAwesomeIcon icon={faLongArrowAltRight}/>
+                </div>
+              </div>
+              <div className="row mt-2 mb-3">
+                <div className="col-md-9 col-9">
+                  Liquidos/fugas
+                </div>
+                <div className="col-md-3 col-3" align="right">
+                  <FontAwesomeIcon icon={faLongArrowAltRight}/>
+                </div>
+              </div>
+              <div className="row mt-2 mb-3">
+                <div className="col-md-9 col-9">
+                  Testigos
+                </div>
+                <div className="col-md-3 col-3" align="right">
+                  <FontAwesomeIcon icon={faLongArrowAltRight}/>
+                </div>
+              </div>
+              <div className="row mt-2 mb-3">
+                <div className="col-md-9 col-9">
+                  En los frenos 
+                </div>
+                <div className="col-md-3 col-3" align="right">
+                  <FontAwesomeIcon icon={faLongArrowAltRight}/>
+                </div>
+              </div>
+              <div className="row mt-2 mb-3">
+                <div className="col-md-9 col-9">
+                  En las bombas de freno
+                </div>
+                <div className="col-md-3 col-3" align="right">
+                  <FontAwesomeIcon icon={faLongArrowAltRight}/>
+                </div>
+              </div>
+              <div className="row mt-2 mb-3">
+                <div className="col-md-9 col-9">
+                  En las llantas y suspension
+                </div>
+                <div className="col-md-3 col-3" align="right">
+                  <FontAwesomeIcon icon={faLongArrowAltRight}/>
+                </div>
+              </div>
+            </Modal.Body>
+            <Modal.Footer align="center">
+              <button className="btn btn-default">¿No encuentras las fallas que necesitas?</button>
+            </Modal.Footer>
+          </Modal>
+
         <div className="recommand mt-4" align="left">
           <h6>DESTACADOS</h6><hr/>
           <div className = "row" style={{background:'#F3F3F3', borderRadius:'10px', padding:'10px'}}>
@@ -56,12 +141,13 @@ class SelectService extends Component {
               </Card.Body>
               </Card>
             </div>
+           
             <div className="col-md-4 col-4" align="center">
               <Card align="center">
                 <Card.Img variant="top" src={require('../../img/icons/revision_por_kilometraje.png')}/>
               <Card.Body>
                 <Card.Text>
-                Revisión por Kilometraje
+                  Revisión por Kilometraje
                 </Card.Text>
               </Card.Body>
               </Card>
@@ -119,52 +205,54 @@ class SelectService extends Component {
           </div>
 
           <div className="recommand mt-4 clone" align="left">
-          <h6>ELECTRICIDAD</h6><hr/>
-          <div className = "row" style={{background:'#F3F3F3', borderRadius:'10px', padding:'10px'}}>
-            <div className="col-md-4 col-4" align="center">
-              <Card>
-              <Card.Img variant="top" src={require('../../img/icons/escaner.png')} />
-              <Card.Body>
-                <Card.Text>
-                CARGA DE BATERIA
-                </Card.Text>
-              </Card.Body>
-              </Card>
+            <h6>ELECTRICIDAD</h6><hr/>
+            <div className = "row" style={{background:'#F3F3F3', borderRadius:'10px', padding:'10px'}}>
+              <div className="col-md-4 col-4" align="center">
+                <Card>
+                <Card.Img variant="top" src={require('../../img/icons/escaner.png')} />
+                <Card.Body>
+                  <Card.Text>
+                  CARGA DE BATERIA
+                  </Card.Text>
+                </Card.Body>
+                </Card>
+              </div>
+              <div className="col-md-4 col-4" align="center">
+                <Card align="center">
+                  <Card.Img variant="top" src={require('../../img/icons/revision_por_kilometraje.png')}/>
+                <Card.Body>
+                  <Card.Text>
+                  SOLO BATERIA
+                  </Card.Text>
+                </Card.Body>
+                </Card>
+              </div>
+              <div className="col-md-4 col-4" align="center">
+                <Card>
+                <Card.Img variant="top" src={require('../../img/icons/cambio_de_aceite.png')} />
+                <Card.Body>
+                  <Card.Text style={{fontSize:'11px'}}>
+                  CARGA DE BATERIA CON VEHICULO
+                  </Card.Text>
+                </Card.Body>
+                </Card>
+              </div>
             </div>
-            <div className="col-md-4 col-4" align="center">
-              <Card align="center">
-                <Card.Img variant="top" src={require('../../img/icons/revision_por_kilometraje.png')}/>
-              <Card.Body>
-                <Card.Text>
-                SOLO BATERIA
-                </Card.Text>
-              </Card.Body>
-              </Card>
-            </div>
-            <div className="col-md-4 col-4" align="center">
-              <Card>
-              <Card.Img variant="top" src={require('../../img/icons/cambio_de_aceite.png')} />
-              <Card.Body>
-                <Card.Text style={{fontSize:'11px'}}>
-                CARGA DE BATERIA CON VEHICULO
-                </Card.Text>
-              </Card.Body>
-              </Card>
-            </div>
-          </div>
           </div>
           <div style={{width:'100%'}} align="cener">
             <div className="row mt-4 mb-5" style={{width:'100%', paddingLeft:'auto', paddingRight:'auto'}} align="center">
               <button className="btn form-control" style={{background:'rgb(179,226,1)', color:'black'}} onClick={this.props.nextclick}>RESERVAR CITA</button>
             </div>
           </div>
-          <div className="bucket" align="left">
-            <div className="bucketIcon pl-4 pr-5 pt-2" style={{color:'white'}}>
-              <FontAwesomeIcon icon={faShoppingCart} size="2x" color="white" style={{float:'left', marginRight:'35px'}}/>
-              <h6 align="center" className="mt-1 pl-5" style={{ float:'left'}}>Ver la motocicleta</h6>
-              <h4 align="right">{this.state.price}</h4>
+          {this.state.price!==0?(
+            <div className="bucket" align="left">
+              <div className="bucketIcon pl-4 pr-5 pt-2" style={{color:'white'}}>
+                <FontAwesomeIcon icon={faShoppingCart} size="2x" color="white" style={{float:'left', marginRight:'35px'}}/>
+                <h6 align="center" className="mt-1 pl-5" style={{ float:'left'}}>Ver la motocicleta</h6>
+                <h4 align="right">{this.state.price}</h4>
+              </div>
             </div>
-          </div>
+          ):''}
        </div>
      </div>
     );
