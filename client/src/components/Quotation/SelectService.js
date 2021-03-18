@@ -1,11 +1,11 @@
 import React, { Component } from "react"; 
 import InputGroup from "../common/InputGroup";
-import {Card, Modal, Button} from 'react-bootstrap'
+import {Card, Modal} from 'react-bootstrap'
 import RecommandedCarsel from './RecommandedCarsel';
 import RecommandedCarsel1 from './RecommandedCarsel1';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLongArrowAltLeft, faLongArrowAltRight, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight, faShoppingCart, faLongArrowAltLeft, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 
 class SelectService extends Component {
   constructor(props){
@@ -14,7 +14,8 @@ class SelectService extends Component {
       search : '',
       price : 1,
       count : 0,
-      modal1 : false
+      modal1 : false,
+      onEngineModal : false
     }
   }
 
@@ -23,12 +24,19 @@ class SelectService extends Component {
   }
 
   handleShow1 = () =>{
-    console.log("123");
     this.setState({ modal1 : true });
   }
 
   handleClose1 = () =>{
     this.setState({modal1:false});
+  }
+  onEngine = () => {
+    this.setState({modal1:false});
+    this.setState({ onEngineModal : true });
+  }
+  onEngineModalClose = () =>{
+    this.setState({modal1:true});
+    this.setState({ onEngineModal : false });
   }
 
   render() {
@@ -61,17 +69,90 @@ class SelectService extends Component {
             onHide={this.handleClose1}
             backdrop="static"
             keyboard={false}
-          >
-            <Modal.Header closeButton style={{background:'rgb(179,226,1)'}}>
-              <Modal.Title style={{fontSize:'20px'}}>¿Donde se presentan las fallas?</Modal.Title>
-            </Modal.Header>
+         > 
+          <Modal.Header closeButton style={{background:'rgb(179,226,1)'}}>
+            <Modal.Title style={{fontSize:'20px'}}>¿Donde se presentan las fallas?</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <div className="row mt-2 mb-3" onClick={this.onEngine}>
+              <div className="col-md-9 col-9">
+                En el motor
+              </div>
+              <div className="col-md-3 col-3" align="right">
+                <FontAwesomeIcon icon={faAngleRight}/>
+              </div>
+            </div>
+            <div className="row mt-2 mb-3">
+              <div className="col-md-9 col-9">
+                En el sistema electrico
+              </div>
+              <div className="col-md-3 col-3" align="right">
+                <FontAwesomeIcon icon={faAngleRight}/>
+              </div>
+            </div>
+            <div className="row mt-2 mb-3">
+              <div className="col-md-9 col-9">
+                Liquidos/fugas
+              </div>
+              <div className="col-md-3 col-3" align="right">
+                <FontAwesomeIcon icon={faAngleRight}/>
+              </div>
+            </div>
+            <div className="row mt-2 mb-3">
+              <div className="col-md-9 col-9">
+                Testigos
+              </div>
+              <div className="col-md-3 col-3" align="right">
+                <FontAwesomeIcon icon={faAngleRight}/>
+              </div>
+            </div>
+            <div className="row mt-2 mb-3">
+              <div className="col-md-9 col-9">
+                En los frenos 
+              </div>
+              <div className="col-md-3 col-3" align="right">
+                <FontAwesomeIcon icon={faAngleRight}/>
+              </div>
+            </div>
+            <div className="row mt-2 mb-3">
+              <div className="col-md-9 col-9">
+                En las bombas de freno
+              </div>
+              <div className="col-md-3 col-3" align="right">
+                <FontAwesomeIcon icon={faAngleRight}/>
+              </div>
+            </div>
+            <div className="row mt-2 mb-3">
+              <div className="col-md-9 col-9">
+                En las llantas y suspension
+              </div>
+              <div className="col-md-3 col-3" align="right">
+                <FontAwesomeIcon icon={faAngleRight}/>
+              </div>
+            </div>
+          </Modal.Body>
+          <Modal.Footer align="center">
+            <button className="btn btn-default">¿No encuentras las fallas que necesitas?</button>
+          </Modal.Footer>
+        </Modal>
+
+        {/* engine modal area */}
+        <Modal
+          show={this.state.onEngineModal}
+          onHide={this.onEngineModalClose}
+          backdrop="static"
+          keyboard={false}
+        >
+          <Modal.Header closeButton style={{background:'rgb(179,226,1)'}}>
+            <Modal.Title style={{fontSize:'20px'}}><FontAwesomeIcon icon={faAngleLeft}/>{' '}Diagnósticos En el motor</Modal.Title>
+          </Modal.Header>
             <Modal.Body>
-              <div className="row mt-2 mb-3">
+              <div className="row mt-2 mb-3" onClick={this.onEngine}>
                 <div className="col-md-9 col-9">
-                  En el motor
+                  Diagnósticos En el motor
                 </div>
                 <div className="col-md-3 col-3" align="right">
-                  <FontAwesomeIcon icon={faLongArrowAltRight}/>
+                  <FontAwesomeIcon icon={faAngleRight}/>
                 </div>
               </div>
               <div className="row mt-2 mb-3">
@@ -79,7 +160,7 @@ class SelectService extends Component {
                   En el sistema electrico
                 </div>
                 <div className="col-md-3 col-3" align="right">
-                  <FontAwesomeIcon icon={faLongArrowAltRight}/>
+                  <FontAwesomeIcon icon={faAngleRight}/>
                 </div>
               </div>
               <div className="row mt-2 mb-3">
@@ -87,46 +168,14 @@ class SelectService extends Component {
                   Liquidos/fugas
                 </div>
                 <div className="col-md-3 col-3" align="right">
-                  <FontAwesomeIcon icon={faLongArrowAltRight}/>
-                </div>
-              </div>
-              <div className="row mt-2 mb-3">
-                <div className="col-md-9 col-9">
-                  Testigos
-                </div>
-                <div className="col-md-3 col-3" align="right">
-                  <FontAwesomeIcon icon={faLongArrowAltRight}/>
-                </div>
-              </div>
-              <div className="row mt-2 mb-3">
-                <div className="col-md-9 col-9">
-                  En los frenos 
-                </div>
-                <div className="col-md-3 col-3" align="right">
-                  <FontAwesomeIcon icon={faLongArrowAltRight}/>
-                </div>
-              </div>
-              <div className="row mt-2 mb-3">
-                <div className="col-md-9 col-9">
-                  En las bombas de freno
-                </div>
-                <div className="col-md-3 col-3" align="right">
-                  <FontAwesomeIcon icon={faLongArrowAltRight}/>
-                </div>
-              </div>
-              <div className="row mt-2 mb-3">
-                <div className="col-md-9 col-9">
-                  En las llantas y suspension
-                </div>
-                <div className="col-md-3 col-3" align="right">
-                  <FontAwesomeIcon icon={faLongArrowAltRight}/>
+                  <FontAwesomeIcon icon={faAngleRight}/>
                 </div>
               </div>
             </Modal.Body>
             <Modal.Footer align="center">
               <button className="btn btn-default">¿No encuentras las fallas que necesitas?</button>
             </Modal.Footer>
-          </Modal>
+        </Modal>
 
         <div className="recommand mt-4" align="left">
           <h6>DESTACADOS</h6><hr/>

@@ -362,7 +362,8 @@
 /* mechine */
 .quotation .mechine .item{
   background-color: rgb(253,253,253);
-  margin:10px
+  margin:10px;
+  margin-left:0px
 }
 
 .quotation .mechine .item{
