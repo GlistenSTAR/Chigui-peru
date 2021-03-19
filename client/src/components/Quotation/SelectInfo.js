@@ -36,8 +36,8 @@ class SelectInfo extends Component {
   }
 
   render() {
-    console.log(this.state);
-    console.log(this.props);
+    const motor  = localStorage.getItem('motor');
+    console.log(motor);
     return (
       <div>
         <div className="sendData mt-3">

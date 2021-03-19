@@ -31,22 +31,42 @@ class SelectMoto extends Component {
   
   onClick = (e) => {
     this.setState({show1 : e.target.getAttribute('data')});
-    this.setState({...this.state.car, 'motorname': this.state.show1});
+    this.setState({
+      car: {
+        ...this.state.car,
+        motorname: e.target.getAttribute('data')
+      },
+    });
   }
   onClick1 = (e) => {
     this.setState({show2 : e.target.getAttribute('data')});
-    // this.state.car.push({'motormodel': this.state.show2});
+    this.setState({
+      car: {
+        ...this.state.car,
+        motormodel: e.target.getAttribute('data')
+      },
+    });
   }
   onClick2 = (e) => {
     this.setState({show3 : e.target.getAttribute('data')});
-    // this.state.car.push({'motoryear': this.state.show3});
+    this.setState({
+      car: {
+        ...this.state.car,
+        motoryear: e.target.getAttribute('data')
+      },
+    });
   }
   onClick3 = (e) => {
     this.setState({show4 : e.target.getAttribute('data')});
-    // this.state.car.push({'motorCylinder': this.state.show4});
+    this.setState({
+      car: {
+        ...this.state.car,
+        motorCylinder: e.target.getAttribute('data')
+      },
+    });
   }
   nextclick = ()=>{
-    console.log(this.state.car);
+    localStorage.setItem( 'motor' , this.state.car);
     this.props.nextclick();
   }
   

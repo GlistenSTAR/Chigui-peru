@@ -20,7 +20,6 @@ class Quotation extends Component {
   }
 
   render() {
-    console.log(this.props,'>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>', this.state);
     return (
       <div className="quotation">
         <nav className="navbar navbar-expand-lg bg-dark navbar-light navbar-fixed-top">
