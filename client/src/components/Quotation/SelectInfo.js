@@ -38,6 +38,7 @@ class SelectInfo extends Component {
   render() {
     const motor  = localStorage.getItem('motor');
     console.log(motor);
+    console.log(localStorage.getItem('date'), '>>>>>>>>>>>>>>>>', localStorage.getItem('time'),'<<<<<<<<<<<<<<<<<<<<<<<<<', localStorage.getItem('location'));
     return (
       <div>
         <div className="sendData mt-3">

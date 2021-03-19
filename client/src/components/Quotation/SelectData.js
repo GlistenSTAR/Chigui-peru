@@ -2,6 +2,7 @@ import 'moment/locale/fr.js';
 import React, { Component } from 'react'
 import { DatePicker } from 'rc-datepicker';
 import 'date-fns';
+import dateFormat from 'dateformat';
 import Grid from '@material-ui/core/Grid';
 import DateFnsUtils from '@date-io/date-fns';
 import {
@@ -33,6 +34,26 @@ export default class SelectData extends Component {
   handleDateChange = (date) => {
     this.setState({ time : date});
   };
+  nextclick = () =>{
+    localStorage.setItem('date', dateFormat(this.state.value, 'mm-dd yyyy'));
+    localStorage.setItem('time', dateFormat(this.state.time, 'hh:MM TT'));
+    localStorage.setItem('location', this.state.location);
+    this.props.nextclick();
+  }
+
+  formatDate=(date)=> {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) 
+        month = '0' + month;
+    if (day.length < 2) 
+        day = '0' + day;
+
+    return [month, day, year].join('-');
+  }
 
   render() {
     const now =  new Date();
@@ -45,6 +66,7 @@ export default class SelectData extends Component {
               value={this.state.value}
               onChange={(jsDate) => this.setState({value: jsDate})}
               minDate = {now}
+              returnFormat="MM-DD YYYY"
             />
           </div>
           { this.state.value?(
@@ -94,6 +116,7 @@ export default class SelectData extends Component {
                   <KeyboardTimePicker
                     margin="normal"
                     id="time-picker"
+                    format="hh:mm a"
                     value={this.state.time}
                     onChange={this.handleDateChange}
                   />
@@ -103,7 +126,7 @@ export default class SelectData extends Component {
           ):''}
 
           <div className="col-12 col-md-12 mt-5 mb-5">
-            <button className="btn form-control" onClick={this.props.nextclick} disabled = {this.state.time && this.state.location?false:true} style={{background:'rgb(179,226,1)', color:'black'}}>
+            <button className="btn form-control" onClick={this.nextclick} disabled = {this.state.time && this.state.location?false:true} style={{background:'rgb(179,226,1)', color:'black'}}>
               FINALIZAR AGENDAMIENTO
             </button>
           </div>
