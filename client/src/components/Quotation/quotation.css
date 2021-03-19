@@ -4,6 +4,10 @@
   font-family: myfont1;
   src: url('../../fonts/PFDinDisplayPro-Regular_35382.ttf');
 }
+@font-face {
+  font-family: myfont2;
+  src: url('../../fonts/PFDinDisplayPro-Light_35378.ttf');
+}
 .quotation .navbar {
     display: flex;
     top: 0;
@@ -143,12 +147,13 @@
   .quotation .selecttag .input-group .input-group-prepend{
     height: 30px;
   }
-  .quotation .selecttag .input-group .select{
+  .quotation .selecttag .input-group .select.form-control{
     height: 30px;
     font-size: 14px;
     margin-right: auto;
     width: 100px;
     float: left;
+    padding:0!important
   }
   .quotation .collapse:not(.show){
     display: block;
@@ -420,4 +425,18 @@
 .model-card .card{
   border-radius: 10px;
   padding:10px  
+}
+
+/* sendData */
+.quotation .sendData div, .quotation .sendData input{
+  font-family: myfont2!important;
+}
+.quotation .sendData input{
+  border:none;
+  border-radius: 20px;
+  border-bottom: 1px solid black
+}
+.quotation .sendData textarea{
+  border-radius: 20px;
+  border: 1px solid black
 }

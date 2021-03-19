@@ -42,30 +42,6 @@ export default () => {
               </Card>
             </div>
         </div>
-        {/* <div>
-          <div align="center">
-              <Card>
-              <Card.Img variant="top" src={require('../../img/icons/escaner.png')} />
-              <Card.Body>
-                <Card.Text>
-                  Servicio de escáner
-                </Card.Text>
-              </Card.Body>
-              </Card>
-            </div>
-        </div>
-        <div>
-        <div align="center">
-            <Card>
-              <Card.Img variant="top" src={require('../../img/icons/escaner.png')} />
-              <Card.Body>
-                <Card.Text>
-                  Servicio de escáner
-                </Card.Text>
-              </Card.Body>
-              </Card>
-            </div>
-        </div> */}
       </ItemsCarousel>
     </div>
   );

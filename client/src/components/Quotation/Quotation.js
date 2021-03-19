@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-// import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faMapMarker, faAngleDoubleDown} from "@fortawesome/free-solid-svg-icons";
 import Stepper from 'react-stepper-horizontal';
 
-// import HorizonalStep from '../common/Step';
 import './quotation.css';
 import SelectMoto from './SelectMoto';
 import SelectService from './SelectService';
@@ -17,13 +15,11 @@ class Quotation extends Component {
   constructor(props){
     super(props);
     this.state = {
-      step : 1  
+      step : 0  
     }
   }
 
-
   render() {
-    console.log(this.state.step);
     return (
       <div className="quotation">
         <nav className="navbar navbar-expand-lg bg-dark navbar-light navbar-fixed-top">
@@ -83,7 +79,6 @@ class Quotation extends Component {
     );
   }
 }
-
 
 export default connect(null, {})(
   withRouter(Quotation)
