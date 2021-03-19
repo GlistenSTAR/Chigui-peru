@@ -103,7 +103,7 @@ export default class SelectData extends Component {
           ):''}
 
           <div className="col-12 col-md-12 mt-5 mb-5">
-            <button className="btn form-control" disabled = {this.state.time && this.state.location?false:true} style={{background:'rgb(179,226,1)', color:'black'}}>
+            <button className="btn form-control" onClick={this.props.nextclick} disabled = {this.state.time && this.state.location?false:true} style={{background:'rgb(179,226,1)', color:'black'}}>
               FINALIZAR AGENDAMIENTO
             </button>
           </div>

@@ -7,11 +7,11 @@ import {faMapMarker, faAngleDoubleDown} from "@fortawesome/free-solid-svg-icons"
 import Stepper from 'react-stepper-horizontal';
 
 // import HorizonalStep from '../common/Step';
+import './quotation.css';
 import SelectMoto from './SelectMoto';
 import SelectService from './SelectService';
-
-import './quotation.css';
 import SelectData from './SelectData';
+import SelectInfo from './SelectInfo';
 
 class Quotation extends Component {
   constructor(props){
@@ -23,6 +23,7 @@ class Quotation extends Component {
 
 
   render() {
+    console.log(this.state.step);
     return (
       <div className="quotation">
         <nav className="navbar navbar-expand-lg bg-dark navbar-light navbar-fixed-top">
@@ -35,11 +36,7 @@ class Quotation extends Component {
                 <span className="input-group-text"><FontAwesomeIcon icon={faMapMarker} color="rgb(179,226,1)"/></span>
               </div>
               <select className="form-control select" >
-                <option>Bogotá</option>
-                <option>Barranquilla</option>
-                <option>Cali</option>
-                <option>Medellin</option>
-                <option>Chía</option>
+                <option>Tingo Maria</option>
               </select>
             </li>
           </div>
@@ -81,6 +78,7 @@ class Quotation extends Component {
         {this.state.step===0?(<SelectMoto nextclick={()=>{this.setState({step: this.state.step+1})}}/>):''}
         {this.state.step===1?(<SelectService nextclick={()=>{this.setState({step: this.state.step+1})}}/>):''}
         {this.state.step===2?(<SelectData nextclick={()=>{this.setState({step: this.state.step+1})}}/>):''}
+        {this.state.step===3?(<SelectInfo/>):''}
       </div>  
     );
   }
