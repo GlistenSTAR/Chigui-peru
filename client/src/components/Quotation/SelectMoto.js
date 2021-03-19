@@ -21,6 +21,7 @@ class SelectMoto extends Component {
       show2:"",
       show3:"",
       show4:"",
+      car:[]
     }
   }
 
@@ -30,15 +31,23 @@ class SelectMoto extends Component {
   
   onClick = (e) => {
     this.setState({show1 : e.target.getAttribute('data')});
+    this.setState({...this.state.car, 'motorname': this.state.show1});
   }
   onClick1 = (e) => {
     this.setState({show2 : e.target.getAttribute('data')});
+    // this.state.car.push({'motormodel': this.state.show2});
   }
   onClick2 = (e) => {
     this.setState({show3 : e.target.getAttribute('data')});
+    // this.state.car.push({'motoryear': this.state.show3});
   }
   onClick3 = (e) => {
     this.setState({show4 : e.target.getAttribute('data')});
+    // this.state.car.push({'motorCylinder': this.state.show4});
+  }
+  nextclick = ()=>{
+    console.log(this.state.car);
+    this.props.nextclick();
   }
   
   render() {
@@ -107,7 +116,7 @@ class SelectMoto extends Component {
         {this.state.show3?carItems4:''}
 
         <div className="mt-5 confirm" align="center">
-          <button className="btn btn-success1" disabled={this.state.show3?false:true} onClick={this.props.nextclick}>SIGUIENTE</button>
+          <button className="btn btn-success1" disabled={this.state.show3?false:true} onClick={this.nextclick}>SIGUIENTE</button>
           <button className="btn btn-default">¿No encuentras tu vehículo?</button>
         </div>
      </div>
