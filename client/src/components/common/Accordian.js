@@ -23,7 +23,6 @@ const Accordian = ({
 		onclick, 
 		shownName
 	}) =>{
-			
 			const classes = useStyles();
 			let content;
 

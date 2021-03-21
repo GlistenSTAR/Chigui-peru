@@ -63,18 +63,19 @@ class Quotation extends Component {
                 completeColor="rgb(179,226,1)"
                 activeBorderColor="rgb(0,0,0)"
                 circleFontColor="rgb(0,0,0)"
-                titleFontSize={16}
-                size={50}
-                />
-
-              </div>
+                titleFontSize={18}
+                size={45}
+              />
+            </div>
             <div className="col-md-3"></div>
           </div>
         </div>
+
         {this.state.step===0?(<SelectMoto nextclick={()=>{this.setState({step: this.state.step+1})}}/>):''}
         {this.state.step===1?(<SelectService nextclick={()=>{this.setState({step: this.state.step+1})}}/>):''}
         {this.state.step===2?(<SelectData nextclick={()=>{this.setState({step: this.state.step+1})}}/>):''}
         {this.state.step===3?(<SelectInfo/>):''}
+        
       </div>  
     );
   }

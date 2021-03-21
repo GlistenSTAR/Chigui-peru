@@ -4,7 +4,7 @@ import ItemsCarousel from 'react-items-carousel';
 
 export default () => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
-  const chevronWidth = 20;
+  const chevronWidth = 40;
   const { innerWidth: width} = window;
   return (
     <div style={{ padding: `0 20px`,paddingTop:'13px', paddingBottom:'13px', marginLeft:'-15px', marginRight:'-15px',  backgroundColor:'rgb(243, 243, 243)', borderRadius:'10px' }}>
@@ -20,47 +20,23 @@ export default () => {
       >
         <div>
           <div align="center">
-            <Card>
-              <Card.Img variant="top" src={require('../../img/icons/cambio_de_aceite.png')} />
+              <Card>
+              <Card.Img variant="top" src={require('../../img/icons/cambio_bateria.png')} />
               <Card.Body>
                 <Card.Text>
-                  Cambio de aceite
+                  Revision de bateria
                 </Card.Text>
               </Card.Body>
-            </Card>
-          </div>
+              </Card>
+            </div>
         </div>
         <div>
           <div align="center">
-            <Card>
-              <Card.Img variant="top" src={require('../../img/icons/cambio_llanta.png')} />
+              <Card>
+              <Card.Img variant="top" src={require('../../img/icons/peritaje.png')} />
               <Card.Body>
                 <Card.Text>
-                  Cambio de llanta
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </div>
-        </div>
-        <div>
-          <div align="center">
-            <Card>
-              <Card.Img variant="top" src={require('../../img/icons/liquido_frenos.png')} style={{width:'58px', height:'50px'}}/>
-              <Card.Body>
-                <Card.Text>
-                  Liquido de frenos
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </div>
-        </div>
-        <div>
-        <div align="center">
-            <Card>
-              <Card.Img variant="top" src={require('../../img/icons/liquido_refrigerante.png')} />
-              <Card.Body>
-                <Card.Text>
-                  Liquido refrigerante
+                  Peritaje
                 </Card.Text>
               </Card.Body>
               </Card>

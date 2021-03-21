@@ -1,8 +1,8 @@
 import React, { Component } from "react"; 
 import InputGroup from "../common/InputGroup";
 import {Card, Modal} from 'react-bootstrap'
+import ReviewCarsel from './ReviewCarsel';
 import RecommandedCarsel from './RecommandedCarsel';
-import RecommandedCarsel1 from './RecommandedCarsel1';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight, faShoppingCart, faAngleLeft,  faPlusCircle } from '@fortawesome/free-solid-svg-icons';
@@ -716,12 +716,12 @@ class SelectService extends Component {
           
           <div className="review mt-3">
             <h6>REVISIONES</h6><hr/>
-            <RecommandedCarsel/>
+            <ReviewCarsel/>
           </div>
           
           <div className="review mt-3">
             <h6>SERVICIOS EXPRESS</h6><hr/>
-            <RecommandedCarsel1/>
+            <RecommandedCarsel/>
           </div>
         </div>
         <div className="mechine mt-3" align="center">
