@@ -66,7 +66,7 @@ class SelectMoto extends Component {
     });
   }
   nextclick = ()=>{
-    localStorage.setItem( 'motor' , this.state.car);
+    localStorage.setItem( 'motor' , JSON.stringify(this.state.car));
     this.props.nextclick();
   }
   
