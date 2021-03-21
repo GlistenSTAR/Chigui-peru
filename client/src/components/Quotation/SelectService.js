@@ -237,7 +237,7 @@ class SelectService extends Component {
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
+                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
                         <li>Aceleracion y desaceleracion</li>
                         <li>Apaga repentinamente</li>
                         <li>Sale humo</li>
@@ -264,7 +264,7 @@ class SelectService extends Component {
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
+                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
                         <li>No enciende</li>
                         </Card.Text>
                     </Card.Body>
@@ -301,7 +301,7 @@ class SelectService extends Component {
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
+                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
                         <li>Inyectores</li>
                       </Card.Text>
                     </Card.Body>
@@ -325,7 +325,7 @@ class SelectService extends Component {
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
+                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
                         <li>Bombillos </li>
                         <li>Tablero </li>
                         <li>Alarma </li>
@@ -352,7 +352,7 @@ class SelectService extends Component {
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
+                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
                         <li>Regulador </li>
                         <li>Bobinas </li>
                         <li>Estator </li>
@@ -378,7 +378,7 @@ class SelectService extends Component {
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
+                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
                         <li>Diagnostico de sensores </li>
                         <li>Sensores </li>
                         </Card.Text>
@@ -416,7 +416,7 @@ class SelectService extends Component {
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
+                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
                         <li>Fuga refrigerante</li>
                       </Card.Text>
                     </Card.Body>
@@ -440,7 +440,7 @@ class SelectService extends Component {
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
+                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
                         <li>Fuga de aceite </li>
                         <li>Fuga de liquidos de frenos </li>
                         </Card.Text>
@@ -465,7 +465,7 @@ class SelectService extends Component {
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
+                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
                         <li>Bomba de aceite </li>
                         </Card.Text>
                     </Card.Body>
@@ -502,7 +502,7 @@ class SelectService extends Component {
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
+                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
                         <li>Motor</li>
                       </Card.Text>
                     </Card.Body>
@@ -526,7 +526,7 @@ class SelectService extends Component {
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
+                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
                         <li>Temperatura</li>
                         </Card.Text>
                     </Card.Body>
@@ -550,7 +550,7 @@ class SelectService extends Component {
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
+                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
                         <li>Freno</li>
                         <li>ABS</li>
                         <li>Traccion</li>
@@ -589,7 +589,7 @@ class SelectService extends Component {
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
+                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
                         <li>Frenos largos</li>
                         <li>Ruido/chillido en los frenos</li>
                       </Card.Text>
@@ -614,7 +614,7 @@ class SelectService extends Component {
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
+                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
                         <li>Fuga en liquido de frenos</li>
                         </Card.Text>
                     </Card.Body>
@@ -638,7 +638,7 @@ class SelectService extends Component {
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
+                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
                         <li>Freno</li>
                         <li>ABS</li>
                         <li>Traccion</li>
