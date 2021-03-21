@@ -3,9 +3,10 @@ import InputGroup from "../common/InputGroup";
 import {Card, Modal} from 'react-bootstrap'
 import ReviewCarsel from './ReviewCarsel';
 import RecommandedCarsel from './RecommandedCarsel';
+import ModalTemplate from '../common/Modal';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleRight, faShoppingCart, faAngleLeft,  faPlusCircle } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight, faShoppingCart, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 
 class SelectService extends Component {
   constructor(props){
@@ -208,447 +209,121 @@ class SelectService extends Component {
             <button className="btn btn-default">¿No encuentras las fallas que necesitas?</button>
           </Modal.Footer>
         </Modal>
-
         {/* engine modal area */}
-        <Modal
-          show={this.state.onEngineModal}
-          onHide={this.onEngineModalClose}
-          backdrop="static"
-          keyboard={false}
-        >
-          <Modal.Header closeButton style={{background:'rgb(179,226,1)', textTransform :'uppercase'}}>
-            <Modal.Title style={{fontSize:'18px'}}><FontAwesomeIcon icon={faAngleLeft} onClick={this.onEngineBack}/>{' '}Diagnósticos En el motor</Modal.Title>
-          </Modal.Header>
-            <Modal.Body>
-              <div className="row mt-2 mb-3">
-                <div className="model-card">
-                  <Card style={{width:'100%'}}>
-                    <div className="row">
-                      <div className="col-8">
-                        <h5 align="left" style={{ textTransform :'uppercase'}}>Diagnostico fallo de motor</h5>
-                      </div>
-                      <div className="col-4" style={{height:'50px'}}>
-                        <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px', paddingTop:'10px', borderRadius:'20px'}}>
-                          <span>3000$ {' '}</span>
-                          <FontAwesomeIcon icon={faPlusCircle} color='green'/>
-                        </h6>
-                      </div>
-                      <hr style={{marginTop:'-8px'}}/>
-                    </div>
-                    <Card.Body>
-                      <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
-                        <li>Aceleracion y desaceleracion</li>
-                        <li>Apaga repentinamente</li>
-                        <li>Sale humo</li>
-                        <li>Pierde fuerza</li>
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-              </div>
-              <div className="row mt-2 mb-3">
-              <div className="model-card">
-                  <Card style={{width:'100%'}}>
-                    <div className="row">
-                      <div className="col-8">
-                        <h5 align="left" style={{ textTransform :'uppercase'}}>Diagnostico encendido</h5>
-                      </div>
-                      <div className="col-4" style={{height:'50px'}}>
-                        <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px', paddingTop:'10px', borderRadius:'20px'}}>
-                          <span>3000$ {' '}</span>
-                          <FontAwesomeIcon icon={faPlusCircle} color='green'/>
-                        </h6>
-                      </div>
-                      <hr style={{marginTop:'-8px'}}/>
-                    </div>
-                    <Card.Body>
-                      <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
-                        <li>No enciende</li>
-                        </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-              </div>
-            </Modal.Body>
-        </Modal>
+        <ModalTemplate
+          headerContent = "Diagnósticos En el motor"
+          onEngineModal = { this.state.onEngineModal }
+          onEngineModalClose = { this.onEngineModalClose }
+          onEngineBack = {this.onEngineBack}
+          data = {[
+            {
+              smallHeader : 'Diagnostico fallo de motor',
+              price : 3000,
+              miniServices : ['Aceleracion y desaceleracion','Apaga repentinamente', 'Sale humo', 'Pierde fuerza']
+            },
+            {
+              smallHeader:'Diagnostico encendido',
+              price : 2000,
+              miniServices : ['No enciende']
+            }
+          ]}
+        />
         {/* onElectronic Modal */}
-        <Modal
-          show={this.state.onElectronicModal}
-          onHide={this.onElectroicModalClose}
-          backdrop="static"
-          keyboard={false}
-        >
-          <Modal.Header closeButton style={{background:'rgb(179,226,1)', textTransform :'uppercase'}}>
-            <Modal.Title style={{fontSize:'18px'}}><FontAwesomeIcon icon={faAngleLeft} onClick={this.onElectronicBack}/>{' '}Diagnósticos En el sistema eléctrico</Modal.Title>
-          </Modal.Header>
-            <Modal.Body>
-              <div className="row mt-2 mb-3">
-                <div className="model-card">
-                  <Card style={{width:'100%'}}>
-                    <div className="row">
-                      <div className="col-8">
-                        <h5 align="left" style={{ textTransform :'uppercase'}}>Diagnostico del sistema de inyeccion</h5>
-                      </div>
-                      <div className="col-4" style={{height:'50px'}}>
-                        <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px', paddingTop:'10px', borderRadius:'20px'}}>
-                          <span>3000$ {' '}</span>
-                          <FontAwesomeIcon icon={faPlusCircle} color='green'/>
-                        </h6>
-                      </div>
-                      <hr style={{marginTop:'-8px'}}/>
-                    </div>
-                    <Card.Body>
-                      <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
-                        <li>Inyectores</li>
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-              </div>
-              <div className="row mt-2 mb-3">
-              <div className="model-card">
-                  <Card style={{width:'100%'}}>
-                    <div className="row">
-                      <div className="col-8">
-                        <h5 align="left" style={{ textTransform :'uppercase'}}>Diagnostico electrico</h5>
-                      </div>
-                      <div className="col-4" style={{height:'50px'}}>
-                        <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px', paddingTop:'10px', borderRadius:'20px'}}>
-                          <span>3000$ {' '}</span>
-                          <FontAwesomeIcon icon={faPlusCircle} color='green'/>
-                        </h6>
-                      </div>
-                      <hr style={{marginTop:'-8px'}}/>
-                    </div>
-                    <Card.Body>
-                      <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
-                        <li>Bombillos </li>
-                        <li>Tablero </li>
-                        <li>Alarma </li>
-                        <li>Mensajes de falla </li>
-                        </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-              </div>
-              <div className="row mt-2 mb-3">
-              <div className="model-card">
-                  <Card style={{width:'100%'}}>
-                    <div className="row">
-                      <div className="col-8">
-                        <h5 align="left" style={{ textTransform :'uppercase'}}>Diagnostico sistema de carga</h5>
-                      </div>
-                      <div className="col-4" style={{height:'50px'}}>
-                        <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px', paddingTop:'10px', borderRadius:'20px'}}>
-                          <span>3000$ {' '}</span>
-                          <FontAwesomeIcon icon={faPlusCircle} color='green'/>
-                        </h6>
-                      </div>
-                      <hr style={{marginTop:'-8px'}}/>
-                    </div>
-                    <Card.Body>
-                      <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
-                        <li>Regulador </li>
-                        <li>Bobinas </li>
-                        <li>Estator </li>
-                        </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-              </div>
-              <div className="row mt-2 mb-3">
-              <div className="model-card">
-                  <Card style={{width:'100%'}}>
-                    <div className="row">
-                      <div className="col-8">
-                        <h5 align="left" style={{ textTransform :'uppercase'}}>Diagnostico de sensores</h5>
-                      </div>
-                      <div className="col-4" style={{height:'50px'}}>
-                        <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px', paddingTop:'10px', borderRadius:'20px'}}>
-                          <span>3000$ {' '}</span>
-                          <FontAwesomeIcon icon={faPlusCircle} color='green'/>
-                        </h6>
-                      </div>
-                      <hr style={{marginTop:'-8px'}}/>
-                    </div>
-                    <Card.Body>
-                      <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
-                        <li>Diagnostico de sensores </li>
-                        <li>Sensores </li>
-                        </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-              </div>
-            </Modal.Body>
-        </Modal>
+        <ModalTemplate
+          headerContent = "Diagnósticos En el sistema eléctrico"
+          onEngineModal = { this.state.onElectronicModal }
+          onEngineModalClose = { this.onElectroicModalClose }
+          onEngineBack = {this.onElectronicBack}
+          data = {[
+            {
+              smallHeader : 'Diagnostico del sistema de inyeccion',
+              price : 3000,
+              miniServices : ['Inyectores']
+            },
+            {
+              smallHeader:'Diagnostico electrico',
+              price : 2000,
+              miniServices : ['Bombillos', 'Tablero', 'Alarma', 'Mensajes de falla']
+            },
+            {
+              smallHeader:'Diagnostico sistema de carga',
+              price : 1000,
+              miniServices : ['Regulador', 'Bobinas', 'Estator']
+            },
+            {
+              smallHeader:'Diagnostico de sensores',
+              price : 1000,
+              miniServices : ['Diagnostico de sensores', 'Sensores']
+            }
+          ]}
+        />
         {/* onLiquidLeak modal */}
-        <Modal
-          show={this.state.onLiquidLeakModal}
-          onHide={this.onLiquidLeakModalClose}
-          backdrop="static"
-          keyboard={false}
-        >
-          <Modal.Header closeButton style={{background:'rgb(179,226,1)', textTransform :'uppercase'}}>
-            <Modal.Title style={{fontSize:'18px'}}><FontAwesomeIcon icon={faAngleLeft} onClick={this.onLiquidLeakBack}/>{' '}Diagnósticos En los liquidos / fugas</Modal.Title>
-          </Modal.Header>
-            <Modal.Body>
-              <div className="row mt-2 mb-3">
-                <div className="model-card">
-                  <Card style={{width:'100%'}}>
-                    <div className="row">
-                      <div className="col-8">
-                        <h5 align="left" style={{ textTransform :'uppercase'}}>Diagnostico perdida de refrigerante</h5>
-                      </div>
-                      <div className="col-4" style={{height:'50px'}}>
-                        <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px', paddingTop:'10px', borderRadius:'20px'}}>
-                          <span>3000$ {' '}</span>
-                          <FontAwesomeIcon icon={faPlusCircle} color='green'/>
-                        </h6>
-                      </div>
-                      <hr style={{marginTop:'-8px'}}/>
-                    </div>
-                    <Card.Body>
-                      <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
-                        <li>Fuga refrigerante</li>
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-              </div>
-              <div className="row mt-2 mb-3">
-              <div className="model-card">
-                  <Card style={{width:'100%'}}>
-                    <div className="row">
-                      <div className="col-8">
-                        <h5 align="left" style={{ textTransform :'uppercase'}}> Diagnostico de fugas</h5>
-                      </div>
-                      <div className="col-4" style={{height:'50px'}}>
-                        <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px', paddingTop:'10px', borderRadius:'20px'}}>
-                          <span>3000$ {' '}</span>
-                          <FontAwesomeIcon icon={faPlusCircle} color='green'/>
-                        </h6>
-                      </div>
-                      <hr style={{marginTop:'-8px'}}/>
-                    </div>
-                    <Card.Body>
-                      <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
-                        <li>Fuga de aceite </li>
-                        <li>Fuga de liquidos de frenos </li>
-                        </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-              </div>
-              <div className="row mt-2 mb-3">
-              <div className="model-card">
-                  <Card style={{width:'100%'}}>
-                    <div className="row">
-                      <div className="col-8">
-                        <h5 align="left" style={{ textTransform :'uppercase'}}>Diagnostico de bomba de gasolina</h5>
-                      </div>
-                      <div className="col-4" style={{height:'50px'}}>
-                        <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px', paddingTop:'10px', borderRadius:'20px'}}>
-                          <span>3000$ {' '}</span>
-                          <FontAwesomeIcon icon={faPlusCircle} color='green'/>
-                        </h6>
-                      </div>
-                      <hr style={{marginTop:'-8px'}}/>
-                    </div>
-                    <Card.Body>
-                      <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
-                        <li>Bomba de aceite </li>
-                        </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-              </div>
-            </Modal.Body>
-        </Modal>
+        <ModalTemplate
+          headerContent = "Diagnósticos En los liquidos/fugas"
+          onEngineModal = { this.state.onLiquidLeakModal }
+          onEngineModalClose = { this.onLiquidLeakModalClose }
+          onEngineBack = {this.onLiquidLeakBack}
+          data = {[
+            {
+              smallHeader : 'Diagnostico perdida de refrigerante',
+              price : 2800,
+              miniServices : ['Fuga refrigerante']
+            },
+            {
+              smallHeader:'Diagnostico de fugas',
+              price : 1200,
+              miniServices : ['Fuga de aceite', 'Fuga de liquidos de frenos']
+            },
+            {
+              smallHeader:'Diagnostico de bomba de gasolina',
+              price : 1200,
+              miniServices : ['Bomba de aceite']
+            }
+          ]}
+        />
         {/* onWitnessesModal */}
-        <Modal
-          show={this.state.onWitnessesModal}
-          onHide={this.onWitnessesModalClose}
-          backdrop="static"
-          keyboard={false}
-        >
-          <Modal.Header closeButton style={{background:'rgb(179,226,1)', textTransform :'uppercase'}}>
-            <Modal.Title style={{fontSize:'18px'}}><FontAwesomeIcon icon={faAngleLeft} onClick={this.onWitnessesBack}/>{' '}Diagnósticos En los testigos</Modal.Title>
-          </Modal.Header>
-            <Modal.Body>
-              <div className="row mt-2 mb-3">
-                <div className="model-card">
-                  <Card style={{width:'100%'}}>
-                    <div className="row">
-                      <div className="col-8">
-                        <h5 align="left" style={{ textTransform :'uppercase'}}>Diagnostico testigo de motor</h5>
-                      </div>
-                      <div className="col-4" style={{height:'50px'}}>
-                        <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px', paddingTop:'10px', borderRadius:'20px'}}>
-                          <span>3000$ {' '}</span>
-                          <FontAwesomeIcon icon={faPlusCircle} color='green'/>
-                        </h6>
-                      </div>
-                      <hr style={{marginTop:'-8px'}}/>
-                    </div>
-                    <Card.Body>
-                      <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
-                        <li>Motor</li>
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-              </div>
-              <div className="row mt-2 mb-3">
-              <div className="model-card">
-                  <Card style={{width:'100%'}}>
-                    <div className="row">
-                      <div className="col-8">
-                        <h5 align="left" style={{ textTransform :'uppercase'}}> Diagnostico testigo de temperatura</h5>
-                      </div>
-                      <div className="col-4" style={{height:'50px'}}>
-                        <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px', paddingTop:'10px', borderRadius:'20px'}}>
-                          <span>3000$ {' '}</span>
-                          <FontAwesomeIcon icon={faPlusCircle} color='green'/>
-                        </h6>
-                      </div>
-                      <hr style={{marginTop:'-8px'}}/>
-                    </div>
-                    <Card.Body>
-                      <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
-                        <li>Temperatura</li>
-                        </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-              </div>
-              <div className="row mt-2 mb-3">
-              <div className="model-card">
-                  <Card style={{width:'100%'}}>
-                    <div className="row">
-                      <div className="col-8">
-                        <h5 align="left" style={{ textTransform :'uppercase'}}>Diagnostico testigo de freno, abs o control de traccion</h5>
-                      </div>
-                      <div className="col-4" style={{height:'50px'}}>
-                        <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px', paddingTop:'10px', borderRadius:'20px'}}>
-                          <span>3000$ {' '}</span>
-                          <FontAwesomeIcon icon={faPlusCircle} color='green'/>
-                        </h6>
-                      </div>
-                      <hr style={{marginTop:'-8px'}}/>
-                    </div>
-                    <Card.Body>
-                      <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
-                        <li>Freno</li>
-                        <li>ABS</li>
-                        <li>Traccion</li>
-                        </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-              </div>
-            </Modal.Body>
-        </Modal>
+        <ModalTemplate
+          headerContent = "Diagnósticos En los testigos"
+          onEngineModal = { this.state.onWitnessesModal }
+          onEngineModalClose = { this.onWitnessesModalClose }
+          onEngineBack = {this.onWitnessesBack}
+          data = {[
+            {
+              smallHeader : 'Diagnostico testigo de motor',
+              price : 1200,
+              miniServices : ['Motor']
+            },
+            {
+              smallHeader:'Diagnostico testigo de temperatura',
+              price : 1200,
+              miniServices : ['Temperatura']
+            },
+            {
+              smallHeader:'Diagnostico testigo de freno, abs o control de traccion',
+              price : 1200,
+              miniServices : ['Freno', 'ABS', 'Traccion']
+            }
+          ]}
+        />
         {/* onWitnessesModal */}
-        <Modal
-          show={this.state.onBrakeModal}
-          onHide={this.onBrakeModalClose}
-          backdrop="static"
-          keyboard={false}
-        >
-          <Modal.Header closeButton style={{background:'rgb(179,226,1)', textTransform :'uppercase'}}>
-            <Modal.Title style={{fontSize:'18px'}}><FontAwesomeIcon icon={faAngleLeft} onClick={this.onBrakeBack}/>{' '}Diagnósticos En los frenos</Modal.Title>
-          </Modal.Header>
-            <Modal.Body>
-              <div className="row mt-2 mb-3">
-                <div className="model-card">
-                  <Card style={{width:'100%'}}>
-                    <div className="row">
-                      <div className="col-8">
-                        <h5 align="left" style={{ textTransform :'uppercase'}}>Diagnostico de frenado</h5>
-                      </div>
-                      <div className="col-4" style={{height:'50px'}}>
-                        <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px', paddingTop:'10px', borderRadius:'20px'}}>
-                          <span>3000$ {' '}</span>
-                          <FontAwesomeIcon icon={faPlusCircle} color='green'/>
-                        </h6>
-                      </div>
-                      <hr style={{marginTop:'-8px'}}/>
-                    </div>
-                    <Card.Body>
-                      <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
-                        <li>Frenos largos</li>
-                        <li>Ruido/chillido en los frenos</li>
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-              </div>
-              <div className="row mt-2 mb-3">
-              <div className="model-card">
-                  <Card style={{width:'100%'}}>
-                    <div className="row">
-                      <div className="col-8">
-                        <h5 align="left" style={{ textTransform :'uppercase'}}> Diagnostico de fugas</h5>
-                      </div>
-                      <div className="col-4" style={{height:'50px'}}>
-                        <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px', paddingTop:'10px', borderRadius:'20px'}}>
-                          <span>3000$ {' '}</span>
-                          <FontAwesomeIcon icon={faPlusCircle} color='green'/>
-                        </h6>
-                      </div>
-                      <hr style={{marginTop:'-8px'}}/>
-                    </div>
-                    <Card.Body>
-                      <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
-                        <li>Fuga en liquido de frenos</li>
-                        </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-              </div>
-              <div className="row mt-2 mb-3">
-              <div className="model-card">
-                  <Card style={{width:'100%'}}>
-                    <div className="row">
-                      <div className="col-8">
-                        <h5 align="left" style={{ textTransform :'uppercase'}}>Diagnostico testigo de freno, abs o control de traccion</h5>
-                      </div>
-                      <div className="col-4" style={{height:'50px'}}>
-                        <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px', paddingTop:'10px', borderRadius:'20px'}}>
-                          <span>3000$ {' '}</span>
-                          <FontAwesomeIcon icon={faPlusCircle} color='green'/>
-                        </h6>
-                      </div>
-                      <hr style={{marginTop:'-8px'}}/>
-                    </div>
-                    <Card.Body>
-                      <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
-                        <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
-                        <li>Freno</li>
-                        <li>ABS</li>
-                        <li>Traccion</li>
-                        </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-              </div>
-            </Modal.Body>
-        </Modal>
+        <ModalTemplate
+          headerContent = "Diagnósticos En los frenos"
+          onEngineModal = { this.state.onBrakeModal }
+          onEngineModalClose = { this.onBrakeModalClose }
+          onEngineBack = {this.onBrakeBack}
+          data = {[
+            {
+              smallHeader : 'Diagnostico de frenado',
+              price : 1200,
+              miniServices : ['Frenos largos', 'Ruido/chillido en los frenos']
+            },
+            {
+              smallHeader:'Diagnostico de fugas',
+              price : 1200,
+              miniServices : ['Fuga en liquido de frenos']
+            }
+          ]}
+        />
         {/* onBrakePumpModal */}
         <Modal
           show={this.state.onBrakePumpModal}
