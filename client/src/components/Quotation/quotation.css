@@ -251,6 +251,9 @@
   max-height: 200px;
   margin: 0px;
 }
+.quotation .services .recommand .card-header .close{
+  margin-top: 'auto';
+}
 .quotation .services .recommand .card-body, .quotation .services .mechine .card-body{
   padding:0;
   font-size: 14px;
@@ -382,10 +385,6 @@
   padding-right:0px!important;
 }
 
-/* .quotation .recommand.clone .card{
-  min-height: 140px!important;
-} */
-
 .quotation .bucket{
   position:fixed;
   bottom:0;
@@ -427,7 +426,9 @@
   border-radius: 10px;
   padding:10px  
 }
-
+.model-card hr{
+  border-top: 2px solid rgb(174, 174, 174)!important;
+}
 /* sendData */
 .quotation .sendData div, .quotation .sendData input{
   font-family: myfont2!important;

@@ -143,8 +143,8 @@ class SelectService extends Component {
             backdrop="static"
             keyboard={false}
          > 
-          <Modal.Header closeButton style={{background:'rgb(179,226,1)'}}>
-            <Modal.Title style={{fontSize:'20px'}}>¿Donde se presentan las fallas?</Modal.Title>
+          <Modal.Header closeButton style={{background:'rgb(179,226,1)', textTransform :'uppercase'}}>
+            <Modal.Title style={{fontSize:'18px'}}>¿Donde se presentan las fallas?</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <div className="row mt-2 mb-3" onClick={this.onEngine}>
@@ -216,8 +216,8 @@ class SelectService extends Component {
           backdrop="static"
           keyboard={false}
         >
-          <Modal.Header closeButton style={{background:'rgb(179,226,1)'}}>
-            <Modal.Title style={{fontSize:'20px'}}><FontAwesomeIcon icon={faAngleLeft} onClick={this.onEngineBack}/>{' '}Diagnósticos En el motor</Modal.Title>
+          <Modal.Header closeButton style={{background:'rgb(179,226,1)', textTransform :'uppercase'}}>
+            <Modal.Title style={{fontSize:'18px'}}><FontAwesomeIcon icon={faAngleLeft} onClick={this.onEngineBack}/>{' '}Diagnósticos En el motor</Modal.Title>
           </Modal.Header>
             <Modal.Body>
               <div className="row mt-2 mb-3">
@@ -233,7 +233,7 @@ class SelectService extends Component {
                           <FontAwesomeIcon icon={faPlusCircle} color='green'/>
                         </h6>
                       </div>
-                      <hr style={{marginTop:'-10px'}}/>
+                      <hr style={{marginTop:'-8px'}}/>
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
@@ -260,7 +260,7 @@ class SelectService extends Component {
                           <FontAwesomeIcon icon={faPlusCircle} color='green'/>
                         </h6>
                       </div>
-                      <hr style={{marginTop:'-10px'}}/>
+                      <hr style={{marginTop:'-8px'}}/>
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
@@ -280,8 +280,8 @@ class SelectService extends Component {
           backdrop="static"
           keyboard={false}
         >
-          <Modal.Header closeButton style={{background:'rgb(179,226,1)'}}>
-            <Modal.Title style={{fontSize:'20px'}}><FontAwesomeIcon icon={faAngleLeft} onClick={this.onElectronicBack}/>{' '}Diagnósticos En el sistema eléctrico</Modal.Title>
+          <Modal.Header closeButton style={{background:'rgb(179,226,1)', textTransform :'uppercase'}}>
+            <Modal.Title style={{fontSize:'18px'}}><FontAwesomeIcon icon={faAngleLeft} onClick={this.onElectronicBack}/>{' '}Diagnósticos En el sistema eléctrico</Modal.Title>
           </Modal.Header>
             <Modal.Body>
               <div className="row mt-2 mb-3">
@@ -297,7 +297,7 @@ class SelectService extends Component {
                           <FontAwesomeIcon icon={faPlusCircle} color='green'/>
                         </h6>
                       </div>
-                      <hr style={{marginTop:'-10px'}}/>
+                      <hr style={{marginTop:'-8px'}}/>
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
@@ -321,7 +321,7 @@ class SelectService extends Component {
                           <FontAwesomeIcon icon={faPlusCircle} color='green'/>
                         </h6>
                       </div>
-                      <hr style={{marginTop:'-10px'}}/>
+                      <hr style={{marginTop:'-8px'}}/>
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
@@ -348,7 +348,7 @@ class SelectService extends Component {
                           <FontAwesomeIcon icon={faPlusCircle} color='green'/>
                         </h6>
                       </div>
-                      <hr style={{marginTop:'-10px'}}/>
+                      <hr style={{marginTop:'-8px'}}/>
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
@@ -374,7 +374,7 @@ class SelectService extends Component {
                           <FontAwesomeIcon icon={faPlusCircle} color='green'/>
                         </h6>
                       </div>
-                      <hr style={{marginTop:'-10px'}}/>
+                      <hr style={{marginTop:'-8px'}}/>
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
@@ -395,8 +395,8 @@ class SelectService extends Component {
           backdrop="static"
           keyboard={false}
         >
-          <Modal.Header closeButton style={{background:'rgb(179,226,1)'}}>
-            <Modal.Title style={{fontSize:'20px'}}><FontAwesomeIcon icon={faAngleLeft} onClick={this.onLiquidLeakBack}/>{' '}Diagnósticos En los liquidos / fugas</Modal.Title>
+          <Modal.Header closeButton style={{background:'rgb(179,226,1)', textTransform :'uppercase'}}>
+            <Modal.Title style={{fontSize:'18px'}}><FontAwesomeIcon icon={faAngleLeft} onClick={this.onLiquidLeakBack}/>{' '}Diagnósticos En los liquidos / fugas</Modal.Title>
           </Modal.Header>
             <Modal.Body>
               <div className="row mt-2 mb-3">
@@ -412,7 +412,7 @@ class SelectService extends Component {
                           <FontAwesomeIcon icon={faPlusCircle} color='green'/>
                         </h6>
                       </div>
-                      <hr style={{marginTop:'-10px'}}/>
+                      <hr style={{marginTop:'-8px'}}/>
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
@@ -436,7 +436,7 @@ class SelectService extends Component {
                           <FontAwesomeIcon icon={faPlusCircle} color='green'/>
                         </h6>
                       </div>
-                      <hr style={{marginTop:'-10px'}}/>
+                      <hr style={{marginTop:'-8px'}}/>
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
@@ -461,7 +461,7 @@ class SelectService extends Component {
                           <FontAwesomeIcon icon={faPlusCircle} color='green'/>
                         </h6>
                       </div>
-                      <hr style={{marginTop:'-10px'}}/>
+                      <hr style={{marginTop:'-8px'}}/>
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
@@ -481,8 +481,8 @@ class SelectService extends Component {
           backdrop="static"
           keyboard={false}
         >
-          <Modal.Header closeButton style={{background:'rgb(179,226,1)'}}>
-            <Modal.Title style={{fontSize:'20px'}}><FontAwesomeIcon icon={faAngleLeft} onClick={this.onWitnessesBack}/>{' '}Diagnósticos En los testigos</Modal.Title>
+          <Modal.Header closeButton style={{background:'rgb(179,226,1)', textTransform :'uppercase'}}>
+            <Modal.Title style={{fontSize:'18px'}}><FontAwesomeIcon icon={faAngleLeft} onClick={this.onWitnessesBack}/>{' '}Diagnósticos En los testigos</Modal.Title>
           </Modal.Header>
             <Modal.Body>
               <div className="row mt-2 mb-3">
@@ -498,7 +498,7 @@ class SelectService extends Component {
                           <FontAwesomeIcon icon={faPlusCircle} color='green'/>
                         </h6>
                       </div>
-                      <hr style={{marginTop:'-10px'}}/>
+                      <hr style={{marginTop:'-8px'}}/>
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
@@ -522,7 +522,7 @@ class SelectService extends Component {
                           <FontAwesomeIcon icon={faPlusCircle} color='green'/>
                         </h6>
                       </div>
-                      <hr style={{marginTop:'-10px'}}/>
+                      <hr style={{marginTop:'-8px'}}/>
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
@@ -546,7 +546,7 @@ class SelectService extends Component {
                           <FontAwesomeIcon icon={faPlusCircle} color='green'/>
                         </h6>
                       </div>
-                      <hr style={{marginTop:'-10px'}}/>
+                      <hr style={{marginTop:'-8px'}}/>
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
@@ -568,8 +568,8 @@ class SelectService extends Component {
           backdrop="static"
           keyboard={false}
         >
-          <Modal.Header closeButton style={{background:'rgb(179,226,1)'}}>
-            <Modal.Title style={{fontSize:'20px'}}><FontAwesomeIcon icon={faAngleLeft} onClick={this.onBrakeBack}/>{' '}Diagnósticos En los frenos</Modal.Title>
+          <Modal.Header closeButton style={{background:'rgb(179,226,1)', textTransform :'uppercase'}}>
+            <Modal.Title style={{fontSize:'18px'}}><FontAwesomeIcon icon={faAngleLeft} onClick={this.onBrakeBack}/>{' '}Diagnósticos En los frenos</Modal.Title>
           </Modal.Header>
             <Modal.Body>
               <div className="row mt-2 mb-3">
@@ -585,7 +585,7 @@ class SelectService extends Component {
                           <FontAwesomeIcon icon={faPlusCircle} color='green'/>
                         </h6>
                       </div>
-                      <hr style={{marginTop:'-10px'}}/>
+                      <hr style={{marginTop:'-8px'}}/>
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
@@ -610,7 +610,7 @@ class SelectService extends Component {
                           <FontAwesomeIcon icon={faPlusCircle} color='green'/>
                         </h6>
                       </div>
-                      <hr style={{marginTop:'-10px'}}/>
+                      <hr style={{marginTop:'-8px'}}/>
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
@@ -634,7 +634,7 @@ class SelectService extends Component {
                           <FontAwesomeIcon icon={faPlusCircle} color='green'/>
                         </h6>
                       </div>
-                      <hr style={{marginTop:'-10px'}}/>
+                      <hr style={{marginTop:'-8px'}}/>
                     </div>
                     <Card.Body>
                       <Card.Text style={{fontSize:'14px', marginTop:'-15px'}}>
@@ -656,8 +656,8 @@ class SelectService extends Component {
           backdrop="static"
           keyboard={false}
         >
-          <Modal.Header closeButton style={{background:'rgb(179,226,1)'}}>
-            <Modal.Title style={{fontSize:'20px'}}><FontAwesomeIcon icon={faAngleLeft} onClick={this.onBrakePumpBack}/>{' '}Diagnósticos En los frenos</Modal.Title>
+          <Modal.Header closeButton style={{background:'rgb(179,226,1)', textTransform :'uppercase'}}>
+            <Modal.Title style={{fontSize:'18px'}}><FontAwesomeIcon icon={faAngleLeft} onClick={this.onBrakePumpBack}/>{' '}Diagnósticos En los frenos</Modal.Title>
           </Modal.Header>
             <Modal.Body>
               
@@ -670,8 +670,8 @@ class SelectService extends Component {
           backdrop="static"
           keyboard={false}
         >
-          <Modal.Header closeButton style={{background:'rgb(179,226,1)'}}>
-            <Modal.Title style={{fontSize:'20px'}}><FontAwesomeIcon icon={faAngleLeft} onClick={this.onTireSuspensionBack}/>{' '}Diagnósticos En los frenos</Modal.Title>
+          <Modal.Header closeButton style={{background:'rgb(179,226,1)', textTransform :'uppercase'}}>
+            <Modal.Title style={{fontSize:'18px'}}><FontAwesomeIcon icon={faAngleLeft} onClick={this.onTireSuspensionBack}/>{' '}Diagnósticos En los frenos</Modal.Title>
           </Modal.Header>
             <Modal.Body>
               
