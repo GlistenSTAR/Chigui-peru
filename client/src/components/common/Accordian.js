@@ -66,7 +66,7 @@ const Accordian = ({
 									style={{fontSize:'14px'}}
 								>
 									{title}{' '}
-									<span className="mt-5 pt-5" style={{fontSize:'22px', color:'#007bff'}}>{' '}{subtitle}</span>
+									<span className="mt-5 pt-5" style={{fontSize:'18px', color:'#007bff'}}>{' '}{subtitle}</span>
 								</Typography>
 							</AccordionSummary>
 
