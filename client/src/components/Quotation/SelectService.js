@@ -1,9 +1,12 @@
 import React, { Component } from "react"; 
 import InputGroup from "../common/InputGroup";
+import PropTypes from 'prop-types';
 import {Card, Modal} from 'react-bootstrap'
 import ReviewCarsel from './ReviewCarsel';
+import { connect } from 'react-redux';
 import RecommandedCarsel from './RecommandedCarsel';
 import ModalTemplate from '../common/Modal';
+import { getServices } from '../../actions/seviceActions';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight, faShoppingCart, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
@@ -14,18 +17,13 @@ class SelectService extends Component {
     this.state ={
       search : '',
       price : 1,
-      count : 0,
-      modal1 : false,
-      onEngineModal : false,
-      onElectronicModal : false,
-      onLiquidLeakModal: false,
-      onWitnessesModal: false,
-      onBrakeModal: false,
-      onBrakePumpModal: false,
-      onTireSuspensionModal: false
+      count : 0
     }
   }
 
+  componentDidMount(){
+    this.props.getServices();
+  }
   onChange = (e) =>{
     console.log(e); 
   }
@@ -35,10 +33,6 @@ class SelectService extends Component {
   handleClose1 = () =>{
     this.setState({modal1:false});
   }
-  onEngine = () => {
-    this.setState({modal1:false});
-    this.setState({ onEngineModal : true });
-  }
   onEngineModalClose = () =>{
     this.setState({ onEngineModal : false });
   }
@@ -46,20 +40,12 @@ class SelectService extends Component {
     this.setState({modal1:true});
     this.setState({ onEngineModal : false });
   }
-  onElectronic = () => {
-    this.setState({modal1:false});
-    this.setState({onElectronicModal: true});
-  }  
   onElectroicModalClose = () =>{
     this.setState({onElectronicModal: false});
   }
   onElectronicBack = () =>{
     this.setState({modal1:true});
     this.setState({ onElectronicModal : false });
-  }
-  onLiquidLeak = () =>{
-    this.setState({modal1:false});
-    this.setState({onLiquidLeakModal: true});
   }
   onLiquidLeakModalClose=()=>{
     this.setState({onLiquidLeakModal: false});
@@ -68,20 +54,12 @@ class SelectService extends Component {
     this.setState({modal1:true});
     this.setState({ onLiquidLeakModal : false });
   }
-  onWitnesses = () => {
-    this.setState({modal1:false});
-    this.setState({onWitnessesModal: true});
-  }
   onWitnessesModalClose = () => {
     this.setState({onWitnessesModal: false});
   }
   onWitnessesBack = () =>{
     this.setState({modal1:true});
     this.setState({ onWitnessesModal : false });
-  }
-  onBrake = () => {
-    this.setState({modal1:false});
-    this.setState({onBrakeModal: true});
   }
   onBrakeModalClose = () => {
     this.setState({onBrakeModal: false});
@@ -90,20 +68,12 @@ class SelectService extends Component {
     this.setState({modal1:true});
     this.setState({ onBrakeModal : false });
   }
-  onBrakePump = () => {
-    this.setState({modal1:false});
-    this.setState({onBrakePumpModal: true});
-  }
   onBrakePumpClose = () => {
     this.setState({onBrakePumpModal: false});
   }
   onBrakePumpBack = () =>{
     this.setState({modal1:true});
     this.setState({ onBrakePumpModal : false });
-  }
-  onTireSuspension =() => {
-    this.setState({modal1:false});
-    this.setState({onTireSuspensionModal: true});
   }
   onTireSuspensionClose = () => {
     this.setState({onTireSuspensionModal: false});
@@ -114,6 +84,21 @@ class SelectService extends Component {
   }
 
   render() {
+    const {serivces} = this.props;
+    let TotalServices = {};
+    if(serivces.services.length > 0){
+      TotalServices = serivces.services.map((item, index)=>(
+        <div className="row mt-2 mb-3" onClick={()=>{this.setState(item.clickEventData, ...this.state)}} key={index}>
+          <div className="col-md-9 col-9">
+            {item.serviceName}
+          </div>
+          <div className="col-md-3 col-3" align="right">
+            <FontAwesomeIcon icon={faAngleRight}/>
+          </div>
+        </div>
+      ));
+    }
+
     return (
      <div className="services container" align="center">
        <div className="row" align="center">
@@ -148,15 +133,16 @@ class SelectService extends Component {
             <Modal.Title style={{fontSize:'18px'}}>¿Donde se presentan las fallas?</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <div className="row mt-2 mb-3" onClick={this.onEngine}>
+            {TotalServices}
+            {/* <div className="row mt-2 mb-3" onClick={this.onEngine}>
               <div className="col-md-9 col-9">
                 En el motor
               </div>
               <div className="col-md-3 col-3" align="right">
                 <FontAwesomeIcon icon={faAngleRight}/>
               </div>
-            </div>
-            <div className="row mt-2 mb-3" onClick={this.onElectronic}>
+            </div> */}
+            {/* <div className="row mt-2 mb-3" onClick={this.onElectronic}>
               <div className="col-md-9 col-9">
                 En el sistema electrico
               </div>
@@ -203,7 +189,7 @@ class SelectService extends Component {
               <div className="col-md-3 col-3" align="right">
                 <FontAwesomeIcon icon={faAngleRight}/>
               </div>
-            </div>
+            </div> */}
           </Modal.Body>
           <Modal.Footer align="center">
             <button className="btn btn-default">¿No encuentras las fallas que necesitas?</button>
@@ -215,17 +201,17 @@ class SelectService extends Component {
           onEngineModal = { this.state.onEngineModal }
           onEngineModalClose = { this.onEngineModalClose }
           onEngineBack = {this.onEngineBack}
-          data = {[
-            {
-              smallHeader : 'Diagnostico fallo de motor',
-              price : 3000,
-              miniServices : ['Aceleracion y desaceleracion','Apaga repentinamente', 'Sale humo', 'Pierde fuerza']
-            },
-            {
-              smallHeader:'Diagnostico encendido',
-              price : 2000,
-              miniServices : ['No enciende']
-            }
+            data = {[
+              {
+                smallHeader : 'Diagnostico fallo de motor',
+                price : 3000,
+                miniServices : ['Aceleracion y desaceleracion','Apaga repentinamente', 'Sale humo', 'Pierde fuerza']
+              },
+              {
+                smallHeader:'Diagnostico encendido',
+                price : 2000,
+                miniServices : ['No enciende']
+              }
           ]}
         />
         {/* onElectronic Modal */}
@@ -484,4 +470,15 @@ class SelectService extends Component {
   }
 }
 
-export default SelectService;
+SelectService.propTypes = {
+  getServices: PropTypes.func.isRequired,
+  services: PropTypes.object
+};
+
+const mapStateToProps = state => ({
+  serivces: state.serivce,
+});
+
+export default connect(mapStateToProps, { getServices })(
+  SelectService
+);

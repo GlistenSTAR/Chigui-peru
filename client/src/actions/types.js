@@ -11,4 +11,5 @@ export const GET_CARS = 'GET_CARS';
 export const GET_POST = 'GET_POST';
 export const ADD_POST = 'ADD_POST';
 export const DELETE_POST = 'DELETE_POST';
+export const GET_SERVICES = 'GET_SERVICES';
 
