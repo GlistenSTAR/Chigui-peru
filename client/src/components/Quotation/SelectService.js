@@ -33,70 +33,93 @@ class SelectService extends Component {
   handleClose1 = () =>{
     this.setState({modal1:false});
   }
-  onEngineModalClose = () =>{
-    this.setState({ onEngineModal : false });
-  }
-  onEngineBack = () =>{
-    this.setState({modal1:true});
-    this.setState({ onEngineModal : false });
-  }
-  onElectroicModalClose = () =>{
-    this.setState({onElectronicModal: false});
-  }
-  onElectronicBack = () =>{
-    this.setState({modal1:true});
-    this.setState({ onElectronicModal : false });
-  }
-  onLiquidLeakModalClose=()=>{
-    this.setState({onLiquidLeakModal: false});
-  }
-  onLiquidLeakBack = () =>{
-    this.setState({modal1:true});
-    this.setState({ onLiquidLeakModal : false });
-  }
-  onWitnessesModalClose = () => {
-    this.setState({onWitnessesModal: false});
-  }
-  onWitnessesBack = () =>{
-    this.setState({modal1:true});
-    this.setState({ onWitnessesModal : false });
-  }
-  onBrakeModalClose = () => {
-    this.setState({onBrakeModal: false});
-  }
-  onBrakeBack = () =>{
-    this.setState({modal1:true});
-    this.setState({ onBrakeModal : false });
-  }
-  onBrakePumpClose = () => {
-    this.setState({onBrakePumpModal: false});
-  }
-  onBrakePumpBack = () =>{
-    this.setState({modal1:true});
-    this.setState({ onBrakePumpModal : false });
-  }
-  onTireSuspensionClose = () => {
-    this.setState({onTireSuspensionModal: false});
-  }
-  onTireSuspensionBack = () =>{
-    this.setState({modal1:true});
-    this.setState({onTireSuspensionModal: false });
-  }
+  // onEngineModalClose = () =>{
+  //   this.setState({ onEngineModal : false });
+  // }
+  // onEngineBack = () =>{
+  //   this.setState({modal1:true});
+  //   this.setState({ onEngineModal : false });
+  // }
+  // onElectroicModalClose = () =>{
+  //   this.setState({onElectronicModal: false});
+  // }
+  // onElectronicBack = () =>{
+  //   this.setState({modal1:true});
+  //   this.setState({ onElectronicModal : false });
+  // }
+  // onLiquidLeakModalClose=()=>{
+  //   this.setState({onLiquidLeakModal: false});
+  // }
+  // onLiquidLeakBack = () =>{
+  //   this.setState({modal1:true});
+  //   this.setState({ onLiquidLeakModal : false });
+  // }
+  // onWitnessesModalClose = () => {
+  //   this.setState({onWitnessesModal: false});
+  // }
+  // onWitnessesBack = () =>{
+  //   this.setState({modal1:true});
+  //   this.setState({ onWitnessesModal : false });
+  // }
+  // onBrakeModalClose = () => {
+  //   this.setState({onBrakeModal: false});
+  // }
+  // onBrakeBack = () =>{
+  //   this.setState({modal1:true});
+  //   this.setState({ onBrakeModal : false });
+  // }
+  // onBrakePumpClose = () => {
+  //   this.setState({onBrakePumpModal: false});
+  // }
+  // onBrakePumpBack = () =>{
+  //   this.setState({modal1:true});
+  //   this.setState({ onBrakePumpModal : false });
+  // }
+  // onTireSuspensionClose = () => {
+  //   this.setState({onTireSuspensionModal: false});
+  // }
+  // onTireSuspensionBack = () =>{
+  //   this.setState({modal1:true});
+  //   this.setState({onTireSuspensionModal: false });
+  // }
 
   render() {
     const {serivces} = this.props;
-    let TotalServices = {};
+    let TotalServices, subContent;
     if(serivces.services.length > 0){
-      TotalServices = serivces.services.map((item, index)=>(
-        <div className="row mt-2 mb-3" onClick={()=>{this.setState(item.clickEventData, ...this.state)}} key={index}>
-          <div className="col-md-9 col-9">
-            {item.serviceName}
+      TotalServices = serivces.services.map((item, index)=>{
+        return(
+          <div className="row mt-2 mb-3" onClick={()=>{this.setState(item.clickEventData, ...this.state)}} key={index}>
+            <div className="col-md-9 col-9">
+              {item.serviceName}
+            </div>
+            <div className="col-md-3 col-3" align="right">
+              <FontAwesomeIcon icon={faAngleRight}/>
+            </div>
           </div>
-          <div className="col-md-3 col-3" align="right">
-            <FontAwesomeIcon icon={faAngleRight}/>
-          </div>
-        </div>
-      ));
+        );
+      });
+      // subContent = serivces.services.map((item1, index)=>(
+      //   <ModalTemplate
+      //     headerContent = {item1.serviceName}
+      //     onEngineModal = { this.state.onEngineModal }
+      //     onEngineModalClose = { ()=>{this.setState(item1.onEngineModalClose, ...this.state)} }
+      //     onEngineBack = {this.onEngineBack}
+      //     key={index}
+      //       data = {[
+      //         {
+      //           smallHeader : 'Diagnostico fallo de motor',
+      //           price : 3000,
+      //           miniServices : ['Aceleracion y desaceleracion','Apaga repentinamente', 'Sale humo', 'Pierde fuerza']
+      //         },
+      //         {
+      //           smallHeader:'Diagnostico encendido',
+      //           price : 2000,
+      //           miniServices : ['No enciende']
+      //         }
+      //     ]}
+      //   />
+      // ));
     }
 
     return (
@@ -109,6 +132,7 @@ class SelectService extends Component {
           value={this.state.search}
           placeholder="Búsqueda..."
         />
+
         <div className="horizal-card row"  onClick={this.handleShow1}>
           <div className="col-md-3 col-sm-3 col-3 mt-auto mb-auto" align="right" >
             <img className="img-rounded" alt="" src={require('../../img/icons/diagnostico.png')} style={{visibility: 'visible', border: '2px solid rgb(179, 226, 1)', borderRadius: '50%'}} />
@@ -134,68 +158,14 @@ class SelectService extends Component {
           </Modal.Header>
           <Modal.Body>
             {TotalServices}
-            {/* <div className="row mt-2 mb-3" onClick={this.onEngine}>
-              <div className="col-md-9 col-9">
-                En el motor
-              </div>
-              <div className="col-md-3 col-3" align="right">
-                <FontAwesomeIcon icon={faAngleRight}/>
-              </div>
-            </div> */}
-            {/* <div className="row mt-2 mb-3" onClick={this.onElectronic}>
-              <div className="col-md-9 col-9">
-                En el sistema electrico
-              </div>
-              <div className="col-md-3 col-3" align="right">
-                <FontAwesomeIcon icon={faAngleRight}/>
-              </div>
-            </div>
-            <div className="row mt-2 mb-3" onClick={this.onLiquidLeak}>
-              <div className="col-md-9 col-9">
-                Liquidos/fugas
-              </div>
-              <div className="col-md-3 col-3" align="right">
-                <FontAwesomeIcon icon={faAngleRight}/>
-              </div>
-            </div>
-            <div className="row mt-2 mb-3" onClick={this.onWitnesses}>
-              <div className="col-md-9 col-9">
-                Testigos
-              </div>
-              <div className="col-md-3 col-3" align="right">
-                <FontAwesomeIcon icon={faAngleRight}/>
-              </div>
-            </div>
-            <div className="row mt-2 mb-3" onClick={this.onBrake}>
-              <div className="col-md-9 col-9">
-                En los frenos 
-              </div>
-              <div className="col-md-3 col-3" align="right">
-                <FontAwesomeIcon icon={faAngleRight}/>
-              </div>
-            </div>
-            <div className="row mt-2 mb-3" onClick={this.onBrakePump}>
-              <div className="col-md-9 col-9">
-                En las bombas de freno
-              </div>
-              <div className="col-md-3 col-3" align="right">
-                <FontAwesomeIcon icon={faAngleRight}/>
-              </div>
-            </div>
-            <div className="row mt-2 mb-3" onClick={this.onTireSuspension}>
-              <div className="col-md-9 col-9">
-                En las llantas y suspension
-              </div>
-              <div className="col-md-3 col-3" align="right">
-                <FontAwesomeIcon icon={faAngleRight}/>
-              </div>
-            </div> */}
           </Modal.Body>
           <Modal.Footer align="center">
             <button className="btn btn-default">¿No encuentras las fallas que necesitas?</button>
           </Modal.Footer>
         </Modal>
-        {/* engine modal area */}
+
+        {/* {subContent} */}
+
         <ModalTemplate
           headerContent = "Diagnósticos En el motor"
           onEngineModal = { this.state.onEngineModal }

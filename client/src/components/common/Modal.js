@@ -25,7 +25,7 @@ class ModalTemplate extends Component {
             <Card style={{width:'100%'}}>
               <div className="row">
                 <div className="col-8" style={{ marginTop:'auto', marginBottom:'auto'}}>
-                  <h5 align="left" style={{ textTransform :'uppercase', fontSize:'14px'}}>{item.smallHeader}</h5>
+                  <h5 align="left" style={{ textTransform :'uppercase', fontSize:'14px'}}>Diagnósticos {item.smallHeader}</h5>
                 </div>
                 <div className="col-4" style={{height:'50px'}}>
                   <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px', paddingTop:'10px', borderRadius:'20px'}}>
