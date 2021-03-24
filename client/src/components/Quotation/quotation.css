@@ -9,17 +9,12 @@
   src: url('../../fonts/PFDinDisplayPro-Light_35378.ttf');
 }
 .quotation .navbar {
-    display: flex;
-    top: 0;
-    align-items: center;
-    color: white;
-    font-weight: 300;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    width: 60%;
+    width: 50%;
+    height: 45px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 0;
 }
 .quotation .selecttag{
   vertical-align: top;
@@ -210,12 +205,12 @@
 
 /* services */
 .quotation .services .row:first-child{
-  width: 80%;
+  width: 60%;
 }
 
 .quotation .services img{
-  width: 40px;
-  height: 40px;
+  width: 65px;
+  height: 65px;
 }
 
 .quotation .services input,.quotation .services .input-group-append{
@@ -261,6 +256,7 @@
 }
 .quotation .services .recommand .card-body p, .quotation .services .mechine .card-body p{
   line-height: 1;
+  font-size: 16px;
 }
 .quotation .services img{
   margin-left: auto;
@@ -268,7 +264,10 @@
 }
 .quotation .services .recommand .card, .quotation .electronic .card{
   border-radius: 10px;
-  min-height: 80px;
+  min-width: 120px;
+  max-width: 180px;
+  min-height: 100px;
+  max-height: 100px;
 }
 
 /* select data */
@@ -324,7 +323,7 @@
     width: 100%;
   }
   .quotation .services .horizal-card{
-    width: 100%;
+    width: 60%;
     font-size: 15px;
   }
   .quotation .services .recommand{
@@ -441,4 +440,14 @@
 .quotation .sendData textarea{
   border-radius: 20px;
   border: 1px solid black
+}
+
+/* imagecarsel width control */
+/* .quotation .MvEJg{
+  width: 110px!important;
+} */
+
+.quotation .bxivhb{
+  width: 110px!important;
+  margin-right: 20px;
 }

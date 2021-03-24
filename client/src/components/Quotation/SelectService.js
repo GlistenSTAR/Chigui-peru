@@ -33,55 +33,55 @@ class SelectService extends Component {
   handleClose1 = () =>{
     this.setState({modal1:false});
   }
-  // onEngineModalClose = () =>{
-  //   this.setState({ onEngineModal : false });
-  // }
-  // onEngineBack = () =>{
-  //   this.setState({modal1:true});
-  //   this.setState({ onEngineModal : false });
-  // }
-  // onElectroicModalClose = () =>{
-  //   this.setState({onElectronicModal: false});
-  // }
-  // onElectronicBack = () =>{
-  //   this.setState({modal1:true});
-  //   this.setState({ onElectronicModal : false });
-  // }
-  // onLiquidLeakModalClose=()=>{
-  //   this.setState({onLiquidLeakModal: false});
-  // }
-  // onLiquidLeakBack = () =>{
-  //   this.setState({modal1:true});
-  //   this.setState({ onLiquidLeakModal : false });
-  // }
-  // onWitnessesModalClose = () => {
-  //   this.setState({onWitnessesModal: false});
-  // }
-  // onWitnessesBack = () =>{
-  //   this.setState({modal1:true});
-  //   this.setState({ onWitnessesModal : false });
-  // }
-  // onBrakeModalClose = () => {
-  //   this.setState({onBrakeModal: false});
-  // }
-  // onBrakeBack = () =>{
-  //   this.setState({modal1:true});
-  //   this.setState({ onBrakeModal : false });
-  // }
-  // onBrakePumpClose = () => {
-  //   this.setState({onBrakePumpModal: false});
-  // }
-  // onBrakePumpBack = () =>{
-  //   this.setState({modal1:true});
-  //   this.setState({ onBrakePumpModal : false });
-  // }
-  // onTireSuspensionClose = () => {
-  //   this.setState({onTireSuspensionModal: false});
-  // }
-  // onTireSuspensionBack = () =>{
-  //   this.setState({modal1:true});
-  //   this.setState({onTireSuspensionModal: false });
-  // }
+  onEngineModalClose = () =>{
+    this.setState({ onEngineModal : false });
+  }
+  onEngineBack = () =>{
+    this.setState({modal1:true});
+    this.setState({ onEngineModal : false });
+  }
+  onElectroicModalClose = () =>{
+    this.setState({onElectronicModal: false});
+  }
+  onElectronicBack = () =>{
+    this.setState({modal1:true});
+    this.setState({ onElectronicModal : false });
+  }
+  onLiquidLeakModalClose=()=>{
+    this.setState({onLiquidLeakModal: false});
+  }
+  onLiquidLeakBack = () =>{
+    this.setState({modal1:true});
+    this.setState({ onLiquidLeakModal : false });
+  }
+  onWitnessesModalClose = () => {
+    this.setState({onWitnessesModal: false});
+  }
+  onWitnessesBack = () =>{
+    this.setState({modal1:true});
+    this.setState({ onWitnessesModal : false });
+  }
+  onBrakeModalClose = () => {
+    this.setState({onBrakeModal: false});
+  }
+  onBrakeBack = () =>{
+    this.setState({modal1:true});
+    this.setState({ onBrakeModal : false });
+  }
+  onBrakePumpClose = () => {
+    this.setState({onBrakePumpModal: false});
+  }
+  onBrakePumpBack = () =>{
+    this.setState({modal1:true});
+    this.setState({ onBrakePumpModal : false });
+  }
+  onTireSuspensionClose = () => {
+    this.setState({onTireSuspensionModal: false});
+  }
+  onTireSuspensionBack = () =>{
+    this.setState({modal1:true});
+    this.setState({onTireSuspensionModal: false });
+  }
 
   render() {
     const {serivces} = this.props;
@@ -135,7 +135,7 @@ class SelectService extends Component {
 
         <div className="horizal-card row"  onClick={this.handleShow1}>
           <div className="col-md-3 col-sm-3 col-3 mt-auto mb-auto" align="right" >
-            <img className="img-rounded" alt="" src={require('../../img/icons/diagnostico.png')} style={{visibility: 'visible', border: '2px solid rgb(179, 226, 1)', borderRadius: '50%'}} />
+            <img className="img-rounded" alt="" src={require('../../img/icons/diagnostico.png')} style={{visibility: 'visible'}} />
           </div>
           <div className="col-md-6 col-sm-6 col-6 text text-default mt-auto mb-auto" >
             <span >Diagnosticar una falla</span><br/>
@@ -310,7 +310,7 @@ class SelectService extends Component {
         </Modal>
         
         <div className="recommand mt-4" align="left">
-          <h6>DESTACADOS</h6><hr/>
+          <h5>DESTACADOS</h5><hr/>
           <div className = "row" style={{background:'#F3F3F3', borderRadius:'10px', padding:'10px'}}>
             <div className="col-md-4 col-4" align="center">
               <Card>
@@ -346,17 +346,17 @@ class SelectService extends Component {
           </div>
           
           <div className="review mt-3">
-            <h6>REVISIONES</h6><hr/>
+            <h5>REVISIONES</h5><hr/>
             <ReviewCarsel/>
           </div>
           
           <div className="review mt-3">
-            <h6>SERVICIOS EXPRESS</h6><hr/>
+            <h5>SERVICIOS EXPRESS</h5><hr/>
             <RecommandedCarsel/>
           </div>
         </div>
         <div className="mechine mt-3" align="center">
-            <h6 align="left">MECANICA</h6><hr/>
+            <h5 align="left">MECANICA</h5><hr/>
             <div className="row" style={{backgroundColor:'#F3F3F3',borderRadius:'10px', fontSize:'13px'}}>
               <div className="col-6 col-md-4">
                 <div className="item row" style={{borderRadius:'20px'}}>
@@ -386,7 +386,7 @@ class SelectService extends Component {
           </div>
 
           <div className="recommand mt-4 clone" align="left">
-            <h6>ELECTRICIDAD</h6><hr/>
+            <h5>ELECTRICIDAD</h5><hr/>
             <div className = "row" style={{background:'#F3F3F3', borderRadius:'10px', padding:'10px'}}>
               <div className="col-md-4 col-4" align="center">
                 <Card>
@@ -429,7 +429,7 @@ class SelectService extends Component {
             <div className="bucket" align="left">
               <div className="bucketIcon pl-4 pr-5 pt-2" style={{color:'white'}}>
                 <FontAwesomeIcon icon={faShoppingCart} size="2x" color="white" style={{float:'left', marginRight:'35px'}}/>
-                <h6 align="center" className="mt-1 pl-5" style={{ float:'left'}}>Ver la motocicleta</h6>
+                <h5 align="center" className="mt-1 pl-5" style={{ float:'left'}}>Ver la motocicleta</h5>
                 <h4 align="right">{this.state.price}</h4>
               </div>
             </div>
