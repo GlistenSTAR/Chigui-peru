@@ -7,11 +7,11 @@ export default () => {
   const chevronWidth = 40;
   const { innerWidth: width} = window;
   return (
-    <div style={{ padding: `0 25px`,paddingTop:'13px', paddingBottom:'13px', marginLeft:'-15px', marginRight:'-15px',  backgroundColor:'rgb(243, 243, 243)', borderRadius:'10px' }}>
+    <div style={{ padding: `0 0`,paddingTop:'13px', paddingBottom:'13px', marginLeft:'-15px', marginRight:'-15px',  backgroundColor:'rgb(243, 243, 243)', borderRadius:'10px' }}>
       <ItemsCarousel
         requestToChangeActive={setActiveItemIndex}
         activeItemIndex={activeItemIndex}
-        numberOfCards={width<968?3:6}
+        numberOfCards={width<968?4:6}
         gutter={20}
         leftChevron={<button className="btn btn-sm btn-outline-success">{'<'}</button>}
         rightChevron={<button className="btn btn-sm btn-outline-success">{'>'}</button>}

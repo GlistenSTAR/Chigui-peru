@@ -104,10 +104,11 @@
 	"buffers":
 	[
 		{
-			"file": "package.json",
+			"file": "/D/xampp/htdocs/mercadofree/web/config.php",
 			"settings":
 			{
-				"buffer_size": 1093,
+				"buffer_size": 18819,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -152,10 +153,13 @@
 	},
 	"expanded_folders":
 	[
-		"/E/projects/workana/autolab(peru)/Chigui"
+		"/D/xampp/htdocs/mercadofree",
+		"/D/xampp/htdocs/mercadofree/web",
+		"/D/xampp/htdocs/mercadofree/web/bundles"
 	],
 	"file_history":
 	[
+		"/E/projects/workana/autolab(peru)/Chigui/package.json",
 		"/E/projects/workana/autolab(peru)/Chigui/client/src/components/common/InputGroup.js",
 		"/E/projects/workana/QR code/Project/InHouse/InHouse/app/screens/Login.js",
 		"/D/xampp/htdocs/mercadofree/.git/config",
@@ -355,29 +359,29 @@
 			[
 				{
 					"buffer": 0,
-					"file": "package.json",
-					"semi_transient": false,
+					"file": "/D/xampp/htdocs/mercadofree/web/config.php",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 1093,
+						"buffer_size": 18819,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								941,
-								941
+								15286,
+								15286
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 2,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 198.4,
+						"translation.y": 6430.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
