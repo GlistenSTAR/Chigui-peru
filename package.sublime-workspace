@@ -104,12 +104,12 @@
 	"buffers":
 	[
 		{
-			"file": "/D/xampp/htdocs/mercadofree/web/config.php",
+			"file": "/D/xampp/htdocs/mercadofree/src/AdministracionBundle/Resources/views/Usuario/detalles.html.twig",
 			"settings":
 			{
-				"buffer_size": 18819,
+				"buffer_size": 33070,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -154,6 +154,12 @@
 	"expanded_folders":
 	[
 		"/D/xampp/htdocs/mercadofree",
+		"/D/xampp/htdocs/mercadofree/src",
+		"/D/xampp/htdocs/mercadofree/src/AdministracionBundle",
+		"/D/xampp/htdocs/mercadofree/src/AdministracionBundle/Controller",
+		"/D/xampp/htdocs/mercadofree/src/AdministracionBundle/Resources",
+		"/D/xampp/htdocs/mercadofree/src/AdministracionBundle/Resources/views",
+		"/D/xampp/htdocs/mercadofree/src/AdministracionBundle/Resources/views/Usuario",
 		"/D/xampp/htdocs/mercadofree/web",
 		"/D/xampp/htdocs/mercadofree/web/bundles"
 	],
@@ -359,19 +365,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/D/xampp/htdocs/mercadofree/web/config.php",
+					"file": "/D/xampp/htdocs/mercadofree/src/AdministracionBundle/Resources/views/Usuario/detalles.html.twig",
 					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 18819,
+						"buffer_size": 33070,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								15286,
-								15286
+								1113,
+								1113
 							]
 						],
 						"settings":
@@ -381,7 +387,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 6430.0,
+						"translation.y": 330.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
