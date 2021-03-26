@@ -138,6 +138,9 @@
   font-family: myfont1!important;
   letter-spacing: 2px;
 }
+.quotation .Name{
+  text-align: left;
+}
 
 @media only screen and (max-width: 992px) {
   .quotation .navbar {
@@ -187,7 +190,7 @@
     margin-top: 3px;
   }
   .quotation .MuiTypography-root.MuiTypography-body1 li{
-    font-size: 20px;
+    font-size: 18px;
   }
   .quotation .MuiTypography-root.MuiTypography-body1 li svg{
     position:absolute!important;

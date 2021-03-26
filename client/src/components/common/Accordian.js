@@ -34,6 +34,9 @@ const Accordian = ({
 				onclick(e);
 				setExpand(!expand);
 			}
+			const clickExpand = (e) =>{
+				setExpand(!expand);
+			}
 					
 			content = data.map((value, key)=>{
 				return (
@@ -54,7 +57,14 @@ const Accordian = ({
 			return (
 				<div className={classes.root}>
 					<div className="container">
-						<Accordion defaultExpanded={true} expanded={expand}>
+						<Accordion 
+							defaultExpanded={true} 
+							expanded={expand} 
+							style={{ 
+								borderBottom:'1px', 
+								borderBottomColor:'white', 
+								borderBottomStyle:'solid'
+							}}>
 							<AccordionSummary
 								expandIcon={<ExpandMoreIcon />}
 								aria-controls="panel1a-content"
@@ -62,10 +72,11 @@ const Accordian = ({
 							>
 								<Typography 
 									className={classes.heading} 
-									style={{fontSize:'14px'}}
+									style={{fontSize:'14px', textAlign:'left'}}
+									onClick={clickExpand}
 								>
-									{title}{' '}
-									<span className="mt-5 pt-5" style={{fontSize:'18px', color:'#007bff'}}>{' '}{subtitle}</span>
+									<span className="Name" style={{ float:'left'}}>{title}{' '}</span>
+									<p style={{fontSize:'18px', color:'#007bff',width:'100%',top:'10px', textAlign:'center', position:'absolute'}}>{' '}{subtitle}</p>
 								</Typography>
 							</AccordionSummary>
 

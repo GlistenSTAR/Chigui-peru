@@ -3,7 +3,6 @@ import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-
 import Spinner from '../common/Spinner';
 import { getCars } from '../../actions/carActions';
 import Accordian from '../common/Accordian';
@@ -38,6 +37,7 @@ class SelectMoto extends Component {
       },
     });
   }
+
   onClick1 = (e) => {
     this.setState({show2 : e.target.getAttribute('data')});
     this.setState({
@@ -47,6 +47,7 @@ class SelectMoto extends Component {
       },
     });
   }
+  
   onClick2 = (e) => {
     this.setState({show3 : e.target.getAttribute('data')});
     this.setState({
@@ -56,6 +57,7 @@ class SelectMoto extends Component {
       },
     });
   }
+  
   onClick3 = (e) => {
     this.setState({show4 : e.target.getAttribute('data')});
     this.setState({
@@ -65,13 +67,13 @@ class SelectMoto extends Component {
       },
     });
   }
+  
   nextclick = ()=>{
     localStorage.setItem( 'motor' , JSON.stringify(this.state.car));
     this.props.nextclick();
   }
   
   render() {
-
     const { cars, loading } = this.props.car;
     let carItems1, carItems2, carItems3, carItems4;
 
