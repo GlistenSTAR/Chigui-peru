@@ -142,7 +142,7 @@ class SelectService extends Component {
             <small >¿No sabes la falla? Descubrámosla</small>
           </div>
           <div className="col-md-3 col-sm-3 col-3 mt-auto mb-auto" align="center" >
-              <button className="btn btn-sm" style={{backgroundColor:'rgb(179,226,1)'}} >Aqui!</button>
+              <button className="btn btn-sm" >Aqui!</button>
           </div>
         </div>
 

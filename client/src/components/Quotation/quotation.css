@@ -166,12 +166,16 @@
   }
   .quotation .selecttag .input-group .input-group-prepend{
     height: 30px;
+    width: 30px;
+  }
+  .quotation .selecttag .input-group .input-group-prepend span{
+    padding-left: 8px;
   }
   .quotation .selecttag .input-group .select.form-control{
     height: 30px;
-    font-size: 14px;
+    font-size: 12px;
     margin-right: auto;
-    width: 100px;
+    width: 85px;
     float: left;
     padding:0!important
   }
@@ -179,14 +183,14 @@
     display: block;
   }
   .quotation .collapse.navbar-collapse li .btn{
-    font-size: 14px;
+    font-size: 12px;
     position:absolute;
     top:1px;
     right: 20px;    
     height: 30px;
     padding-top: 5px;
     padding-right: auto;
-    width: 100px;
+    width: 88px;
     margin-top: 3px;
   }
   .quotation .MuiTypography-root.MuiTypography-body1 li{
@@ -245,9 +249,9 @@
   margin-left: auto;
   margin-right: auto;
   line-height: 1;
-  padding-top:10px;
-  padding-bottom: 10px;
-  width: 60%;
+  padding-top:7px;
+  padding-bottom: 7px;
+  width: 80%;
 }
 .quotation .services .text-default{
   text-align: left;
@@ -339,15 +343,32 @@
 .MuiDialog-root .MuiPickersTimePickerToolbar-hourMinuteLabel h2, .MuiDialog-root h6, .MuiDialog-root span{
   color:black!important
 }
+.quotation .services .horizal-card button{
+  background-color:rgb(179,226,1);
+  width:'70px';
+  padding-top:'2px';
+  padding-bottom:'2px';
 
-
+}
 @media only screen and (max-width: 992px) {
   .quotation .services .row:first-child{
     width: 100%;
   }
   .quotation .services .horizal-card{
     width: 100%;
-    font-size: 15px;
+    font-size: 14px;
+  }
+  .quotation .services .horizal-card img{
+    width: 50px;
+    height: 50px;
+  }
+  .quotation .services .horizal-card small{
+    font-family: myfont2;
+  }
+  .quotation .services .horizal-card button{
+    width: 50px;
+    padding-top:0;
+    padding-bottom:0;
   }
   .quotation .services .recommand{
     width: 100%;
