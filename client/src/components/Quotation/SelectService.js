@@ -147,7 +147,7 @@ class SelectService extends Component {
         </div>
 
          {/* Diagnosticar una falla modal */}
-         <Modal
+         {/* <Modal
             show={this.state.modal1}
             onHide={this.handleClose1}
             backdrop="static"
@@ -162,10 +162,10 @@ class SelectService extends Component {
           <Modal.Footer align="center">
             <button className="btn btn-default">¿No encuentras las fallas que necesitas?</button>
           </Modal.Footer>
-        </Modal>
+        </Modal> */}
 
         {/* {subContent} */}
-
+{/* 
         <ModalTemplate
           headerContent = "Diagnósticos En el motor"
           onEngineModal = { this.state.onEngineModal }
@@ -183,9 +183,9 @@ class SelectService extends Component {
                 miniServices : ['No enciende']
               }
           ]}
-        />
+        /> */}
         {/* onElectronic Modal */}
-        <ModalTemplate
+        {/* <ModalTemplate
           headerContent = "Diagnósticos En el sistema eléctrico"
           onEngineModal = { this.state.onElectronicModal }
           onEngineModalClose = { this.onElectroicModalClose }
@@ -212,9 +212,9 @@ class SelectService extends Component {
               miniServices : ['Diagnostico de sensores', 'Sensores']
             }
           ]}
-        />
+        /> */}
         {/* onLiquidLeak modal */}
-        <ModalTemplate
+        {/* <ModalTemplate
           headerContent = "Diagnósticos En los liquidos/fugas"
           onEngineModal = { this.state.onLiquidLeakModal }
           onEngineModalClose = { this.onLiquidLeakModalClose }
@@ -236,9 +236,9 @@ class SelectService extends Component {
               miniServices : ['Bomba de aceite']
             }
           ]}
-        />
+        /> */}
         {/* onWitnessesModal */}
-        <ModalTemplate
+        {/* <ModalTemplate
           headerContent = "Diagnósticos En los testigos"
           onEngineModal = { this.state.onWitnessesModal }
           onEngineModalClose = { this.onWitnessesModalClose }
@@ -260,9 +260,9 @@ class SelectService extends Component {
               miniServices : ['Freno', 'ABS', 'Traccion']
             }
           ]}
-        />
+        /> */}
         {/* onWitnessesModal */}
-        <ModalTemplate
+        {/* <ModalTemplate
           headerContent = "Diagnósticos En los frenos"
           onEngineModal = { this.state.onBrakeModal }
           onEngineModalClose = { this.onBrakeModalClose }
@@ -279,9 +279,9 @@ class SelectService extends Component {
               miniServices : ['Fuga en liquido de frenos']
             }
           ]}
-        />
+        /> */}
         {/* onBrakePumpModal */}
-        <Modal
+        {/* <Modal
           show={this.state.onBrakePumpModal}
           onHide={this.onBrakePumpModalClose}
           backdrop="static"
@@ -293,9 +293,9 @@ class SelectService extends Component {
             <Modal.Body>
               
             </Modal.Body>
-        </Modal>
+        </Modal> */}
         {/* onTireSuspensionModal */}
-        <Modal
+        {/* <Modal
           show={this.state.onTireSuspensionModal}
           onHide={this.onTireSuspensionModalClose}
           backdrop="static"
@@ -354,8 +354,8 @@ class SelectService extends Component {
             <h5>SERVICIOS EXPRESS</h5><hr/>
             <RecommandedCarsel/>
           </div>
-        </div>
-        <div className="mechine mt-3" align="center">
+        </div> */}
+        {/* {/* <div className="mechine mt-3" align="center">
             <h5 align="left">MECANICA</h5><hr/>
             <div className="row" style={{backgroundColor:'#F3F3F3',borderRadius:'10px', fontSize:'13px'}}>
               <div className="col-6 col-md-4">
@@ -433,7 +433,7 @@ class SelectService extends Component {
                 <h4 align="right">{this.state.price}</h4>
               </div>
             </div>
-          ):''}
+          ):''} */}
        </div>
      </div>
     );

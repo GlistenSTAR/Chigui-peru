@@ -15,7 +15,7 @@ class Quotation extends Component {
   constructor(props){
     super(props);
     this.state = {
-      step : 1  
+      step : 0  
     }
   }
 
@@ -55,7 +55,7 @@ class Quotation extends Component {
                 steps={ [
                   {title: 'ELIGE TU VEHÍCULO'}, 
                   {title: 'ELIGE TUS SERVICIOS'}, 
-                  {title: 'AGENDA TU CITA'}, 
+                  {title: "AGENDA TU CITA"}, 
                   {title: 'DATOS DE CONTACTO'}
                 ] } 
                 activeStep={ this.state.step } 
@@ -63,8 +63,9 @@ class Quotation extends Component {
                 completeColor="rgb(179,226,1)"
                 activeBorderColor="rgb(0,0,0)"
                 circleFontColor="rgb(0,0,0)"
-                titleFontSize={18}
-                size={45}
+                circleFontSize={18}
+                titleFontSize={13}
+                size={46}
               />
             </div>
             <div className="col-md-3"></div>

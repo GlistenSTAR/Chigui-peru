@@ -11,8 +11,8 @@
 .quotation .navbar {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    width: 50%;
-    height: 45px;
+    width: 70%;
+    height: 40px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -22,12 +22,31 @@
 .quotation .navbar-brand {
     background: url('../../img/sign.png') no-repeat;
     background-position: 0 0;
-    background-size: 40px 40px;
-    width: 40px;
-    height: 40px; 
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px; 
     margin-left: 40px;
     margin-right:40px;
-    margin-top:6px
+    margin-top:8px
+}
+.quotation .collapse.navbar-collapse li .btn {
+  font-size: 14px;
+  position: absolute;
+  top: 1px;
+  right: 20px;
+  height: 30px;
+  padding-top: 5px;
+  padding-right: auto;
+  width: 100px;
+  margin-top: 3px;
+}
+.quotation .selecttag .input-group .select.form-control {
+  height: 30px;
+  font-size: 14px;
+  margin-right: auto;
+  width: 100px;
+  float: left;
+  padding: 0!important;
 }
 .quotation .fa-caret-right{
   margin-left: auto;
@@ -115,9 +134,9 @@
   margin-left: 20px;
   margin-right: 20px;
 }
-.quotation .col-md-6 div , .quotation .col-md-6 a{
+.quotation .col-md-6 div{
   font-family: myfont1!important;
-  font-size: 14px!important;
+  letter-spacing: 2px;
 }
 
 @media only screen and (max-width: 992px) {
@@ -127,17 +146,19 @@
     padding-top: 3px;
   }
   .quotation .navbar-brand{
-    width: 20px;
-    background-size: 20px 20px;
-    height: 20px;
     margin-left: 10px;
-    margin-right: 20px;
+    margin-right: 10px;
+    margin-top: 0px;
+  }
+  .quotation .col-md-6 div{
+    letter-spacing: 1px;
   }
   .quotation .selecttag{
     margin-right: auto;
+    margin-top:1px
   }
   .quotation .selecttag .input-group{
-    height: 30px;
+    height: 40px;
     margin-right: auto;
   }
   .quotation .selecttag .input-group .input-group-prepend{
@@ -193,9 +214,6 @@
   .quotation .MuiTypography-root.MuiTypography-body1 li:hover{
     background-color: azure;
     cursor: hand;
-  }
-  .quotation .col-md-6 div{
-    font-size: 14px!important;
   }
   .quotation .col-md-6{
     padding-left: 0px;
