@@ -71,6 +71,12 @@
   border: rgb(179,226,1);
   color:#fff
 }
+.quotation .services .threeRow.card-text{
+  font-size: 17px!important;
+}
+.quotation .services .oneRow{
+  padding-top: 5px
+}
 .btn-success1:hover{
   background-color: rgba(179,226,1, 0.6);
 }
@@ -175,7 +181,7 @@
     height: 30px;
     font-size: 12px;
     margin-right: auto;
-    width: 85px;
+    width: 90px;
     float: left;
     padding:0!important
   }
@@ -243,7 +249,7 @@
 }
 
 .quotation .services .horizal-card{
-  border: 2px solid rgba(179,226,1, 0.6);
+  border: 3px solid rgba(179,226,1, 0.6);
   border-radius: 15px;
   justify-content: center;
   margin-left: auto;
@@ -280,11 +286,16 @@
   padding:0;
   font-size: 14px;
   font-style: unset;
+  margin-top: auto;
+  margin-bottom: auto;
 }
-.quotation .services .recommand .card-body p, .quotation .services .mechine .card-body p{
+.quotation .services .recommand .card-body p.card-text, .quotation .services .mechine .card-body p.card-text{
   line-height: 1;
-  font-size: 16px;
-}
+  font-size: 18px;
+  color:rgb(0, 0, 0);
+  font-family: myfont2;
+  font-style: bold;
+}  
 .quotation .services img{
   margin-left: auto;
   margin-right: auto;
@@ -381,11 +392,13 @@
   }
   .quotation .services .recommand .col-4 .card, .quotation .services .mechine .col-4 .card{
     border-radius: 10px;
+    padding:5px
   }
   .quotation .services .recommand .card-body, .quotation .services .mechine .card-body{
-    padding:0;
     font-size: 14px;
     font-style: unset;
+    margin-top: auto;
+    margin-bottom: auto;
   }
   .quotation .services .recommand .card-body p, .quotation .services .mechine .card-body p{
     line-height: 1;
@@ -408,6 +421,27 @@
   }
   .quotation .SelectData h4{
     width: 100%!important;
+  }
+  .quotation .services .recommand .col-md-4, .quotation .services .review .col-md-4{
+    max-width: 120px;
+    min-width: 80px;
+    margin: 0px;
+  }
+  .quotation .services .recommand .col-md-4 img, .quotation .services .review .col-md-4 img{
+    width: 60px;
+    height: 60px;
+  }
+  .quotation .services .recommand .col-md-4 .card, .quotation .services .review .col-md-4 .card{
+    max-width: 120px;
+    min-width: 90px;
+    max-height: 100px;
+    min-height: 100px;
+  }
+  .quotation .services .threeRow.card-text{
+    font-size: 13px!important;
+  }
+  .quotation .services .recommand .col-md-4 .card .card-body p.card-text, .quotation .services .review .col-md-4 .card .card-body p.card-text{
+    font-size: 14px;
   }
 }
 

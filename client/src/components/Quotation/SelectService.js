@@ -139,7 +139,7 @@ class SelectService extends Component {
           </div>
           <div className="col-md-6 col-sm-6 col-6 text text-default mt-auto mb-auto" >
             <span >Diagnosticar una falla</span><br/>
-            <small >¿No sabes la falla? Descubrámosla</small>
+            <small style={{color:'grey'}}>¿No sabes la falla? Descubrámosla</small>
           </div>
           <div className="col-md-3 col-sm-3 col-3 mt-auto mb-auto" align="center" >
               <button className="btn btn-sm" >Aqui!</button>
@@ -307,10 +307,10 @@ class SelectService extends Component {
             <Modal.Body>
               
             </Modal.Body>
-        </Modal>
+        </Modal> */}
         
         <div className="recommand mt-4" align="left">
-          <h5>DESTACADOS</h5><hr/>
+          <h6 style={{color:'grey'}}>DESTACADOS</h6><hr/>
           <div className = "row" style={{background:'#F3F3F3', borderRadius:'10px', padding:'10px'}}>
             <div className="col-md-4 col-4" align="center">
               <Card>
@@ -345,7 +345,7 @@ class SelectService extends Component {
             </div>
           </div>
           
-          <div className="review mt-3">
+          {/* <div className="review mt-3">
             <h5>REVISIONES</h5><hr/>
             <ReviewCarsel/>
           </div>
@@ -353,9 +353,44 @@ class SelectService extends Component {
           <div className="review mt-3">
             <h5>SERVICIOS EXPRESS</h5><hr/>
             <RecommandedCarsel/>
+          </div> */}
+        </div>
+        <div className="mechine mt-3" align="center">
+          <div className="recommand clone" align="left">
+            <h6 style={{color:'grey'}}>ELECTRICIDAD</h6><hr/>
+            <div className = "row" style={{background:'#F3F3F3', borderRadius:'10px', padding:'10px'}}>
+              <div className="col-md-4 col-4" align="center">
+                <Card>
+                <Card.Img variant="top" src={require('../../img/icons/cambio_bateria.png')} />
+                <Card.Body>
+                  <Card.Text>
+                  Carga de Bateria
+                  </Card.Text>
+                </Card.Body>
+                </Card>
+              </div>
+              <div className="col-md-4 col-4" align="center">
+                <Card align="center">
+                  <Card.Img variant="top" src={require('../../img/icons/cambio_bateria.png')}/>
+                <Card.Body>
+                  <Card.Text style={{marginTop:'auto',marginBottom:'auto'}} className="oneRow">
+                  Solo Bateria
+                  </Card.Text>
+                </Card.Body>
+                </Card>
+              </div>
+              <div className="col-md-4 col-4" align="center">
+                <Card>
+                <Card.Img variant="top" src={require('../../img/icons/cambio_bateria.png')} />
+                <Card.Body>
+                  <Card.Text className="threeRow">
+                  Carga de Bateria con Vehiculo
+                  </Card.Text>
+                </Card.Body>
+                </Card>
+              </div>
+            </div>
           </div>
-        </div> */}
-        {/* {/* <div className="mechine mt-3" align="center">
             <h5 align="left">MECANICA</h5><hr/>
             <div className="row" style={{backgroundColor:'#F3F3F3',borderRadius:'10px', fontSize:'13px'}}>
               <div className="col-6 col-md-4">
@@ -385,41 +420,6 @@ class SelectService extends Component {
             </div>
           </div>
 
-          <div className="recommand mt-4 clone" align="left">
-            <h5>ELECTRICIDAD</h5><hr/>
-            <div className = "row" style={{background:'#F3F3F3', borderRadius:'10px', padding:'10px'}}>
-              <div className="col-md-4 col-4" align="center">
-                <Card>
-                <Card.Img variant="top" src={require('../../img/icons/escaner.png')} />
-                <Card.Body>
-                  <Card.Text>
-                  CARGA DE BATERIA
-                  </Card.Text>
-                </Card.Body>
-                </Card>
-              </div>
-              <div className="col-md-4 col-4" align="center">
-                <Card align="center">
-                  <Card.Img variant="top" src={require('../../img/icons/revision_por_kilometraje.png')}/>
-                <Card.Body>
-                  <Card.Text>
-                  SOLO BATERIA
-                  </Card.Text>
-                </Card.Body>
-                </Card>
-              </div>
-              <div className="col-md-4 col-4" align="center">
-                <Card>
-                <Card.Img variant="top" src={require('../../img/icons/cambio_de_aceite.png')} />
-                <Card.Body>
-                  <Card.Text style={{fontSize:'11px'}}>
-                  CARGA DE BATERIA CON VEHICULO
-                  </Card.Text>
-                </Card.Body>
-                </Card>
-              </div>
-            </div>
-          </div>
           <div style={{width:'100%'}} align="cener">
             <div className="row mt-4 mb-5" style={{width:'100%', paddingLeft:'auto', paddingRight:'auto'}} align="center">
               <button className="btn form-control" style={{background:'rgb(179,226,1)', color:'black'}} onClick={this.props.nextclick}>RESERVAR CITA</button>
@@ -433,7 +433,7 @@ class SelectService extends Component {
                 <h4 align="right">{this.state.price}</h4>
               </div>
             </div>
-          ):''} */}
+          ):''}
        </div>
      </div>
     );
