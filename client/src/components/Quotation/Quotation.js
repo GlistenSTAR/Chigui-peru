@@ -15,7 +15,7 @@ class Quotation extends Component {
   constructor(props){
     super(props);
     this.state = {
-      step : 1  
+      step : 0  
     }
   }
 
@@ -66,6 +66,7 @@ class Quotation extends Component {
                 circleFontSize={18}
                 titleFontSize={13}
                 size={46}
+                onClick={()=>console.log('asdfsadf')}
               />
             </div>
             <div className="col-md-3"></div>

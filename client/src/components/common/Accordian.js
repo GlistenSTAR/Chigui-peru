@@ -76,7 +76,7 @@ const Accordian = ({
 									onClick={clickExpand}
 								>
 									<span className="Name" style={{ float:'left'}}>{title}{' '}</span>
-									<p style={{fontSize:'18px', color:'#007bff',width:'100%',top:'10px', textAlign:'center', position:'absolute'}}>{' '}{subtitle}</p>
+									<span style={{fontSize:'18px', color:'#007bff',width:'100%',top:'10px',left:'0', textAlign:'center', position:'absolute'}}>{' '}{subtitle}</span>
 								</Typography>
 							</AccordionSummary>
 
