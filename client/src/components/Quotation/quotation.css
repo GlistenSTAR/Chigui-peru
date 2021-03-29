@@ -46,7 +46,9 @@
   margin-right: auto;
   width: 100px;
   float: left;
-  padding: 0!important;
+  padding: 0;
+  padding-top: auto;
+  padding-bottom: auto;
 }
 .quotation .fa-caret-right{
   margin-left: auto;
@@ -178,12 +180,9 @@
     padding-left: 8px;
   }
   .quotation .selecttag .input-group .select.form-control{
-    height: 30px;
     font-size: 12px;
-    margin-right: auto;
     width: 90px;
-    float: left;
-    padding:0!important
+    padding-top: 3px;
   }
   .quotation .collapse:not(.show){
     display: block;
@@ -194,10 +193,10 @@
     top:1px;
     right: 20px;    
     height: 30px;
-    padding-top: 5px;
     padding-right: auto;
     width: 88px;
-    margin-top: 3px;
+    padding-top: auto;
+    padding-bottom: auto;
   }
   .quotation .MuiTypography-root.MuiTypography-body1 li{
     font-size: 18px;
@@ -359,7 +358,10 @@
   width:'70px';
   padding-top:'2px';
   padding-bottom:'2px';
-
+}
+.quotation .services .horizal-card small{
+  font-family: myfont2!important;
+  font-size:14px!important
 }
 @media only screen and (max-width: 992px) {
   .quotation .services .row:first-child{
@@ -367,15 +369,13 @@
   }
   .quotation .services .horizal-card{
     width: 100%;
-    font-size: 14px;
+    font-size: 15px;
   }
   .quotation .services .horizal-card img{
     width: 50px;
     height: 50px;
   }
-  .quotation .services .horizal-card small{
-    font-family: myfont2;
-  }
+  
   .quotation .services .horizal-card button{
     width: 50px;
     padding-top:0;
@@ -449,17 +449,17 @@
 .quotation .mechine .item{
   background-color: rgb(253,253,253);
   margin:10px;
-  margin-left:0px
+  margin-left:0px;
+  min-height: 50px;
+  min-width: 190px;
+  color:black;
 }
-
-.quotation .mechine .item{
-  min-height: 55px;
-  max-width: 180px;
-}
-
 .quotation .mechine .item .col-7{
-  padding-left:0px!important;
-  padding-right:0px!important;
+  font-family: myfont2;
+  font-size: 17px;
+}
+.quotation .mechine .item .col-5{
+ margin-left:-15px!important;
 }
 
 .quotation .bucket{
@@ -467,7 +467,7 @@
   bottom:0;
   right:10px; 
   width: 35%;  
-  background-color: rgba(118, 154, 0, 0.8);
+  background-color: rgba(179,226,1, 0.8);
   min-height:45px;
   border-top-left-radius:15px;
   border-top-right-radius:15px
@@ -478,6 +478,19 @@
     width:100%; 
     bottom:0;
     left:0; 
+  }
+  .quotation .mechine .item{
+    min-width: 150px;
+  }
+  .quotation .mechine .item img{
+    width: 60px;
+    height: 60px;
+  }
+  .quotation .mechine .item .col-7{
+    font-size: 13px;
+    margin-top:auto!important;
+    margin-bottom:auto!important;
+    margin-left: 4px;
   }
 }
 
@@ -520,12 +533,48 @@
   border: 1px solid black
 }
 
-/* imagecarsel width control */
-/* .quotation .MvEJg{
-  width: 110px!important;
-} */
+.quotation .btn-outline-green{
+  color:rgb(179,226,1);
+  border:1px solid rgb(179,226,1);
+}
 
 .quotation .bxivhb{
   width: 110px!important;
   margin-right: 20px;
+}
+
+
+/* carsel */
+.quotation .carsel1{
+  padding: 0 22px;
+  padding-top:13px;
+  padding-bottom:13px;
+  margin-left:-15px;
+  margin-right:-15px;
+  background-color:rgb(243, 243, 243);
+  border-radius:10px
+}
+@media only screen and (max-width: 1204px) {
+
+}
+@media only screen and (max-width: 992px) {
+  .quotation .carsel1{
+    padding: 0 12px;
+    padding-top:13px;
+    padding-bottom:13px;
+    margin-left:-15px;
+    margin-right:-15px;
+    background-color:rgb(243, 243, 243);
+    border-radius:10px
+  }
+  .quotation .carsel1 .card{
+    max-width: 120px!important;
+    min-width: 90px!important;
+    max-height: 100px!important;
+    min-height: 100px!important;
+  }
+  .quotation .carsel1 .card p.card-text{
+    font-family: myfont2;
+    font-size: 14px!important;
+  }
 }

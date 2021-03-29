@@ -31,7 +31,7 @@ class Quotation extends Component {
               <div className="input-group-prepend">
                 <span className="input-group-text"><FontAwesomeIcon icon={faMapMarker} color="rgb(179,226,1)"/></span>
               </div>
-              <select className="form-control select" >
+              <select className="form-control select p-auto" >
                 <option>Tingo Maria</option>
               </select>
             </li>

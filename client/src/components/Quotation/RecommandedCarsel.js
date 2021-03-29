@@ -7,24 +7,14 @@ export default () => {
   const chevronWidth = 20;
   const { innerWidth: width} = window;
   return (
-    <div 
-      style={{ 
-        padding: '0 25px',
-        paddingTop:'13px', 
-        paddingBottom:'13px', 
-        marginLeft:'-15px', 
-        marginRight:'-15px',
-        width:'100%',  
-        backgroundColor:'rgb(243, 243, 243)', 
-        borderRadius:'10px' 
-    }}>
+    <div className="carsel1">
       <ItemsCarousel
         requestToChangeActive={setActiveItemIndex}
         activeItemIndex={activeItemIndex}
         numberOfCards={width<748?3:6}
         gutter={20}
-        leftChevron={<button className="btn btn-sm btn-outline-success">{'<'}</button>}
-        rightChevron={<button className="btn btn-sm btn-outline-success">{'>'}</button>}
+        leftChevron={<button className="btn btn-sm btn-outline-green">{'<'}</button>}
+        rightChevron={<button className="btn btn-sm btn-outline-green">{'>'}</button>}
         outsideChevron
         chevronWidth={chevronWidth}
       >

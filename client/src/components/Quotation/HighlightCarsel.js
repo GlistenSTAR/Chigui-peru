@@ -20,25 +20,37 @@ export default () => {
       >
         <div>
           <div align="center">
-              <Card>  
-              <Card.Img variant="top" src={require('../../img/icons/revission de bateria.png')} />
-              <Card.Body>
-                <Card.Text>
-                  Revision de bateria
-                </Card.Text>
-              </Card.Body>
+            <Card>
+                <Card.Img variant="top" src={require('../../img/icons/escaner.png')} />
+                <Card.Body>
+                  <Card.Text>
+                    Servicio de escáner
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+        </div>
+        <div>
+          <div align="center">
+              <Card align="center">
+                  <Card.Img variant="top" src={require('../../img/icons/revision_por_kilometraje.png')}/>
+                <Card.Body>
+                  <Card.Text>
+                    Revisión por Kilometraje
+                  </Card.Text>
+                </Card.Body>
               </Card>
             </div>
         </div>
         <div>
           <div align="center">
               <Card>
-              <Card.Img variant="top" src={require('../../img/icons/peritaje.png')} />
-              <Card.Body>
-                <Card.Text className="oneRow">
-                  Peritaje
-                </Card.Text>
-              </Card.Body>
+                <Card.Img variant="top" src={require('../../img/icons/cambio_de_aceite.png')} />
+                <Card.Body>
+                  <Card.Text>
+                    Cambio de aceite
+                  </Card.Text>
+                </Card.Body>
               </Card>
             </div>
         </div>

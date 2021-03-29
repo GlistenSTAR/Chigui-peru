@@ -1,12 +1,15 @@
 import React, { Component } from "react"; 
 import InputGroup from "../common/InputGroup";
 import PropTypes from 'prop-types';
-import {Card, Modal} from 'react-bootstrap'
-import ReviewCarsel from './ReviewCarsel';
 import { connect } from 'react-redux';
-import RecommandedCarsel from './RecommandedCarsel';
+import {Card, Modal} from 'react-bootstrap'
 import ModalTemplate from '../common/Modal';
 import { getServices } from '../../actions/seviceActions';
+
+import ReviewCarsel from './ReviewCarsel';
+import RecommandedCarsel from './RecommandedCarsel';
+import HighlightCarsel from './HighlightCarsel';
+import ElectronicCarsel from './ElectronicCarsel';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight, faShoppingCart, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
@@ -311,108 +314,45 @@ class SelectService extends Component {
         
         <div className="recommand mt-4" align="left">
           <h6 style={{color:'grey'}}>DESTACADOS</h6><hr/>
-          <div className = "row" style={{background:'#F3F3F3', borderRadius:'10px', padding:'10px'}}>
-            <div className="col-md-4 col-4" align="center">
-              <Card>
-              <Card.Img variant="top" src={require('../../img/icons/escaner.png')} />
-              <Card.Body>
-                <Card.Text>
-                  Servicio de escáner
-                </Card.Text>
-              </Card.Body>
-              </Card>
-            </div>
-           
-            <div className="col-md-4 col-4" align="center">
-              <Card align="center">
-                <Card.Img variant="top" src={require('../../img/icons/revision_por_kilometraje.png')}/>
-              <Card.Body>
-                <Card.Text>
-                  Revisión por Kilometraje
-                </Card.Text>
-              </Card.Body>
-              </Card>
-            </div>
-            <div className="col-md-4 col-4" align="center">
-              <Card>
-              <Card.Img variant="top" src={require('../../img/icons/cambio_de_aceite.png')} />
-              <Card.Body>
-                <Card.Text>
-                  Cambio de aceite
-                </Card.Text>
-              </Card.Body>
-              </Card>
-            </div>
-          </div>
+          <HighlightCarsel />
           
-          {/* <div className="review mt-3">
-            <h5>REVISIONES</h5><hr/>
-            <ReviewCarsel/>
+          <div className="review mt-3">
+            <h6 style={{color:'grey'}}>REVISIONES</h6><hr/>
+            <ReviewCarsel />
           </div>
           
           <div className="review mt-3">
-            <h5>SERVICIOS EXPRESS</h5><hr/>
-            <RecommandedCarsel/>
-          </div> */}
+            <h6 style={{color:'grey'}}>SERVICIOS EXPRESS</h6><hr/>
+            <RecommandedCarsel />
+          </div>
         </div>
         <div className="mechine mt-3" align="center">
           <div className="recommand clone" align="left">
             <h6 style={{color:'grey'}}>ELECTRICIDAD</h6><hr/>
-            <div className = "row" style={{background:'#F3F3F3', borderRadius:'10px', padding:'10px'}}>
-              <div className="col-md-4 col-4" align="center">
-                <Card>
-                <Card.Img variant="top" src={require('../../img/icons/cambio_bateria.png')} />
-                <Card.Body>
-                  <Card.Text>
-                  Carga de Bateria
-                  </Card.Text>
-                </Card.Body>
-                </Card>
-              </div>
-              <div className="col-md-4 col-4" align="center">
-                <Card align="center">
-                  <Card.Img variant="top" src={require('../../img/icons/cambio_bateria.png')}/>
-                <Card.Body>
-                  <Card.Text style={{marginTop:'auto',marginBottom:'auto'}} className="oneRow">
-                  Solo Bateria
-                  </Card.Text>
-                </Card.Body>
-                </Card>
-              </div>
-              <div className="col-md-4 col-4" align="center">
-                <Card>
-                <Card.Img variant="top" src={require('../../img/icons/cambio_bateria.png')} />
-                <Card.Body>
-                  <Card.Text className="threeRow">
-                  Carga de Bateria con Vehiculo
-                  </Card.Text>
-                </Card.Body>
-                </Card>
-              </div>
-            </div>
+            <ElectronicCarsel />
           </div>
-            <h5 align="left">MECANICA</h5><hr/>
-            <div className="row" style={{backgroundColor:'#F3F3F3',borderRadius:'10px', fontSize:'13px'}}>
-              <div className="col-6 col-md-4">
-                <div className="item row" style={{borderRadius:'20px'}}>
+            <h6 align="left" style={{color:'grey'}}>MECANICA</h6><hr/>
+            <div className="row" style={{backgroundColor:'#F3F3F3',borderRadius:'10px'}}>
+              <div className="col-md-4 col-6">
+                <div className="item row" style={{borderRadius:'28px'}}>
                   <div className="col-5"><img src={require('../../img/icons/frenos.png')} alt="icon"/></div>
-                  <div className="col-7 mt-2" align="left" style={{fontSize:'14px'}}>Pastilla de frenos</div>
+                  <div className="col-7 mt-2" align="left">Pastilla de frenos</div>
                 </div>
               </div>
               <div className="col-6 col-md-4">
-                <div className="item row" style={{borderRadius:'20px'}}>
-                  <div className="col-5"><img src={require('../../img/icons/cambio_bateria.png')} alt="icon"/></div>
+                <div className="item row" style={{borderRadius:'28px'}}>
+                  <div className="col-5"><img src={require('../../img/icons/cambio de bateria.png')} alt="icon"/></div>
                   <div className="col-7 mt-2" align="left">Cambio de Bateria</div>
                 </div>
               </div>
               <div className="col-6 col-md-4">
-                <div className="item row" style={{borderRadius:'20px'}}>
+                <div className="item row" style={{borderRadius:'28px'}}>
                   <div className="col-5"><img src={require('../../img/icons/frenos.png')} alt="icon"/></div>
                   <div className="col-7 mt-2" align="left">Mantenimiento General</div>
                 </div>
               </div>
               <div className="col-6 col-md-4">
-                <div className="item row" style={{borderRadius:'20px'}}>
+                <div className="item row" style={{borderRadius:'28px'}}>
                   <div className="col-5"><img src={require('../../img/icons/frenos.png')} alt="icon"/></div>
                   <div className="col-7 mt-2" align="left">Mantenimiento premiun</div>
                 </div>
