@@ -19,6 +19,10 @@ class Quotation extends Component {
     }
   }
 
+  stepClick = (e) =>{
+    console.log(e);
+  }
+
   render() {
     return (
       <div className="quotation">
@@ -53,10 +57,10 @@ class Quotation extends Component {
             <div className="col-md-6 mb-4">
               <Stepper 
                 steps={ [
-                  {title: 'ELIGE TU VEHÍCULO'}, 
-                  {title: 'ELIGE TUS SERVICIOS'}, 
-                  {title: "AGENDA TU CITA"}, 
-                  {title: 'DATOS DE CONTACTO'}
+                  {title: 'ELIGE TU VEHÍCULO', onClick:()=>this.setState({step:0})}, 
+                  {title: 'ELIGE TUS SERVICIOS', onClick:()=>this.setState({step:1})}, 
+                  {title: "AGENDA TU CITA", onClick:()=>this.setState({step:2})}, 
+                  {title: 'DATOS DE CONTACTO', onClick:()=>this.setState({step:3})}
                 ] } 
                 activeStep={ this.state.step } 
                 activeColor="rgba(179,226,1,0.5)" 
@@ -66,7 +70,7 @@ class Quotation extends Component {
                 circleFontSize={18}
                 titleFontSize={13}
                 size={46}
-                onClick={()=>console.log('asdfsadf')}
+                onClick={this.stepClick}
               />
             </div>
             <div className="col-md-3"></div>

@@ -60,7 +60,7 @@ export default class SelectData extends Component {
     return (
         <div align="center" className="SelectData container">
           <div style={{width:'100%'}}>
-            <h4 align="left" style={{width:'60%'}}><FontAwesomeIcon icon={faCalculator} size="1x"/>{' '}FECHA</h4><hr/>
+            <h5 align="left" style={{width:'60%'}}><FontAwesomeIcon icon={faCalculator} size="1x"/>{' '}FECHA</h5><hr/>
             <DatePicker
               className='my-react-datepicker'
               value={this.state.value}
@@ -71,7 +71,7 @@ export default class SelectData extends Component {
           </div>
           { this.state.value?(
             <div>
-              <h4 align="left" className="mt-4" style={{width:'60%'}}><FontAwesomeIcon icon={faMotorcycle} size="1x"/>{' '}RECEPCIÓN DEL CARRO</h4><hr/>
+              <h5 align="left" className="mt-4" style={{width:'60%'}}><FontAwesomeIcon icon={faMotorcycle} size="1x"/>{' '}RECEPCIÓN DEL CARRO</h5><hr/>
               <div className="locationGroup">
                 <div className="row mt-2 mb-2" name="OurWorkstation"  onClick={this.selectLocation} style={{borderWidth:'1px', borderRadius:'10px', borderColor:'rgba(0,0,0,0.5', borderStyle:'solid', maxWidth:'350px', padding:'10px', color:'black'}}>
                   <div className="col-md-3 col-3" name="OurWorkstation" align="right">
@@ -110,7 +110,7 @@ export default class SelectData extends Component {
           ) : ''}
           { this.state.location?(
             <div>
-              <h4 align="left" className="mt-4" style={{width:'60%'}}><FontAwesomeIcon icon={faClock} size="1x"/>{' '}HORA</h4><hr/>
+              <h5 align="left" className="mt-4" style={{width:'60%'}}><FontAwesomeIcon icon={faClock} size="1x"/>{' '}HORA</h5><hr/>
               <MuiPickersUtilsProvider utils={DateFnsUtils}>
                 <Grid container justify="space-around">
                   <KeyboardTimePicker

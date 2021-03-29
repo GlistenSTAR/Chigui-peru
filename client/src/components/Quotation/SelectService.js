@@ -128,13 +128,13 @@ class SelectService extends Component {
     return (
      <div className="services container" align="center">
        <div className="row" align="center">
-        <InputGroup
+        {/* <InputGroup
           name="search"
           icon="fa fa-search"
           onChange={this.onChange}
           value={this.state.search}
           placeholder="Búsqueda..."
-        />
+        /> */}
 
         <div className="horizal-card row"  onClick={this.handleShow1}>
           <div className="col-md-3 col-sm-3 col-3 mt-auto mb-auto" align="right" >
