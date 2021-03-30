@@ -89,6 +89,7 @@ class SelectService extends Component {
   render() {
     const {serivces} = this.props;
     let TotalServices, subContent;
+    console.log(serivces);
     if(serivces.services.length > 0){
       TotalServices = serivces.services.map((item, index)=>{
         return(

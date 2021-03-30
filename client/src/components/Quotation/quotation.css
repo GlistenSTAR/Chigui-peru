@@ -555,7 +555,9 @@
   border-radius:10px
 }
 @media only screen and (max-width: 1204px) {
-
+  .quotation .services .row:first-child {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 992px) {
   .quotation .carsel1{
@@ -576,5 +578,10 @@
   .quotation .carsel1 .card p.card-text{
     font-family: myfont2;
     font-size: 14px!important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .quotation .services .row:first-child {
+    width: 100%;
   }
 }
