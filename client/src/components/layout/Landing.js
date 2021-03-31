@@ -17,23 +17,41 @@ class Landing extends Component {
     return (
       <div>
         <Navbar />
-        <div className="landing">
-          <div className="landing-inner text-light">
+        <div className="landing"> </div>
+        <div className="landing-inner text-light">
+          <div className="row">
+            <div className="landing-letter p-4" style={{backgroundColor:'rgba(0,0,0,0.5)'}}>
+              <h2 style={{textTransform: 'uppercase'}} >Mecánica de confianza En tus manos</h2>
+              <hr className="logo_line"/>
               <div className="row">
-                <div className="col-md-12 text-center landing-letter">
-                  <h1 className="display-3 mb-4 mt-5">TODO EN UN SOLO LUGAR</h1>
-                  <hr className="logo_line"/>
-                  <p className="lead">
-                    {' '}
-                    Con nuestra aplicación, verifica el estado de tu vehículo, los servicios realizados y cotizaciones.
-                  </p>
-                  <div className="button-group">
-                    <Link className="btn btn-lg mybtn" to="cotizacion"> <FontAwesomeIcon icon={faUserEdit}/>{'       '}Pedir cotizacion </Link>
-                    <Link className="btn btn-lg mybtn" to="tel:+981121401"><FontAwesomeIcon icon={faMobileAlt}/>{' '}Llámanos<br/>(+51)+981121401</Link>
+                <div className="col-md-4 offset-md-3" align="left"  style={{fontSize:'18px'}}>
+                  <div className="m-2">
+                    <img src={require('./../../img/icons/garantia.png')} style={{width:'50px', height:'50px'}}/>
+                    <span className="ml-4">Garantía en todos los servicios</span>
+                  </div>
+                  <div className="m-2">
+                    <img src={require('./../../img/icons/price.png')} style={{width:'50px', height:'50px'}}/>
+                    <span className="ml-4">Precios accesibles</span>
+                  </div>
+                  <div className="m-2">
+                    <img src={require('./../../img/icons/diagnostico-green.png')} style={{width:'50px', height:'50px'}}/>
+                    <span className="ml-4">Diagnostico</span>
                   </div>
                 </div>
+                <div className="col-md-2" style={{marginTop:"auto", marginBottom:"auto"}}>
+                  <Link className="btn btn-lg mybtn" to="cotizacion">¡Cotiza y agenda ya!</Link>
+                </div>
               </div>
+              {/* <p className="lead">
+                {' '}
+                Con nuestra aplicación, verifica el estado de tu vehículo, los servicios realizados y cotizaciones.
+              </p>
+              <div className="button-group">
+                <Link className="btn btn-lg mybtn" to="cotizacion"> <FontAwesomeIcon icon={faUserEdit}/>{'       '}Pedir cotizacion </Link>
+                <Link className="btn btn-lg mybtn" to="tel:+981121401"><FontAwesomeIcon icon={faMobileAlt}/>{' '}Llámanos<br/>(+51)+981121401</Link>
+              </div> */}
             </div>
+          </div>
         </div>
         {/* <div className="row pt-5">
           <div className="col-12 line-third-of-web-form"></div>
