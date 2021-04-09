@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faMapMarker, faAngleDoubleDown} from "@fortawesome/free-solid-svg-icons";
@@ -15,12 +15,8 @@ class Quotation extends Component {
   constructor(props){
     super(props);
     this.state = {
-      step : 0  
+      step : 1  
     }
-  }
-
-  stepClick = (e) =>{
-    console.log(e);
   }
 
   render() {
@@ -28,7 +24,7 @@ class Quotation extends Component {
       <div className="quotation">
         <nav className="navbar navbar-expand-lg bg-dark navbar-light navbar-fixed-top">
           <div className="d-lg-block d-md-block">
-            <div className="navbar-brand"></div>
+            <Link to="/"><div className="navbar-brand"></div></Link>
           </div>
           <div className="selecttag">
             <li className="input-group">
@@ -70,7 +66,6 @@ class Quotation extends Component {
                 circleFontSize={18}
                 titleFontSize={13}
                 size={46}
-                onClick={this.stepClick}
               />
             </div>
             <div className="col-md-3"></div>

@@ -12,7 +12,7 @@ import {
 // get services
 export const getServices = () => dispatch => {
   axios
-    .get('/api/service/getService')
+    .get('/api/service/total_diagonse')
     .then(res => 
       dispatch({
         type: GET_SERVICES,

@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import InputGroup from "../common/InputGroup";
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import {Card, Modal} from 'react-bootstrap'
-import ModalTemplate from '../common/Modal';
+import {Card} from 'react-bootstrap'
+import ModalTemplate from '../common/Modal'
+import SubModalTemplate from '../common/SubModal';
 import { getServices } from '../../actions/seviceActions';
 
 import ReviewCarsel from './ReviewCarsel';
@@ -30,79 +31,64 @@ class SelectService extends Component {
   onChange = (e) =>{
     console.log(e); 
   }
-  handleShow1 = () =>{
-    this.setState({ modal1 : true });
+  total_diagnose = () =>{
+    this.setState({ total_diagnose_modal : true });
   }
-  handleClose1 = () =>{
-    this.setState({modal1:false});
+  total_diagnose_modal_close = () =>{
+    this.setState({total_diagnose_modal:false});
   }
   onEngineModalClose = () =>{
     this.setState({ onEngineModal : false });
   }
   onEngineBack = () =>{
-    this.setState({modal1:true});
+    this.setState({total_diagnose_modal:true});
     this.setState({ onEngineModal : false });
   }
   onElectroicModalClose = () =>{
     this.setState({onElectronicModal: false});
   }
   onElectronicBack = () =>{
-    this.setState({modal1:true});
+    this.setState({total_diagnose_modal:true});
     this.setState({ onElectronicModal : false });
   }
   onLiquidLeakModalClose=()=>{
     this.setState({onLiquidLeakModal: false});
   }
   onLiquidLeakBack = () =>{
-    this.setState({modal1:true});
+    this.setState({total_diagnose_modal:true});
     this.setState({ onLiquidLeakModal : false });
   }
   onWitnessesModalClose = () => {
     this.setState({onWitnessesModal: false});
   }
   onWitnessesBack = () =>{
-    this.setState({modal1:true});
+    this.setState({total_diagnose_modal:true});
     this.setState({ onWitnessesModal : false });
   }
   onBrakeModalClose = () => {
     this.setState({onBrakeModal: false});
   }
   onBrakeBack = () =>{
-    this.setState({modal1:true});
+    this.setState({total_diagnose_modal:true});
     this.setState({ onBrakeModal : false });
   }
   onBrakePumpClose = () => {
     this.setState({onBrakePumpModal: false});
   }
   onBrakePumpBack = () =>{
-    this.setState({modal1:true});
+    this.setState({total_diagnose_modal:true});
     this.setState({ onBrakePumpModal : false });
   }
   onTireSuspensionClose = () => {
     this.setState({onTireSuspensionModal: false});
   }
   onTireSuspensionBack = () =>{
-    this.setState({modal1:true});
+    this.setState({total_diagnose_modal:true});
     this.setState({onTireSuspensionModal: false });
   }
 
   render() {
     const {serivces} = this.props;
-    let TotalServices, subContent;
-    console.log(serivces);
-    if(serivces.services.length > 0){
-      TotalServices = serivces.services.map((item, index)=>{
-        return(
-          <div className="row mt-2 mb-3" onClick={()=>{this.setState(item.clickEventData, ...this.state)}} key={index}>
-            <div className="col-md-9 col-9">
-              {item.serviceName}
-            </div>
-            <div className="col-md-3 col-3" align="right">
-              <FontAwesomeIcon icon={faAngleRight}/>
-            </div>
-          </div>
-        );
-      });
       // subContent = serivces.services.map((item1, index)=>(
       //   <ModalTemplate
       //     headerContent = {item1.serviceName}
@@ -124,7 +110,7 @@ class SelectService extends Component {
       //     ]}
       //   />
       // ));
-    }
+    // }
 
     return (
      <div className="services container" align="center">
@@ -136,8 +122,7 @@ class SelectService extends Component {
           value={this.state.search}
           placeholder="Búsqueda..."
         /> */}
-
-        <div className="horizal-card row"  onClick={this.handleShow1}>
+        <div className="horizal-card row"  onClick={this.total_diagnose}>
           <div className="col-md-3 col-sm-3 col-3 mt-auto mb-auto" align="right" >
             <img className="img-rounded" alt="" src={require('../../img/icons/diagnostico.png')} style={{visibility: 'visible'}} />
           </div>
@@ -151,22 +136,11 @@ class SelectService extends Component {
         </div>
 
          {/* Diagnosticar una falla modal */}
-         {/* <Modal
-            show={this.state.modal1}
-            onHide={this.handleClose1}
-            backdrop="static"
-            keyboard={false}
-         > 
-          <Modal.Header closeButton style={{background:'rgb(179,226,1)', textTransform :'uppercase'}}>
-            <Modal.Title style={{fontSize:'18px'}}>¿Donde se presentan las fallas?</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            {TotalServices}
-          </Modal.Body>
-          <Modal.Footer align="center">
-            <button className="btn btn-default">¿No encuentras las fallas que necesitas?</button>
-          </Modal.Footer>
-        </Modal> */}
+         <ModalTemplate
+            show={this.state.total_diagnose_modal}
+            hide={this.total_diagnose_modal_close}
+            data={serivces.services}
+         /> 
 
         {/* {subContent} */}
 {/* 
