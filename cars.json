@@ -1,0 +1,3029 @@
+[{
+  "_id": {
+    "$oid": "605e1cfeb8168b1a70a183ee"
+  },
+  "name": "HONDA",
+  "mark": "/img/mark/honda.png",
+  "model": [
+    {
+      "_id": {
+        "$oid": "605e1ff2b8168b1a70a18440"
+      },
+      "modelName": "STORM 125",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e1ff2b8168b1a70a18441"
+          },
+          "date": "2011",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1ff2b8168b1a70a18442"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e1fdeb8168b1a70a1843d"
+      },
+      "modelName": "CBF 150",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e1fdeb8168b1a70a1843e"
+          },
+          "date": "2012",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1fdeb8168b1a70a1843f"
+              },
+              "cylinderName": "150CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e1fc7b8168b1a70a1843a"
+      },
+      "modelName": "XL 200",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e1fc7b8168b1a70a1843b"
+          },
+          "date": "2010",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1fc7b8168b1a70a1843c"
+              },
+              "cylinderName": "200CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e1fb1b8168b1a70a18437"
+      },
+      "modelName": "INVICTA",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e1fb1b8168b1a70a18438"
+          },
+          "date": "2012",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1fb1b8168b1a70a18439"
+              },
+              "cylinderName": "150CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e1f8fb8168b1a70a18434"
+      },
+      "modelName": "ELITE 125",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e1f8fb8168b1a70a18435"
+          },
+          "date": "2018",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1f8fb8168b1a70a18436"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e1f73b8168b1a70a1842f"
+      },
+      "modelName": "CGL 125",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e1f7cb8168b1a70a18432"
+          },
+          "date": "2014",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1f7cb8168b1a70a18433"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e1f73b8168b1a70a18430"
+          },
+          "date": "2013",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1f73b8168b1a70a18431"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e1f5db8168b1a70a1842c"
+      },
+      "modelName": "XR150",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e1f5db8168b1a70a1842d"
+          },
+          "date": "2016",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1f5db8168b1a70a1842e"
+              },
+              "cylinderName": "150CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e1f4eb8168b1a70a18429"
+      },
+      "modelName": "WAVE 110",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e1f4eb8168b1a70a1842a"
+          },
+          "date": "2016",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1f4eb8168b1a70a1842b"
+              },
+              "cylinderName": "110CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e1f3cb8168b1a70a18426"
+      },
+      "modelName": "WAVE NF",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e1f3cb8168b1a70a18427"
+          },
+          "date": "2006",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1f3cb8168b1a70a18428"
+              },
+              "cylinderName": "110CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e1f11b8168b1a70a1841d"
+      },
+      "modelName": "CRF 250L RALLY",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e1f24b8168b1a70a18424"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1f24b8168b1a70a18425"
+              },
+              "cylinderName": "250CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e1f1fb8168b1a70a18422"
+          },
+          "date": "2019",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1f1fb8168b1a70a18423"
+              },
+              "cylinderName": "250CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e1f19b8168b1a70a18420"
+          },
+          "date": "2018",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1f19b8168b1a70a18421"
+              },
+              "cylinderName": "250CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e1f11b8168b1a70a1841e"
+          },
+          "date": "2017",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1f11b8168b1a70a1841f"
+              },
+              "cylinderName": "250CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e1ebdb8168b1a70a18416"
+      },
+      "modelName": "CRF 250L",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e1efdb8168b1a70a1841b"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1efdb8168b1a70a1841c"
+              },
+              "cylinderName": "250CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e1ef7b8168b1a70a18419"
+          },
+          "date": "2017",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1ef7b8168b1a70a1841a"
+              },
+              "cylinderName": "250CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e1ebdb8168b1a70a18417"
+          },
+          "date": "2013",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1ebdb8168b1a70a18418"
+              },
+              "cylinderName": "250CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e1ea1b8168b1a70a18413"
+      },
+      "modelName": "CRF 230F",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e1ea1b8168b1a70a18414"
+          },
+          "date": "2019",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1ea1b8168b1a70a18415"
+              },
+              "cylinderName": "230CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e1e33b8168b1a70a18410"
+      },
+      "modelName": "WAVE 110SCD",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e1e33b8168b1a70a18411"
+          },
+          "date": "2019",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1e33b8168b1a70a18412"
+              },
+              "cylinderName": "110CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e1e1bb8168b1a70a1840b"
+      },
+      "modelName": "HONDA WAVE 110S",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e1e21b8168b1a70a1840e"
+          },
+          "date": "2018",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1e21b8168b1a70a1840f"
+              },
+              "cylinderName": "110CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e1e1bb8168b1a70a1840c"
+          },
+          "date": "2017",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1e1bb8168b1a70a1840d"
+              },
+              "cylinderName": "110CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e1e04b8168b1a70a18408"
+      },
+      "modelName": "XR190CT",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e1e04b8168b1a70a18409"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1e04b8168b1a70a1840a"
+              },
+              "cylinderName": "190CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e1dc8b8168b1a70a18403"
+      },
+      "modelName": "XR190L",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e1dcfb8168b1a70a18406"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1dcfb8168b1a70a18407"
+              },
+              "cylinderName": "190CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e1dc8b8168b1a70a18404"
+          },
+          "date": "2019",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1dc8b8168b1a70a18405"
+              },
+              "cylinderName": "190CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e1dbab8168b1a70a18400"
+      },
+      "modelName": "XR150LE3",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e1dbab8168b1a70a18401"
+          },
+          "date": "2019",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1dbab8168b1a70a18402"
+              },
+              "cylinderName": "150CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e1d50b8168b1a70a183fd"
+      },
+      "modelName": "CB250 TWISTER",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e1d50b8168b1a70a183fe"
+          },
+          "date": "2017",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1d50b8168b1a70a183ff"
+              },
+              "cylinderName": "250CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e1d27b8168b1a70a183f4"
+      },
+      "modelName": "CB190R",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e1d38b8168b1a70a183fb"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1d38b8168b1a70a183fc"
+              },
+              "cylinderName": "190CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e1d34b8168b1a70a183f9"
+          },
+          "date": "2019",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1d34b8168b1a70a183fa"
+              },
+              "cylinderName": "190CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e1d2fb8168b1a70a183f7"
+          },
+          "date": "2018",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1d2fb8168b1a70a183f8"
+              },
+              "cylinderName": "190CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e1d27b8168b1a70a183f5"
+          },
+          "date": "2017",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1d27b8168b1a70a183f6"
+              },
+              "cylinderName": "190CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e1cfeb8168b1a70a183ef"
+      },
+      "modelName": "CB125FT TWISTER",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e1d0fb8168b1a70a183f2"
+          },
+          "date": "2019",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1d0fb8168b1a70a183f3"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e1cfeb8168b1a70a183f0"
+          },
+          "date": "2018",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e1cfeb8168b1a70a183f1"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "__v": 31
+},{
+  "_id": {
+    "$oid": "605e239b564f1e2b2449a019"
+  },
+  "name": "SUZUKI",
+  "mark": "/img/mark/suzuki.png",
+  "model": [
+    {
+      "_id": {
+        "$oid": "605e2444564f1e2b2449a03a"
+      },
+      "modelName": "GSX150 GIXXER",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e2455564f1e2b2449a041"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e2455564f1e2b2449a042"
+              },
+              "cylinderName": "155CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e244e564f1e2b2449a03f"
+          },
+          "date": "2017",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e244e564f1e2b2449a040"
+              },
+              "cylinderName": "155CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e2449564f1e2b2449a03d"
+          },
+          "date": "2016",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e2449564f1e2b2449a03e"
+              },
+              "cylinderName": "155CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e2444564f1e2b2449a03b"
+          },
+          "date": "2015",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e2444564f1e2b2449a03c"
+              },
+              "cylinderName": "155CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e2417564f1e2b2449a031"
+      },
+      "modelName": "GSX150 SF GIXXER",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e2427564f1e2b2449a038"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e2427564f1e2b2449a039"
+              },
+              "cylinderName": "115CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e2422564f1e2b2449a036"
+          },
+          "date": "2017",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e2422564f1e2b2449a037"
+              },
+              "cylinderName": "115CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e241e564f1e2b2449a034"
+          },
+          "date": "2016",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e241e564f1e2b2449a035"
+              },
+              "cylinderName": "115CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e2417564f1e2b2449a032"
+          },
+          "date": "2015",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e2417564f1e2b2449a033"
+              },
+              "cylinderName": "115CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e23e4564f1e2b2449a028"
+      },
+      "modelName": "GSX250R",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e23fb564f1e2b2449a02f"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e23fb564f1e2b2449a030"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e23f5564f1e2b2449a02d"
+          },
+          "date": "2019",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e23f5564f1e2b2449a02e"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e23ef564f1e2b2449a02b"
+          },
+          "date": "2018",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e23ef564f1e2b2449a02c"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e23e4564f1e2b2449a029"
+          },
+          "date": "2017",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e23e4564f1e2b2449a02a"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e23c2564f1e2b2449a021"
+      },
+      "modelName": "GSXR150",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e23cd564f1e2b2449a026"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e23cd564f1e2b2449a027"
+              },
+              "cylinderName": "150CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e23c8564f1e2b2449a024"
+          },
+          "date": "2019",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e23c8564f1e2b2449a025"
+              },
+              "cylinderName": "150CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e23c2564f1e2b2449a022"
+          },
+          "date": "2018",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e23c2564f1e2b2449a023"
+              },
+              "cylinderName": "150CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e239b564f1e2b2449a01a"
+      },
+      "modelName": "GSXS150",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e23aa564f1e2b2449a01f"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e23aa564f1e2b2449a020"
+              },
+              "cylinderName": "150CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e23a4564f1e2b2449a01d"
+          },
+          "date": "2019",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e23a4564f1e2b2449a01e"
+              },
+              "cylinderName": "150CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e239b564f1e2b2449a01b"
+          },
+          "date": "2018",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e239b564f1e2b2449a01c"
+              },
+              "cylinderName": "150CC"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "__v": 17
+},{
+  "_id": {
+    "$oid": "605e254c564f1e2b2449a043"
+  },
+  "name": "BAJAJ",
+  "mark": "/img/mark/bajaj.png",
+  "model": [
+    {
+      "_id": {
+        "$oid": "605e332f564f1e2b2449a082"
+      },
+      "modelName": "DOMINAR 400 1.0",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e3334564f1e2b2449a085"
+          },
+          "date": "2021",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e3334564f1e2b2449a086"
+              },
+              "cylinderName": "374CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e332f564f1e2b2449a083"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e332f564f1e2b2449a084"
+              },
+              "cylinderName": "374CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e331c564f1e2b2449a07d"
+      },
+      "modelName": "DOMINAR 400 2.0",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e3320564f1e2b2449a080"
+          },
+          "date": "2021",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e3320564f1e2b2449a081"
+              },
+              "cylinderName": "374CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e331c564f1e2b2449a07e"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e331c564f1e2b2449a07f"
+              },
+              "cylinderName": "374CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e3301564f1e2b2449a078"
+      },
+      "modelName": "PULSAR RS200",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e3307564f1e2b2449a07b"
+          },
+          "date": "2021",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e3307564f1e2b2449a07c"
+              },
+              "cylinderName": "200CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e3301564f1e2b2449a079"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e3301564f1e2b2449a07a"
+              },
+              "cylinderName": "200CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e32e8564f1e2b2449a073"
+      },
+      "modelName": "PULSAR NS200FI ABS",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e32ef564f1e2b2449a076"
+          },
+          "date": "2021",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e32ef564f1e2b2449a077"
+              },
+              "cylinderName": "200CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e32e8564f1e2b2449a074"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e32e8564f1e2b2449a075"
+              },
+              "cylinderName": "200CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e32c1564f1e2b2449a06e"
+      },
+      "modelName": "PULSAR NS200 FI",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e32d5564f1e2b2449a071"
+          },
+          "date": "2021",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e32d5564f1e2b2449a072"
+              },
+              "cylinderName": "200CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e32c1564f1e2b2449a06f"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e32c1564f1e2b2449a070"
+              },
+              "cylinderName": "200CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e32a3564f1e2b2449a069"
+      },
+      "modelName": "PULSAR NS160 TD",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e32ae564f1e2b2449a06c"
+          },
+          "date": "2021",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e32ae564f1e2b2449a06d"
+              },
+              "cylinderName": "161CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e32a3564f1e2b2449a06a"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e32a3564f1e2b2449a06b"
+              },
+              "cylinderName": "161CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e3274564f1e2b2449a064"
+      },
+      "modelName": "PULSAR 150R",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e3282564f1e2b2449a067"
+          },
+          "date": "2021",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e3282564f1e2b2449a068"
+              },
+              "cylinderName": "150CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e3274564f1e2b2449a065"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e3274564f1e2b2449a066"
+              },
+              "cylinderName": "150CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e325a564f1e2b2449a061"
+      },
+      "modelName": "PULSAR 150 NEON",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e325a564f1e2b2449a062"
+          },
+          "date": "2021",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e325a564f1e2b2449a063"
+              },
+              "cylinderName": "150CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e3242564f1e2b2449a05c"
+      },
+      "modelName": "PULSAR NS125",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e3248564f1e2b2449a05f"
+          },
+          "date": "2021",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e3248564f1e2b2449a060"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e3242564f1e2b2449a05d"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e3242564f1e2b2449a05e"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e2964564f1e2b2449a047"
+      },
+      "modelName": "DISCOVER 125 ST",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e29a8564f1e2b2449a05a"
+          },
+          "date": "2021",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e29a8564f1e2b2449a05b"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e29a3564f1e2b2449a058"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e29a3564f1e2b2449a059"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e299b564f1e2b2449a056"
+          },
+          "date": "2019",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e299b564f1e2b2449a057"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e2995564f1e2b2449a054"
+          },
+          "date": "2018",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e2995564f1e2b2449a055"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e298e564f1e2b2449a052"
+          },
+          "date": "2017",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e298e564f1e2b2449a053"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e2988564f1e2b2449a050"
+          },
+          "date": "2016",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e2988564f1e2b2449a051"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e297f564f1e2b2449a04e"
+          },
+          "date": "2015",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e297f564f1e2b2449a04f"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e297b564f1e2b2449a04c"
+          },
+          "date": "2014",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e297b564f1e2b2449a04d"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e2976564f1e2b2449a04a"
+          },
+          "date": "2013",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e2976564f1e2b2449a04b"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "605e2964564f1e2b2449a048"
+          },
+          "date": "2012",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e2964564f1e2b2449a049"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "605e254c564f1e2b2449a044"
+      },
+      "modelName": "BOXER 150X UG",
+      "year": [
+        {
+          "_id": {
+            "$oid": "605e254c564f1e2b2449a045"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "605e254c564f1e2b2449a046"
+              },
+              "cylinderName": "145CC"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "__v": 27
+},{
+  "_id": {
+    "$oid": "606fea8c9d096c09bc7aba88"
+  },
+  "name": "YAMAHA",
+  "mark": "/img/mark/yamaha.png",
+  "model": [
+    {
+      "_id": {
+        "$oid": "606fef779d096c09bc7abb60"
+      },
+      "modelName": "YZF-R6",
+      "year": [
+        {
+          "_id": {
+            "$oid": "606fef899d096c09bc7abb6b"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fef899d096c09bc7abb6c"
+              },
+              "cylinderName": "599CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fef859d096c09bc7abb69"
+          },
+          "date": "2019",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fef859d096c09bc7abb6a"
+              },
+              "cylinderName": "599CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fef829d096c09bc7abb67"
+          },
+          "date": "2018",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fef829d096c09bc7abb68"
+              },
+              "cylinderName": "599CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fef7f9d096c09bc7abb65"
+          },
+          "date": "2017",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fef7f9d096c09bc7abb66"
+              },
+              "cylinderName": "599CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fef7a9d096c09bc7abb63"
+          },
+          "date": "2016",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fef7a9d096c09bc7abb64"
+              },
+              "cylinderName": "599CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fef779d096c09bc7abb61"
+          },
+          "date": "2015",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fef779d096c09bc7abb62"
+              },
+              "cylinderName": "599CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "606fef4b9d096c09bc7abb53"
+      },
+      "modelName": "MT-09",
+      "year": [
+        {
+          "_id": {
+            "$oid": "606fef619d096c09bc7abb5e"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fef619d096c09bc7abb5f"
+              },
+              "cylinderName": "847CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fef5b9d096c09bc7abb5c"
+          },
+          "date": "2019",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fef5b9d096c09bc7abb5d"
+              },
+              "cylinderName": "847CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fef589d096c09bc7abb5a"
+          },
+          "date": "2018",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fef589d096c09bc7abb5b"
+              },
+              "cylinderName": "847CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fef559d096c09bc7abb58"
+          },
+          "date": "2017",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fef559d096c09bc7abb59"
+              },
+              "cylinderName": "847CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fef509d096c09bc7abb56"
+          },
+          "date": "2016",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fef509d096c09bc7abb57"
+              },
+              "cylinderName": "847CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fef4b9d096c09bc7abb54"
+          },
+          "date": "2015",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fef4b9d096c09bc7abb55"
+              },
+              "cylinderName": "847CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "606fef119d096c09bc7abb40"
+      },
+      "modelName": "YZ125",
+      "year": [
+        {
+          "_id": {
+            "$oid": "606fef349d096c09bc7abb51"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fef349d096c09bc7abb52"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fef2d9d096c09bc7abb4f"
+          },
+          "date": "2019",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fef2d9d096c09bc7abb50"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fef2a9d096c09bc7abb4d"
+          },
+          "date": "2018",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fef2a9d096c09bc7abb4e"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fef279d096c09bc7abb4b"
+          },
+          "date": "2017",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fef279d096c09bc7abb4c"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fef249d096c09bc7abb49"
+          },
+          "date": "2016",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fef249d096c09bc7abb4a"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fef1e9d096c09bc7abb47"
+          },
+          "date": "2015",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fef1e9d096c09bc7abb48"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fef1a9d096c09bc7abb45"
+          },
+          "date": "2014",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fef1a9d096c09bc7abb46"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fef159d096c09bc7abb43"
+          },
+          "date": "2013",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fef159d096c09bc7abb44"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fef119d096c09bc7abb41"
+          },
+          "date": "2012",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fef119d096c09bc7abb42"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "606feebd9d096c09bc7abb25"
+      },
+      "modelName": "YZF-R15",
+      "year": [
+        {
+          "_id": {
+            "$oid": "606feef99d096c09bc7abb3e"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feef99d096c09bc7abb3f"
+              },
+              "cylinderName": "155CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feef49d096c09bc7abb3c"
+          },
+          "date": "2019",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feef49d096c09bc7abb3d"
+              },
+              "cylinderName": "155CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feeee9d096c09bc7abb3a"
+          },
+          "date": "2018",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feeee9d096c09bc7abb3b"
+              },
+              "cylinderName": "155CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feeeb9d096c09bc7abb38"
+          },
+          "date": "2017",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feeeb9d096c09bc7abb39"
+              },
+              "cylinderName": "155CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feee49d096c09bc7abb36"
+          },
+          "date": "2016",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feee49d096c09bc7abb37"
+              },
+              "cylinderName": "155CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feee19d096c09bc7abb34"
+          },
+          "date": "2015",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feee19d096c09bc7abb35"
+              },
+              "cylinderName": "155CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feedb9d096c09bc7abb32"
+          },
+          "date": "2014",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feedb9d096c09bc7abb33"
+              },
+              "cylinderName": "155CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feed89d096c09bc7abb30"
+          },
+          "date": "2013",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feed89d096c09bc7abb31"
+              },
+              "cylinderName": "155CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feed39d096c09bc7abb2e"
+          },
+          "date": "2012",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feed39d096c09bc7abb2f"
+              },
+              "cylinderName": "155CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feecd9d096c09bc7abb2c"
+          },
+          "date": "2011",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feecd9d096c09bc7abb2d"
+              },
+              "cylinderName": "155CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feec79d096c09bc7abb2a"
+          },
+          "date": "2010",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feec79d096c09bc7abb2b"
+              },
+              "cylinderName": "155CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feec19d096c09bc7abb28"
+          },
+          "date": "2009",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feec19d096c09bc7abb29"
+              },
+              "cylinderName": "155CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feebd9d096c09bc7abb26"
+          },
+          "date": "2008",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feebd9d096c09bc7abb27"
+              },
+              "cylinderName": "155CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "606fee969d096c09bc7abb16"
+      },
+      "modelName": "CYGNUS-Z",
+      "year": [
+        {
+          "_id": {
+            "$oid": "606feea79d096c09bc7abb23"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feea79d096c09bc7abb24"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feea49d096c09bc7abb21"
+          },
+          "date": "2019",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feea49d096c09bc7abb22"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feea19d096c09bc7abb1f"
+          },
+          "date": "2018",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feea19d096c09bc7abb20"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fee9f9d096c09bc7abb1d"
+          },
+          "date": "2017",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fee9f9d096c09bc7abb1e"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fee9c9d096c09bc7abb1b"
+          },
+          "date": "2016",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fee9c9d096c09bc7abb1c"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fee999d096c09bc7abb19"
+          },
+          "date": "2015",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fee999d096c09bc7abb1a"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fee969d096c09bc7abb17"
+          },
+          "date": "2014",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fee969d096c09bc7abb18"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "606fee649d096c09bc7abb07"
+      },
+      "modelName": "MT-07",
+      "year": [
+        {
+          "_id": {
+            "$oid": "606fee789d096c09bc7abb14"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fee789d096c09bc7abb15"
+              },
+              "cylinderName": "655CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fee749d096c09bc7abb12"
+          },
+          "date": "2019",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fee749d096c09bc7abb13"
+              },
+              "cylinderName": "655CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fee709d096c09bc7abb10"
+          },
+          "date": "2018",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fee709d096c09bc7abb11"
+              },
+              "cylinderName": "655CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fee6d9d096c09bc7abb0e"
+          },
+          "date": "2017",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fee6d9d096c09bc7abb0f"
+              },
+              "cylinderName": "655CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fee6a9d096c09bc7abb0c"
+          },
+          "date": "2016",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fee6a9d096c09bc7abb0d"
+              },
+              "cylinderName": "655CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fee689d096c09bc7abb0a"
+          },
+          "date": "2015",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fee689d096c09bc7abb0b"
+              },
+              "cylinderName": "655CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fee649d096c09bc7abb08"
+          },
+          "date": "2014",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fee649d096c09bc7abb09"
+              },
+              "cylinderName": "655CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "606fec239d096c09bc7abaf8"
+      },
+      "modelName": "XTZ150",
+      "year": [
+        {
+          "_id": {
+            "$oid": "606fec3f9d096c09bc7abb05"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fec3f9d096c09bc7abb06"
+              },
+              "cylinderName": "149CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fec399d096c09bc7abb03"
+          },
+          "date": "2019",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fec399d096c09bc7abb04"
+              },
+              "cylinderName": "149CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fec339d096c09bc7abb01"
+          },
+          "date": "2018",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fec339d096c09bc7abb02"
+              },
+              "cylinderName": "149CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fec309d096c09bc7abaff"
+          },
+          "date": "2017",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fec309d096c09bc7abb00"
+              },
+              "cylinderName": "149CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fec2d9d096c09bc7abafd"
+          },
+          "date": "2016",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fec2d9d096c09bc7abafe"
+              },
+              "cylinderName": "149CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fec2a9d096c09bc7abafb"
+          },
+          "date": "2015",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fec2a9d096c09bc7abafc"
+              },
+              "cylinderName": "149CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fec239d096c09bc7abaf9"
+          },
+          "date": "2014",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fec239d096c09bc7abafa"
+              },
+              "cylinderName": "149CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "606febf59d096c09bc7abae9"
+      },
+      "modelName": "XTZ125",
+      "year": [
+        {
+          "_id": {
+            "$oid": "606fec109d096c09bc7abaf6"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fec109d096c09bc7abaf7"
+              },
+              "cylinderName": "124CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fec0a9d096c09bc7abaf4"
+          },
+          "date": "2019",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fec0a9d096c09bc7abaf5"
+              },
+              "cylinderName": "124CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fec079d096c09bc7abaf2"
+          },
+          "date": "2018",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fec079d096c09bc7abaf3"
+              },
+              "cylinderName": "124CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fec039d096c09bc7abaf0"
+          },
+          "date": "2017",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fec039d096c09bc7abaf1"
+              },
+              "cylinderName": "124CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606febfe9d096c09bc7abaee"
+          },
+          "date": "2016",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606febfe9d096c09bc7abaef"
+              },
+              "cylinderName": "124CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606febf99d096c09bc7abaec"
+          },
+          "date": "2015",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606febf99d096c09bc7abaed"
+              },
+              "cylinderName": "124CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606febf59d096c09bc7abaea"
+          },
+          "date": "2014",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606febf59d096c09bc7abaeb"
+              },
+              "cylinderName": "124CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "606febbc9d096c09bc7abad6"
+      },
+      "modelName": "FZ16",
+      "year": [
+        {
+          "_id": {
+            "$oid": "606febdd9d096c09bc7abae7"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606febdd9d096c09bc7abae8"
+              },
+              "cylinderName": "150CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606febd79d096c09bc7abae5"
+          },
+          "date": "2019",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606febd79d096c09bc7abae6"
+              },
+              "cylinderName": "150CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606febd59d096c09bc7abae3"
+          },
+          "date": "2018",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606febd59d096c09bc7abae4"
+              },
+              "cylinderName": "150CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606febd29d096c09bc7abae1"
+          },
+          "date": "2017",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606febd29d096c09bc7abae2"
+              },
+              "cylinderName": "150CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606febcd9d096c09bc7abadf"
+          },
+          "date": "2016",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606febcd9d096c09bc7abae0"
+              },
+              "cylinderName": "150CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606febca9d096c09bc7abadd"
+          },
+          "date": "2015",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606febca9d096c09bc7abade"
+              },
+              "cylinderName": "150CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606febc49d096c09bc7abadb"
+          },
+          "date": "2014",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606febc49d096c09bc7abadc"
+              },
+              "cylinderName": "150CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606febbf9d096c09bc7abad9"
+          },
+          "date": "2013",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606febbf9d096c09bc7abada"
+              },
+              "cylinderName": "150CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606febbc9d096c09bc7abad7"
+          },
+          "date": "2012",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606febbc9d096c09bc7abad8"
+              },
+              "cylinderName": "150CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "606feba29d096c09bc7abacf"
+      },
+      "modelName": "FZS FI",
+      "year": [
+        {
+          "_id": {
+            "$oid": "606febab9d096c09bc7abad4"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606febab9d096c09bc7abad5"
+              },
+              "cylinderName": "150CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feba69d096c09bc7abad2"
+          },
+          "date": "2019",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feba69d096c09bc7abad3"
+              },
+              "cylinderName": "150CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feba29d096c09bc7abad0"
+          },
+          "date": "2018",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feba29d096c09bc7abad1"
+              },
+              "cylinderName": "150CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "606feb719d096c09bc7abac0"
+      },
+      "modelName": "YB125",
+      "year": [
+        {
+          "_id": {
+            "$oid": "606feb909d096c09bc7abacd"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feb909d096c09bc7abace"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feb8a9d096c09bc7abacb"
+          },
+          "date": "2019",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feb8a9d096c09bc7abacc"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feb859d096c09bc7abac9"
+          },
+          "date": "2017",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feb859d096c09bc7abaca"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feb819d096c09bc7abac7"
+          },
+          "date": "2015",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feb819d096c09bc7abac8"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feb7b9d096c09bc7abac5"
+          },
+          "date": "2014",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feb7b9d096c09bc7abac6"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feb759d096c09bc7abac3"
+          },
+          "date": "2009",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feb759d096c09bc7abac4"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feb719d096c09bc7abac1"
+          },
+          "date": "2005",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feb719d096c09bc7abac2"
+              },
+              "cylinderName": "125CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "606feb359d096c09bc7abaaf"
+      },
+      "modelName": "XTZ250",
+      "year": [
+        {
+          "_id": {
+            "$oid": "606feb539d096c09bc7ababe"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feb539d096c09bc7ababf"
+              },
+              "cylinderName": "250CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feb509d096c09bc7ababc"
+          },
+          "date": "2019",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feb509d096c09bc7ababd"
+              },
+              "cylinderName": "250CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feb4b9d096c09bc7ababa"
+          },
+          "date": "2018",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feb4b9d096c09bc7ababb"
+              },
+              "cylinderName": "250CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feb489d096c09bc7abab8"
+          },
+          "date": "2017",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feb489d096c09bc7abab9"
+              },
+              "cylinderName": "250CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feb449d096c09bc7abab6"
+          },
+          "date": "2016",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feb449d096c09bc7abab7"
+              },
+              "cylinderName": "250CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feb409d096c09bc7abab4"
+          },
+          "date": "2015",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feb409d096c09bc7abab5"
+              },
+              "cylinderName": "250CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feb3b9d096c09bc7abab2"
+          },
+          "date": "2014",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feb3b9d096c09bc7abab3"
+              },
+              "cylinderName": "250CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feb359d096c09bc7abab0"
+          },
+          "date": "2013",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feb359d096c09bc7abab1"
+              },
+              "cylinderName": "250CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "606feb209d096c09bc7abaac"
+      },
+      "modelName": "MT15",
+      "year": [
+        {
+          "_id": {
+            "$oid": "606feb209d096c09bc7abaad"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feb209d096c09bc7abaae"
+              },
+              "cylinderName": "155CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "606feaff9d096c09bc7abaa3"
+      },
+      "modelName": "NMAX-ABS",
+      "year": [
+        {
+          "_id": {
+            "$oid": "606feb0f9d096c09bc7abaaa"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feb0f9d096c09bc7abaab"
+              },
+              "cylinderName": "155CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feb0b9d096c09bc7abaa8"
+          },
+          "date": "2019",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feb0b9d096c09bc7abaa9"
+              },
+              "cylinderName": "155CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feb079d096c09bc7abaa6"
+          },
+          "date": "2018",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feb079d096c09bc7abaa7"
+              },
+              "cylinderName": "155CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feaff9d096c09bc7abaa4"
+          },
+          "date": "2017",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feaff9d096c09bc7abaa5"
+              },
+              "cylinderName": "155CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "606fead39d096c09bc7aba9a"
+      },
+      "modelName": "FZ25",
+      "year": [
+        {
+          "_id": {
+            "$oid": "606feae39d096c09bc7abaa1"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feae39d096c09bc7abaa2"
+              },
+              "cylinderName": "249CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feade9d096c09bc7aba9f"
+          },
+          "date": "2019",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feade9d096c09bc7abaa0"
+              },
+              "cylinderName": "249CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fead89d096c09bc7aba9d"
+          },
+          "date": "2018",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fead89d096c09bc7aba9e"
+              },
+              "cylinderName": "249CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fead39d096c09bc7aba9b"
+          },
+          "date": "2017",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fead39d096c09bc7aba9c"
+              },
+              "cylinderName": "249CC"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": {
+        "$oid": "606fea8c9d096c09bc7aba89"
+      },
+      "modelName": "CRYPTON T110",
+      "year": [
+        {
+          "_id": {
+            "$oid": "606feab49d096c09bc7aba98"
+          },
+          "date": "2020",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feab49d096c09bc7aba99"
+              },
+              "cylinderName": "110CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feaaf9d096c09bc7aba96"
+          },
+          "date": "2019",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feaaf9d096c09bc7aba97"
+              },
+              "cylinderName": "110CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feaac9d096c09bc7aba94"
+          },
+          "date": "2018",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feaac9d096c09bc7aba95"
+              },
+              "cylinderName": "110CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feaa69d096c09bc7aba92"
+          },
+          "date": "2017",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feaa69d096c09bc7aba93"
+              },
+              "cylinderName": "110CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606feaa19d096c09bc7aba90"
+          },
+          "date": "2016",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606feaa19d096c09bc7aba91"
+              },
+              "cylinderName": "110CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fea9b9d096c09bc7aba8e"
+          },
+          "date": "2015",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fea9b9d096c09bc7aba8f"
+              },
+              "cylinderName": "110CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fea979d096c09bc7aba8c"
+          },
+          "date": "2014",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fea979d096c09bc7aba8d"
+              },
+              "cylinderName": "110CC"
+            }
+          ]
+        },
+        {
+          "_id": {
+            "$oid": "606fea8c9d096c09bc7aba8a"
+          },
+          "date": "2013",
+          "cylinder": [
+            {
+              "_id": {
+                "$oid": "606fea8c9d096c09bc7aba8b"
+              },
+              "cylinderName": "110CC"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "__v": 105
+}]
