@@ -17,7 +17,9 @@ class SelectService extends Component {
     super(props);
     this.state ={
       search : '',
-      count : 0
+      count : 0,
+      price: 0,
+      amount: 0
     }
   }
 
@@ -31,7 +33,7 @@ class SelectService extends Component {
     this.setState({ total_diagnose_modal : true });
   }
   total_diagnose_modal_close = () =>{
-    this.setState({total_diagnose_modal:false});
+    this.setState({ total_diagnose_modal : false});
   }
 
   render() {
@@ -123,6 +125,7 @@ class SelectService extends Component {
               <button className="btn form-control" style={{background:'rgb(179,226,1)', color:'black'}} onClick={this.props.nextclick}>RESERVAR CITA</button>
             </div>
           </div>
+          
           {localStorage.getItem("price")?(
             <div className="bucket" align="left">
               <div className="bucketIcon pl-4 pr-5 pt-2" style={{color:'white'}}>
@@ -132,6 +135,7 @@ class SelectService extends Component {
               </div>
             </div>
           ):''}
+
        </div>
      </div>
     );

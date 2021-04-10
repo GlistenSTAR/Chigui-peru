@@ -9,6 +9,7 @@ class SubModalTemplate extends Component {
   addCart = (price, name) =>{
     localStorage.setItem("price", price);
     localStorage.setItem("service_name", name);
+    console.log(this.props);
   }
   
   render() {
