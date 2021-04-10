@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserEdit, faMobileAlt } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faUserEdit, faMobileAlt } from "@fortawesome/free-solid-svg-icons";
 import Navbar from './Navbar';
 
 class Landing extends Component {
@@ -26,15 +26,15 @@ class Landing extends Component {
               <div className="row">
                 <div className="col-md-4 offset-md-3" align="left"  style={{fontSize:'18px'}}>
                   <div className="m-2">
-                    <img src={require('./../../img/icons/garantia.png')} style={{width:'50px', height:'50px'}}/>
+                    <img src={require('./../../img/icons/garantia.png')} alt="icon" style={{width:'50px', height:'50px'}}/>
                     <span className="ml-4">Garantía en todos los servicios</span>
                   </div>
                   <div className="m-2">
-                    <img src={require('./../../img/icons/price.png')} style={{width:'50px', height:'50px'}}/>
+                    <img src={require('./../../img/icons/price.png')} alt="icon" style={{width:'50px', height:'50px'}}/>
                     <span className="ml-4">Precios accesibles</span>
                   </div>
                   <div className="m-2">
-                    <img src={require('./../../img/icons/diagnostico-green.png')} style={{width:'50px', height:'50px'}}/>
+                    <img src={require('./../../img/icons/diagnostico-green.png')} alt="icon" style={{width:'50px', height:'50px'}}/>
                     <span className="ml-4">Diagnostico</span>
                   </div>
                 </div>

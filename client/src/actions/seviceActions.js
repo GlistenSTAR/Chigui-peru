@@ -1,12 +1,10 @@
 import axios from 'axios';
 
 import {
-  GET_PROFILE,
   GET_SERVICES,
   PROFILE_LOADING,
   CLEAR_CURRENT_PROFILE,
   GET_ERRORS,
-  SET_CURRENT_USER
 } from './types';
 
 // get services

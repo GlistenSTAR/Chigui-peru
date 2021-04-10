@@ -1,0 +1,190 @@
+[{
+  "_id": {
+    "$oid": "60708ae4e72f9c06ebb3e832"
+  },
+  "service_type": "total_diagonse",
+  "data": [
+    {
+      "name": "En el Motor",
+      "subdata": [
+        {
+          "subname": "FALLOS DE MOTOR",
+          "price": "18",
+          "time": "45",
+          "service_list": [
+            "Aceleracion y desaceleracion",
+            "Apaga repentinamente",
+            "Sale humo",
+            "Pierde fuerza",
+            "Cambios"
+          ]
+        },
+        {
+          "subname": "encendido",
+          "price": "18",
+          "time": "45",
+          "service_list": [
+            "No enciende"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "En el sistema electrico",
+      "subdata": [
+        {
+          "subname": "del sistema de inyeccion",
+          "price": "50",
+          "time": "60",
+          "service_list": [
+            "Inyectores"
+          ]
+        },
+        {
+          "subname": "electrico",
+          "price": "50",
+          "time": "60",
+          "service_list": [
+            "Bombillos",
+            "Tablero",
+            "Alarma",
+            "Mensajes de falla"
+          ]
+        },
+        {
+          "subname": "sistema de carga",
+          "price": "30",
+          "time": "45",
+          "service_list": [
+            "Regulador",
+            "Bobinas",
+            "Estator"
+          ]
+        },
+        {
+          "subname": "de sensores",
+          "price": "50",
+          "time": "60",
+          "service_list": [
+            "Diagnostico de sensores",
+            "Sensores"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "En el Liquidos/fugas",
+      "subdata": [
+        {
+          "subname": "perdida de refrigerante",
+          "price": "12",
+          "time": "30",
+          "service_list": [
+            "Fuga refrigerante"
+          ]
+        },
+        {
+          "subname": "de fugas",
+          "price": "15",
+          "time": "10",
+          "service_list": [
+            "Fuga de aceite",
+            "Fuga de liquidos de frenos"
+          ]
+        },
+        {
+          "subname": "bomba de gasolina",
+          "price": "30",
+          "time": "45",
+          "service_list": [
+            "Bomba de aceite"
+          ]
+        },
+        {
+          "subname": "de sensores",
+          "price": "30",
+          "time": "45",
+          "service_list": [
+            "Diagnostico de sensores",
+            "Sensores"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "En el Testigos",
+      "subdata": [
+        {
+          "subname": "testigo de motor",
+          "price": "30",
+          "time": "45",
+          "service_list": [
+            "Motor"
+          ]
+        },
+        {
+          "subname": "testigo de temperatura",
+          "price": "30",
+          "time": "45",
+          "service_list": [
+            "Temperatura"
+          ]
+        },
+        {
+          "subname": " testigo de freno, abs o control de traccion",
+          "price": "30",
+          "time": "45",
+          "service_list": [
+            "Freno",
+            "ABS",
+            "Traccion"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "En los frenos",
+      "subdata": [
+        {
+          "subname": "de frenado",
+          "price": "10",
+          "time": "30",
+          "service_list": [
+            "Frenos largos",
+            "Ruido/chillido en los frenos"
+          ]
+        },
+        {
+          "subname": "de fugas",
+          "price": "10",
+          "time": "30",
+          "service_list": [
+            "Fuga en liquido de frenos"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "En las bombas de freno",
+      "subdata": [
+        {
+          "subname": "",
+          "price": "10",
+          "time": "30",
+          "service_list": []
+        }
+      ]
+    },
+    {
+      "name": "En las llantas y suspension",
+      "subdata": [
+        {
+          "subname": "",
+          "price": "12",
+          "time": "30",
+          "service_list": []
+        }
+      ]
+    }
+  ]
+}]
