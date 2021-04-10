@@ -17,7 +17,6 @@ class SelectService extends Component {
     super(props);
     this.state ={
       search : '',
-      amount : 1,
       count : 0
     }
   }
@@ -67,7 +66,7 @@ class SelectService extends Component {
             hide={this.total_diagnose_modal_close}
             data={serivces.services}
             type={1}
-         /> 
+         />
         
         
         <div className="recommand mt-4" align="left">
@@ -124,12 +123,12 @@ class SelectService extends Component {
               <button className="btn form-control" style={{background:'rgb(179,226,1)', color:'black'}} onClick={this.props.nextclick}>RESERVAR CITA</button>
             </div>
           </div>
-          {this.state.price!==0?(
+          {localStorage.getItem("price")?(
             <div className="bucket" align="left">
               <div className="bucketIcon pl-4 pr-5 pt-2" style={{color:'white'}}>
-                <FontAwesomeIcon icon={faShoppingCart} size="2x" color="white" style={{float:'left', marginRight:'35px'}}/>
-                <h5 align="center" className="mt-1 pl-5" style={{ float:'left'}}>Ver la motocicleta</h5>
-                <h4 align="right">{this.state.amount}</h4>
+                <FontAwesomeIcon icon={faShoppingCart} size="2x" color="white" style={{float:'left'}}/>
+                <h5 align="center" className="mt-1 pl-5" style={{ float:'left'}}>Ver Motocicleta</h5>
+                <h4 align="right">S/.{' '}{localStorage.getItem("price")}</h4>
               </div>
             </div>
           ):''}
