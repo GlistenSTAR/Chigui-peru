@@ -1,17 +1,10 @@
 import React, { Component } from "react"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft,  faPlusCircle } from '@fortawesome/free-solid-svg-icons';
+import { faAngleLeft,  faCheckCircle,  faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 import {Card, Modal} from 'react-bootstrap'
 
 
 class SubModalTemplate extends Component {
-  
-  addCart = (price, name) =>{
-    localStorage.setItem("price", price);
-    localStorage.setItem("service_name", name);
-    console.log(this.props);
-  }
-  
   render() {
     const {
       headerContent, 
@@ -22,11 +15,10 @@ class SubModalTemplate extends Component {
     } = this.props;
 
     let content = data.map((item, key)=>{
-
       let minicontent = item.service_list.map((value, index)=>(
         <li key={index}>{value}</li>
       )); 
-
+      let flag=item.subname;
       return (
         <div className="row mt-2 mb-3" key={key}>
           <div className="model-card">
@@ -38,7 +30,13 @@ class SubModalTemplate extends Component {
                 <div className="col-4" style={{height:'50px'}}>
                   <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px', paddingTop:'10px', borderRadius:'20px'}}>
                     <span>{'S/.'}{item.price}</span>
-                    <FontAwesomeIcon icon={faPlusCircle} className="ml-3" color='green' onClick={()=>this.addCart(item.price, item.subname)}/>
+                    <FontAwesomeIcon icon={typeof this.state[flag]===null?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
+                      onClick={
+                        ()=>{
+                          this.props.onchange2(item.price, item.subname); 
+                          this.setState({[item.subname] : 1})
+                        }}
+                    />
                   </h6>
                 </div>
                 <hr style={{marginTop:'-8px', width:'95%'}}/>
@@ -53,6 +51,7 @@ class SubModalTemplate extends Component {
           </div>
         </div>
     )});
+
     return (
       <Modal
         show={onModal}

@@ -20,7 +20,6 @@ class ModalTemplate extends Component {
           let obj = {};
           return(
             <div key={index}>
-              
               <div className="row mt-2 mb-3" onClick={() => {
                   obj[submodal_index] = true;
                   this.setState(obj);
@@ -46,6 +45,7 @@ class ModalTemplate extends Component {
                   obj[submodal_index] = false;
                   this.setState(obj);
                 }}
+                onchange2={(price, name)=>this.props.onchange1(price, name)}
               />
             </div>
           );

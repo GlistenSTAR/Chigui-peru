@@ -19,16 +19,47 @@ class SelectService extends Component {
       search : '',
       count : 0,
       price: 0,
-      amount: 0
+      amount: 0,
+      carts: []
     }
   }
 
   componentDidMount(){
     this.props.getServices();
   }
-  onChange = (e) =>{
-    console.log(e); 
+  onChange = (price, name) =>{
+    let new_cart = {service_name : name, price : price};
+    let amount, same_flag=0, index=0;
+    let carts_temp = this.state.carts;
+    if(this.state.carts.length > 0){
+      this.state.carts.map((cart, _i)=>{
+        if(cart.service_name === name) {
+          same_flag = 1;
+          index = _i;
+        } 
+      });
+      if(same_flag===1){
+          carts_temp.splice(index, 1);
+          price  = this.state.price - parseInt(price);
+          amount = this.state.amount - 1;
+          this.setState({carts: carts_temp});
+          this.setState({price: price, amount: amount});
+      } else {
+          carts_temp.push(new_cart);
+          this.setState({carts: carts_temp});
+          price  = this.state.price + parseInt(price);
+          amount = this.state.amount + 1;
+          this.setState({price: price, amount: amount});
+      }
+    } else{
+      carts_temp.push(new_cart);
+      this.setState({carts: carts_temp});
+      price  = this.state.price + parseInt(price);
+      amount = this.state.amount + 1;
+      this.setState({price: price, amount: amount});
+    }
   }
+
   total_diagnose = () =>{
     this.setState({ total_diagnose_modal : true });
   }
@@ -38,7 +69,6 @@ class SelectService extends Component {
 
   render() {
     const {serivces} = this.props;
-      
     return (
      <div className="services container" align="center">
        <div className="row" align="center">
@@ -68,6 +98,7 @@ class SelectService extends Component {
             hide={this.total_diagnose_modal_close}
             data={serivces.services}
             type={1}
+            onchange1={(price, name)=>this.onChange(price, name)}
          />
         
         
@@ -126,12 +157,15 @@ class SelectService extends Component {
             </div>
           </div>
           
-          {localStorage.getItem("price")?(
-            <div className="bucket" align="left">
+          {this.state.price>0?(
+            <div className="bucket" align="left" style={{zIndex:'9999999999999999'}}>
               <div className="bucketIcon pl-4 pr-5 pt-2" style={{color:'white'}}>
-                <FontAwesomeIcon icon={faShoppingCart} size="2x" color="white" style={{float:'left'}}/>
+                <div style={{float:'left'}}>
+                  <FontAwesomeIcon icon={faShoppingCart} size="2x" color="white" style={{float:'left'}}/>
+                  <span className="badge badge-success" style={{marginLeft:'-10px', paddingTop:'-20px'}}>{this.state.amount}</span>
+                </div>
                 <h5 align="center" className="mt-1 pl-5" style={{ float:'left'}}>Ver Motocicleta</h5>
-                <h4 align="right">S/.{' '}{localStorage.getItem("price")}</h4>
+                <h4 align="right">S/.{' '}{this.state.price}</h4>
               </div>
             </div>
           ):''}
