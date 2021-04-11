@@ -168,7 +168,7 @@
       "name": "En las bombas de freno",
       "subdata": [
         {
-          "subname": "",
+          "subname": "bombas de freno",
           "price": "10",
           "time": "30",
           "service_list": []
@@ -179,7 +179,7 @@
       "name": "En las llantas y suspension",
       "subdata": [
         {
-          "subname": "",
+          "subname": "llantas y suspension",
           "price": "12",
           "time": "30",
           "service_list": []

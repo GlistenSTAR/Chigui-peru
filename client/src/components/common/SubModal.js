@@ -5,6 +5,12 @@ import {Card, Modal} from 'react-bootstrap'
 
 
 class SubModalTemplate extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+
+    };
+  }
   render() {
     const {
       headerContent, 
@@ -30,11 +36,15 @@ class SubModalTemplate extends Component {
                 <div className="col-4" style={{height:'50px'}}>
                   <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px', paddingTop:'10px', borderRadius:'20px'}}>
                     <span>{'S/.'}{item.price}</span>
-                    <FontAwesomeIcon icon={typeof this.state[flag]===null?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
+                    <FontAwesomeIcon icon={this.state[flag]===1?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
                       onClick={
                         ()=>{
-                          this.props.onchange2(item.price, item.subname); 
-                          this.setState({[item.subname] : 1})
+                          this.props.onchange2(item.price, item.subname);
+                          if(this.state[item.subname]!==1){
+                            this.setState({[item.subname] : 1})
+                          } else{
+                            this.setState({[item.subname] : 0})
+                          }
                         }}
                     />
                   </h6>

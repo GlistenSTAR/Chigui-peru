@@ -474,6 +474,11 @@
   border-top-right-radius:15px
 }
 
+.modal-body .list:hover{
+  color:rgb(179, 226, 1);
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 992px) {
   .quotation .bucket{
     width:100%; 

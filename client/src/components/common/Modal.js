@@ -19,7 +19,7 @@ class ModalTemplate extends Component {
           let submodal_index = "submodal"+index;
           let obj = {};
           return(
-            <div key={index}>
+            <div key={index} className="list">
               <div className="row mt-2 mb-3" onClick={() => {
                   obj[submodal_index] = true;
                   this.setState(obj);
