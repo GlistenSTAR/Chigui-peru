@@ -1,4 +1,4 @@
 module.exports = {
-  mongoURI: "mongodb://localhost/Chiqui",//your cloud mongodb uri write here  
+  mongoURI: "mongodb+srv://danil:**lionheart**!@cluster0.bpdyq.mongodb.net",//your cloud mongodb uri write here  
     secretOrKey: "PBFPVYFBQXZTYFPBFEQJHDXXQVAPTPQJKTOYQWIPBVWLXTOXBTFXQ!^#WAXBVCXQWAXFQJVWLEQNTOZQGGQLFXQWAKVWLXQWAEBIPBFXF!QVXGTVJVWLBTPQWAEBFPBFHCVLXBQUFEVWLXGDP"
   };

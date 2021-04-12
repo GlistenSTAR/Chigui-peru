@@ -45,7 +45,7 @@ class ModalTemplate extends Component {
                   obj[submodal_index] = false;
                   this.setState(obj);
                 }}
-                onchange2={(price, name)=>this.props.onchange1(price, name)}
+                onchange2={(price, name, time)=>this.props.onchange1(price, name, time)}
               />
             </div>
           );

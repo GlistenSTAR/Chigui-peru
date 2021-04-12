@@ -20,15 +20,16 @@ class SelectService extends Component {
       count : 0,
       price: 0,
       amount: 0,
-      carts: []
+      carts: [],
+      cart_show: false
     }
   }
 
   componentDidMount(){
     this.props.getServices();
   }
-  onChange = (price, name) =>{
-    let new_cart = {service_name : name, price : price};
+  onChange = (price, name, time) =>{
+    let new_cart = {service_name : name, price : price, time : time};
     let amount, same_flag=0, index=0;
     let carts_temp = this.state.carts;
     if(this.state.carts.length > 0){
@@ -60,6 +61,10 @@ class SelectService extends Component {
     }
   }
 
+  show_cart=()=>{
+    this.setState({cart_show:!this.state.cart_show})
+  }
+
   total_diagnose = () =>{
     this.setState({ total_diagnose_modal : true });
   }
@@ -69,6 +74,15 @@ class SelectService extends Component {
 
   render() {
     const {serivces} = this.props;
+
+    let tableContent = this.state.carts.map((cart, index)=>(
+        <tr key={index} align="center" style={{fontSize:'13px'}}>
+          <td style={{textTransform: 'uppercase'}}>DIAGNÓSTICOS{' '}{cart.service_name}</td>
+          <td>S/.{cart.price}</td>
+          <td>{cart.time}{' '}mins</td>
+        </tr>
+    ));
+
     return (
      <div className="services container" align="center">
        <div className="row" align="center">
@@ -98,7 +112,7 @@ class SelectService extends Component {
             hide={this.total_diagnose_modal_close}
             data={serivces.services}
             type={1}
-            onchange1={(price, name)=>this.onChange(price, name)}
+            onchange1={(price, name, time)=>this.onChange(price, name, time)}
          />
         
         
@@ -158,7 +172,7 @@ class SelectService extends Component {
           </div>
           
           {this.state.price>0?(
-            <div className="bucket" align="left" style={{zIndex:'9999999999999999'}}>
+            <div className="bucket" align="left" style={{zIndex:'9999999999999999'}} onClick={this.show_cart}>
               <div className="bucketIcon pl-4 pr-5 pt-2" style={{color:'white'}}>
                 <div style={{float:'left'}}>
                   <FontAwesomeIcon icon={faShoppingCart} size="2x" color="white" style={{float:'left'}}/>
@@ -167,6 +181,21 @@ class SelectService extends Component {
                 <h5 align="center" className="mt-1 pl-5" style={{ float:'left'}}>Ver Motocicleta</h5>
                 <h4 align="right">S/.{' '}{this.state.price}</h4>
               </div>
+              {this.state.cart_show?(
+                <div className="text-grey bg-white mt-2" align="center">
+                  <h3>Precio total : <span>S/.{this.state.price}</span></h3>
+                  <table className="table">
+                    <thead align="center">
+                      <td width="60%">Nombre</td>
+                      <td width="30%">Precio</td>
+                      <td width="10%">Acción</td>
+                    </thead>
+                    <tbody>
+                      {tableContent}
+                    </tbody>
+                  </table>
+                </div>
+              ):''}
             </div>
           ):''}
 

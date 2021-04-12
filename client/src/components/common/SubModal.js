@@ -39,7 +39,7 @@ class SubModalTemplate extends Component {
                     <FontAwesomeIcon icon={this.state[flag]===1?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
                       onClick={
                         ()=>{
-                          this.props.onchange2(item.price, item.subname);
+                          this.props.onchange2(item.price, item.subname, item.time);
                           if(this.state[item.subname]!==1){
                             this.setState({[item.subname] : 1})
                           } else{
