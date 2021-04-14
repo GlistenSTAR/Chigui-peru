@@ -9,7 +9,7 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "db": "start mongod --dbpath 'E:/projects/workana/autolab(peru)/Chigui/Chiguidb'",
-    "dev": "concurrently -n Server,Client,DB \"npm run server\" \"npm run client\" \"npm run db\"",
+    "dev": "concurrently -n Server,Client \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "DanilShelikhov",
