@@ -38,24 +38,26 @@ class SelectService extends Component {
           same_flag = 1;
           index = _i;
         } 
+        return 0;
       });
       if(same_flag===1){
           carts_temp.splice(index, 1);
-          price  = this.state.price - parseInt(price);
+          price  = this.state.price - parseInt(price, 10);
           amount = this.state.amount - 1;
           this.setState({carts: carts_temp});
           this.setState({price: price, amount: amount});
       } else {
           carts_temp.push(new_cart);
           this.setState({carts: carts_temp});
-          price  = this.state.price + parseInt(price);
+          price  = this.state.price + parseInt(price, 10);
           amount = this.state.amount + 1;
           this.setState({price: price, amount: amount});
       }
+      return 0;
     } else{
       carts_temp.push(new_cart);
       this.setState({carts: carts_temp});
-      price  = this.state.price + parseInt(price);
+      price  = this.state.price + parseInt(price, 10);
       amount = this.state.amount + 1;
       this.setState({price: price, amount: amount});
     }

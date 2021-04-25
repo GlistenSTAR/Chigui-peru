@@ -5,10 +5,12 @@ import 'date-fns';
 import dateFormat from 'dateformat';
 import Grid from '@material-ui/core/Grid';
 import DateFnsUtils from '@date-io/date-fns';
+
 import {
   MuiPickersUtilsProvider,
   KeyboardTimePicker,
 } from '@material-ui/pickers';
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalculator, faClock, faHome, faMotorcycle, faPersonBooth } from '@fortawesome/free-solid-svg-icons';
 
@@ -108,6 +110,7 @@ export default class SelectData extends Component {
               </div>
             </div>
           ) : ''}
+          
           { this.state.location?(
             <div>
               <h5 align="left" className="mt-4" style={{width:'60%'}}><FontAwesomeIcon icon={faClock} size="1x"/>{' '}HORA</h5><hr/>

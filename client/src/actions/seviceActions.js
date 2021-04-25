@@ -15,7 +15,7 @@ export const getServices = () => dispatch => {
       dispatch({
         type: GET_SERVICES,
         payload: res.data
-      })
+      }) 
     )
     .catch(err =>
       dispatch({

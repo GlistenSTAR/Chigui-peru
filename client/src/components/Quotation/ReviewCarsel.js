@@ -6,6 +6,7 @@ export default () => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const chevronWidth = 40;
   const { innerWidth: width} = window;
+  
   return (
     <div className="carsel1">
       <ItemsCarousel

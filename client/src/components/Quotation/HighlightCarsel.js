@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import { Card } from 'react-bootstrap'
 import ItemsCarousel from 'react-items-carousel';
+import { Modal } from 'react-bootstrap'
+
 
 export default () => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
+  const [activeServices, setActiveServices] = useState(false);
+  const [mileage, setMileage] = useState(false);
+  const [chagneOil, setChangeOil] = useState(false);
   const chevronWidth = 40;
   const { innerWidth: width} = window;
   return (
@@ -19,7 +24,7 @@ export default () => {
         chevronWidth={chevronWidth}
       >
         <div>
-          <div align="center">
+          <div align="center" onClick={()=>{ setActiveServices(true); }}>
             <Card>
                 <Card.Img variant="top" src={require('../../img/icons/escaner.png')} />
                 <Card.Body>
@@ -31,7 +36,7 @@ export default () => {
             </div>
         </div>
         <div>
-          <div align="center">
+          <div align="center" onClick={()=>{setMileage(true);}}>
               <Card align="center">
                   <Card.Img variant="top" src={require('../../img/icons/revision_por_kilometraje.png')}/>
                 <Card.Body>
@@ -43,7 +48,7 @@ export default () => {
             </div>
         </div>
         <div>
-          <div align="center">
+          <div align="center" onClick={()=>{setChangeOil(true);}}>
               <Card>
                 <Card.Img variant="top" src={require('../../img/icons/cambio_de_aceite.png')} />
                 <Card.Body>
@@ -55,6 +60,34 @@ export default () => {
             </div>
         </div>
       </ItemsCarousel>
+      
+      <Modal
+          isOpen={activeServices}
+          onRequestClose={()=>setActiveServices(false)}
+          contentLabel="Example Modal"
+        >
+          <h2>Hello</h2>
+          <button onClick={()=>setActiveServices(false)}>close</button>
+          <div>I am a modal</div>
+      </Modal>
+      <Modal
+          isOpen={mileage}
+          onRequestClose={()=>setActiveServices(false)}
+          contentLabel="Example Modal"
+        >
+          <h2>Hello</h2>
+          <button onClick={()=>setActiveServices(false)}>close</button>
+          <div>I am a modal</div>
+      </Modal>
+      <Modal
+          isOpen={chagneOil}
+          onRequestClose={()=>setActiveServices(false)}
+          contentLabel="Example Modal"
+        >
+          <h2>Hello</h2>
+          <button onClick={()=>setActiveServices(false)}>close</button>
+          <div>I am a modal</div>
+      </Modal>
     </div>
   );
 };
