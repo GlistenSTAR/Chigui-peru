@@ -60,8 +60,8 @@ class ModalTemplate extends Component {
               backdrop="static"
               keyboard={false}
             > 
-              <Modal.Header closeButton style={{background:'rgb(179,226,1)', textTransform :'uppercase'}}>
-                <Modal.Title style={{fontSize:'18px'}}>¿Donde se presentan las fallas?</Modal.Title>
+              <Modal.Header closeButton>
+                <Modal.Title>¿Donde se presentan las fallas?</Modal.Title>
               </Modal.Header>
               <Modal.Body>
                 {TotalServices}

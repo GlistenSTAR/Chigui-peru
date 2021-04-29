@@ -591,3 +591,27 @@
     width: 100%;
   }
 }
+
+
+
+
+
+.modal-header{
+  background:rgb(179,226,1); 
+  text-transform :uppercase;
+}
+.modal-title{
+  font-size:18px;
+}
+.circle_icon{
+  width: 50px!important;
+  height: 50px!important;
+  padding-top: 5px;
+  margin-left: 20px;
+}
+
+@media (min-width: 576px){
+  .modal-dialog {
+      max-width: 700px;
+  }
+}

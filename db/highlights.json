@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "6089af39fb5678fa15526d32"
+  },
+  "price": "50",
+  "time": "45",
+  "serviceName": "scanner",
+  "data": {
+    "detail": [
+      "lectura de la computadora de la moto.",
+      "Incluye borrar codigo de falla en caso de ser el caso"
+    ]
+  }
+},{
+  "_id": {
+    "$oid": "6089afd9fb5678fa15526d33"
+  },
+  "price": "35",
+  "time": "60",
+  "serviceName": "mileage",
+  "data": {
+    "detail": [
+      "Suspension",
+      "Claxon",
+      "Escaner",
+      "Refrigerante en caso de tenerlo",
+      "Fugas y niveles",
+      "Luces",
+      "lantas",
+      "Frenos"
+    ]
+  }
+}]
