@@ -8,7 +8,6 @@ import axios from 'axios';
 import ListComponent from '../common/List';
 
 export default ({addCart}) => {
-  // console.log(addCart);
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const [activeServices, setActiveServices] = useState(false);
   const [mileage, setMileage] = useState(false);
@@ -16,6 +15,10 @@ export default ({addCart}) => {
   const [highlight, setHightlight] = useState();
   const [scanData, setScanData] = useState([]);
   const [mileageData, setMileageData] = useState([]);
+  const [flag1, setFlag1] = useState(false);
+  const [flag2, setFlag2] = useState(false);
+  const [flag3, setFlag3] = useState(false);
+
   let temp1, temp2, minicontent1;
 
   const chevronWidth = 40;
@@ -134,10 +137,10 @@ export default ({addCart}) => {
               <div className="col-4" style={{height:'50px'}}>
                 <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px', paddingTop:'10px', borderRadius:'20px'}}>
                   <span>{'S/.'}{scanData.price}</span>
-                  <FontAwesomeIcon icon={faPlusCircle} className="ml-3" color='green' 
+                  <FontAwesomeIcon icon={flag1?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
                     onClick={
                       ()=>{
-                        console.log("asdfasdfasdfadsf");
+                        setFlag1(!flag1);
                         addCart(scanData.price, "Servicio de Escaner", scanData.time);
                         // if(this.state[item.subname]!==1){
                         //   this.setState({[item.subname] : 1})
