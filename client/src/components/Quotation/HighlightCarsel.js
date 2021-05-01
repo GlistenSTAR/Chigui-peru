@@ -12,9 +12,9 @@ export default () => {
   const [mileage, setMileage] = useState(false);
   const [chagneOil, setChangeOil] = useState(false);
   const [highlight, setHightlight] = useState();
-  const [scanData, setScanData] = useState();
-  const [mileageData, setMileageData] = useState();
-  let temp1, temp2;
+  const [scanData, setScanData] = useState([]);
+  const [mileageData, setMileageData] = useState([]);
+  let temp1, temp2, minicontent1;
 
   const chevronWidth = 40;
   const { innerWidth: width} = window;
@@ -26,17 +26,25 @@ export default () => {
   }, []);
 
   if(typeof highlight !== "undefined"){
+    // console.log(highlight);
     highlight.map((highlight)=>{
       if(highlight.serviceName === "scanner"){
         temp1 = highlight;
       }
-      if(highlight.serviceName==="mileage"){
+      if(highlight.serviceName === "mileage"){
         temp2 = highlight;
       }
     });
-    setScanData(temp1);
-    setMileageData(temp2);
+
+    if(typeof temp1 !=="undefined" && scanData.length === 0){
+      setScanData(temp1);
+    }
+    if(typeof temp2 !=="undefined" && mileageData.length === 0){
+      setMileageData(temp2);
+    }
   }  
+
+  
   
   return (
     <div className="carsel1">
@@ -100,7 +108,7 @@ export default () => {
                 </div>
                 <div className="col-md-9" style={{fontSize:'14px'}}>
                   Tiempo estimado<br/>
-                  <span style={{fontSize:'12px', fontFamily:'serif'}}>scanData.price</span>
+                  <span style={{fontSize:'12px', fontFamily:'serif'}}>{scanData.time} min</span>
                 </div>
               </div>
             </div>
@@ -117,40 +125,98 @@ export default () => {
             </div>
           </div>
           <div className="card">
-          <div className="row  m-2">
-            <div className="col-8" style={{ marginTop:'auto', marginBottom:'auto'}}>
-              <h5 align="left" style={{ textTransform :'uppercase', fontSize:'14px'}}>Servicio de Escaner</h5>
-            </div>  
-            <div className="col-4" style={{height:'50px'}}>
-              <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px', paddingTop:'10px', borderRadius:'20px'}}>
-                <span>{'S/.'}scanData.price</span>
-                <FontAwesomeIcon icon={faPlusCircle} className="ml-3" color='green' 
-                  // onClick={
-                  //   ()=>{
-                  //     this.props.onchange2(item.price, item.subname, item.time);
-                  //     if(this.state[item.subname]!==1){
-                  //       this.setState({[item.subname] : 1})
-                  //     } else{
-                  //       this.setState({[item.subname] : 0})
-                  //     }
-                  //   }}
-                />
-              </h6>
+            <div className="row  m-2">
+              <div className="col-8" style={{ marginTop:'auto', marginBottom:'auto'}}>
+                <h5 align="left" style={{ textTransform :'uppercase', fontSize:'14px'}}>Servicio de Escaner</h5>
+              </div>  
+              <div className="col-4" style={{height:'50px'}}>
+                <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px', paddingTop:'10px', borderRadius:'20px'}}>
+                  <span>{'S/.'}{scanData.price}</span>
+                  <FontAwesomeIcon icon={faPlusCircle} className="ml-3" color='green' 
+                    // onClick={
+                    //   ()=>{
+                    //     this.props.onchange2(item.price, item.subname, item.time);
+                    //     if(this.state[item.subname]!==1){
+                    //       this.setState({[item.subname] : 1})
+                    //     } else{
+                    //       this.setState({[item.subname] : 0})
+                    //     }
+                    //   }}
+                  />
+                </h6>
+              </div>
+              <hr style={{}}/>
             </div>
-            <hr style={{marginTop:'-8px', width:'95%'}}/>
-          </div>
+            <Card.Body>
+              <Card.Text style={{marginTop:'-15px'}}>
+                <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
+                {minicontent1}
+              </Card.Text>
+            </Card.Body>
           </div>
         </Modal.Body>
       </Modal>
       
-      <Modal
-          isOpen={mileage}
-          onRequestClose={()=>setActiveServices(false)}
-          contentLabel="Example Modal"
-        >
-          <h2>Hello</h2>
-          <button onClick={()=>setActiveServices(false)}>close</button>
-          <div>I am a modal</div>
+      <Modal show={mileage} onHide={()=> setMileage(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>Servicio de Escáner</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <div className="row">
+            <div className="col-md-6" style={{verticalAlign:'center'}}>
+              <div className="row">
+                <div className="col-md-2 circle_icon" >
+                  <FontAwesomeIcon icon={faClock} style={{color:'rgb(179,226,1)', fontSize:'35px'}}/>
+                </div>
+                <div className="col-md-9" style={{fontSize:'14px'}}>
+                  Tiempo estimado<br/>
+                  <span style={{fontSize:'12px', fontFamily:'serif'}}>{mileageData.time} min</span>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6" align="right">
+            <div className="row">
+                <div className="col-md-6 circle_icon" align="right">
+                  <FontAwesomeIcon icon={faStickyNote} style={{color:'rgb(179,226,1)', fontSize:'35px', textAlign:'right' }}/>
+                </div>
+                <div className="col-md-5" style={{fontSize:'14px'}} align="left">
+                Garantía<br/>
+                  <span style={{fontSize:'12px', fontFamily:'serif', textAlign:'left'}}>6 mes(es) o 10000 Km</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="card">
+            <div className="row  m-2">
+              <div className="col-8" style={{ marginTop:'auto', marginBottom:'auto'}}>
+                <h5 align="left" style={{ textTransform :'uppercase', fontSize:'14px'}}>Servicio de Escaner</h5>
+              </div>  
+              <div className="col-4" style={{height:'50px'}}>
+                <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px', paddingTop:'10px', borderRadius:'20px'}}>
+                  <span>{'S/.'}{mileageData.price}</span>
+                  <FontAwesomeIcon icon={faPlusCircle} className="ml-3" color='green' 
+                    // onClick={
+                    //   ()=>{
+                    //     this.props.onchange2(item.price, item.subname, item.time);
+                    //     if(this.state[item.subname]!==1){
+                    //       this.setState({[item.subname] : 1})
+                    //     } else{
+                    //       this.setState({[item.subname] : 0})
+                    //     }
+                    //   }}
+                  />
+                </h6>
+              </div>
+              <hr style={{}}/>
+            </div>
+            <Card.Body>
+              <Card.Text style={{marginTop:'-15px'}}>
+                <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
+                {minicontent1}
+              </Card.Text>
+            </Card.Body>
+          </div>
+        </Modal.Body>
       </Modal>
       <Modal
           isOpen={chagneOil}

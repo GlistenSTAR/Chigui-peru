@@ -609,6 +609,12 @@
   padding-top: 5px;
   margin-left: 20px;
 }
+.card hr{
+  margin-top:-8px;
+  width:95%;
+  border-width:1px!important;
+  border-color:black!important
+}
 
 @media (min-width: 576px){
   .modal-dialog {
