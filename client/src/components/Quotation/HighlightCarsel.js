@@ -7,7 +7,8 @@ import { faClock, faStickyNote, faPlusCircle, faCheckCircle } from '@fortawesome
 import axios from 'axios';
 import ListComponent from '../common/List';
 
-export default () => {
+export default ({addCart}) => {
+  // console.log(addCart);
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const [activeServices, setActiveServices] = useState(false);
   const [mileage, setMileage] = useState(false);
@@ -134,15 +135,16 @@ export default () => {
                 <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px', paddingTop:'10px', borderRadius:'20px'}}>
                   <span>{'S/.'}{scanData.price}</span>
                   <FontAwesomeIcon icon={faPlusCircle} className="ml-3" color='green' 
-                    // onClick={
-                    //   ()=>{
-                    //     this.props.onchange2(item.price, item.subname, item.time);
-                    //     if(this.state[item.subname]!==1){
-                    //       this.setState({[item.subname] : 1})
-                    //     } else{
-                    //       this.setState({[item.subname] : 0})
-                    //     }
-                    //   }}
+                    onClick={
+                      ()=>{
+                        console.log("asdfasdfasdfadsf");
+                        addCart(scanData.price, "Servicio de Escaner", scanData.time);
+                        // if(this.state[item.subname]!==1){
+                        //   this.setState({[item.subname] : 1})
+                        // } else{
+                        //   this.setState({[item.subname] : 0})
+                        // }
+                      }}
                   />
                 </h6>
               </div>

@@ -120,7 +120,7 @@ class SelectService extends Component {
         
         <div className="recommand mt-4" align="left">
           <h6 style={{color:'grey'}}>DESTACADOS</h6><hr/>
-          <HighlightCarsel />
+          <HighlightCarsel addCart={(price, name, time) => {this.onChange(price, name, time);console.log("asdf")}}/>
           
           <div className="review mt-3">
             <h6 style={{color:'grey'}}>REVISIONES</h6><hr/>
