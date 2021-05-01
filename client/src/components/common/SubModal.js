@@ -8,7 +8,6 @@ class SubModalTemplate extends Component {
   constructor(props){
     super(props);
     this.state={
-
     };
   }
   render() {
@@ -24,7 +23,7 @@ class SubModalTemplate extends Component {
       let minicontent = item.service_list.map((value, index)=>(
         <li key={index}>{value}</li>
       )); 
-      let flag=item.subname;
+      let flag = item.subname;
       return (
         <div className="row mt-2 mb-3" key={key}>
           <div className="model-card">

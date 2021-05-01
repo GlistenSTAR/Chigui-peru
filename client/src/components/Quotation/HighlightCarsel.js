@@ -5,6 +5,7 @@ import { Modal} from 'react-bootstrap'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faStickyNote, faPlusCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
+import ListComponent from '../common/List';
 
 export default () => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
@@ -26,7 +27,6 @@ export default () => {
   }, []);
 
   if(typeof highlight !== "undefined"){
-    // console.log(highlight);
     highlight.map((highlight)=>{
       if(highlight.serviceName === "scanner"){
         temp1 = highlight;
@@ -44,8 +44,6 @@ export default () => {
     }
   }  
 
-  
-  
   return (
     <div className="carsel1">
       <ItemsCarousel
@@ -70,6 +68,7 @@ export default () => {
               </Card>
             </div>
         </div>
+
         <div>
           <div align="center" onClick={()=>{setMileage(true);}}>
               <Card align="center">
@@ -82,6 +81,7 @@ export default () => {
               </Card>
             </div>
         </div>
+
         <div>
           <div align="center" onClick={()=>{setChangeOil(true);}}>
               <Card>
@@ -95,6 +95,7 @@ export default () => {
             </div>
         </div>
       </ItemsCarousel>
+
       <Modal show={activeServices} onHide={()=> setActiveServices(false)}>
         <Modal.Header closeButton>
           <Modal.Title>Servicio de Escáner</Modal.Title>
@@ -103,7 +104,7 @@ export default () => {
           <div className="row">
             <div className="col-md-6" style={{verticalAlign:'center'}}>
               <div className="row">
-                <div className="col-md-2 circle_icon" >
+                <div className="col-md-2 circle_icon">
                   <FontAwesomeIcon icon={faClock} style={{color:'rgb(179,226,1)', fontSize:'35px'}}/>
                 </div>
                 <div className="col-md-9" style={{fontSize:'14px'}}>
@@ -118,7 +119,7 @@ export default () => {
                   <FontAwesomeIcon icon={faStickyNote} style={{color:'rgb(179,226,1)', fontSize:'35px', textAlign:'right' }}/>
                 </div>
                 <div className="col-md-5" style={{fontSize:'14px'}} align="left">
-                Garantía<br/>
+                  Garantía<br/>
                   <span style={{fontSize:'12px', fontFamily:'serif', textAlign:'left'}}>6 mes(es) o 10000 Km</span>
                 </div>
               </div>
@@ -145,13 +146,13 @@ export default () => {
                   />
                 </h6>
               </div>
-              <hr style={{}}/>
+              <hr/>
             </div>
             <Card.Body>
               <Card.Text style={{marginTop:'-15px'}}>
                 <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
-                {minicontent1}
               </Card.Text>
+              <ListComponent data={typeof scanData.data!=="undefined"?scanData.data[0].detail:null}/>
             </Card.Body>
           </div>
         </Modal.Body>
@@ -218,6 +219,7 @@ export default () => {
           </div>
         </Modal.Body>
       </Modal>
+      
       <Modal
           isOpen={chagneOil}
           onRequestClose={()=>setActiveServices(false)}
