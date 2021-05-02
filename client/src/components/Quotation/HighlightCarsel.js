@@ -16,10 +16,9 @@ export default ({addCart}) => {
   const [highlight, setHightlight] = useState();
   const [scanData, setScanData] = useState([]);
   const [mileageData, setMileageData] = useState([]);
-  const [flag1, setFlag1] = useState(false);
-  const [flag3, setFlag3] = useState(false);
+  const [flag, setFlag] = useState(false);
 
-  let temp1, temp2, minicontent1;
+  let temp1, temp2;
 
   const chevronWidth = 40;
   const { innerWidth: width} = window;
@@ -38,6 +37,7 @@ export default ({addCart}) => {
       if(highlight.serviceName === "mileage"){
         temp2 = highlight;
       }
+      return 0;
     });
 
     if(typeof temp1 !=="undefined" && scanData.length === 0){
@@ -137,10 +137,10 @@ export default ({addCart}) => {
               <div className="col-4" style={{height:'50px'}}>
                 <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px', paddingTop:'10px', borderRadius:'20px'}}>
                   <span>{'S/.'}{scanData.price}</span>
-                  <FontAwesomeIcon icon={flag1?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
+                  <FontAwesomeIcon icon={flag?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
                     onClick={
                       ()=>{
-                        setFlag1(!flag1);
+                        setFlag(!flag);
                         addCart(scanData.price, "Servicio de Escaner", scanData.time);
                         // if(this.state[item.subname]!==1){
                         //   this.setState({[item.subname] : 1})
@@ -163,7 +163,11 @@ export default ({addCart}) => {
         </Modal.Body>
       </Modal>
 
-      <MileageComponent data={mileageData} show={mileage} hide={()=> setMileage(false)} onClick={(price, name, time)=>addCart(price, name, time)}/>
+      <MileageComponent 
+        data={mileageData} 
+        show={mileage} 
+        hide={()=> setMileage(false)} onClick={(price, name, time)=>addCart(price, name, time)}
+      />
       
       <Modal
           isOpen={chagneOil}
