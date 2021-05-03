@@ -613,7 +613,7 @@
   margin-top:-8px;
   width:95%;
   border-width:1px!important;
-  border-color:black!important
+  border-color:rgb(160, 160, 160)!important
 }
 
 @media (min-width: 576px){

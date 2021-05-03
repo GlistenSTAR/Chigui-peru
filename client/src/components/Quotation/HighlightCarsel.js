@@ -152,7 +152,7 @@ export default ({addCart}) => {
                   />
                 </h6>
               </div>
-              <hr/>
+              <hr style={{borderColor:'grey'}}/>
             </div>
             <Card.Body>
               <Card.Text style={{marginTop:'-15px'}}>
