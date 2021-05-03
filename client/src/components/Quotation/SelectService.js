@@ -79,7 +79,7 @@ class SelectService extends Component {
 
     let tableContent = this.state.carts.map((cart, index)=>(
         <tr key={index} align="center" style={{fontSize:'13px'}}>
-          <td style={{textTransform: 'uppercase'}}>DIAGNÓSTICOS{' '}{cart.service_name}</td>
+          <td style={{textTransform: 'uppercase'}}>{' '}{cart.service_name}</td>
           <td>S/.{cart.price}</td>
           <td>{cart.time}{' '}mins</td>
         </tr>
@@ -120,7 +120,7 @@ class SelectService extends Component {
         
         <div className="recommand mt-4" align="left">
           <h6 style={{color:'grey'}}>DESTACADOS</h6><hr/>
-          <HighlightCarsel addCart={(price, name, time) => {this.onChange(price, name, time);console.log("asdf")}}/>
+          <HighlightCarsel addCart={(price, name, time) => {this.onChange(price, name, time)}} style={{backgroundColor:'#FEFEFE'}}/>
           
           <div className="review mt-3">
             <h6 style={{color:'grey'}}>REVISIONES</h6><hr/>
@@ -139,7 +139,7 @@ class SelectService extends Component {
             <ElectronicCarsel />
           </div>
           <h6 align="left" style={{color:'grey'}}>MECANICA</h6><hr/>
-          <div className="row" style={{backgroundColor:'#F3F3F3',borderRadius:'10px'}}>
+          <div className="row" style={{backgroundColor:'#EAEAEA',borderRadius:'10px'}}>
             <div className="col-md-4 col-6">
               <div className="item row" style={{borderRadius:'28px'}}>
                 <div className="col-5"><img src={require('../../img/icons/frenos.png')} alt="icon"/></div>

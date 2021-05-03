@@ -7,6 +7,7 @@ import { faClock, faStickyNote, faPlusCircle, faCheckCircle } from '@fortawesome
 import axios from 'axios';
 import ListComponent from '../common/List';
 import MileageComponent from '../minicomponents/MileageComponent';
+import OilChange from '../minicomponents/OilChange';
 
 export default ({addCart}) => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
@@ -166,18 +167,15 @@ export default ({addCart}) => {
       <MileageComponent 
         data={mileageData} 
         show={mileage} 
-        hide={()=> setMileage(false)} onClick={(price, name, time)=>addCart(price, name, time)}
+        hide={()=> setMileage(false)} 
+        onClick={(price, name, time)=>addCart(price, name, time)}
       />
-      
-      <Modal
-          isOpen={chagneOil}
-          onRequestClose={()=>setActiveServices(false)}
-          contentLabel="Example Modal"
-        >
-          <h2>Hello</h2>
-          <button onClick={()=>setActiveServices(false)}>close</button>
-          <div>I am a modal</div>
-      </Modal>
+
+      <OilChange
+        show={chagneOil} 
+        hide={()=> setChangeOil(false)} 
+        onClick={(price, name, time)=>addCart(price, name, time)}
+      />
     </div>
   );
 };
