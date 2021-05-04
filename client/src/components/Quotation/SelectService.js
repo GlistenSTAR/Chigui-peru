@@ -10,18 +10,18 @@ import HighlightCarsel from './HighlightCarsel';
 import ElectronicCarsel from './ElectronicCarsel';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart, faRecycle } from '@fortawesome/free-solid-svg-icons';
 
 class SelectService extends Component {
   constructor(props){
     super(props);
     this.state ={
       search : '',
-      count : 0,
       price: 0,
       amount: 0,
       carts: [],
-      cart_show: false
+      cart_show: false,
+      free_cart:[]
     }
   }
 
@@ -32,6 +32,14 @@ class SelectService extends Component {
     let new_cart = {service_name : name, price : price, time : time};
     let amount, same_flag=0, index=0;
     let carts_temp = this.state.carts;
+    
+    //free_services
+    if(new_cart.price===0){
+      let new_free_cart = this.state.free_cart.push(new_cart);
+      this.setState({ free_cart : new_free_cart });
+    }
+
+    //price_services
     if(this.state.carts.length > 0){
       this.state.carts.map((cart, _i)=>{
         if(cart.service_name === name) {
@@ -70,13 +78,14 @@ class SelectService extends Component {
   total_diagnose = () =>{
     this.setState({ total_diagnose_modal : true });
   }
+
   total_diagnose_modal_close = () =>{
     this.setState({ total_diagnose_modal : false});
   }
 
   render() {
+    let free_services;
     const {serivces} = this.props;
-
     let tableContent = this.state.carts.map((cart, index)=>(
         <tr key={index} align="center" style={{fontSize:'13px'}}>
           <td style={{textTransform: 'uppercase'}}>{' '}{cart.service_name}</td>
@@ -84,6 +93,22 @@ class SelectService extends Component {
           <td>{cart.time}{' '}mins</td>
         </tr>
     ));
+    if(this.state.free_cart.length > 0){
+      free_services = this.state.free_cart.map((cart, key)=>(
+        <div className="row" key={key}>
+          <div className="col-md-2">
+            <FontAwesomeIcon icon={faRecycle} size="2x"/>
+          </div>
+          <div className="col-md-5">
+            {cart.name} <br/>
+            <span style={{fontFamily:'serif'}}>{cart.time}</span>
+          </div>
+          <div className="col-md-5">
+  
+          </div>
+        </div>
+      ));
+    }  
 
     return (
      <div className="services container" align="center">
@@ -117,10 +142,11 @@ class SelectService extends Component {
             onchange1={(price, name, time)=>this.onChange(price, name, time)}
          />
         
-        
         <div className="recommand mt-4" align="left">
           <h6 style={{color:'grey'}}>DESTACADOS</h6><hr/>
-          <HighlightCarsel addCart={(price, name, time) => {this.onChange(price, name, time)}} style={{backgroundColor:'#FEFEFE'}}/>
+          <HighlightCarsel 
+            addCart={(price, name, time) => {this.onChange(price, name, time)}} 
+            style={{backgroundColor:'#FEFEFE'}}/>
           
           <div className="review mt-3">
             <h6 style={{color:'grey'}}>REVISIONES</h6><hr/>
@@ -168,17 +194,28 @@ class SelectService extends Component {
         </div>
 
           <div style={{width:'100%'}} align="cener">
-            <div className="row mt-4 mb-5" style={{width:'100%', paddingLeft:'auto', paddingRight:'auto'}} align="center">
-              <button className="btn form-control" style={{background:'rgb(179,226,1)', color:'black'}} onClick={this.props.nextclick}>RESERVAR CITA</button>
+            <div 
+              className="row mt-4 mb-5" 
+              style={{width:'100%', paddingLeft:'auto', paddingRight:'auto'}} 
+              align="center"
+            >
+              <button 
+                className="btn form-control" 
+                style={{background:'rgb(179,226,1)', color:'black'}} 
+                onClick={this.props.nextclick}
+              >RESERVAR CITA</button>
             </div>
           </div>
           
-          {this.state.price>0?(
+          {this.state.amount > 0?(
             <div className="bucket" align="left" style={{zIndex:'9999999999999999'}} onClick={this.show_cart}>
               <div className="bucketIcon pl-4 pr-5 pt-2" style={{color:'white'}}>
                 <div style={{float:'left'}}>
                   <FontAwesomeIcon icon={faShoppingCart} size="2x" color="white" style={{float:'left'}}/>
-                  <span className="badge badge-success" style={{marginLeft:'-10px', paddingTop:'-20px'}}>{this.state.amount}</span>
+                  <span 
+                    className="badge badge-success" 
+                    style={{marginLeft:'-10px', paddingTop:'-20px'}}>
+                      {this.state.amount}</span>
                 </div>
                 <h5 align="center" className="mt-1 pl-5" style={{ float:'left'}}>Ver Motocicleta</h5>
                 <h4 align="right">S/.{' '}{this.state.price}</h4>
@@ -186,6 +223,7 @@ class SelectService extends Component {
               {this.state.cart_show?(
                 <div className="text-grey bg-white mt-2" align="center">
                   <h3>Precio total : <span>S/.{this.state.price}</span></h3>
+                  {free_services}
                   <table className="table">
                     <thead align="center">
                       <td width="60%">Nombre</td>
@@ -200,7 +238,6 @@ class SelectService extends Component {
               ):''}
             </div>
           ):''}
-
        </div>
      </div>
     );
