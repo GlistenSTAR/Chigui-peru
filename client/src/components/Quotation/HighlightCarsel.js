@@ -174,7 +174,9 @@ export default ({addCart}) => {
       <OilChange
         show={chagneOil} 
         hide={()=> setChangeOil(false)} 
-        onClick={(price, name, time)=>addCart(price, name, time)}
+        onClick={(price, name, time)=>{
+          addCart(price, name, time);
+        }}
       />
     </div>
   );

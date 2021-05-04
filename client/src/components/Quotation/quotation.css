@@ -73,6 +73,20 @@
   border: rgb(179,226,1);
   color:#fff
 }
+.btn-man-made{
+  background-color: rgb(179,226,1);
+  border: rgb(179,226,1);
+  color:#fff
+}
+.btn-man-made:hover{
+  background-color: rgba(179,226,1, 0.6);
+}
+.btn-man-made:active{
+  border: rgba(179,226,1, 0.6);
+}
+.btn-man-made:focus{
+  border: rgba(179,226,1, 0.6);
+}
 .quotation .services .threeRow.card-text{
   font-size: 17px!important;
 }
