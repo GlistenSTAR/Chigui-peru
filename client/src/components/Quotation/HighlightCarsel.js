@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Card } from 'react-bootstrap'
+import { Card, Modal } from 'react-bootstrap'
 import ItemsCarousel from 'react-items-carousel';
-import { Modal} from 'react-bootstrap'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faStickyNote, faPlusCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
