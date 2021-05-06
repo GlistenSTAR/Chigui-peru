@@ -150,7 +150,9 @@ class SelectService extends Component {
           
           <div className="review mt-3">
             <h6 style={{color:'grey'}}>REVISIONES</h6><hr/>
-            <ReviewCarsel />
+            <ReviewCarsel 
+              addCart={(price, name, time) => {this.onChange(price, name, time)}} 
+            />
           </div>
           
           <div className="review mt-3">
