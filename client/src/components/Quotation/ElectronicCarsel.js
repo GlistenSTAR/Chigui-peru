@@ -1,11 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card } from 'react-bootstrap'
 import ItemsCarousel from 'react-items-carousel';
+import axios from 'axios';
 
 export default () => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
+  const [electronicData, setElectronicData] = useState([]);
   const chevronWidth = 40;
   const { innerWidth: width} = window;
+
+  useEffect(() => {
+    axios
+      .get("/api/highlights")
+      .then(response => setElectronicData(response.data));
+  }, []);
+
   return (
     <div className="carsel1">
       <ItemsCarousel
