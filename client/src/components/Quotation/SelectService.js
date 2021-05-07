@@ -166,7 +166,9 @@ class SelectService extends Component {
         <div className="mechine mt-3" align="center">
           <div className="recommand clone" align="left">
             <h6 style={{color:'grey'}}>ELECTRICIDAD</h6><hr/>
-            <ElectronicCarsel />
+            <ElectronicCarsel 
+              addCart={(price, name, time) => {this.onChange(price, name, time)}}
+            />
           </div>
           <h6 align="left" style={{color:'grey'}}>MECANICA</h6><hr/>
           <div className="row" style={{backgroundColor:'#EAEAEA',borderRadius:'10px'}}>

@@ -62,7 +62,7 @@ img{
   color: #bbb !important;
 }
 hr{
-  border-top: 3px solid rgb(179,226,1)!important;
+  border-top: 1px solid rgb(179,226,1);
   width: 60%;
   align-items: left;
 }
