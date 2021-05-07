@@ -3,7 +3,7 @@ import { Card, Modal } from 'react-bootstrap'
 import ItemsCarousel from 'react-items-carousel';
 import OilChange from '../minicomponents/OilChange';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock, faShieldAlt, faCheckCircle, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
+import { faClock, faShieldAlt, faCheckCircle, faPlusCircle, faStickyNote } from '@fortawesome/free-solid-svg-icons';
 
 export default ({addCart}) => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
@@ -151,37 +151,56 @@ export default ({addCart}) => {
       
       <Modal show={iceDeviceShow} onHide={()=> setIceDeviceShow(false)}>
         <Modal.Header closeButton>
-          <Modal.Title>Líquido de Frenos</Modal.Title>
+          <Modal.Title>Líquido Refrigerante</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Card>
             <Card.Body>
               <div className="row">
-                <div className="col-md-6">
-                  <h5>Cambio de Liquido de Frenos</h5>
-                  <div style={{fontFamily:'serif', color:'grey'}}>
-                    <FontAwesomeIcon icon={faClock} size="sm"/>{' '}<span>Duración 35 min</span><br/>
-                    <FontAwesomeIcon icon={faShieldAlt} size="sm"/>{' '}<span>Garantía 6 mes(es) o 5000 Km</span>
+                <div className="col-md-6" style={{verticalAlign:'center'}}>
+                  <div className="row">
+                    <div className="col-md-2 circle_icon">
+                      <FontAwesomeIcon icon={faClock} style={{color:'rgb(179,226,1)', fontSize:'35px'}}/>
+                    </div>
+                    <div className="col-md-9" style={{fontSize:'14px'}}>
+                      Tiempo estimado<br/>
+                      <span style={{fontSize:'12px', fontFamily:'serif'}}>45 min</span>
+                    </div>
                   </div>
                 </div>
-                <div className="col-md-6 pt-3" align="right">
-                  <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px',width:'200px', paddingTop:'10px', borderRadius:'20px'}}>
-                    <span>{'S/.'}20</span>
+                <div className="col-md-6" align="right">
+                  <div className="row">
+                    <div className="col-md-5 circle_icon" align="right">
+                      <FontAwesomeIcon icon={faStickyNote} style={{color:'rgb(179,226,1)', fontSize:'35px', textAlign:'right' }}/>
+                    </div>
+                    <div className="col-md-6" style={{fontSize:'14px'}} align="left">
+                      Garantía<br/>
+                      <span style={{fontSize:'12px', fontFamily:'serif', textAlign:'left'}}>6 mes(es) o 10000 Km</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div className="row m-2 p-2" style={{borderRadius:'10px', border:'2px solid #B3E201'}}>
+                  <div className="col-md-6">
+                    Cambio de Refrigerante de Motor
+                  </div>
+                  <div className="col-md-6" align="right">
+                    {'S/.'}25
                     <FontAwesomeIcon icon={flag?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
                       onClick={
                         ()=>{
-                          addCart(20, "Líquido de Frenos", 35);
+                          addCart(25, "Cambio de Refrigerante de Motor", 45);
                           setFlag(!flag);
                         }}
                     />
-                  </h6>
+                  </div>
+                        <hr className="mt-2" style={{color:'grey'}}/>
+                  <div style={{color:'grey'}} className="ml-3">
+                      <li>Refrigerante de Motor</li>
+                      <li>Mano de obra</li>
+                    </div>
                 </div>
-              </div>
-              <div className="mt-3">
-                <ul class="list-group">
-                  <li class="list-group-item" style={{backgroundColor:'#F3F3F3'}}>Liquido de Frenos</li>
-                  <li class="list-group-item mt-2" style={{backgroundColor:'#F3F3F3'}}>Mano de obra</li>
-                </ul>
               </div>
             </Card.Body>
           </Card>
