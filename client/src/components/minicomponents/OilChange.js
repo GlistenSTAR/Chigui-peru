@@ -77,7 +77,7 @@ class OilChange extends Component {
 
                 <div 
                   className="card-header" 
-                  style={{borderBottom:'1px solid rgba(0,0,0,0.2)', 
+                  style={{ 
                   paddingTop:'10px', 
                   paddingBottom:'0px'}}
                 >

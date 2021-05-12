@@ -142,9 +142,6 @@ export default ({addCart}) => {
               </Card.Text>
             </Card.Body>
           </Card>
-          <div align="center">
-            <button className="btn btn-man-made mt-2 mb-2 form-control">¿Qué es diferente en Chigui?</button>
-          </div>
         </Modal.Body>
       </Modal>
       

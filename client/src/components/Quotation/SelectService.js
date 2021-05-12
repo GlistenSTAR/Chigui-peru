@@ -10,7 +10,7 @@ import HighlightCarsel from './HighlightCarsel';
 import ElectronicCarsel from './ElectronicCarsel';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart, faRecycle } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart, faShieldAlt, faWindowClose } from '@fortawesome/free-solid-svg-icons';
 
 class SelectService extends Component {
   constructor(props){
@@ -28,6 +28,7 @@ class SelectService extends Component {
   componentDidMount(){
     this.props.getServices();
   }
+
   onChange = (price, name, time) =>{
     let new_cart = {service_name : name, price : price, time : time};
     let amount, same_flag=0, index=0;
@@ -71,6 +72,10 @@ class SelectService extends Component {
     }
   }
 
+  onFreeChange = (price, name, time, Rin) => {
+    console.log(price,'?????????????????', name, '>>>>>>>>>>>>>>>', time, 'llllllllllllllllllllllllllll', Rin);
+  }
+
   show_cart=()=>{
     this.setState({cart_show:!this.state.cart_show})
   }
@@ -83,14 +88,24 @@ class SelectService extends Component {
     this.setState({ total_diagnose_modal : false});
   }
 
+  deleteRow = (index) => {
+    let temp = this.state.carts;
+    temp.splice(index, 1);
+    this.setState({carts: temp, amount: this.state.amount-1});
+  }
+  go_nextStep = () => { 
+      console.log('nextstep');
+      // this.props.nextclick();
+  }
+  
   render() {
     let free_services;
     const {serivces} = this.props;
     let tableContent = this.state.carts.map((cart, index)=>(
         <tr key={index} align="center" style={{fontSize:'13px'}}>
-          <td style={{textTransform: 'uppercase'}}>{' '}{cart.service_name}</td>
-          <td>S/.{cart.price}</td>
-          <td>{cart.time}{' '}mins</td>
+          <td style={{textTransform: 'uppercase'}}>{' '}{cart.service_name}<br/><span style={{fontFamily:'serif'}}>{cart.time}{' '}mins</span></td>
+          <td>S/.{cart.price}<br/></td>
+          <td><FontAwesomeIcon icon={faWindowClose} size="2x" onClick={() => this.deleteRow(index)}/></td>
         </tr>
     ));
     if(this.state.free_cart.length > 0){
@@ -159,6 +174,7 @@ class SelectService extends Component {
             <h6 style={{color:'grey'}}>SERVICIOS EXPRESS</h6><hr/>
             <RecommandedCarsel 
               addCart={(price, name, time) => {this.onChange(price, name, time)}}
+              addFreeServices={(price, name, time, Rin)=>{this.onFreeChange(price, name, time, Rin)}}
             />
           </div>
         </div>
@@ -208,14 +224,14 @@ class SelectService extends Component {
               <button 
                 className="btn form-control" 
                 style={{background:'rgb(179,226,1)', color:'black'}} 
-                onClick={this.props.nextclick}
+                onClick={()=>this.go_nextStep}
               >RESERVAR CITA</button>
             </div>
           </div>
           
-          {this.state.amount > 0?(
-            <div className="bucket" align="left" style={{zIndex:'9999999999999999'}} onClick={this.show_cart}>
-              <div className="bucketIcon pl-4 pr-5 pt-2" style={{color:'white'}}>
+          {this.state.amount > 0 ? (
+            <div className="bucket" align="left" style={{zIndex:'9999999999999999'}} >
+              <div className="bucketIcon pl-4 pr-5 pt-2" style={{color:'white'}} onClick={this.show_cart}>
                 <div style={{float:'left'}}>
                   <FontAwesomeIcon icon={faShoppingCart} size="2x" color="white" style={{float:'left'}}/>
                   <span 
@@ -224,13 +240,14 @@ class SelectService extends Component {
                       {this.state.amount}</span>
                 </div>
                 <h5 align="center" className="mt-1 pl-5" style={{ float:'left'}}>Ver Motocicleta</h5>
-                <h4 align="right">S/.{' '}{this.state.price}</h4>
+                <h4 align="right">{this.state.price?'S/.':''}{' '}{this.state.price?this.state.price:this.state.name}</h4>
               </div>
-              {this.state.cart_show?(
+              { this.state.cart_show?(
                 <div className="text-grey bg-white mt-2" align="center">
-                  <h3>Precio total : <span>S/.{this.state.price}</span></h3>
+                  <h3>Precio total : <span>{this.state.price?'S/.':''}{this.state.price?this.state.price:this.state.name}</span></h3>
+                  <hr/>
                   {free_services}
-                  <table className="table">
+                  <table className="table table-bordered" id="table" style={{width:'90%', marginLeft:'auto', marginRight:'auto', border:'1px sold whitesmoke'}}>
                     <thead>
                     <tr align="center">
                       <th width="60%">Nombre</th>
@@ -238,12 +255,52 @@ class SelectService extends Component {
                       <th width="10%">Acción</th>
                     </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="pb-5">
                       {tableContent}
                     </tbody>
                   </table>
+                  <div className="row mt-4 mb-4">
+                    <p align="left" className="ml-5">Todos los servicios incluyen</p>
+                    <div className="col-md-6 pl-5 mt-2 mb-2" align="left"> Revisión de Calidad <br/><span style={{fontFamily:'serif'}}>20mins</span></div>
+                    <div className="col-md-6" style={{marginTop:'auto', marginBottom:'auto'}} >
+                      <span className="badge badge-success msj-free">
+                        GRATIS
+                      </span>
+                    </div>
+                    <div className="col-md-6 pl-5 mt-2 mb-2" align="left"> Revisión técnica <br/><span style={{fontFamily:'serif'}}>20mins</span></div>
+                    <div className="col-md-6" style={{marginTop:'auto', marginBottom:'auto'}} >
+                      <span className="badge badge-success msj-free">
+                        GRATIS
+                      </span>
+                    </div>
+                    <div className="col-md-6 pl-5 mt-2 mb-2" align="left"> Lavado en Seco <br/><span style={{fontFamily:'serif'}}>30mins</span></div>
+                    <div className="col-md-6" style={{marginTop:'auto', marginBottom:'auto'}} >
+                      <span className="badge badge-success msj-free">
+                        GRATIS
+                      </span>
+                    </div>
+                    <div className="col-md-6 pl-5 mt-2 mb-2" align="left"> Desinfección <br/><span style={{fontFamily:'serif'}}>10mins</span></div>
+                    <div className="col-md-6" style={{marginTop:'auto', marginBottom:'auto'}} >
+                      <span className="badge badge-success msj-free">
+                        GRATIS
+                      </span>
+                    </div>
+                    <div className="col-md-6 pl-5 mt-2 mb-2" align="left"> Garantía  <FontAwesomeIcon icon={faShieldAlt} style={{color:'green'}}/></div>
+                    <div className="col-md-6" style={{marginTop:'auto', marginBottom:'auto'}} >
+                      <span className="badge badge-success msj-free">
+                        GRATIS
+                      </span>
+                    </div>
+                  </div>
+                  <hr/>
+
+                  <button 
+                    className="mt-3 mb-3 btn btn-outline-success" 
+                    style={{width:'95%'}}
+                    onClick={()=>this.go_nextStep}
+                  >RESERVAR CITA</button>
                 </div>
-              ):''}
+              ) : ''}
             </div>
           ):''}
        </div>
@@ -261,6 +318,6 @@ const mapStateToProps = state => ({
   serivces: state.serivce,
 });
 
-export default connect(mapStateToProps, { getServices })(
+export default connect( mapStateToProps, { getServices })(
   SelectService
 );

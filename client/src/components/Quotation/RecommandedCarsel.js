@@ -5,46 +5,19 @@ import OilChange from '../minicomponents/OilChange';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faShieldAlt, faCheckCircle, faPlusCircle, faStickyNote } from '@fortawesome/free-solid-svg-icons';
 
-export default ({addCart}) => {
+export default ({addCart, addFreeServices}) => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const [chagneOil, setChangeOil] = useState(false);
   const [froznShow, setFrzonShow] = useState(false);
   const [tireshow, setTireShow] = useState(false);
   const [iceDeviceShow, setIceDeviceShow] = useState(false);
   const [flag, setFlag] = useState(false);
-  const [button1, setButton1] = useState(false);
-  const [button2, setButton2] = useState(false);
-  const [button3, setButton3] = useState(false);
+  const [button, setButton] = useState('');
   const [button_top, setButton_top] = useState('');
-  // let temp1, temp2;
 
   const chevronWidth = 40;
   const { innerWidth: width} = window;
 
-  // useEffect(() => {
-  //   axios
-  //     .get("/api/highlights")
-  //     .then(response => setHightlight(response.data));
-  // }, []);
-
-  // if(typeof highlight !== "undefined"){
-  //   highlight.map((highlight)=>{
-  //     if(highlight.serviceName === "scanner"){
-  //       temp1 = highlight;
-  //     }
-  //     if(highlight.serviceName === "mileage"){
-  //       temp2 = highlight;
-  //     }
-  //     return 0;
-  //   });
-
-  //   if(typeof temp1 !=="undefined" && scanData.length === 0){
-  //     setScanData(temp1);
-  //   }
-  //   if(typeof temp2 !=="undefined" && mileageData.length === 0){
-  //     setMileageData(temp2);
-  //   }
-  // }
   return (
     <div className="carsel1">
       <ItemsCarousel
@@ -205,7 +178,7 @@ export default ({addCart}) => {
               </div>
               <div className="col-md-6" align="right">
                 <h5>POR COTIZAR</h5>
-                <button className={`btn btn-success ` + (button_top === 1 ? "active" : '')}  onClick={()=>setButton_top(1)}>SELECCIONAR</button>
+                <button className={`btn btn-success ` + (button_top === 17 ? "active" : '')}  onClick={()=>setButton_top(17)}>SELECCIONAR</button>
               </div>
             </div>
 
@@ -215,7 +188,7 @@ export default ({addCart}) => {
               </div>
               <div className="col-md-6" align="right">
                 <h5>POR COTIZAR</h5>
-                <button className={`btn btn-success ` + (button_top === 2 ? 'active' : '')} onClick={() => setButton_top(2)}>SELECCIONAR</button>
+                <button className={`btn btn-success ` + (button_top === 18 ? 'active' : '')} onClick={() => setButton_top(18)}>SELECCIONAR</button>
               </div>
             </div>
 
@@ -225,18 +198,37 @@ export default ({addCart}) => {
                 </div>
                 <div className="col-md-6" align="right">
                   <h5>POR COTIZAR</h5>
-                  <button className={`btn btn-success ` + (button_top === 3 ? 'active' : '')} onClick={() => setButton_top(3)}>SELECCIONAR</button>
+                  <button className={`btn btn-success ` + (button_top === 19 ? 'active' : '')} onClick={() => setButton_top(19)}>SELECCIONAR</button>
                 </div>
             </div>    
 
             <h5 style={{color: 'rgb(179,226,1)'}}>AMABLE</h5>
             <div className="row">
               <div className="btn-group" style={{width:'90%', marginLeft:'auto', marginRight:'auto', borderRadius:'10px'}}>
-                <button className={button1?'active':''} style={{width:'33.33%'}} onClick={()=>{setButton1(true);setButton2(false);setButton3(false)}}>*17</button>
-                <button className={button2?'active':''} style={{width:'33.33%'}} onClick={()=>{setButton1(false);setButton2(true);setButton3(false)}}>*18</button>
-                <button className={button3?'active':''} style={{width:'33.33%'}} onClick={()=>{setButton1(false);setButton2(false);setButton3(true)}}>*19</button>
+                <button className={button===17?'active':''} style={{width:'33.33%'}} onClick={()=>{setButton(17)}}>*17</button>
+                <button className={button===18?'active':''} style={{width:'33.33%'}} onClick={()=>{setButton(18)}}>*18</button>
+                <button className={button===19?'active':''} style={{width:'33.33%'}} onClick={()=>{setButton(19)}}>*19</button>
               </div>
             </div>               
+         </div>
+         <div className="mt-4 mb-4" style={{width:'95%', marginLeft:'auto', marginRight:'auto', display:'flex', justifyContent: 'space-around'}}>
+            <button 
+              className="btn btn-primary" 
+              onClick={ ()=>{
+                  let tempRin = [];
+                  if(typeof button_top !== "undefined"){
+                    tempRin.push(button_top)
+                  } 
+                  if(typeof button_top !== "undefined"){
+                    tempRin.push(button)
+                  } 
+                  if(tempRin.length >0){
+                    addFreeServices(0,'Cambio de Llanta', 45, tempRin);
+                  }
+                }
+              }
+            >AGREGAR</button>
+            <button className="btn btn-info">POR COTIZAR</button>
          </div>
         </Modal.Body>
       </Modal>

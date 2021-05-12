@@ -481,7 +481,7 @@
   position:fixed;
   bottom:0;
   right:10px; 
-  width: 400px;  
+  width: 385px;  
   background-color: rgba(179,226,1, 0.8);
   min-height:45px;
   border-top-left-radius:15px;
@@ -491,6 +491,9 @@
 .modal-body .list:hover{
   color:rgb(179, 226, 1);
   cursor: pointer;
+}
+#table td{
+  vertical-align: middle!important;
 }
 
 @media only screen and (max-width: 992px) {
@@ -628,11 +631,11 @@
   width:95%;
   border-width:1px!important;
   border-color:rgb(160, 160, 160)!important
-}
+  }
 .btn-group button{
   background-color: rgb(179,226,1); /* Green background */
   border: 1px solid rgb(139, 231, 139); /* Green border */
-  color: white; /* White text */
+  color: black; /* White text */
   padding: 10px 24px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
   float: left; /* Float the buttons side by side */
