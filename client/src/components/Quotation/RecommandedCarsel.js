@@ -9,8 +9,13 @@ export default ({addCart}) => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const [chagneOil, setChangeOil] = useState(false);
   const [froznShow, setFrzonShow] = useState(false);
+  const [tireshow, setTireShow] = useState(false);
   const [iceDeviceShow, setIceDeviceShow] = useState(false);
   const [flag, setFlag] = useState(false);
+  const [button1, setButton1] = useState(false);
+  const [button2, setButton2] = useState(false);
+  const [button3, setButton3] = useState(false);
+  const [button_top, setButton_top] = useState('');
   // let temp1, temp2;
 
   const chevronWidth = 40;
@@ -65,7 +70,7 @@ export default ({addCart}) => {
           </div>
         </div>
         <div >
-          <div align="center">
+          <div align="center" onClick={()=>setTireShow(true)}>
             <Card>
               <Card.Img variant="top" src={require('../../img/icons/cambio_llanta.png')} />
               <Card.Body>
@@ -139,13 +144,100 @@ export default ({addCart}) => {
                 </div>
               </div>
               <div className="mt-3">
-                <ul class="list-group">
-                  <li class="list-group-item" style={{backgroundColor:'#F3F3F3'}}>Liquido de Frenos</li>
-                  <li class="list-group-item mt-2" style={{backgroundColor:'#F3F3F3'}}>Mano de obra</li>
+                <ul className="list-group">
+                  <li className="list-group-item" style={{backgroundColor:'#F3F3F3'}}>Liquido de Frenos</li>
+                  <li className="list-group-item mt-2" style={{backgroundColor:'#F3F3F3'}}>Mano de obra</li>
                 </ul>
               </div>
             </Card.Body>
           </Card>
+        </Modal.Body>
+      </Modal>
+
+      <Modal show={froznShow} onHide={()=> setFrzonShow(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>Líquido de Frenos</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Card>
+            <Card.Body>
+              <div className="row">
+                <div className="col-md-6">
+                  <h5>Cambio de Liquido de Frenos</h5>
+                  <div style={{fontFamily:'serif', color:'grey'}}>
+                    <FontAwesomeIcon icon={faClock} size="sm"/>{' '}<span>Duración 35 min</span><br/>
+                    <FontAwesomeIcon icon={faShieldAlt} size="sm"/>{' '}<span>Garantía 6 mes(es) o 5000 Km</span>
+                  </div>
+                </div>
+                <div className="col-md-6 pt-3" align="right">
+                  <h6 align="center" style={{ background:'rgb(179,226,1)',height:'40px',width:'200px', paddingTop:'10px', borderRadius:'20px'}}>
+                    <span>{'S/.'}20</span>
+                    <FontAwesomeIcon icon={flag?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
+                      onClick={
+                        ()=>{
+                          addCart(20, "Líquido de Frenos", 35);
+                          setFlag(!flag);
+                        }}
+                    />
+                  </h6>
+                </div>
+              </div>
+              <div className="mt-3">
+                <ul className="list-group">
+                  <li className="list-group-item" style={{backgroundColor:'#F3F3F3'}}>Liquido de Frenos</li>
+                  <li className="list-group-item mt-2" style={{backgroundColor:'#F3F3F3'}}>Mano de obra</li>
+                </ul>
+              </div>
+            </Card.Body>
+          </Card>
+        </Modal.Body>
+      </Modal>
+
+      <Modal show={tireshow} onHide={()=> setTireShow(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>ELIGE EL RIN</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+         <div>
+           <div className="row" style={{borderBottom:'1px solid grey', marginBottom:'10px', marginLeft:'5px', marginRight:'5px', paddingBottom:'10px' }}>
+              <div className="col-md-6">
+                Rin 17
+              </div>
+              <div className="col-md-6" align="right">
+                <h5>POR COTIZAR</h5>
+                <button className={`btn btn-success ` + (button_top === 1 ? "active" : '')}  onClick={()=>setButton_top(1)}>SELECCIONAR</button>
+              </div>
+            </div>
+
+            <div className="row" style={{borderBottom:'1px solid grey', marginBottom:'10px', marginLeft:'5px', marginRight:'5px', paddingBottom:'10px'}}>
+              <div className="col-md-6">
+                  Rin 18
+              </div>
+              <div className="col-md-6" align="right">
+                <h5>POR COTIZAR</h5>
+                <button className={`btn btn-success ` + (button_top === 2 ? 'active' : '')} onClick={() => setButton_top(2)}>SELECCIONAR</button>
+              </div>
+            </div>
+
+            <div className="row" style={{borderBottom:'1px solid grey', marginBottom:'10px', marginLeft:'5px', marginRight:'5px', paddingBottom:'10px'}}>
+              <div className="col-md-6">
+                  Rin 19
+                </div>
+                <div className="col-md-6" align="right">
+                  <h5>POR COTIZAR</h5>
+                  <button className={`btn btn-success ` + (button_top === 3 ? 'active' : '')} onClick={() => setButton_top(3)}>SELECCIONAR</button>
+                </div>
+            </div>    
+
+            <h5 style={{color: 'rgb(179,226,1)'}}>AMABLE</h5>
+            <div className="row">
+              <div className="btn-group" style={{width:'90%', marginLeft:'auto', marginRight:'auto', borderRadius:'10px'}}>
+                <button className={button1?'active':''} style={{width:'33.33%'}} onClick={()=>{setButton1(true);setButton2(false);setButton3(false)}}>*17</button>
+                <button className={button2?'active':''} style={{width:'33.33%'}} onClick={()=>{setButton1(false);setButton2(true);setButton3(false)}}>*18</button>
+                <button className={button3?'active':''} style={{width:'33.33%'}} onClick={()=>{setButton1(false);setButton2(false);setButton3(true)}}>*19</button>
+              </div>
+            </div>               
+         </div>
         </Modal.Body>
       </Modal>
       

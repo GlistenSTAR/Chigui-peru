@@ -94,20 +94,20 @@ class SelectService extends Component {
         </tr>
     ));
     if(this.state.free_cart.length > 0){
-      free_services = this.state.free_cart.map((cart, key)=>(
-        <div className="row" key={key}>
-          <div className="col-md-2">
-            <FontAwesomeIcon icon={faRecycle} size="2x"/>
-          </div>
-          <div className="col-md-5">
-            {cart.name} <br/>
-            <span style={{fontFamily:'serif'}}>{cart.time}</span>
-          </div>
-          <div className="col-md-5">
+      // free_services = this.state.free_cart.map((cart, key)=>(
+      //   <div className="row" key={key}>
+      //     <div className="col-md-2">
+      //       <FontAwesomeIcon icon={faRecycle} size="2x"/>
+      //     </div>
+      //     <div className="col-md-5">
+      //       {cart.name} <br/>
+      //       <span style={{fontFamily:'serif'}}>{cart.time}</span>
+      //     </div>
+      //     <div className="col-md-5">
   
-          </div>
-        </div>
-      ));
+      //     </div>
+      //   </div>
+      // ));
     }  
 
     return (
@@ -231,10 +231,12 @@ class SelectService extends Component {
                   <h3>Precio total : <span>S/.{this.state.price}</span></h3>
                   {free_services}
                   <table className="table">
-                    <thead align="center">
-                      <td width="60%">Nombre</td>
-                      <td width="30%">Precio</td>
-                      <td width="10%">Acción</td>
+                    <thead>
+                    <tr align="center">
+                      <th width="60%">Nombre</th>
+                      <th width="30%">Precio</th>
+                      <th width="10%">Acción</th>
+                    </tr>
                     </thead>
                     <tbody>
                       {tableContent}

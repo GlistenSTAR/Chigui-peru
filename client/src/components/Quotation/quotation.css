@@ -629,7 +629,36 @@
   border-width:1px!important;
   border-color:rgb(160, 160, 160)!important
 }
-
+.btn-group button{
+  background-color: rgb(179,226,1); /* Green background */
+  border: 1px solid rgb(139, 231, 139); /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+.btn-group button.active, .btn.btn-success.active{
+  background-color: rgb(4, 216, 4)!important;
+}
+.btn-group button:hover{
+  background-color: rgb(4, 216, 4);
+}
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.btn-success{
+  background-color: rgb(179,226,1); /* Green background */
+  border: 1px solid rgb(139, 231, 139); /* Green border */
+}
+.btn-success:hover{
+  background-color: rgb(4, 216, 4);
+   /* Green background */
+}
 @media (min-width: 576px){
   .modal-dialog {
       max-width: 700px;
