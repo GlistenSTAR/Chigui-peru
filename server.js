@@ -11,7 +11,7 @@ const highlights = require('./routes/api/highlights');
 const oils = require('./routes/api/oils');
 const reviews = require('./routes/api/reviews');
 const electronics = require('./routes/api/electronics');
-
+const batteries = require('./routes/api/batteries');
 
 const app = express();
 
@@ -42,6 +42,7 @@ app.use('/api/highlights', highlights);
 app.use('/api/oils', oils);
 app.use('/api/reviews', reviews);
 app.use('/api/electronics', electronics);
+app.use('/api/batteries', batteries);
 
 // Server static assets if in production
 if (process.env.NODE_ENV === 'production') {

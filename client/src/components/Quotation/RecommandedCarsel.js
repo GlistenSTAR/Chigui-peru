@@ -289,8 +289,7 @@ export default ({addCart, addFreeServices}) => {
             </Card.Body>
           </Card>
         </Modal.Body>
-      </Modal>
-                        
+      </Modal>     
     </div>
     
   );

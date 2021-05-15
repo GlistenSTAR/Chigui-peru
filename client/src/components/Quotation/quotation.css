@@ -496,6 +496,10 @@
   vertical-align: middle!important;
 }
 
+.select_battery:hover{
+  border: 2px solid rgb(179, 226, 1)
+}
+
 @media only screen and (max-width: 992px) {
   .quotation .bucket{
     width:100%; 

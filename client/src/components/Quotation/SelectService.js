@@ -8,6 +8,7 @@ import ReviewCarsel from './ReviewCarsel';
 import RecommandedCarsel from './RecommandedCarsel';
 import HighlightCarsel from './HighlightCarsel';
 import ElectronicCarsel from './ElectronicCarsel';
+import ElectronicModal from '../minicomponents/Mechines'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart, faShieldAlt, faWindowClose } from '@fortawesome/free-solid-svg-icons';
@@ -95,7 +96,7 @@ class SelectService extends Component {
   }
   go_nextStep = () => { 
       console.log('nextstep');
-      // this.props.nextclick();
+      this.props.nextclick();
   }
   
   render() {
@@ -189,25 +190,25 @@ class SelectService extends Component {
           <h6 align="left" style={{color:'grey'}}>MECANICA</h6><hr/>
           <div className="row" style={{backgroundColor:'#EAEAEA',borderRadius:'10px'}}>
             <div className="col-md-4 col-6">
-              <div className="item row" style={{borderRadius:'28px'}}>
+              <div className="item row" style={{borderRadius:'28px'}} onClick={() => this.setState({breakpadShow: true})}>
                 <div className="col-5"><img src={require('../../img/icons/frenos.png')} alt="icon"/></div>
                 <div className="col-7 mt-2" align="left">Pastilla de frenos</div>
               </div>
             </div>
             <div className="col-6 col-md-4">
-              <div className="item row" style={{borderRadius:'28px'}}>
+              <div className="item row" style={{borderRadius:'28px'}} onClick={() => this.setState({batteryChangeShow: true})}>
                 <div className="col-5"><img src={require('../../img/icons/cambio de bateria.png')} alt="icon"/></div>
                 <div className="col-7 mt-2" align="left">Cambio de Bateria</div>
               </div>
             </div>
             <div className="col-6 col-md-4">
-              <div className="item row" style={{borderRadius:'28px'}}>
+              <div className="item row" style={{borderRadius:'28px'}} onClick={() => this.setState({gernalMainShow: true})}>
                 <div className="col-5"><img src={require('../../img/icons/frenos.png')} alt="icon"/></div>
                 <div className="col-7 mt-2" align="left">Mantenimiento General</div>
               </div>
             </div>
             <div className="col-6 col-md-4">
-              <div className="item row" style={{borderRadius:'28px'}}>
+              <div className="item row" style={{borderRadius:'28px'}} onClick={() => this.setState({premiunMainShow:true})}>
                 <div className="col-5"><img src={require('../../img/icons/frenos.png')} alt="icon"/></div>
                 <div className="col-7 mt-2" align="left">Mantenimiento premiun</div>
               </div>
@@ -224,7 +225,7 @@ class SelectService extends Component {
               <button 
                 className="btn form-control" 
                 style={{background:'rgb(179,226,1)', color:'black'}} 
-                onClick={()=>this.go_nextStep}
+                onClick={this.go_nextStep}
               >RESERVAR CITA</button>
             </div>
           </div>
@@ -297,13 +298,24 @@ class SelectService extends Component {
                   <button 
                     className="mt-3 mb-3 btn btn-outline-success" 
                     style={{width:'95%'}}
-                    onClick={()=>this.go_nextStep}
+                    onClick={this.go_nextStep}
                   >RESERVAR CITA</button>
                 </div>
               ) : ''}
             </div>
           ):''}
        </div>
+       <ElectronicModal 
+        first = {this.state.breakpadShow}
+        second = {this.state.batteryChangeShow}
+        third = {this.state.gernalMainShow}
+        fourth = {this.state.premiunMainShow}
+        hideFirst = {() => this.setState({breakpadShow : false})}
+        hideSecond = {() => this.setState({batteryChangeShow : false})}
+        hidethird = {() => this.setState({gernalMainShow : false})}
+        hideFourth = {() => this.setState({premiunMainShow : false})}
+        addCart = {(price, name, time) => {this.onChange(price, name, time)}}
+       />
      </div>
     );
   }
