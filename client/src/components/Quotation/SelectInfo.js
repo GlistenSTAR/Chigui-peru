@@ -1,20 +1,22 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import { loginUser } from '../../actions/authActions';
+import { saveServices } from '../../actions/seviceActions';
 import TextFieldGroup from '../common/TextFieldGroup';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
+import { withRouter } from 'react-router-dom';
 import { Card } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import PropTypes from 'prop-types';
 import { faCalendarAlt, faClock, faEdit, faMotorcycle, faCogs, faShieldAlt } from '@fortawesome/free-solid-svg-icons';
 
 class SelectInfo extends Component {
   constructor() {
     super();
     this.state = {
-      email: '',
-      name: '',
-      phonenum:'',
-      detail:''
+      email: 'asdf@gmail.com',
+      name: 'asdf',
+      phonenum:'123',
+      detail:'asdfsadf'
     };
 
     this.onChange = this.onChange.bind(this);
@@ -25,13 +27,19 @@ class SelectInfo extends Component {
   onSubmit(e) {
     e.preventDefault();
 
-    const userData = {
+    const seviceData = {
       email: this.state.email,
       name: this.state.name,
-      phonenum: this.state.phonenum
+      phonenum: this.state.phonenum,
+      detail: this.state.detail,
+      motor: JSON.parse(localStorage.getItem('motor')),
+      date: localStorage.getItem('date'),
+      time: localStorage.getItem('time'),
+      sevices : JSON.parse(localStorage.getItem('sevices')),
+      total_price: localStorage.getItem('price')
     };
-
-    this.props.loginUser(userData);
+    console.log(this.props);
+    this.props.saveServices(seviceData, this.props.history);
   }
 
   onChange(e) {
@@ -44,7 +52,7 @@ class SelectInfo extends Component {
     const time = localStorage.getItem('time');
     const sevice = JSON.parse(localStorage.getItem('sevices'));
     const price = localStorage.getItem('price');
-    console.log(price);
+    
     let sevices;
     
     sevices = sevice.map(( item , index )=>(
@@ -76,12 +84,12 @@ class SelectInfo extends Component {
       </div>
     ));
     return (
-      <div>
+      <form onSubmit={this.onSubmit}>
         <div className="sendData mt-3">
           <div className="container">
             <div className="row">
               <div className="col-md-8 m-auto">
-                <form onSubmit={this.onSubmit}>
+                <div>
                   <TextFieldGroup
                     placeholder="Nombre y apellido *"
                     name="name"
@@ -109,7 +117,7 @@ class SelectInfo extends Component {
                     value={this.state.detail}
                     onChange={this.onChange}
                   />
-                </form>
+                </div>
               </div>
             </div>
           </div>
@@ -249,18 +257,21 @@ class SelectInfo extends Component {
                   </div>
                   <hr style={{marginTop:'5px'}}/>
 
-                  <button className="form-control btn btn-lg btn-success">ENVIAR</button>
+                  <button className="form-control btn btn-lg btn-success" type="submit">ENVIAR</button>
                   </Card.Body>
                 </Card>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </form>
     )
   }
 }
 
+SelectInfo.propTypes = {
+  saveServices: PropTypes.func.isRequired,
+};
 
-export default connect(null, { loginUser })(SelectInfo);
+export default connect(null, { saveServices })(withRouter(SelectInfo));
 

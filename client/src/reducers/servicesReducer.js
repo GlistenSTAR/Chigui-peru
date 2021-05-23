@@ -1,4 +1,5 @@
 import { 
+  GET_ERRORS,
   GET_SERVICES 
 } from '../actions/types';
 
@@ -14,7 +15,11 @@ export default function(state = initialState, action) {
         services: action.payload
       };
     }
-      
+    case GET_ERRORS:{
+      return{
+        errors: action.payload
+      }
+    }  
     default:
       return state;
   }
