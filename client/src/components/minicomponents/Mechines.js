@@ -10,6 +10,10 @@ class ElectronicModal extends Component {
     this.state = {
       flag : false,
       flag1 : false,
+      flag2 : false,
+      flag3 : false,
+      flag4 : false,
+      flag5 : false,
       select_battery_show : false,
       selected_battery_name: '',
       selected_battery_referr: '',
@@ -122,7 +126,7 @@ class ElectronicModal extends Component {
             </div> 
             <hr style={{borderColor:'grey', width:'100%'}}/>
             <Card.Body>
-              <Card.Text style={{marginTop:'-15px'}}>
+              <div style={{marginTop:'-15px'}}>
                 <div className="row">
                     <div className="col-md-6">
                       <span style={{fontStyle:'italic', fontSize:'12px', color:'rgb(179,226,1)'}}>Síntomas relacionados a este diagnóstico:</span>
@@ -144,18 +148,249 @@ class ElectronicModal extends Component {
                       ):''}
                     </div>
                 </div>
-              </Card.Text>
+              </div>
             </Card.Body>
           </div>
         </Modal.Body>
-      </Modal>
+        </Modal>
+        
+       <Modal show={this.props.third} onHide = {this.props.hidethird}>
+        <Modal.Header closeButton>
+            <Modal.Title>Mantenimiento General</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Card className="mt-1 mb-1">
+            <Card.Header>
+              <div className="row">
+                <div className="col-md-6">Bujia</div>
+                <div className="col-md-6" align="right">
+                  <div className="" align="center" style={{backgroundColor:'rgb(179, 226, 1)',width:'200px', borderRadius:'20px'}}>
+                    S/.8
+                    <FontAwesomeIcon icon={this.state.flag2?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
+                      onClick={
+                        ()=>{
+                          this.props.addCart(8, "Mantenimiento General-Bujia", 15);
+                          this.setState({flag2 : !this.state.flag2})
+                        }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </Card.Header>
+            <Card.Body>
 
-       <Modal show={this.props.third} onHide = {this.props.hideThird}>
-          <div className="">third component</div>                    
+            </Card.Body>
+          </Card>
+          <Card className="mt-1 mb-1">
+            <Card.Header>
+              <div className="row">
+                <div className="col-md-6">Aceite</div>
+                <div className="col-md-6" align="right">
+                  <div className="" align="center" style={{backgroundColor:'rgb(179, 226, 1)',width:'200px', borderRadius:'20px'}}>
+                    S/.21
+                    <FontAwesomeIcon icon={this.state.flag3?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
+                      onClick={
+                        ()=>{
+                          this.props.addCart(21, "Mantenimiento General-Aceite", 15);
+                          this.setState({flag3 : !this.state.flag3})
+                        }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </Card.Header>
+            <Card.Body>
+
+            </Card.Body>
+          </Card>
+          <Card className="mt-1 mb-1">
+            <Card.Header>
+              <div className="row">
+                <div className="col-md-6">Mano de obra</div>
+                <div className="col-md-6" align="right">
+                  <div className="" align="center" style={{backgroundColor:'rgb(179, 226, 1)',width:'200px', borderRadius:'20px'}}>
+                    S/.30
+                    <FontAwesomeIcon icon={this.state.flag4?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
+                      onClick={
+                        ()=>{
+                          this.props.addCart(30, "Mantenimiento General-Mano de obra", 15);
+                          this.setState({flag4 : !this.state.flag4})
+                        }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </Card.Header>
+            <Card.Body>
+
+            </Card.Body>
+          </Card>
+          <Card className="mt-1 mb-1">
+            <Card.Header>
+              <div className="row">
+                <div className="col-md-6">Filtro de aire</div>
+                <div className="col-md-6" align="right">
+                  <div className="" align="center" style={{backgroundColor:'rgb(179, 226, 1)',width:'200px', borderRadius:'20px'}}>
+                    S/.25
+                    <FontAwesomeIcon icon={this.state.flag5?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
+                      onClick={
+                        ()=>{
+                          this.props.addCart(25, "Filtro de aire", 15);
+                          this.setState({flag5 : !this.state.flag5})
+                        }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </Card.Header>
+            <Card.Body>
+
+            </Card.Body>
+          </Card>
+        </Modal.Body>                 
        </Modal>
-
+        
+       {/* premium */}
        <Modal show={this.props.fourth} onHide = {this.props.hideFourth}>
-          <div className="">fourth component</div>                    
+          <Modal.Header closeButton>
+              <Modal.Title>Mantenimiento premiun</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+          <Card className="mt-1 mb-1">
+            <Card.Header>
+              <div className="row">
+                <div className="col-md-6">Bujia</div>
+                <div className="col-md-6" align="right">
+                  <div className="" align="center" style={{backgroundColor:'rgb(179, 226, 1)',width:'200px', borderRadius:'20px'}}>
+                    S/.8
+                    <FontAwesomeIcon icon={this.state.flag2?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
+                      onClick={
+                        ()=>{
+                          this.props.addCart(8, "Mantenimiento General-Bujia", 15);
+                          this.setState({flag2 : !this.state.flag2})
+                        }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </Card.Header>
+            <Card.Body>
+
+            </Card.Body>
+          </Card>
+          <Card className="mt-1 mb-1">
+            <Card.Header>
+              <div className="row">
+                <div className="col-md-6">Aceite</div>
+                <div className="col-md-6" align="right">
+                  <div className="" align="center" style={{backgroundColor:'rgb(179, 226, 1)',width:'200px', borderRadius:'20px'}}>
+                    S/.21
+                    <FontAwesomeIcon icon={this.state.flag3?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
+                      onClick={
+                        ()=>{
+                          this.props.addCart(21, "Mantenimiento General-Aceite", 15);
+                          this.setState({flag3 : !this.state.flag3})
+                        }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </Card.Header>
+            <Card.Body>
+
+            </Card.Body>
+          </Card>
+          <Card className="mt-1 mb-1">
+            <Card.Header>
+              <div className="row">
+                <div className="col-md-6">Mano de obra</div>
+                <div className="col-md-6" align="right">
+                  <div className="" align="center" style={{backgroundColor:'rgb(179, 226, 1)',width:'200px', borderRadius:'20px'}}>
+                    S/.30
+                    <FontAwesomeIcon icon={this.state.flag4?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
+                      onClick={
+                        ()=>{
+                          this.props.addCart(30, "Mantenimiento General-Mano de obra", 15);
+                          this.setState({flag4 : !this.state.flag4})
+                        }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </Card.Header>
+            <Card.Body>
+
+            </Card.Body>
+          </Card>
+          <Card className="mt-1 mb-1">
+            <Card.Header>
+              <div className="row">
+                <div className="col-md-6">Filtro de aire</div>
+                <div className="col-md-6" align="right">
+                  <div className="" align="center" style={{backgroundColor:'rgb(179, 226, 1)',width:'200px', borderRadius:'20px'}}>
+                    S/.25
+                    <FontAwesomeIcon icon={this.state.flag5?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
+                      onClick={
+                        ()=>{
+                          this.props.addCart(25, "Filtro de aire", 15);
+                          this.setState({flag5 : !this.state.flag5})
+                        }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </Card.Header>
+            <Card.Body>
+
+            </Card.Body>
+          </Card>
+
+          <Card className="mt-1 mb-1">
+            <Card.Header>
+              <div className="row">
+                <div className="col-md-6">Filtro de aire</div>
+                <div className="col-md-6" align="right">
+                  <div className="" align="center" style={{backgroundColor:'rgb(179, 226, 1)',width:'200px', borderRadius:'20px'}}>
+                    S/.25
+                    <FontAwesomeIcon icon={this.state.flag5?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
+                      onClick={
+                        ()=>{
+                          this.props.addCart(25, "Filtro de aire", 15);
+                          this.setState({flag5 : !this.state.flag5})
+                        }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </Card.Header>
+            <Card.Body>
+
+            </Card.Body>
+          </Card>
+
+          <Card className="mt-1 mb-1">
+            <Card.Header>
+              <div className="row">
+                <div className="col-md-6">Filtro de aire</div>
+                <div className="col-md-6" align="right">
+                  <div className="" align="center" style={{backgroundColor:'rgb(179, 226, 1)',width:'200px', borderRadius:'20px'}}>
+                    S/.25
+                    <FontAwesomeIcon icon={this.state.flag5?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
+                      onClick={
+                        ()=>{
+                          this.props.addCart(25, "Filtro de aire", 15);
+                          this.setState({flag5 : !this.state.flag5})
+                        }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </Card.Header>
+            <Card.Body>
+
+            </Card.Body>
+          </Card>
+        </Modal.Body>             
        </Modal>
 
         <Modal show={this.state.select_battery_show} onHide={()=> this.setState({ select_battery_show: false})}>

@@ -42,7 +42,7 @@ class SelectService extends Component {
     }
 
     //price_services
-    if(this.state.carts.length > 0){
+    if(this.state.carts.length >= 0){
       this.state.carts.map((cart, _i)=>{
         if(cart.service_name === name) {
           same_flag = 1;
@@ -95,7 +95,8 @@ class SelectService extends Component {
     this.setState({carts: temp, amount: this.state.amount-1});
   }
   go_nextStep = () => { 
-      console.log('nextstep');
+      localStorage.setItem('sevices', JSON.stringify(this.state.carts));
+      localStorage.setItem('price', JSON.stringify(this.state.price));
       this.props.nextclick();
   }
   
@@ -231,7 +232,7 @@ class SelectService extends Component {
           </div>
           
           {this.state.amount > 0 ? (
-            <div className="bucket" align="left" style={{zIndex:'9999999999999999'}} >
+            <div className="bucket" align="left" style={{zIndex:'9999999999999999', boxShadow:"-2px -6px 14px -6px rgb(0 0 0 / 75%)"}} >
               <div className="bucketIcon pl-4 pr-5 pt-2" style={{color:'white'}} onClick={this.show_cart}>
                 <div style={{float:'left'}}>
                   <FontAwesomeIcon icon={faShoppingCart} size="2x" color="white" style={{float:'left'}}/>
@@ -244,8 +245,8 @@ class SelectService extends Component {
                 <h4 align="right">{this.state.price?'S/.':''}{' '}{this.state.price?this.state.price:this.state.name}</h4>
               </div>
               { this.state.cart_show?(
-                <div className="text-grey bg-white mt-2" align="center">
-                  <h3>Precio total : <span>{this.state.price?'S/.':''}{this.state.price?this.state.price:this.state.name}</span></h3>
+                <div className="text-grey bg-white" align="center">
+                  <h3 className="mt-3 pt-3">Precio total : <span>{this.state.price?'S/.':''}{this.state.price?this.state.price:this.state.name}</span></h3>
                   <hr/>
                   {free_services}
                   <table className="table table-bordered" id="table" style={{width:'90%', marginLeft:'auto', marginRight:'auto', border:'1px sold whitesmoke'}}>
@@ -294,7 +295,6 @@ class SelectService extends Component {
                     </div>
                   </div>
                   <hr/>
-
                   <button 
                     className="mt-3 mb-3 btn btn-outline-success" 
                     style={{width:'95%'}}

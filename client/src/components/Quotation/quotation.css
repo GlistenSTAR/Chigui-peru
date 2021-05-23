@@ -671,3 +671,15 @@
       max-width: 700px;
   }
 }
+
+
+.quotation .green_box{
+  background-color: rgb(179, 226, 1);
+  height: 300px;  
+}
+
+.quotation .locationGroup .row.mt-2.mb-2.active{
+  border-color: rgb(179, 226, 1)!important;
+  border-width: 3px!important;
+
+}

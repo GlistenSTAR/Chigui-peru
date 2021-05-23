@@ -21,7 +21,8 @@ export default class SelectData extends Component {
     this.state = {
       value : '',
       location : '',
-      time : new Date()
+      time : new Date(),
+      flag:''
     };
   }
 
@@ -31,6 +32,7 @@ export default class SelectData extends Component {
 
   selectLocation = (e) =>{
     this.setState({ location : e.target.getAttribute('name')});
+    this.setState({ flag: 1});
   }
 
   handleDateChange = (date) => {
@@ -73,37 +75,109 @@ export default class SelectData extends Component {
           </div>
           { this.state.value?(
             <div>
-              <h5 align="left" className="mt-4" style={{width:'60%'}}><FontAwesomeIcon icon={faMotorcycle} size="1x"/>{' '}RECEPCIÓN DEL CARRO</h5><hr/>
+              <h5 
+                align="left" 
+                className="mt-4" 
+                style={{width:'60%'}}>
+                  <FontAwesomeIcon 
+                    icon={faMotorcycle} 
+                    size="1x"/>
+                      {' '}RECEPCIÓN DEL CARRO
+              </h5>
+              
+              <hr/>
+              
               <div className="locationGroup">
-                <div className="row mt-2 mb-2" name="OurWorkstation"  onClick={this.selectLocation} style={{borderWidth:'1px', borderRadius:'10px', borderColor:'rgba(0,0,0,0.5', borderStyle:'solid', maxWidth:'350px', padding:'10px', color:'black'}}>
+                <div 
+                  className={`row mt-2 mb-2 `+(this.state.flag === 1 ? 'active' : '')}
+                  name="OurWorkstation"  
+                  onClick={this.selectLocation} 
+                  
+                  style={{
+                    borderWidth:'1px', 
+                    borderRadius:'10px', 
+                    borderColor:'rgba(0,0,0,0.5)', 
+                    borderStyle:'solid', 
+                    maxWidth:'350px', 
+                    padding:'10px', 
+                    color:'black', 
+                  }}>
+                  
                   <div className="col-md-3 col-3" name="OurWorkstation" align="right">
                     <FontAwesomeIcon icon={faHome} size="2x" name="OurWorkstation"/>
                   </div>
-                  <div className="col-md-9 col-9" name="OurWorkstation" align="left" style={{marginTop:'auto', marginBottom:'auto'}}>
-                    Yo llevo mi carro al taller
+                  
+                  <div 
+                    className="col-md-9 col-9" 
+                    name="OurWorkstation" 
+                    align="left" 
+                    style={{marginTop:'auto', marginBottom:'auto'}}>
+                      Yo llevo mi carro al taller
                   </div>
+
                 </div>
-                <div className="row mt-2 mb-2 disabled" name="myworkstation" style={{borderWidth:'1px', borderRadius:'10px', borderColor:'rgba(0,0,0,0.5', borderStyle:'solid', maxWidth:'350px', padding:'10px'}}>
+                <div 
+                  className="row mt-2 mb-2 disabled" 
+                  name="myworkstation" 
+                  style={{
+                    borderWidth:'1px', 
+                    borderRadius:'10px', 
+                    borderColor:'rgba(0,0,0,0.5)', 
+                    borderStyle:'solid', 
+                    maxWidth:'350px', 
+                    padding:'10px'
+                  }}>
+                  
                   <div className="col-md-3 col-3" align="right">
                     <FontAwesomeIcon icon={faPersonBooth} name="myworkstation" size="2x"/>
                   </div>
-                  <div className="col-md-9 col-9" align="left" name="myworkstation" style={{marginTop:'auto', marginBottom:'auto'}}>
-                    Lleven mi carro al taller
-                    <span className="badge badge-pill badge-secondary" style={{position:'absolute', bottom:'-20px', right:'-20px', fontSize:'15px'}}>
-                      ¡Muy Pronto!
+                  <div 
+                    className="col-md-9 col-9" 
+                    align="left" 
+                    name="myworkstation" 
+                    style={{marginTop:'auto', marginBottom:'auto'}}>
+                      Lleven mi carro al taller
+                    <span 
+                      className="badge badge-pill badge-secondary" 
+                      style={{position:'absolute', bottom:'-20px', right:'-20px', fontSize:'15px'}}>
+                        ¡Muy Pronto!
                     </span>
                   </div>
                   
                 </div>
-                <div className="row mt-2 mb-2 disabled" name="myhourse" style={{borderWidth:'1px', borderRadius:'10px', borderColor:'rgba(0,0,0,0.5', borderStyle:'solid', maxWidth:'350px', padding:'10px'}}>
+                <div 
+                  className="row mt-2 mb-2 disabled" 
+                  name="myhourse" 
+                  style={{
+                    borderWidth:'1px', 
+                    borderRadius:'10px', 
+                    borderColor:'rgba(0,0,0,0.5)', 
+                    borderStyle:'solid', 
+                    maxWidth:'350px', 
+                    padding:'10px'}}>
+                  
                   <div className="col-md-3 col-3" align="right" name="myhourse">
                     {/* <img src={require('../../img/icons/worker.png')} height="40px" name="myhourse"/> */}
                     <FontAwesomeIcon icon={faPersonBooth} name="myhourse" size="2x"/>
                   </div>
-                  <div className="col-md-9 col-9" align="left" name="myhourse" style={{marginTop:'auto', marginBottom:'auto'}}>
-                    Quiero el servicio en mi casa
-                    <span className="badge badge-pill badge-secondary" style={{position:'absolute', bottom:'-20px', right:'-20px', fontSize:'15px'}}>
-                      ¡Muy Pronto!
+                  <div 
+                  className="col-md-9 col-9" 
+                  align="left" 
+                  name="myhourse" 
+                  style={{
+                    marginTop:'auto', 
+                    marginBottom:'auto'
+                  }}>
+                      Quiero el servicio en mi casa
+                    <span 
+                      className="badge badge-pill badge-secondary" 
+                      style={{
+                        position:'absolute', 
+                        bottom:'-20px', 
+                        right:'-20px', 
+                        fontSize:'15px'
+                      }}>
+                        ¡Muy Pronto!
                     </span>
                   </div>
                 </div>
@@ -113,7 +187,16 @@ export default class SelectData extends Component {
           
           { this.state.location?(
             <div>
-              <h5 align="left" className="mt-4" style={{width:'60%'}}><FontAwesomeIcon icon={faClock} size="1x"/>{' '}HORA</h5><hr/>
+              <h5 
+                align="left" 
+                className="mt-4" 
+                style={{width:'60%'}}
+              >
+                <FontAwesomeIcon icon={faClock} size="1x"/>{' '}HORA
+              </h5>
+              
+              <hr/>
+              
               <MuiPickersUtilsProvider utils={DateFnsUtils}>
                 <Grid container justify="space-around">
                   <KeyboardTimePicker
@@ -129,8 +212,13 @@ export default class SelectData extends Component {
           ):''}
 
           <div className="col-12 col-md-12 mt-5 mb-5">
-            <button className="btn form-control" onClick={this.nextclick} disabled = {this.state.time && this.state.location?false:true} style={{background:'rgb(179,226,1)', color:'black'}}>
-              FINALIZAR AGENDAMIENTO
+            <button 
+              className="btn form-control" 
+              onClick={this.nextclick} 
+              disabled = {this.state.time && this.state.location ? false : true} 
+              style={{ background: 'rgb(179,226,1)', color: 'black'}}
+              >
+                FINALIZAR AGENDAMIENTO
             </button>
           </div>
         </div>
