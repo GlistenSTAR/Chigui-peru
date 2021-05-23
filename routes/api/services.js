@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport');
 const mongoose = require('mongoose');
+const sendEmail = require('../../models/send.mail')
 
 // Load Profile Model
 const Services = require('../../models/Services');
@@ -62,9 +63,27 @@ router.post(
     .then(data => {
       const content = {
         Subject: "Confirm Email",
-        HTMLPart: "<a href=\'http://"+CLIENT_ORIGIN+"/confirmed/"+nuserr.id+"\'>Click to confirm email</a>",      
-        TextPart: "Copy and paste this link: "+CLIENT_ORIGIN+"/confirm/"+nuserr.id,
-        CustomID: "CustomID"
+        HTMLPart: "<div style='font-family:'PT Sans',Helvetica,Arial'>\
+                    <p style='text-align:left;margin-bottom:0;font-size:1.2em'>Hola "+req.body.name+",</p>\
+                    <p style='text-align:left;font-size:1.2em;margin-top:0.5em'>\
+                      Gracias por confiar en nosotros y poner tu vehículo en nuestras manos.</p>\
+                    <p style='text-align:left'>A continuación los datos de los servicios solicitados:</p>\
+                    <div style='margin:auto;max-width:700px;font-family:'PT Sans',Helvetica,Arial;font-size:1.1em'>\
+                      <table cellpadding='0' cellspacing='0' style='width:100%;border:1px solid #aaa;border-radius:5px;background-color:#ffffff'>\
+                        <tbody><tr><td>\
+                              <div style='background:#10b472;color:#ffffff;text-align:center'>\
+                                  <div style='display:inline-block;width:50%;min-width:290px;text-align:left;overflow:auto;vertical-align:top;text-align:right'>\
+                                      <div style='padding:0.5em'>\
+                                          <span style='font-size:1.2em;font-weight:bold'>"+req.body.motor.motorname+' '+req.body.motor.motormodel+'/'+req.body.motor.motorCylinder+"</span>\
+                                      </div>\
+                                  </div>\
+                              </div>\
+                          </td>\
+                        </tr></tbody>\
+                      </table>\
+                    </div></div>",      
+        TextPart: "",
+        CustomID: ""
       }
       sendEmail(req.body.email, content)
       .then(()=>{

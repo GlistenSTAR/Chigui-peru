@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "6094a59c3190207393046701"
+  },
+  "description": "Carga de bateria en el vehiculo + diagnostico",
+  "name": "CARGA DE BATERIA",
+  "price": "15",
+  "time": "0"
+},{
+  "_id": {
+    "$oid": "6094a5d93190207393046702"
+  },
+  "description": "Carga de bateria sola, sin vehiculo.",
+  "name": "SOLO BATERIA",
+  "price": "5",
+  "time": "0"
+},{
+  "_id": {
+    "$oid": "6094a6023190207393046703"
+  },
+  "description": "Diagnostico con scanner de  bateria",
+  "name": "Diagnostico de Bateria",
+  "price": "7",
+  "time": "0"
+}]

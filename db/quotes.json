@@ -1,0 +1,34 @@
+[{
+  "_id": {
+    "$oid": "60aa77428b762a434806211c"
+  },
+  "name": "asdf",
+  "email": "asdf@gmail.com",
+  "phonenumber": 123,
+  "detail": "asdfsadf",
+  "date": "05-26 2021",
+  "time": "06:39 PM",
+  "total_price": "65",
+  "motor": [
+    {
+      "_id": {
+        "$oid": "60aa77428b762a434806211d"
+      },
+      "motorname": "BAJAJ",
+      "motormodel": "PULSAR NS200FI ABS",
+      "motoryear": "2020",
+      "motorCylinder": "200CC"
+    }
+  ],
+  "services": [
+    {
+      "_id": {
+        "$oid": "60aa77428b762a434806211e"
+      },
+      "service_name": "Peritaje de compra plus",
+      "price": 65,
+      "time": 200
+    }
+  ],
+  "__v": 0
+}]

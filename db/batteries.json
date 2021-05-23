@@ -1,0 +1,43 @@
+[{
+  "_id": {
+    "$oid": "609eb745edc54ed1007e5b71"
+  },
+  "brand": "MGM",
+  "price": "79",
+  "referrence": "YTX7A-BS"
+},{
+  "_id": {
+    "$oid": "609eb7b488a3ba2abcf7eee2"
+  },
+  "brand": "MGM",
+  "price": "69",
+  "referrence": "12N7-3B"
+},{
+  "_id": {
+    "$oid": "609eb7de88a3ba2abcf7eee3"
+  },
+  "brand": "MGM",
+  "price": "69",
+  "referrence": "12N7-3A"
+},{
+  "_id": {
+    "$oid": "609eb7f088a3ba2abcf7eee4"
+  },
+  "brand": "MGM",
+  "price": "55",
+  "referrence": "12N5-3B"
+},{
+  "_id": {
+    "$oid": "609eb82f88a3ba2abcf7eee5"
+  },
+  "brand": "MGM",
+  "price": "55",
+  "referrence": "12N5-4B"
+},{
+  "_id": {
+    "$oid": "609eb84a88a3ba2abcf7eee6"
+  },
+  "brand": "MGM",
+  "price": "55",
+  "referrence": "YTX5L-BS"
+}]

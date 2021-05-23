@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "60913b19397fecca3e7bf3ec"
+  },
+  "type": "Revision de bateria",
+  "data": [
+    {
+      "subname": "Revision de bateria",
+      "description": "Revision de bateria , estado de salud, nivel de carga, etc.",
+      "time": "15",
+      "price": "20"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60913ba4397fecca3e7bf3ed"
+  },
+  "data": [
+    {
+      "subname": "Peritaje de compra",
+      "description": "Se le realizara el peritaje economico a los vehiculos de 2 a 3 años o menores a 30,000.00 Km",
+      "time": "60",
+      "price": "30"
+    },
+    {
+      "subname": "Peritaje de compra plus",
+      "description": "Peritaje mas completo, donde se medira el desgaste del interno motor, sistema electrico.",
+      "time": "200",
+      "price": "65"
+    }
+  ],
+  "type": "Peritaje"
+}]
