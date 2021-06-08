@@ -73,7 +73,7 @@ router.post(
                         <tbody><tr><td>\
                               <div style='background:#10b472;color:#ffffff;text-align:center'>\
                                   <div style='display:inline-block;width:50%;min-width:290px;text-align:left;overflow:auto;vertical-align:top;text-align:right'>\
-                                      <div style='padding:0.5em'>\
+                                      <div style='padding:0.5em; text-align:center'>\
                                           <span style='font-size:1.2em;font-weight:bold'>"+req.body.motor.motorname+' '+req.body.motor.motormodel+'/'+req.body.motor.motorCylinder+"</span>\
                                       </div>\
                                   </div>\
