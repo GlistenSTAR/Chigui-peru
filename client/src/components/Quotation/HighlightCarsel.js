@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Card, Modal } from 'react-bootstrap'
 import ItemsCarousel from 'react-items-carousel';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock, faStickyNote, faPlusCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import { faClock, faPlusCircle, faCheckCircle, faShieldAlt } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import ListComponent from '../common/List';
 import MileageComponent from '../minicomponents/MileageComponent';
@@ -113,14 +113,14 @@ export default ({addCart}) => {
                 </div>
                 <div className="col-md-9" style={{fontSize:'14px'}}>
                   Tiempo estimado<br/>
-                  <span style={{fontSize:'12px', fontFamily:'serif'}}>{scanData.time} min</span>
+                  <span style={{fontSize:'12px', fontFamily:'serif', color:'black'}}>{scanData.time} min</span>
                 </div>
               </div>
             </div>
             <div className="col-md-6" align="right">
             <div className="row">
                 <div className="col-md-6 circle_icon" align="right">
-                  <FontAwesomeIcon icon={faStickyNote} style={{color:'rgb(179,226,1)', fontSize:'35px', textAlign:'right' }}/>
+                  <FontAwesomeIcon icon={faShieldAlt} style={{color:'rgb(179,226,1)', fontSize:'35px', textAlign:'right' }}/>
                 </div>
                 <div className="col-md-5" style={{fontSize:'14px'}} align="left">
                   Garantía<br/>

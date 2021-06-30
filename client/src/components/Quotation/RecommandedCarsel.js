@@ -3,7 +3,7 @@ import { Card, Modal } from 'react-bootstrap'
 import ItemsCarousel from 'react-items-carousel';
 import OilChange from '../minicomponents/OilChange';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock, faShieldAlt, faCheckCircle, faPlusCircle, faStickyNote } from '@fortawesome/free-solid-svg-icons';
+import { faClock, faShieldAlt, faCheckCircle, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 
 export default ({addCart, addFreeServices}) => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
@@ -99,8 +99,8 @@ export default ({addCart, addFreeServices}) => {
                 <div className="col-md-6">
                   <h5>Cambio de Liquido de Frenos</h5>
                   <div style={{fontFamily:'serif', color:'grey'}}>
-                    <FontAwesomeIcon icon={faClock} size="sm"/>{' '}<span>Duración 35 min</span><br/>
-                    <FontAwesomeIcon icon={faShieldAlt} size="sm"/>{' '}<span>Garantía 6 mes(es) o 5000 Km</span>
+                    <FontAwesomeIcon icon={faClock} size="sm" style={{color:'blue'}}/>{' '}<span >Duración 35 min</span><br/>
+                    <FontAwesomeIcon icon={faShieldAlt} size="sm" style={{color:'blue'}}/>{' '}<span >Garantía 6 mes(es) o 5000 Km</span>
                   </div>
                 </div>
                 <div className="col-md-6 pt-3" align="right">
@@ -138,8 +138,8 @@ export default ({addCart, addFreeServices}) => {
                 <div className="col-md-6">
                   <h5>Cambio de Liquido de Frenos</h5>
                   <div style={{fontFamily:'serif', color:'grey'}}>
-                    <FontAwesomeIcon icon={faClock} size="sm"/>{' '}<span>Duración 35 min</span><br/>
-                    <FontAwesomeIcon icon={faShieldAlt} size="sm"/>{' '}<span>Garantía 6 mes(es) o 5000 Km</span>
+                    <FontAwesomeIcon icon={faClock} size="sm" style={{color:'blue'}}/>{' '}<span >Duración 35 min</span><br/>
+                    <FontAwesomeIcon icon={faShieldAlt} size="sm" style={{color:'blue'}}/>{' '}<span >Garantía 6 mes(es) o 5000 Km</span>
                   </div>
                 </div>
                 <div className="col-md-6 pt-3" align="right">
@@ -172,7 +172,34 @@ export default ({addCart, addFreeServices}) => {
         </Modal.Header>
         <Modal.Body>
          <div>
-           <div className="row" style={{borderBottom:'1px solid grey', marginBottom:'10px', marginLeft:'5px', marginRight:'5px', paddingBottom:'10px' }}>
+         <div className="row" style={{borderBottom:'1px solid grey', marginBottom:'4px', marginLeft:'5px', marginRight:'5px', paddingBottom:'10px' }}>
+              <div className="col-md-6">
+                Rin 14
+              </div>
+              <div className="col-md-6" align="right">
+                <h5>POR COTIZAR</h5>
+                <button className={`btn btn-success ` + (button_top === 14 ? "active" : '')}  onClick={()=>setButton_top(14)}>SELECCIONAR</button>
+              </div>
+            </div>
+         <div className="row" style={{borderBottom:'1px solid grey', marginBottom:'4px', marginLeft:'5px', marginRight:'5px', paddingBottom:'10px' }}>
+              <div className="col-md-6">
+                Rin 15
+              </div>
+              <div className="col-md-6" align="right">
+                <h5>POR COTIZAR</h5>
+                <button className={`btn btn-success ` + (button_top === 15 ? "active" : '')}  onClick={()=>setButton_top(15)}>SELECCIONAR</button>
+              </div>
+            </div>
+         <div className="row" style={{borderBottom:'1px solid grey', marginBottom:'4px', marginLeft:'5px', marginRight:'5px', paddingBottom:'10px' }}>
+              <div className="col-md-6">
+                Rin 16
+              </div>
+              <div className="col-md-6" align="right">
+                <h5>POR COTIZAR</h5>
+                <button className={`btn btn-success ` + (button_top === 16 ? "active" : '')}  onClick={()=>setButton_top(16)}>SELECCIONAR</button>
+              </div>
+            </div>
+           <div className="row" style={{borderBottom:'1px solid grey', marginBottom:'4px', marginLeft:'5px', marginRight:'5px', paddingBottom:'10px' }}>
               <div className="col-md-6">
                 Rin 17
               </div>
@@ -182,7 +209,7 @@ export default ({addCart, addFreeServices}) => {
               </div>
             </div>
 
-            <div className="row" style={{borderBottom:'1px solid grey', marginBottom:'10px', marginLeft:'5px', marginRight:'5px', paddingBottom:'10px'}}>
+            <div className="row" style={{borderBottom:'1px solid grey', marginBottom:'4px', marginLeft:'5px', marginRight:'5px', paddingBottom:'10px'}}>
               <div className="col-md-6">
                   Rin 18
               </div>
@@ -192,7 +219,7 @@ export default ({addCart, addFreeServices}) => {
               </div>
             </div>
 
-            <div className="row" style={{borderBottom:'1px solid grey', marginBottom:'10px', marginLeft:'5px', marginRight:'5px', paddingBottom:'10px'}}>
+            <div className="row" style={{borderBottom:'1px solid grey', marginBottom:'4px', marginLeft:'5px', marginRight:'5px', paddingBottom:'10px'}}>
               <div className="col-md-6">
                   Rin 19
                 </div>
@@ -205,9 +232,8 @@ export default ({addCart, addFreeServices}) => {
             <h5 style={{color: 'rgb(179,226,1)'}}>AMABLE</h5>
             <div className="row">
               <div className="btn-group" style={{width:'90%', marginLeft:'auto', marginRight:'auto', borderRadius:'10px'}}>
-                <button className={button===17?'active':''} style={{width:'33.33%'}} onClick={()=>{setButton(17)}}>*17</button>
-                <button className={button===18?'active':''} style={{width:'33.33%'}} onClick={()=>{setButton(18)}}>*18</button>
-                <button className={button===19?'active':''} style={{width:'33.33%'}} onClick={()=>{setButton(19)}}>*19</button>
+                <button className={button===14?'active':''} style={{width:'50%'}} onClick={()=>{setButton(14)}}>*1</button>
+                <button className={button===15?'active':''} style={{width:'50%'}} onClick={()=>{setButton(15)}}>*2</button>
               </div>
             </div>               
          </div>
@@ -229,6 +255,9 @@ export default ({addCart, addFreeServices}) => {
               }
             >AGREGAR</button>
             <button className="btn btn-info">POR COTIZAR</button>
+            <div className="ring-number">
+
+            </div>
          </div>
         </Modal.Body>
       </Modal>
@@ -248,14 +277,14 @@ export default ({addCart, addFreeServices}) => {
                     </div>
                     <div className="col-md-9" style={{fontSize:'14px'}}>
                       Tiempo estimado<br/>
-                      <span style={{fontSize:'12px', fontFamily:'serif'}}>45 min</span>
+                      <span style={{fontSize:'12px', fontFamily:'serif' }}>45 min</span>
                     </div>
                   </div>
                 </div>
                 <div className="col-md-6" align="right">
                   <div className="row">
                     <div className="col-md-5 circle_icon" align="right">
-                      <FontAwesomeIcon icon={faStickyNote} style={{color:'rgb(179,226,1)', fontSize:'35px', textAlign:'right' }}/>
+                      <FontAwesomeIcon icon={faShieldAlt} style={{color:'rgb(179,226,1)', fontSize:'35px', textAlign:'right' }}/>
                     </div>
                     <div className="col-md-6" style={{fontSize:'14px'}} align="left">
                       Garantía<br/>

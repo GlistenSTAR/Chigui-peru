@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Card, Modal } from 'react-bootstrap'
 import ItemsCarousel from 'react-items-carousel';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock, faStickyNote, faCheckCircle, faPlusCircle } from '@fortawesome/free-solid-svg-icons';
+import { faClock, faCheckCircle, faPlusCircle, faShieldAlt } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios'
 
 export default ({addCart}) => {
@@ -109,7 +109,7 @@ export default ({addCart}) => {
             <div className="col-md-6" align="right">
               <div className="row">
                 <div className="col-md-6 circle_icon" align="right">
-                  <FontAwesomeIcon icon={faStickyNote} style={{color:'rgb(179,226,1)', fontSize:'35px', textAlign:'right' }}/>
+                  <FontAwesomeIcon icon={faShieldAlt} style={{color:'rgb(179,226,1)', fontSize:'35px', textAlign:'right' }}/>
                 </div>
                 <div className="col-md-5" style={{fontSize:'14px'}} align="left">
                   Garantía<br/>
@@ -121,7 +121,7 @@ export default ({addCart}) => {
           <Card>
             <Card.Body>
               <Card.Text>
-                <div class="row" style={{borderBottom:'1px solid grey'}}>
+                <div className="row" style={{borderBottom:'1px solid grey'}}>
                   <div className="col-md-6">
                     <h6>Servicio de Desvare</h6>
                   </div>
@@ -152,6 +152,10 @@ export default ({addCart}) => {
         <Modal.Body>
            {content?content:''} 
         </Modal.Body>
+        <div className="mt-2 mb-3">
+          <div className="motocycle pt-1 pb-3">
+          </div>
+        </div>
       </Modal>
     </div>
   );

@@ -1,4 +1,4 @@
-const mailjet = require ('node-mailjet').connect('8244e719835365d03f77058ca7dfcc10', '9860cba58b6a7028465a15875825e174');
+const mailjet = require ('node-mailjet').connect('5a8a9ba004aeb8393227cac4ad8e8c75', '232c3e500109e16866331c7cf30a9f91');
 
 module.exports = async (to, content) => {
   const subject = content.Subject;
@@ -11,13 +11,13 @@ module.exports = async (to, content) => {
     "Messages":[
       {
         "From": {
-          "Email": "www0327333@gmail.com",
-          "Name": "Expert Ivnest Team"
+          "Email": "clientes@chigui.com.pe",
+          "Name": "Chigui"
         },
         "To": [
           {
             "Email": to,
-            "Name": "ttt"
+            "Name": "Chigui"
           }
         ],
         "Subject": subject,

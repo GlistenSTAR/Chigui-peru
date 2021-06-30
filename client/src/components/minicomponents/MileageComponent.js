@@ -48,7 +48,7 @@ class MileageComponent extends Component {
                   <div>
                     <div className="row pl-3 pr-3" onClick={()=>{ this.setState({show1: !this.state.show1})}}>
                       <FontAwesomeIcon icon={this.state.show1?faCaretDown:faCaretRight} size="2x" color="rgb(179,226,1)"/>
-                      <span style={{marginTop:'auto', marginBottom:'auto', fontSize:'18px'}} className="ml-3">Revision General</span>
+                      <span style={{marginTop:'auto', marginBottom:'auto', fontSize:'18px'}} className="ml-3">Esta la de revisión  general</span>
                       <div style={{marginTop:'auto', marginBottom:'auto', fontSize:'18px', marginLeft:'auto'}}>{'S/.'}{data.price}</div>
                     </div>
                     {this.state.show1?(

@@ -345,7 +345,7 @@ class ElectronicModal extends Component {
             </Card.Body>
           </Card>
 
-          <Card className="mt-1 mb-1">
+          {/* <Card className="mt-1 mb-1">
             <Card.Header>
               <div className="row">
                 <div className="col-md-6">Filtro de aire</div>
@@ -366,9 +366,9 @@ class ElectronicModal extends Component {
             <Card.Body>
 
             </Card.Body>
-          </Card>
+          </Card> */}
 
-          <Card className="mt-1 mb-1">
+          {/* <Card className="mt-1 mb-1">
             <Card.Header>
               <div className="row">
                 <div className="col-md-6">Filtro de aire</div>
@@ -389,7 +389,7 @@ class ElectronicModal extends Component {
             <Card.Body>
 
             </Card.Body>
-          </Card>
+          </Card> */}
         </Modal.Body>             
        </Modal>
 

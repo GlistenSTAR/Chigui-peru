@@ -112,7 +112,7 @@ export default class SelectData extends Component {
                     name="OurWorkstation" 
                     align="left" 
                     style={{marginTop:'auto', marginBottom:'auto'}}>
-                      Yo llevo mi carro al taller
+                      Yo llevo mi moto al taller
                   </div>
 
                 </div>
@@ -136,7 +136,7 @@ export default class SelectData extends Component {
                     align="left" 
                     name="myworkstation" 
                     style={{marginTop:'auto', marginBottom:'auto'}}>
-                      Lleven mi carro al taller
+                      Lleven mi moto al taller
                     <span 
                       className="badge badge-pill badge-secondary" 
                       style={{position:'absolute', bottom:'-20px', right:'-20px', fontSize:'15px'}}>

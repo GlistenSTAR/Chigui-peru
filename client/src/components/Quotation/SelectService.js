@@ -11,7 +11,7 @@ import ElectronicCarsel from './ElectronicCarsel';
 import ElectronicModal from '../minicomponents/Mechines'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart, faShieldAlt, faWindowClose } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart, faShieldAlt, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 class SelectService extends Component {
   constructor(props){
@@ -91,8 +91,11 @@ class SelectService extends Component {
 
   deleteRow = (index) => {
     let temp = this.state.carts;
+    let deleted_price = this.state.carts[index].price
+    console.log(deleted_price)
     temp.splice(index, 1);
     this.setState({carts: temp, amount: this.state.amount-1});
+    this.setState({price: this.state.price - deleted_price});
   }
   go_nextStep = () => { 
       localStorage.setItem('sevices', JSON.stringify(this.state.carts));
@@ -107,7 +110,7 @@ class SelectService extends Component {
         <tr key={index} align="center" style={{fontSize:'13px'}}>
           <td style={{textTransform: 'uppercase'}}>{' '}{cart.service_name}<br/><span style={{fontFamily:'serif'}}>{cart.time}{' '}mins</span></td>
           <td>S/.{cart.price}<br/></td>
-          <td><FontAwesomeIcon icon={faWindowClose} size="2x" onClick={() => this.deleteRow(index)}/></td>
+          <td><FontAwesomeIcon icon={faTrashAlt} size="2x" onClick={() => this.deleteRow(index)}/></td>
         </tr>
     ));
     if(this.state.free_cart.length > 0){
@@ -130,13 +133,6 @@ class SelectService extends Component {
     return (
      <div className="services container" align="center">
        <div className="row" align="center">
-        {/* <InputGroup
-          name="search"
-          icon="fa fa-search"
-          onChange={this.onChange}
-          value={this.state.search}
-          placeholder="Búsqueda..."
-        /> */}
         <div className="horizal-card row"  onClick={this.total_diagnose}>
           <div className="col-md-3 col-sm-3 col-3 mt-auto mb-auto" align="right" >
             <img className="img-rounded" alt="" src={require('../../img/icons/diagnostico.png')} style={{visibility: 'visible'}} />
@@ -238,15 +234,15 @@ class SelectService extends Component {
                   <FontAwesomeIcon icon={faShoppingCart} size="2x" color="white" style={{float:'left'}}/>
                   <span 
                     className="badge badge-success" 
-                    style={{marginLeft:'-10px', paddingTop:'-20px'}}>
+                    style={{marginLeft:'-10px', paddingTop:'-20px', backgroundColor:'green'}}>
                       {this.state.amount}</span>
                 </div>
                 <h5 align="center" className="mt-1 pl-5" style={{ float:'left'}}>Ver Motocicleta</h5>
                 <h4 align="right">{this.state.price?'S/.':''}{' '}{this.state.price?this.state.price:this.state.name}</h4>
               </div>
               { this.state.cart_show?(
-                <div className="text-grey bg-white" align="center">
-                  <h3 className="mt-3 pt-3">Precio total : <span>{this.state.price?'S/.':''}{this.state.price?this.state.price:this.state.name}</span></h3>
+                <div className="text-grey bg-white" align="center" style={{lineHeight:'1'}}>
+                  <h3 className="pt-3">Precio total : <span>{this.state.price?'S/.':''}{this.state.price?this.state.price:this.state.name}</span></h3>
                   <hr/>
                   {free_services}
                   <table className="table table-bordered" id="table" style={{width:'90%', marginLeft:'auto', marginRight:'auto', border:'1px sold whitesmoke'}}>
@@ -265,31 +261,31 @@ class SelectService extends Component {
                     <p align="left" className="ml-5">Todos los servicios incluyen</p>
                     <div className="col-md-6 pl-5 mt-2 mb-2" align="left"> Revisión de Calidad <br/><span style={{fontFamily:'serif'}}>20mins</span></div>
                     <div className="col-md-6" style={{marginTop:'auto', marginBottom:'auto'}} >
-                      <span className="badge badge-success msj-free">
+                      <span className="badge badge-success msj-free "  >
                         GRATIS
                       </span>
                     </div>
                     <div className="col-md-6 pl-5 mt-2 mb-2" align="left"> Revisión técnica <br/><span style={{fontFamily:'serif'}}>20mins</span></div>
                     <div className="col-md-6" style={{marginTop:'auto', marginBottom:'auto'}} >
-                      <span className="badge badge-success msj-free">
+                      <span className="badge badge-success msj-free  " >
                         GRATIS
                       </span>
                     </div>
                     <div className="col-md-6 pl-5 mt-2 mb-2" align="left"> Lavado en Seco <br/><span style={{fontFamily:'serif'}}>30mins</span></div>
                     <div className="col-md-6" style={{marginTop:'auto', marginBottom:'auto'}} >
-                      <span className="badge badge-success msj-free">
+                      <span className="badge badge-success msj-free " >
                         GRATIS
                       </span>
                     </div>
                     <div className="col-md-6 pl-5 mt-2 mb-2" align="left"> Desinfección <br/><span style={{fontFamily:'serif'}}>10mins</span></div>
                     <div className="col-md-6" style={{marginTop:'auto', marginBottom:'auto'}} >
-                      <span className="badge badge-success msj-free">
+                      <span className="badge badge-success msj-free " >
                         GRATIS
                       </span>
                     </div>
-                    <div className="col-md-6 pl-5 mt-2 mb-2" align="left"> Garantía  <FontAwesomeIcon icon={faShieldAlt} style={{color:'green'}}/></div>
+                    <div className="col-md-6 pl-5 mt-2 mb-2" align="left"> Garantía  <FontAwesomeIcon icon={faShieldAlt} style={{color:'blue'}}/></div>
                     <div className="col-md-6" style={{marginTop:'auto', marginBottom:'auto'}} >
-                      <span className="badge badge-success msj-free">
+                      <span className="badge badge-success msj-free " >
                         GRATIS
                       </span>
                     </div>

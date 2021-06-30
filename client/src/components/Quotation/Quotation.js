@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faMapMarker, faAngleDoubleDown} from "@fortawesome/free-solid-svg-icons";
 import Stepper from 'react-stepper-horizontal';
+import ModalTemplate from '../common/Modal'
 
 import './quotation.css';
 import SelectMoto from './SelectMoto';
@@ -15,8 +16,13 @@ class Quotation extends Component {
   constructor(props){
     super(props);
     this.state = {
-      step : 2  
+      step : 0,
+      showModal: false,
     }
+  }
+
+  showModal = () =>{
+    this.setState({ showModal : true });
   }
 
   render() {
@@ -39,13 +45,20 @@ class Quotation extends Component {
           <div className="collapse navbar-collapse">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <button className="btn btn-default">
-                  <FontAwesomeIcon icon={faAngleDoubleDown} color="rgb(179,226,1)" size="1x"/>{' '}Descuentos
+              <button className="btn btn-sm" onClick={this.showModal}>
+                  <FontAwesomeIcon icon={faAngleDoubleDown} color="rgb(179,226,1)" size="1x"/>{' '}Descuentos 
                 </button>
               </li>     
             </ul>
           </div>
         </nav>
+
+        <ModalTemplate
+          show={this.state.showModal}
+          hide={() => this.setState({showModal:false})}
+          data={[]}
+          type={1}
+        />
 
         <div className="container">
           <div className="row" align="center">

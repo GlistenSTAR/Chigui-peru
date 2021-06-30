@@ -3,7 +3,7 @@ import { Card, Modal } from 'react-bootstrap'
 import ItemsCarousel from 'react-items-carousel';
 import axios from 'axios';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock, faStickyNote, faPlusCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import { faClock, faPlusCircle, faCheckCircle, faShieldAlt } from '@fortawesome/free-solid-svg-icons';
 
 export default ({addCart}) => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
@@ -51,7 +51,7 @@ export default ({addCart}) => {
             <div className="col-md-6" align="right">
             <div className="row">
                 <div className="col-md-6 circle_icon" align="right">
-                  <FontAwesomeIcon icon={faStickyNote} style={{color:'rgb(179,226,1)', fontSize:'35px', textAlign:'right' }}/>
+                  <FontAwesomeIcon icon={faShieldAlt} style={{color:'rgb(179,226,1)', fontSize:'35px', textAlign:'right' }}/>
                 </div>
                 <div className="col-md-5" style={{fontSize:'14px'}} align="left">
                   Garantía<br/>

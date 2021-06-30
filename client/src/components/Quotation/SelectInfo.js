@@ -13,10 +13,10 @@ class SelectInfo extends Component {
   constructor() {
     super();
     this.state = {
-      email: 'asdf@gmail.com',
-      name: 'asdf',
-      phonenum:'123',
-      detail:'asdfsadf'
+      email: '',
+      name: '',
+      phonenum:'',
+      detail:''
     };
 
     this.onChange = this.onChange.bind(this);
@@ -197,7 +197,7 @@ class SelectInfo extends Component {
                           <span style={{fontFamily:'serif'}}>20mins</span>
                       </div>
                       <div className="col-md-6" style={{marginTop:'auto', marginBottom:'auto'}} >
-                        <span className="badge badge-success msj-free">
+                        <span className="badge badge-success msj-free " style={{color:'green'}}>
                           GRATIS
                         </span>
                       </div>
@@ -206,7 +206,7 @@ class SelectInfo extends Component {
                         <span style={{fontFamily:'serif'}}>20mins</span>
                       </div>
                       <div className="col-md-6" style={{marginTop:'auto', marginBottom:'auto'}} >
-                        <span className="badge badge-success msj-free">
+                        <span className="badge badge-success msj-free " >
                           GRATIS
                         </span>
                       </div>
@@ -216,7 +216,7 @@ class SelectInfo extends Component {
                         <span style={{fontFamily:'serif'}}>30mins</span>
                       </div>
                       <div className="col-md-6" style={{marginTop:'auto', marginBottom:'auto'}} >
-                        <span className="badge badge-success msj-free">
+                        <span className="badge badge-success msj-free ">
                           GRATIS
                         </span>
                       </div>
@@ -226,7 +226,7 @@ class SelectInfo extends Component {
                           <span style={{fontFamily:'serif'}}>10mins</span>
                       </div>
                       <div className="col-md-6" style={{marginTop:'auto', marginBottom:'auto'}} >
-                        <span className="badge badge-success msj-free">
+                        <span className="badge badge-success msj-free ">
                           GRATIS
                         </span>
                       </div>
@@ -239,7 +239,7 @@ class SelectInfo extends Component {
                       <div 
                         className="col-md-6" 
                         style={{marginTop:'auto', marginBottom:'auto'}} >
-                        <span className="badge badge-success msj-free">
+                        <span className="badge badge-success  ">
                           GRATIS
                         </span>
                       </div>

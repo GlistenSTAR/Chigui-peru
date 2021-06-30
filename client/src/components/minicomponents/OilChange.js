@@ -15,7 +15,7 @@ class OilChange extends Component {
     super(props);
     this.state={
       oil:[],
-      price:21, 
+      price:'POR COTIZAR', 
       time:0,
       type_referr:'',
       show_oil_list:false,
@@ -94,7 +94,7 @@ class OilChange extends Component {
                       borderRadius:'20px'}}
                       align="center"
                     >
-                      <span>{'S/.'}{this.state.price}</span>
+                      <span>{typeof this.state.price==="string"?this.state.price:'S/.'+this.state.price}</span>
                       <FontAwesomeIcon 
                         icon={this.state.flag?faCheckCircle:faPlusCircle} 
                         className="ml-3" 
@@ -112,8 +112,8 @@ class OilChange extends Component {
                   style={{fontSize:'14px', fontFamily:'myfont2', color:'grey'}} 
                   className="p-3"
                 >
-                  <FontAwesomeIcon icon={faClock} size="sm"/>{' '}<span>Duración 15 min</span><br/>
-                  <FontAwesomeIcon icon={faShieldAlt} size="sm"/>{' '}<span>Garantía 8 día(s) o 200 Km</span>
+                  <FontAwesomeIcon icon={faClock} size="sm" style={{color:'blue'}}/>{' '}<span >Duración 15 min</span><br/>
+                  <FontAwesomeIcon icon={faShieldAlt} size="sm"  style={{color:'blue'}}/>{' '}<span>Garantía 8 día(s) o 200 Km</span>
                 </div>
 
                 <div className="content pl-3">

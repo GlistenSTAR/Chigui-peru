@@ -28,6 +28,13 @@ class ModalTemplate extends Component {
                   {item.name}
                 </div>
                 <div className="col-md-3 col-3" align="right">
+                {
+                  (item.name === "En el Liquidos/fugas") || (item.name === "En las llantas y suspension") || (item.name === "En los frenos" ) ?
+                  <span></span>
+                  :
+                  <span class="badge badge-success">Incluye escáner</span>
+                  
+                }
                   <FontAwesomeIcon icon={faAngleRight}/>
                 </div>
               </div>
@@ -61,13 +68,13 @@ class ModalTemplate extends Component {
               keyboard={false}
             > 
               <Modal.Header closeButton>
-                <Modal.Title>¿Donde se presentan las fallas?</Modal.Title>
+                <Modal.Title>¿Donde se presentan las fallas?  </Modal.Title>
               </Modal.Header>
               <Modal.Body>
                 {TotalServices}
               </Modal.Body>
               <Modal.Footer align="center">
-                <button className="btn btn-default">¿No encuentras las fallas que necesitas?</button>
+                <a type='button' rel="noopener noreferrer" href="https://api.whatsapp.com/send?phone=51966008620&fbclid=IwAR06Fjb22h2X8rBI2OXE7UqZvAh5xCFmeLbgO5EGxeuceXYHGWxhe69pWuQ" target="_blank" className="btn btn-default btn-outline-secondary">¿No encuentras tu vehículo?</a>
               </Modal.Footer>
             </Modal>);
       } else if(type === 2){
