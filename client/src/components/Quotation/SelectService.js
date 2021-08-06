@@ -31,7 +31,7 @@ class SelectService extends Component {
   }
 
   onChange = (price, name, time) =>{
-    let new_cart = {service_name : name, price : price, time : time};
+    let new_cart = { service_name : name, price : price, time : time };
     let amount, same_flag=0, index=0;
     let carts_temp = this.state.carts;
     
