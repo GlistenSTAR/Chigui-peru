@@ -120,10 +120,9 @@ export default ({addCart}) => {
           </div>
           <Card>
             <Card.Body>
-              <Card.Text>
                 <div className="row" style={{borderBottom:'1px solid grey'}}>
                   <div className="col-md-6">
-                    <h6>Servicio de Desvare</h6>
+                    <li>Servicio de Desvare</li>
                   </div>
                   <div className="col-md-6" align="right">
                     S/.{battery?battery.data[0].price:''}
@@ -139,7 +138,6 @@ export default ({addCart}) => {
                 <div className="ml-4 mt-2" style={{color: 'grey'}}>
                   <li>Mano de obra</li>
                 </div>
-              </Card.Text>
             </Card.Body>
           </Card>
         </Modal.Body>
