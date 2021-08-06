@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faMapMarker, faAngleDoubleDown} from "@fortawesome/free-solid-svg-icons";
+import { faMapMarker, faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
 import Stepper from 'react-stepper-horizontal';
 import ModalTemplate from '../common/Modal'
 
@@ -16,7 +16,7 @@ class Quotation extends Component {
   constructor(props){
     super(props);
     this.state = {
-      step : 0,
+      step : 1,
       showModal: false,
     }
   }

@@ -54,8 +54,8 @@ class MileageComponent extends Component {
                     {this.state.show1?(
                       <div className="pl-2" style={{color:'grey'}}>
                         <div style={{fontSize:'14px', fontFamily:'myfont2'}}>
-                          <FontAwesomeIcon icon={faClock} size="0.5x"/>{' '}<span>Duración 30 min</span><br/>
-                          <FontAwesomeIcon icon={faShieldAlt} size="0.5x"/>{' '}<span>Garantía 8 día(s) o 200 Km</span>
+                          <FontAwesomeIcon icon={faClock} />{' '}<span>Duración 30 min</span><br/>
+                          <FontAwesomeIcon icon={faShieldAlt} />{' '}<span>Garantía 8 día(s) o 200 Km</span>
                         </div>
                         <ListComponent data={typeof data.data!=="undefined"?data.data[0].detail:null}/>
                       </div>
