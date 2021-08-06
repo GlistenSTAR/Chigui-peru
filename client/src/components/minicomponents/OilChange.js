@@ -94,16 +94,16 @@ class OilChange extends Component {
                       borderRadius:'20px'}}
                       align="center"
                     >
-                      <span>{typeof this.state.price==="string"?this.state.price:'S/.'+this.state.price}</span>
+                      <span>{typeof this.state.price === "string" ? this.state.price : 'S/.'+ this.state.price}</span>
                       <FontAwesomeIcon 
-                        icon={this.state.flag?faCheckCircle:faPlusCircle} 
+                        icon={ this.state.flag ? faCheckCircle : faPlusCircle } 
                         className="ml-3" 
                         color='green' 
-                        onClick={
-                          ()=>{
-                            this.props.onClick(this.state.price, "Revisión por Kilometraje", '15');
-                            this.setState({flag: !this.state.flag})
-                          }}
+                        // onClick={
+                        //   ()=>{
+                        //     this.props.onClick(this.state.price, "Revisión por Kilometraje", '15');
+                        //     this.setState({flag: !this.state.flag})
+                        //   }}
                       />
                     </h6>
                   </div>
@@ -112,8 +112,8 @@ class OilChange extends Component {
                   style={{fontSize:'14px', fontFamily:'myfont2', color:'grey'}} 
                   className="p-3"
                 >
-                  <FontAwesomeIcon icon={faClock} size="sm" style={{color:'blue'}}/>{' '}<span >Duración 15 min</span><br/>
-                  <FontAwesomeIcon icon={faShieldAlt} size="sm"  style={{color:'blue'}}/>{' '}<span>Garantía 8 día(s) o 200 Km</span>
+                  <FontAwesomeIcon icon={ faClock } size="sm" style={{color:'blue'}}/>{' '}<span >Duración 15 min</span><br/>
+                  <FontAwesomeIcon icon={ faShieldAlt } size="sm"  style={{color:'blue'}}/>{' '}<span>Garantía 8 día(s) o 200 Km</span>
                 </div>
 
                 <div className="content pl-3">
@@ -153,14 +153,14 @@ class OilChange extends Component {
                         }}>
                         <span>POR COTIZAR</span>
                         <FontAwesomeIcon 
-                          icon={this.state.flag1?faCheckCircle:faPlusCircle} 
+                          icon={ this.state.flag1 ? faCheckCircle : faPlusCircle } 
                           className="ml-3" 
                           color='green' 
-                          onClick={
-                            ()=>{
-                              this.props.onClick(0, "POR COTIZAR", '15');
-                              this.setState({flag1: !this.state.flag1})
-                            }} 
+                          // onClick={
+                          //   ()=>{
+                          //     this.props.onClick(0, "POR COTIZAR", '15');
+                          //     this.setState({flag1: !this.state.flag1})
+                          //   }} 
                         />
                       </h6>
                     </div>
