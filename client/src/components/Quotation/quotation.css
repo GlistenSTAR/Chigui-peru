@@ -484,8 +484,11 @@
   width: 385px;  
   background-color: rgba(179,226,1, 0.8);
   min-height:45px;
+  max-height:600px;
   border-top-left-radius:15px;
-  border-top-right-radius:15px
+  border-top-right-radius:15px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .modal-body .list:hover{
