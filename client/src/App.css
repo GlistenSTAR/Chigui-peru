@@ -191,6 +191,7 @@ hr{
   margin-top: 20px;
   background: url('./img/motocycle.png') no-repeat;
   background-size: 100% 100%;
+  display: flex;
 }
 
 /*.badge-success {*/

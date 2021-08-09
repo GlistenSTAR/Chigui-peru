@@ -122,17 +122,19 @@ export default ({addCart}) => {
             <Card.Body>
                 <div className="row" style={{borderBottom:'1px solid grey'}}>
                   <div className="col-md-6">
-                    <li>Servicio de Desvare</li>
+                      <li>Servicio de Desvare</li>
                   </div>
                   <div className="col-md-6" align="right">
-                    S/.{battery?battery.data[0].price:''}
-                    <FontAwesomeIcon icon={flag1?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
-                      onClick={
-                        ()=>{
-                          addCart(battery?battery.data[0].price:0, "REVISIÓN DE BATERÍA", battery?battery.data[0].time:0);
-                          setFlag1(!flag1)
-                        }}
-                    />
+                    <h6  align="center" style={{ background:'rgb(179,226,1)',height:'30px',paddingTop:'7px',width:'200px', borderRadius:'20px'}}>
+                        S/.{battery?battery.data[0].price:''}
+                        <FontAwesomeIcon icon={flag1?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
+                          onClick={
+                            ()=>{
+                              addCart(battery?battery.data[0].price:0, "REVISIÓN DE BATERÍA", battery?battery.data[0].time:0);
+                              setFlag1(!flag1)
+                            }}
+                            />
+                    </h6>
                   </div>
                 </div>
                 <div className="ml-4 mt-2" style={{color: 'grey'}}>
@@ -150,7 +152,7 @@ export default ({addCart}) => {
         <Modal.Body>
            {content?content:''} 
         </Modal.Body>
-        <div className="mt-2 mb-3">
+        <div className="mt-2 mb-3" align="center" style={{display:'flex'}}>
           <div className="motocycle pt-1 pb-3">
           </div>
         </div>

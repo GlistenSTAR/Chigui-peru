@@ -18,6 +18,7 @@ class MileageComponent extends Component {
     return (
       <Modal show={show} onHide={hide}>
         <Modal.Header closeButton>
+        REVISION POR KILOMETRAJE
         </Modal.Header>
         <Modal.Body>
           <div className="card">
