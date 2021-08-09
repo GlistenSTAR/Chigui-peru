@@ -65,7 +65,7 @@ class OilChange extends Component {
     return (
       <div>
         <Modal show={this.props.show} onHide={this.props.hide}>
-          <Modal.Header closeButton> </Modal.Header>
+          <Modal.Header closeButton> Cambio de Aceite </Modal.Header>
           <Modal.Body>
             <Card style={{ width: '100%' }}>
               <Card.Body 
