@@ -15,8 +15,10 @@ class OilChange extends Component {
     super(props);
     this.state={
       oil:[],
-      price:'POR COTIZAR', 
+      price: 21,
+      // price:'POR COTIZAR', 
       time:0,
+      flag: false,
       type_referr:'',
       show_oil_list:false,
       name:'MOBIL',
@@ -50,14 +52,14 @@ class OilChange extends Component {
           onClick={()=> 
             this.setState({referr:item.referr, name:item.name, price: item.price})
           }>
-          <label className="form-check-label m-2" style={{paddingLeft:'50px'}}>
+          <label className="form-check-label m-2 d-flex justify-content-between" style={{paddingLeft:'50px'}}>
             <input 
               type="radio" 
               className="form-check-input" 
               name="optradio" 
               defaultChecked={index===0?true:false}
             />
-            {item.name} || {item.referr}
+            {item.name} || {item.referr} <span>S/.{item.price}</span>
           </label>
         </div>
       ))
@@ -99,11 +101,11 @@ class OilChange extends Component {
                         icon={ this.state.flag ? faCheckCircle : faPlusCircle } 
                         className="ml-3" 
                         color='green' 
-                        // onClick={
-                        //   ()=>{
-                        //     this.props.onClick(this.state.price, "Revisión por Kilometraje", '15');
-                        //     this.setState({flag: !this.state.flag})
-                        //   }}
+                        onClick={
+                          ()=>{
+                            this.props.onClick(this.state.price, "Revisión por Kilometraje", '15');
+                            this.setState({flag: !this.state.flag})
+                          }}
                       />
                     </h6>
                   </div>
@@ -156,11 +158,11 @@ class OilChange extends Component {
                           icon={ this.state.flag1 ? faCheckCircle : faPlusCircle } 
                           className="ml-3" 
                           color='green' 
-                          // onClick={
-                          //   ()=>{
-                          //     this.props.onClick(0, "POR COTIZAR", '15');
-                          //     this.setState({flag1: !this.state.flag1})
-                          //   }} 
+                          onClick={
+                            ()=>{
+                              this.props.onClick("POR COTIZAR", "Filtro de Aire", '15');
+                              this.setState({flag1: !this.state.flag1})
+                            }} 
                         />
                       </h6>
                     </div>
