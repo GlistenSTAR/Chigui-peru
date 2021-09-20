@@ -232,8 +232,8 @@ export default ({addCart, addFreeServices}) => {
             <h5 style={{color: 'rgb(179,226,1)'}}>AMABLE</h5>
             <div className="row">
               <div className="btn-group" style={{width:'90%', marginLeft:'auto', marginRight:'auto', borderRadius:'10px'}}>
-                <button className={button===14?'active':''} style={{width:'50%'}} onClick={()=>{setButton(14)}}>*1</button>
-                <button className={button===15?'active':''} style={{width:'50%'}} onClick={()=>{setButton(15)}}>*2</button>
+                <button className={button===14?'active':''} style={{width:'50%'}} onClick={()=>{setButton(1)}}>*1</button>
+                <button className={button===15?'active':''} style={{width:'50%'}} onClick={()=>{setButton(2)}}>*2</button>
               </div>
             </div>               
          </div>
@@ -242,14 +242,19 @@ export default ({addCart, addFreeServices}) => {
               className="btn btn-primary" 
               onClick={ ()=>{
                   let tempRin = [];
+                  let tempRin_cart = {}
+                  tempRin_cart.title="ELIGE EL RIN";
                   if(typeof button_top !== "undefined"){
-                    tempRin.push(button_top)
+                    tempRin.push(button_top);
+                    tempRin_cart.content ="[Rin:" + button_top.toString() + "]";
                   } 
-                  if(typeof button_top !== "undefined"){
-                    tempRin.push(button)
+                  if(typeof button !== "undefined"){
+                    tempRin.push(button);
+                    tempRin_cart.content = tempRin_cart.content + "[Cantidad:" + button.toString() + "]";
                   } 
                   if(tempRin.length >0){
                     addFreeServices(0,'Cambio de Llanta', 45, tempRin);
+                    addCart("POR COTIZAR", tempRin_cart, 45);
                   }
                 }
               }

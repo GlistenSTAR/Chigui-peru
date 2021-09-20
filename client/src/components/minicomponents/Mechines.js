@@ -8,6 +8,8 @@ class ElectronicModal extends Component {
   constructor(props){
     super(props);
     this.state = {
+      totalprice: 0,
+      flag6: false,
       flag : false,
       flag1 : false,
       flag2 : false,
@@ -24,16 +26,19 @@ class ElectronicModal extends Component {
     axios.get('/api/batteries').then((res) => { 
       this.setState({data : res.data});
     });
+    
   }
   render() {
     let content;
     if(typeof this.state.data !== "undefined"){
       content = this.state.data.map((item, index)=>(
         <div key={index} className="mt-1 mb-1" onClick={()=>{
+          
           this.setState({selected_battery_name: item.brand});
           this.setState({selected_battery_referr: item.referrence});
           this.setState({selected_battery_price: item.price});
           this.setState({select_battery_show: false});
+
         }}>
           <Card className="select_battery">  
             <Card.Body>
@@ -44,7 +49,8 @@ class ElectronicModal extends Component {
                 <div className="col-md-6 pr-5" align="right" style={{color:'grey'}}>
                   <div class="form-check">
                     <label class="form-check-label" >
-                      <input type="radio" class="form-check-input" name="optradio"/>S/.{' '}{item.price}
+                      <input type="radio" class="form-check-input" name="optradio"                      
+                    />S/.{' '}{item.price}
                     </label>
                   </div>
                 </div>
@@ -134,7 +140,7 @@ class ElectronicModal extends Component {
                       <li>mano de obra</li>
                     </div>
                     <div className="col-md-6" align="right" style={{marginTop:'auto', marginBottom:'auto'}}>
-                      {this.state.selected_battery_price.length > 0?(
+                      {this.state.selected_battery_price > 0?(
                         <div className="col-md-6" align="center" style={{backgroundColor:'rgb(179, 226, 1)', borderRadius:'20px'}}>
                           S/.{this.state.selected_battery_price}
                           <FontAwesomeIcon icon={this.state.flag1?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
@@ -156,20 +162,40 @@ class ElectronicModal extends Component {
         
        <Modal show={this.props.third} onHide = {this.props.hidethird}>
         <Modal.Header closeButton>
-            <Modal.Title>Mantenimiento General</Modal.Title>
+            <Modal.Title>Mantenimiento General </Modal.Title>
+            
         </Modal.Header>
         <Modal.Body>
-          <Card className="mt-1 mb-1">
+          <div className="row">
+            <div className="col-md-6"></div>
+            <div className="col-md-6" align="right">
+              <div className="" align="right" style={{backgroundColor:'rgb(179, 226, 1)',width:'125px', borderRadius:'20px', paddingRight: '3px', paddingTop:'3px'}}>
+              {this.state.totalprice?'S/.':''} {this.state.totalprice? this.state.totalprice:'Precio'}
+                <FontAwesomeIcon icon={this.state.flag6?faCheckCircle:faPlusCircle} className="ml-1" color='green' style={{marginRight: "25px"}}
+                  onClick={
+                    ()=>{
+                      this.props.addCart(this.state.totalprice, "Mantenimiento General", 60);
+                      this.setState({flag6 : !this.state.flag6})
+                    }}
+                />
+              </div>
+            </div>
+          </div>
+          <Card className="mt-2 mb-1">
             <Card.Header>
               <div className="row">
                 <div className="col-md-6">Bujia</div>
                 <div className="col-md-6" align="right">
-                  <div className="" align="center" style={{backgroundColor:'rgb(179, 226, 1)',width:'200px', borderRadius:'20px'}}>
-                    S/.8
-                    <FontAwesomeIcon icon={this.state.flag2?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
+                  <div className="" align="right" style={{ paddingRight: '3px', paddingTop:'3px'}}>
+                     
+                    <FontAwesomeIcon icon={this.state.flag2?faCheckCircle:faPlusCircle} className="mr-1" color='green' 
                       onClick={
                         ()=>{
-                          this.props.addCart(8, "Mantenimiento General-Bujia", 15);
+                          if (this.state.flag2) {
+                            this.setState({ totalprice: this.state.totalprice - 8});
+                          } else { this.setState({ totalprice: this.state.totalprice + 8}); }
+                          
+                          // this.props.addCart(8, "Mantenimiento General-Bujia", 15);
                           this.setState({flag2 : !this.state.flag2})
                         }}
                     />
@@ -186,12 +212,15 @@ class ElectronicModal extends Component {
               <div className="row">
                 <div className="col-md-6">Aceite</div>
                 <div className="col-md-6" align="right">
-                  <div className="" align="center" style={{backgroundColor:'rgb(179, 226, 1)',width:'200px', borderRadius:'20px'}}>
-                    S/.21
-                    <FontAwesomeIcon icon={this.state.flag3?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
+                  <div className="" align="right" style={{paddingRight: '3px', paddingTop:'3px'}}>
+                    {/* S/.21 */}
+                    <FontAwesomeIcon icon={this.state.flag3?faCheckCircle:faPlusCircle} className="ml-1" color='green' 
                       onClick={
                         ()=>{
-                          this.props.addCart(21, "Mantenimiento General-Aceite", 15);
+                          if (this.state.flag3) {
+                            this.setState({ totalprice: this.state.totalprice - 21});
+                          } else { this.setState({ totalprice: this.state.totalprice + 21}); }
+                          // this.props.addCart(21, "Mantenimiento General-Aceite", 15);
                           this.setState({flag3 : !this.state.flag3})
                         }}
                     />
@@ -208,12 +237,15 @@ class ElectronicModal extends Component {
               <div className="row">
                 <div className="col-md-6">Mano de obra</div>
                 <div className="col-md-6" align="right">
-                  <div className="" align="center" style={{backgroundColor:'rgb(179, 226, 1)',width:'200px', borderRadius:'20px'}}>
-                    S/.30
-                    <FontAwesomeIcon icon={this.state.flag4?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
+                  <div className="" align="right" style={{paddingRight: '3px', paddingTop:'3px'}}>
+                    {/* S/.30 */}
+                    <FontAwesomeIcon icon={this.state.flag4?faCheckCircle:faPlusCircle} className="ml-1" color='green' 
                       onClick={
                         ()=>{
-                          this.props.addCart(30, "Mantenimiento General-Mano de obra", 15);
+                          if (this.state.flag4) {
+                            this.setState({ totalprice: this.state.totalprice - 30});
+                          } else { this.setState({ totalprice: this.state.totalprice + 30}); }
+                          // this.props.addCart(30, "Mantenimiento General-Mano de obra", 15);
                           this.setState({flag4 : !this.state.flag4})
                         }}
                     />
@@ -230,12 +262,15 @@ class ElectronicModal extends Component {
               <div className="row">
                 <div className="col-md-6">Filtro de aire</div>
                 <div className="col-md-6" align="right">
-                  <div className="" align="center" style={{backgroundColor:'rgb(179, 226, 1)',width:'200px', borderRadius:'20px'}}>
-                    S/.25
-                    <FontAwesomeIcon icon={this.state.flag5?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
+                  <div className="" align="right" style={{paddingRight: '3px', paddingTop:'3px'}}>
+                    {/* S/.25 */}
+                    <FontAwesomeIcon icon={this.state.flag5?faCheckCircle:faPlusCircle} className="ml-1" color='green' 
                       onClick={
                         ()=>{
-                          this.props.addCart(25, "Filtro de aire", 15);
+                          if (this.state.flag5) {
+                            this.setState({ totalprice: this.state.totalprice - 15});
+                          } else { this.setState({ totalprice: this.state.totalprice + 15}); }
+                          // this.props.addCart(25, "Filtro de aire", 15);
                           this.setState({flag5 : !this.state.flag5})
                         }}
                     />
@@ -256,17 +291,36 @@ class ElectronicModal extends Component {
               <Modal.Title>Mantenimiento premiun</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-          <Card className="mt-1 mb-1">
+          <div className="row">
+            <div className="col-md-6"></div>
+            <div className="col-md-6" align="right">
+              <div className="" align="right" style={{backgroundColor:'rgb(179, 226, 1)',width:'125px', borderRadius:'20px', paddingRight: '3px', paddingTop:'3px'}}>
+              {this.state.totalprice?'S/.':''} {this.state.totalprice? this.state.totalprice:'Precio'}
+                <FontAwesomeIcon icon={this.state.flag6?faCheckCircle:faPlusCircle} className="ml-1" color='green' style={{marginRight: "25px"}}
+                  onClick={
+                    ()=>{
+                      this.props.addCart(this.state.totalprice, "Mantenimiento General", 60);
+                      this.setState({flag6 : !this.state.flag6})
+                    }}
+                />
+              </div>
+            </div>
+          </div>
+          <Card className="mt-2 mb-1">
             <Card.Header>
               <div className="row">
                 <div className="col-md-6">Bujia</div>
                 <div className="col-md-6" align="right">
-                  <div className="" align="center" style={{backgroundColor:'rgb(179, 226, 1)',width:'200px', borderRadius:'20px'}}>
-                    S/.8
-                    <FontAwesomeIcon icon={this.state.flag2?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
+                  <div className="" align="right" style={{ paddingRight: '3px', paddingTop:'3px'}}>
+                     
+                    <FontAwesomeIcon icon={this.state.flag2?faCheckCircle:faPlusCircle} className="mr-1" color='green' 
                       onClick={
                         ()=>{
-                          this.props.addCart(8, "Mantenimiento General-Bujia", 15);
+                          if (this.state.flag2) {
+                            this.setState({ totalprice: this.state.totalprice - 8});
+                          } else { this.setState({ totalprice: this.state.totalprice + 8}); }
+                          
+                          // this.props.addCart(8, "Mantenimiento General-Bujia", 15);
                           this.setState({flag2 : !this.state.flag2})
                         }}
                     />
@@ -283,12 +337,15 @@ class ElectronicModal extends Component {
               <div className="row">
                 <div className="col-md-6">Aceite</div>
                 <div className="col-md-6" align="right">
-                  <div className="" align="center" style={{backgroundColor:'rgb(179, 226, 1)',width:'200px', borderRadius:'20px'}}>
-                    S/.21
-                    <FontAwesomeIcon icon={this.state.flag3?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
+                  <div className="" align="right" style={{paddingRight: '3px', paddingTop:'3px'}}>
+                    {/* S/.21 */}
+                    <FontAwesomeIcon icon={this.state.flag3?faCheckCircle:faPlusCircle} className="ml-1" color='green' 
                       onClick={
                         ()=>{
-                          this.props.addCart(21, "Mantenimiento General-Aceite", 15);
+                          if (this.state.flag3) {
+                            this.setState({ totalprice: this.state.totalprice - 21});
+                          } else { this.setState({ totalprice: this.state.totalprice + 21}); }
+                          // this.props.addCart(21, "Mantenimiento General-Aceite", 15);
                           this.setState({flag3 : !this.state.flag3})
                         }}
                     />
@@ -305,12 +362,15 @@ class ElectronicModal extends Component {
               <div className="row">
                 <div className="col-md-6">Mano de obra</div>
                 <div className="col-md-6" align="right">
-                  <div className="" align="center" style={{backgroundColor:'rgb(179, 226, 1)',width:'200px', borderRadius:'20px'}}>
-                    S/.30
-                    <FontAwesomeIcon icon={this.state.flag4?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
+                  <div className="" align="right" style={{paddingRight: '3px', paddingTop:'3px'}}>
+                    {/* S/.30 */}
+                    <FontAwesomeIcon icon={this.state.flag4?faCheckCircle:faPlusCircle} className="ml-1" color='green' 
                       onClick={
                         ()=>{
-                          this.props.addCart(30, "Mantenimiento General-Mano de obra", 15);
+                          if (this.state.flag4) {
+                            this.setState({ totalprice: this.state.totalprice - 30});
+                          } else { this.setState({ totalprice: this.state.totalprice + 30}); }
+                          // this.props.addCart(30, "Mantenimiento General-Mano de obra", 15);
                           this.setState({flag4 : !this.state.flag4})
                         }}
                     />
@@ -327,12 +387,15 @@ class ElectronicModal extends Component {
               <div className="row">
                 <div className="col-md-6">Filtro de aire</div>
                 <div className="col-md-6" align="right">
-                  <div className="" align="center" style={{backgroundColor:'rgb(179, 226, 1)',width:'200px', borderRadius:'20px'}}>
-                    S/.25
-                    <FontAwesomeIcon icon={this.state.flag5?faCheckCircle:faPlusCircle} className="ml-3" color='green' 
+                  <div className="" align="right" style={{paddingRight: '3px', paddingTop:'3px'}}>
+                    {/* S/.25 */}
+                    <FontAwesomeIcon icon={this.state.flag5?faCheckCircle:faPlusCircle} className="ml-1" color='green' 
                       onClick={
                         ()=>{
-                          this.props.addCart(25, "Filtro de aire", 15);
+                          if (this.state.flag5) {
+                            this.setState({ totalprice: this.state.totalprice - 15});
+                          } else { this.setState({ totalprice: this.state.totalprice + 15}); }
+                          // this.props.addCart(25, "Filtro de aire", 15);
                           this.setState({flag5 : !this.state.flag5})
                         }}
                     />
