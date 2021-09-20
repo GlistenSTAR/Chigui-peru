@@ -197,7 +197,7 @@ class SelectInfo extends Component {
                           <span style={{fontFamily:'serif'}}>20mins</span>
                       </div>
                       <div className="col-md-6" style={{marginTop:'auto', marginBottom:'auto'}} >
-                        <span className="badge badge-success msj-free " style={{color:'green'}}>
+                        <span className="badge badge-success msj-free " >
                           GRATIS
                         </span>
                       </div>
