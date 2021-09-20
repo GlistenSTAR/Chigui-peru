@@ -31,12 +31,16 @@ class SelectService extends Component {
   }
 
   onChange = (price, name, time) =>{
+    let price1 = Number(price);
+    if (price1 >= 0) {
+      price = price1;
+    }
     let new_cart = { service_name : name, price : price, time : time };
     let amount, same_flag=0, index=0;
     let carts_temp = this.state.carts;
     
     //free_services
-    if(new_cart.price===0){
+    if(new_cart.price === 0){
       let new_free_cart = this.state.free_cart.push(new_cart);
       this.setState({ free_cart : new_free_cart });
     }
@@ -51,15 +55,24 @@ class SelectService extends Component {
         return 0;
       });
       if(same_flag===1){
+        // let price_before = this.state.carts.price[index];
           carts_temp.splice(index, 1);
-          price  = this.state.price - parseInt(price, 10);
+          if (typeof price === "number") {
+            price  = this.state.price - parseInt(price, 10);
+          } else {
+            price = this.state.price;
+          }
           amount = this.state.amount - 1;
           this.setState({carts: carts_temp});
           this.setState({price: price, amount: amount});
       } else {
           carts_temp.push(new_cart);
           this.setState({carts: carts_temp});
-          price  = this.state.price + parseInt(price, 10);
+          if (typeof price === "number") {
+            price  = this.state.price + parseInt(price, 10);
+          } else {
+            price = this.state.price;
+          }
           amount = this.state.amount + 1;
           this.setState({price: price, amount: amount});
       }
@@ -67,7 +80,11 @@ class SelectService extends Component {
     } else{
       carts_temp.push(new_cart);
       this.setState({carts: carts_temp});
-      price  = this.state.price + parseInt(price, 10);
+      if (typeof price === "number") {
+        price  = this.state.price + parseInt(price, 10);
+      } else {
+        price = this.state.price;
+      }
       amount = this.state.amount + 1;
       this.setState({price: price, amount: amount});
     }
@@ -108,8 +125,16 @@ class SelectService extends Component {
     const {serivces} = this.props;
     let tableContent = this.state.carts.map((cart, index)=>(
         <tr key={index} align="center" style={{fontSize:'13px'}}>
-          <td style={{textTransform: 'uppercase'}}>{' '}{cart.service_name}<br/><span style={{fontFamily:'serif'}}>{cart.time}{' '}mins</span></td>
-          <td>S/.{cart.price}<br/></td>
+          {/* {this.gjk==""?(<>):()} */}
+          {typeof cart.service_name === 'string' ? (
+            <td style={{textTransform: 'uppercase'}}>{' '}{cart.service_name}<br/><span style={{fontFamily:'serif'}}>{cart.time}{' '}mins</span></td>
+            ) : (
+            <td style={{textTransform: 'uppercase'}}>{' '}{cart.service_name.title}<br/>{cart.service_name.content}<br/><span style={{fontFamily:'serif'}}>{cart.time}{' '}mins</span></td>
+          )}
+          {/* <td style={{textTransform: 'uppercase'}}>{' '}{typeof cart.service_name =="object"?(cart.service_name.title<br>cart.service_name.content):(cart.service_name)}<br/><span style={{fontFamily:'serif'}}>{cart.time}{' '}mins</span></td> */}
+          <td>{typeof cart.price === "number"?'S/.':''} {cart.price}
+            {/* S/.{cart.price} */}
+            <br/></td>
           <td><FontAwesomeIcon icon={faTrashAlt} size="2x" onClick={() => this.deleteRow(index)}/></td>
         </tr>
     ));
@@ -229,30 +254,30 @@ class SelectService extends Component {
           
           {this.state.amount > 0 ? (
             <div className="bucket" align="left" style={{zIndex:'9999999999999999', boxShadow:"-2px -6px 14px -6px rgb(0 0 0 / 75%)"}} >
-              <div className="bucketIcon pl-4 pr-5 pt-2" style={{color:'white'}} onClick={this.show_cart}>
-                <div style={{float:'left'}}>
-                  <FontAwesomeIcon icon={faShoppingCart} size="2x" color="white" style={{float:'left'}}/>
+              <div className="bucketIcon pl-4 pr-5 pt-2 d-flex justify-content-around " style={{color:'white', lineHeight:'1'}} onClick={this.show_cart}>
+                <div style={{}}>
+                  <FontAwesomeIcon icon={faShoppingCart} size="2x" color="white" style={{}}/>
                   <span 
                     className="badge badge-success" 
                     style={{marginLeft:'-10px', paddingTop:'-20px', backgroundColor:'green'}}>
                       {this.state.amount}</span>
                 </div>
-                <h5 align="center" className="mt-1 pl-5" style={{ float:'left'}}>Ver Motocicleta</h5>
-                <h4 align="right">{this.state.price?'S/.':''}{' '}{this.state.price?this.state.price:this.state.name}</h4>
+                <h5 align="center" className="mt-1 pa-1" >{this.state.cart_show?"Total":"ver motocicleta"} </h5>
+                <h5 align="center" className="mt-1 pl-1" >{this.state.price?'S/.':''}{' '}{this.state.price?this.state.price:''}</h5>
               </div>
               { this.state.cart_show?(
-                <div className="text-grey bg-white" align="center" style={{lineHeight:'1'}}>
-                  <h3 className="pt-3">Precio total : <span>{this.state.price?'S/.':''}{this.state.price?this.state.price:this.state.name}</span></h3>
+                <div className="text-grey bg-white" align="center" style={{lineHeight:'1', marginTop:'10px'}}>
+                  {/* <h3 className="pt-3">Precio total : <span>{this.state.price?'S/.':''}{this.state.price?this.state.price:this.state.name}</span></h3> */}
                   <hr/>
                   {free_services}
                   <table className="table table-bordered" id="table" style={{width:'90%', marginLeft:'auto', marginRight:'auto', border:'1px sold whitesmoke'}}>
-                    <thead>
+                    {/* <thead>
                     <tr align="center">
                       <th width="60%">Nombre</th>
                       <th width="30%">Precio</th>
                       <th width="10%">Acción</th>
                     </tr>
-                    </thead>
+                    </thead> */}
                     <tbody className="pb-5">
                       {tableContent}
                     </tbody>
