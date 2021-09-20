@@ -12,7 +12,7 @@ router.get(
   (req, res) =>{
     Oils.find()
     .then(oils =>{
-      res.json(oils[0].oils)
+      res.json(oils)
     })
     .catch(err => res.status(404).json({ nopostsfound: 'No oil data found' }));
   }
