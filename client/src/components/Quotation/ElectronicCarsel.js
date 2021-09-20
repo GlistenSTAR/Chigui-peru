@@ -135,7 +135,7 @@ export default ({addCart}) => {
                 <Card.Img variant="top" src={require('../../img/icons/cambio_bateria.png')} />
                 <Card.Body>
                   <Card.Text className="threeRow">
-                  Carga de Bateria con Vehiculo
+                  Refrigerante de Motor
                   </Card.Text>
                 </Card.Body>
                 </Card>
