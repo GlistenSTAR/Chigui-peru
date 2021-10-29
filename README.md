@@ -1,4 +1,4 @@
-# AutoLab-client
+# Chigui-client
 
 ## Quick Start
 
@@ -33,4 +33,4 @@ GlistenSTAR
 
 ### License
 
-This project is licensed under the Danil. S License
+This project is licensed under the GlistenSTAR License

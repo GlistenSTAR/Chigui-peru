@@ -4,13 +4,14 @@ import { connect } from 'react-redux';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarker, faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
 import Stepper from 'react-stepper-horizontal';
-import ModalTemplate from '../common/Modal'
 
-import './quotation.css';
+import ModalTemplate from '../common/Modal'
 import SelectMoto from './SelectMoto';
 import SelectService from './SelectService';
 import SelectData from './SelectData';
 import SelectInfo from './SelectInfo';
+
+import './quotation.css';
 
 class Quotation extends Component {
   constructor(props){
@@ -83,7 +84,7 @@ class Quotation extends Component {
             </div>
             <div className="col-md-3"></div>
           </div>
-        </div>
+        </div >
 
         {this.state.step===0?(<SelectMoto nextclick={()=>{this.setState({step: this.state.step+1})}}/>):''}
         {this.state.step===1?(<SelectService nextclick={()=>{this.setState({step: this.state.step+1})}}/>):''}

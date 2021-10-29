@@ -4,6 +4,7 @@
   font-family: myfont1;
   src: url('../../fonts/PFDinDisplayPro-Regular_35382.ttf');
 }
+
 @font-face {
   font-family: myfont2;
   src: url('../../fonts/PFDinDisplayPro-Light_35378.ttf');
@@ -102,7 +103,8 @@
 .btn-success:focus{
   border: rgba(179,226,1, 0.6);
 }
-.btn-success:not(:disabled):not(.disabled).active, .btn-success:not(:disabled):not(.disabled):active, .show>.btn-success.dropdown-toggle {
+.btn-success:not(:disabled):not(.disabled).active, 
+.show>.btn-success.dropdown-toggle {
   color: #fff;
   background-color: rgba(179,226,1, 0.6);
   border-color: rgba(179,226,1, 0.6);
