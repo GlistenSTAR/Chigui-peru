@@ -31,63 +31,82 @@ class SelectService extends Component {
   }
 
   onChange = (price, name, time) =>{
-    let price1 = Number(price);
-    if (price1 >= 0) {
-      price = price1;
-    }
-    let new_cart = { service_name : name, price : price, time : time };
-    let amount, same_flag=0, index=0;
-    let carts_temp = this.state.carts;
-    
-    //free_services
-    if(new_cart.price === 0){
-      let new_free_cart = this.state.free_cart.push(new_cart);
-      this.setState({ free_cart : new_free_cart });
-    }
+    if(name === "updatePrice"){
+      if (this.state.carts.length > 0){
+        let total_price=0;
+        this.state.carts.map((item, index)=>{
+          if (item.service_name === "Revisión por Kilometraje"){
+            let temp = this.state.carts;
+            temp[index].price = price;
+            this.setState({carts: temp});
+            total_price += price;
+          } else{
+            total_price += item.price;
+          }
+          this.setState({price: total_price})
+        });
+      }
+    } else {
+      let price1 = Number(price);
+      if (price1 >= 0) {
+        price = price1;
+      }
+      let new_cart = { service_name : name, price : price, time : time };
+      let amount, same_flag=0, index=0;
+      let carts_temp = this.state.carts;
+      
+      //free_services
+      if(new_cart.price === 0){
+        let new_free_cart = this.state.free_cart.push(new_cart);
+        this.setState({ free_cart : new_free_cart });
+      }
 
-    //price_services
-    if(this.state.carts.length >= 0){
-      this.state.carts.map((cart, _i)=>{
-        if(cart.service_name === name) {
-          same_flag = 1;
-          index = _i;
-        } 
+      //price_services
+      if(this.state.carts.length >= 0){
+        this.state.carts.map((cart, _i)=>{
+          if(cart.service_name === name) {
+            same_flag = 1;
+            index = _i;
+          } 
+          return 0;
+        });
+
+        if(same_flag===1){
+          // let price_before = this.state.carts.price[index];
+            carts_temp.splice(index, 1);
+            if (typeof price === "number") {
+              price  = this.state.price - parseInt(price, 10);
+            } else {
+              price = this.state.price;
+            }
+            amount = this.state.amount - 1;
+            this.setState({carts: carts_temp});
+            this.setState({price: price, amount: amount});
+        } else {
+            carts_temp.push(new_cart);
+            this.setState({carts: carts_temp});
+            if (typeof price === "number") {
+              price  = this.state.price + parseInt(price, 10);
+            } else {
+              price = this.state.price;
+            }
+            amount = this.state.amount + 1;
+            this.setState({price: price, amount: amount});
+        }
         return 0;
-      });
-      if(same_flag===1){
-        // let price_before = this.state.carts.price[index];
-          carts_temp.splice(index, 1);
-          if (typeof price === "number") {
-            price  = this.state.price - parseInt(price, 10);
-          } else {
-            price = this.state.price;
-          }
-          amount = this.state.amount - 1;
-          this.setState({carts: carts_temp});
-          this.setState({price: price, amount: amount});
-      } else {
-          carts_temp.push(new_cart);
-          this.setState({carts: carts_temp});
-          if (typeof price === "number") {
-            price  = this.state.price + parseInt(price, 10);
-          } else {
-            price = this.state.price;
-          }
-          amount = this.state.amount + 1;
-          this.setState({price: price, amount: amount});
+      } else{
+        carts_temp.push(new_cart);
+        this.setState({carts: carts_temp});
+        if (typeof price === "number") {
+          price  = this.state.price + parseInt(price, 10);
+        } else {
+          price = this.state.price;
+        }
+        amount = this.state.amount + 1;
+        this.setState({price: price, amount: amount});
       }
-      return 0;
-    } else{
-      carts_temp.push(new_cart);
-      this.setState({carts: carts_temp});
-      if (typeof price === "number") {
-        price  = this.state.price + parseInt(price, 10);
-      } else {
-        price = this.state.price;
-      }
-      amount = this.state.amount + 1;
-      this.setState({price: price, amount: amount});
     }
+    
   }
 
   onFreeChange = (price, name, time, Rin) => {
@@ -263,7 +282,12 @@ class SelectService extends Component {
                       {this.state.amount}</span>
                 </div>
                 <h5 align="center" className="mt-1 pa-1" >{this.state.cart_show?"Total":"ver motocicleta"} </h5>
-                <h5 align="center" className="mt-1 pl-1" >{this.state.price?'S/.':''}{' '}{this.state.price?this.state.price:''}</h5>
+                <h5 align="center" className="mt-1 pl-1" >{this.state.price?'S/.':''}{' '}{
+                  this.state.price?
+                    this.state.price
+                      :
+                    ''
+                }</h5>
               </div>
               { this.state.cart_show?(
                 <div className="text-grey bg-white" align="center" style={{lineHeight:'1', marginTop:'10px'}}>

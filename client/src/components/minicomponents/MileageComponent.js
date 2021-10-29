@@ -15,10 +15,11 @@ class MileageComponent extends Component {
   }
   render() {
     let {data, show, hide } = this.props;
+    // console.log(data);
     return (
       <Modal show={show} onHide={hide}>
         <Modal.Header closeButton>
-        REVISION POR KILOMETRAJE
+          REVISION POR KILOMETRAJE
         </Modal.Header>
         <Modal.Body>
           <div className="card">

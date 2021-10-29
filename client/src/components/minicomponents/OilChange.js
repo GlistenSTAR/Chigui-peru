@@ -15,8 +15,7 @@ class OilChange extends Component {
     super(props);
     this.state={
       oil:[],
-      price: 21,
-      // price:'POR COTIZAR', 
+      price:21, 
       time:0,
       flag: false,
       type_referr:'',
@@ -34,17 +33,20 @@ class OilChange extends Component {
   }
   selectOil = (e) =>{
     this.setState({show_oil_list:true});
-    // this.props.hide()
   }
   onBack = (e) =>{
     this.setState({ show_oil_list : false })
   }
   chooseOil = ()=>{
     this.setState({show_oil_list: false})
+    if (this.state.flag){
+      console.log(1);
+      this.props.onClick(this.state.price, "updatePrice", '15');
+    }
   }
   render() {
     let ChooseReferr;
-    if(this.state.oil.length>0){
+    if(this.state.oil.length > 0){
       ChooseReferr = this.state.oil.map((item, index)=>(
         <div 
           key={index} 
@@ -57,13 +59,14 @@ class OilChange extends Component {
               type="radio" 
               className="form-check-input" 
               name="optradio" 
-              defaultChecked={index===0?true:false}
+              defaultChecked={index === 0 ? true:false}
             />
             {item.name} || {item.referr} <span>S/.{item.price}</span>
           </label>
         </div>
       ))
     }
+
     return (
       <div>
         <Modal show={this.props.show} onHide={this.props.hide}>
@@ -88,7 +91,6 @@ class OilChange extends Component {
                   </div>
 
                   <div className="col-4" style={{ marginLeft:'auto'}}>
-
                     <h6 
                       style={{ background:'rgb(179,226,1)',
                       height:'40px', 
