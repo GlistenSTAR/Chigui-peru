@@ -34,8 +34,8 @@ class SelectService extends Component {
     if(name === "updatePrice"){
       if (this.state.carts.length > 0){
         let total_price=0;
-        this.state.carts.map((item, index)=>{
-          if (item.service_name === "Revisión por Kilometraje"){
+        this.state.carts.map((item, index) => {
+          if (item.service_name === "Cambio de Aceite"){
             let temp = this.state.carts;
             temp[index].price = price;
             this.setState({carts: temp});
@@ -44,6 +44,7 @@ class SelectService extends Component {
             total_price += item.price;
           }
           this.setState({price: total_price})
+          return 0;
         });
       }
     } else {

@@ -47,9 +47,9 @@ class ElectronicModal extends Component {
                   <h5>{item.brand}</h5>{' '}-{' '} <label style={{color:'grey'}}>{item.referrence}</label>
                 </div>
                 <div className="col-md-6 pr-5" align="right" style={{color:'grey'}}>
-                  <div class="form-check">
-                    <label class="form-check-label" >
-                      <input type="radio" class="form-check-input" name="optradio"                      
+                  <div className="form-check">
+                    <label className="form-check-label" >
+                      <input type="radio" className="form-check-input" name="optradio"                      
                     />S/.{' '}{item.price}
                     </label>
                   </div>

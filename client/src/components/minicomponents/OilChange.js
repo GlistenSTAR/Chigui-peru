@@ -8,7 +8,8 @@ import {
   faPlusCircle, 
   faCheckCircle, 
   faPencilAlt, 
-  faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+  faAngleLeft 
+} from '@fortawesome/free-solid-svg-icons';
 
 class OilChange extends Component {
   constructor(props){
@@ -40,7 +41,6 @@ class OilChange extends Component {
   chooseOil = ()=>{
     this.setState({show_oil_list: false})
     if (this.state.flag){
-      console.log(1);
       this.props.onClick(this.state.price, "updatePrice", '15');
     }
   }
@@ -105,7 +105,7 @@ class OilChange extends Component {
                         color='green' 
                         onClick={
                           ()=>{
-                            this.props.onClick(this.state.price, "Revisión por Kilometraje", '15');
+                            this.props.onClick(this.state.price, "Cambio de Aceite", '15');
                             this.setState({flag: !this.state.flag})
                           }}
                       />
