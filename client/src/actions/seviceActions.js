@@ -11,11 +11,11 @@ import {
 export const getServices = () => dispatch => {
   axios
     .get('/api/service/total_diagonse')
-    .then(res => 
+    .then(res =>
       dispatch({
         type: GET_SERVICES,
         payload: res.data
-      }) 
+      })
     )
     .catch(err =>
       dispatch({
@@ -28,20 +28,20 @@ export const getServices = () => dispatch => {
 export const saveServices = (seviceData, history) => dispatch => {
   console.log(seviceData);
   axios.post('/api/service/save_quote', seviceData)
-  .then( res =>{
-    console.log(res.data.success);
-    if(res.data.success === true){
-      history.push('/');
-    } else {
-      dispatch({
-        type: GET_ERRORS,
-        payload: res.data.errors
-      })
-    }
-  })
-  .catch(err =>
-    console.log(err)
-  );
+    .then(res => {
+      console.log(res.data.success);
+      if (res.data.success === true) {
+        history.push('/');
+      } else {
+        dispatch({
+          type: GET_ERRORS,
+          payload: res.data.errors
+        })
+      }
+    })
+    .catch(err =>
+      console.log(err)
+    );
 }
 
 // Profile loading

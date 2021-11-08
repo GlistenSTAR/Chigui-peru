@@ -8,13 +8,13 @@ const Reviews = require('../../models/Reviews');
 router.get('/test', (req, res) => res.json({ msg: 'reviews Works' }));
 
 router.get(
-  '/', 
-  (req, res) =>{
+  '/',
+  (req, res) => {
     Reviews.find()
-    .then(reviews =>{
-      res.json(reviews)
-    })
-    .catch(err => res.status(404).json({ nopostsfound: 'No oil data found' }));
+      .then(reviews => {
+        res.json(reviews)
+      })
+      .catch(err => res.status(404).json({ nopostsfound: 'No oil data found' }));
   }
 );
 

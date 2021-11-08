@@ -8,13 +8,13 @@ const Electronics = require('../../models/Electronics');
 router.get('/test', (req, res) => res.json({ msg: 'Electronic Works' }));
 
 router.get(
-  '/', 
-  (req, res) =>{
+  '/',
+  (req, res) => {
     Electronics.find()
-    .then(Electronics =>{
-      res.json(Electronics)
-    })
-    .catch(err => res.status(404).json({ nopostsfound: 'No posts found' }));
+      .then(Electronics => {
+        res.json(Electronics)
+      })
+      .catch(err => res.status(404).json({ nopostsfound: 'No posts found' }));
   }
 );
 

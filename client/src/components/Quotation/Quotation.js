@@ -14,16 +14,16 @@ import SelectInfo from './SelectInfo';
 import './quotation.css';
 
 class Quotation extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      step : 1,
+      step: 1,
       showModal: false,
     }
   }
 
-  showModal = () =>{
-    this.setState({ showModal : true });
+  showModal = () => {
+    this.setState({ showModal: true });
   }
 
   render() {
@@ -36,7 +36,7 @@ class Quotation extends Component {
           <div className="selecttag">
             <li className="input-group">
               <div className="input-group-prepend">
-                <span className="input-group-text"><FontAwesomeIcon icon={faMapMarker} color="rgb(179,226,1)"/></span>
+                <span className="input-group-text"><FontAwesomeIcon icon={faMapMarker} color="rgb(179,226,1)" /></span>
               </div>
               <select className="form-control select p-auto" >
                 <option>Tingo Maria</option>
@@ -46,17 +46,17 @@ class Quotation extends Component {
           <div className="collapse navbar-collapse">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-              <button className="btn btn-sm" onClick={this.showModal}>
-                  <FontAwesomeIcon icon={faAngleDoubleDown} color="rgb(179,226,1)" size="1x"/>{' '}Descuentos 
+                <button className="btn btn-sm" onClick={this.showModal}>
+                  <FontAwesomeIcon icon={faAngleDoubleDown} color="rgb(179,226,1)" size="1x" />{' '}Descuentos
                 </button>
-              </li>     
+              </li>
             </ul>
           </div>
         </nav>
 
         <ModalTemplate
           show={this.state.showModal}
-          hide={() => this.setState({showModal:false})}
+          hide={() => this.setState({ showModal: false })}
           data={[]}
           type={1}
         />
@@ -65,15 +65,15 @@ class Quotation extends Component {
           <div className="row" align="center">
             <div className="col-md-3"></div>
             <div className="col-md-6 mb-4">
-              <Stepper 
-                steps={ [
-                  {title: 'ELIGE TU VEHÍCULO', onClick:()=>this.setState({step:0})}, 
-                  {title: 'ELIGE TUS SERVICIOS', onClick:()=>this.setState({step:1})}, 
-                  {title: "AGENDA TU CITA", onClick:()=>this.setState({step:2})}, 
-                  {title: 'DATOS DE CONTACTO', onClick:()=>this.setState({step:3})}
-                ] } 
-                activeStep={ this.state.step } 
-                activeColor="rgba(179,226,1,0.5)" 
+              <Stepper
+                steps={[
+                  { title: 'ELIGE TU VEHÍCULO', onClick: () => this.setState({ step: 0 }) },
+                  { title: 'ELIGE TUS SERVICIOS', onClick: () => this.setState({ step: 1 }) },
+                  { title: "AGENDA TU CITA", onClick: () => this.setState({ step: 2 }) },
+                  { title: 'DATOS DE CONTACTO', onClick: () => this.setState({ step: 3 }) }
+                ]}
+                activeStep={this.state.step}
+                activeColor="rgba(179,226,1,0.5)"
                 completeColor="rgb(179,226,1)"
                 activeBorderColor="rgb(0,0,0)"
                 circleFontColor="rgb(0,0,0)"
@@ -86,11 +86,11 @@ class Quotation extends Component {
           </div>
         </div >
 
-        {this.state.step===0?(<SelectMoto nextclick={()=>{this.setState({step: this.state.step+1})}}/>):''}
-        {this.state.step===1?(<SelectService nextclick={()=>{this.setState({step: this.state.step+1})}}/>):''}
-        {this.state.step===2?(<SelectData nextclick={()=>{this.setState({step: this.state.step+1})}}/>):''}
-        {this.state.step===3?(<SelectInfo/>):''}
-      </div>  
+        {this.state.step === 0 ? (<SelectMoto nextclick={() => { this.setState({ step: this.state.step + 1 }) }} />) : ''}
+        {this.state.step === 1 ? (<SelectService nextclick={() => { this.setState({ step: this.state.step + 1 }) }} />) : ''}
+        {this.state.step === 2 ? (<SelectData nextclick={() => { this.setState({ step: this.state.step + 1 }) }} />) : ''}
+        {this.state.step === 3 ? (<SelectInfo />) : ''}
+      </div>
     );
   }
 }

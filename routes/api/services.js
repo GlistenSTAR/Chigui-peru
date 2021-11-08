@@ -8,12 +8,12 @@ const sendEmail = require('../../models/send.mail')
 const Services = require('../../models/Services');
 const Quote = require('../../models/Quote');
 
-router.get('/test', (req, res)=>console.log("test"));
+router.get('/test', (req, res) => console.log("test"));
 
 router.get(
   '/total_diagonse',
   (req, res) => {
-    Services.findOne({service_type: "total_diagonse"})
+    Services.findOne({ service_type: "total_diagonse" })
       .then(services => {
         res.json(services.data);
       })
@@ -60,15 +60,15 @@ router.post(
       services: req.body.sevices
     });
     newUser.save()
-    .then(data => {
-      let services="";
-      for(let i=0; i<req.body.sevices.length; i++){
-	services +="<tr style='width:100%'><td style='width: 80%;text-align:left'>"+req.body.sevices[i].service_name+"</td><td style='width: 20%;text-align:right'>S/."+req.body.sevices[i].price+"</td></tr>" 
-      }
-      const content = {
-        Subject: "Tu cita en Chigui",
-        HTMLPart: "<div style='font-family:'PT Sans',Helvetica,Arial;max-width:700px; width: 100%;margin-left: auto;margin-right: auto;'>\
-                     <p style='text-align:left;margin-bottom:0;font-size:1.2em'>Hola "+req.body.name+" </p>\
+      .then(data => {
+        let services = "";
+        for (let i = 0; i < req.body.sevices.length; i++) {
+          services += "<tr style='width:100%'><td style='width: 80%;text-align:left'>" + req.body.sevices[i].service_name + "</td><td style='width: 20%;text-align:right'>S/." + req.body.sevices[i].price + "</td></tr>"
+        }
+        const content = {
+          Subject: "Tu cita en Chigui",
+          HTMLPart: "<div style='font-family:'PT Sans',Helvetica,Arial;max-width:700px; width: 100%;margin-left: auto;margin-right: auto;'>\
+                     <p style='text-align:left;margin-bottom:0;font-size:1.2em'>Hola "+ req.body.name + " </p>\
                      <p style='text-align:left;font-size:1.2em;margin-top:0.5em'>\
                             Gracias por confiar en nosotros y poner tu vehículo en nuestras manos.</p>\
                      <p style='text-align:left'>A continuación los datos de los servicios solicitados:</p>\
@@ -78,7 +78,7 @@ router.post(
                               <div style='background:#b3e201;color:#ffffff;text-align:center'>\
                                  <div style='display:inline-block;width:100%;min-width:290px;text-align:left;overflow:auto;vertical-align:top;text-align:right'>\
                                      <div style='padding:0.5em; text-align:center'>\
-                                          <span style='font-size:1.2em;font-weight:bold'>"+req.body.motor.motorname+" "+req.body.motor.motormodel+"/"+req.body.motor.motorCylinder+"</span>\
+                                          <span style='font-size:1.2em;font-weight:bold'>"+ req.body.motor.motorname + " " + req.body.motor.motormodel + "/" + req.body.motor.motorCylinder + "</span>\
                                     </div>\
                                 </div>\
                               </div>\
@@ -92,24 +92,24 @@ router.post(
                                 </td> </tr>\
                            <tr style='font-size: 1em;margin-top:auto; margin-bottom:auto'>\
                                <td style='padding:10px;border-bottom: 1px solid grey; width: 50%;'>\
-                                 <table style='width:90%'>  <tbody> "+services+"</tbody>   </table>\
+                                 <table style='width:90%'>  <tbody> "+ services + "</tbody>   </table>\
                               </td>\
-                              <td style='padding:10px;border-bottom: 1px solid grey; width: 50%' colspan='2'>    <span>"+req.body.date+"<br>"+req.body.time+"</span> </td>\
+                              <td style='padding:10px;border-bottom: 1px solid grey; width: 50%' colspan='2'>    <span>"+ req.body.date + "<br>" + req.body.time + "</span> </td>\
                             </tr> </tbody>\
                         </table>\
                        <div style='font-size: 0.8em;'>ROY C. D.A<br>\
                             Gerente de Gestión de Clientes</div>\
                         <div style='color:greenyellow; font-size: 0.8;margin-top:20px'><a href='ttp://chigui.com.pe'>Chigui</a></div>\
                     </div>",
-        TextPart: "",
-        CustomID: ""
-      }
-      sendEmail(req.body.email, content)
-      .then(()=>{
-          res.json({success: true});
-      }).catch(err => console.log(err));
-    })
-    .catch(err => {console.log(err);res.json({success:false, errors: "Los datos no se guardan. Por favor contacte con nosotros."})});
+          TextPart: "",
+          CustomID: ""
+        }
+        sendEmail(req.body.email, content)
+          .then(() => {
+            res.json({ success: true });
+          }).catch(err => console.log(err));
+      })
+      .catch(err => { console.log(err); res.json({ success: false, errors: "Los datos no se guardan. Por favor contacte con nosotros." }) });
   }
 )
 

@@ -11,7 +11,7 @@ export const getCars = () => dispatch => {
   dispatch(setPostLoading());
   axios
     .get('/api/cars')
-    .then(res =>{
+    .then(res => {
       dispatch({
         type: GET_CARS,
         payload: res.data

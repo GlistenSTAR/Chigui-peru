@@ -8,7 +8,7 @@ module.exports = function validateCarInput(data) {
   data.mark = !isEmpty(data.mark) ? data.mark : '';
   data.modelName = !isEmpty(data.modelName) ? data.modelName : '';
   data.date = !isEmpty(data.date) ? data.date : '';
-  
+
   if (Validator.isEmpty(data.name)) {
     errors.name = 'Name field is required.';
   }
@@ -21,7 +21,7 @@ module.exports = function validateCarInput(data) {
   if (Validator.isEmpty(data.date)) {
     errors.date = 'Date field is required.';
   }
-  
+
   return {
     errors,
     isValid: isEmpty(errors)

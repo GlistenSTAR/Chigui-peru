@@ -8,5 +8,5 @@ export default combineReducers({
   auth: authReducer,
   errors: errorReducer,
   car: carReducer,
-  serivce : serivceReducer
+  serivce: serivceReducer
 });

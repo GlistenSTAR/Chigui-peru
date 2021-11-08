@@ -8,13 +8,13 @@ const Oils = require('../../models/Oils');
 router.get('/test', (req, res) => res.json({ msg: 'hightlight Works' }));
 
 router.get(
-  '/', 
-  (req, res) =>{
+  '/',
+  (req, res) => {
     Oils.find()
-    .then(oils =>{
-      res.json(oils)
-    })
-    .catch(err => res.status(404).json({ nopostsfound: 'No oil data found' }));
+      .then(oils => {
+        res.json(oils)
+      })
+      .catch(err => res.status(404).json({ nopostsfound: 'No oil data found' }));
   }
 );
 

@@ -1,5 +1,5 @@
-
 /* quotation */
+
 @font-face {
   font-family: myfont1;
   src: url('../../fonts/PFDinDisplayPro-Regular_35382.ttf');
@@ -9,27 +9,31 @@
   font-family: myfont2;
   src: url('../../fonts/PFDinDisplayPro-Light_35378.ttf');
 }
+
 .quotation .navbar {
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    width: 800px;
-    height: 40px;
-    margin-left: auto;
-    margin-right: auto;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 800px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.quotation .selecttag{
+
+.quotation .selecttag {
   vertical-align: top;
 }
+
 .quotation .navbar-brand {
-    background: url('../../img/sign.png') no-repeat;
-    background-position: 0 0;
-    background-size: 30px 30px;
-    width: 30px;
-    height: 30px; 
-    margin-left: 40px;
-    margin-right:40px;
-    margin-top:8px
+  background: url('../../img/sign.png') no-repeat;
+  background-position: 0 0;
+  background-size: 30px 30px;
+  width: 30px;
+  height: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 8px
 }
+
 .quotation .collapse.navbar-collapse li .btn {
   font-size: 14px;
   position: absolute;
@@ -41,6 +45,7 @@
   width: 100px;
   margin-top: 3px;
 }
+
 .quotation .selecttag .input-group .select.form-control {
   height: 30px;
   font-size: 14px;
@@ -51,119 +56,147 @@
   padding-top: auto;
   padding-bottom: auto;
 }
-.quotation .fa-caret-right{
+
+.quotation .fa-caret-right {
   margin-left: auto;
 }
+
 .quotation .MuiAccordionSummary-root.Mui-expanded {
-    min-height: 50px!important;
+  min-height: 50px!important;
 }
-.quotation .MuiTypography-root.MuiTypography-body1{
+
+.quotation .MuiTypography-root.MuiTypography-body1 {
   width: 100%;
 }
-.quotation .MuiAccordionSummary-content .MuiTypography-root.makeStyles-heading-12{
+
+.quotation .MuiAccordionSummary-content .MuiTypography-root.makeStyles-heading-12 {
   font-size: 16px;
 }
-.quotation .MuiButtonBase-root.MuiAccordionSummary-root{
-  background-color: rgb(179,226,1);
+
+.quotation .MuiButtonBase-root.MuiAccordionSummary-root {
+  background-color: rgb(179, 226, 1);
 }
-.quotation .MuiTypography-root{
+
+.quotation .MuiTypography-root {
   font-size: 16px;
 }
-.btn-success1{
-  background-color: rgb(179,226,1);
-  border: rgb(179,226,1);
-  color:#fff
+
+.btn-success1 {
+  background-color: rgb(179, 226, 1);
+  border: rgb(179, 226, 1);
+  color: #fff
 }
-.btn-man-made{
-  background-color: rgb(179,226,1);
-  border: rgb(179,226,1);
-  color:#fff
+
+.btn-man-made {
+  background-color: rgb(179, 226, 1);
+  border: rgb(179, 226, 1);
+  color: #fff
 }
-.btn-man-made:hover{
-  background-color: rgba(179,226,1, 0.6);
+
+.btn-man-made:hover {
+  background-color: rgba(179, 226, 1, 0.6);
 }
-.btn-man-made:active{
-  border: rgba(179,226,1, 0.6);
+
+.btn-man-made:active {
+  border: rgba(179, 226, 1, 0.6);
 }
-.btn-man-made:focus{
-  border: rgba(179,226,1, 0.6);
+
+.btn-man-made:focus {
+  border: rgba(179, 226, 1, 0.6);
 }
-.quotation .services .threeRow.card-text{
+
+.quotation .services .threeRow.card-text {
   font-size: 17px!important;
 }
-.quotation .services .oneRow{
+
+.quotation .services .oneRow {
   padding-top: 5px
 }
-.btn-success1:hover{
-  background-color: rgba(179,226,1, 0.6);
+
+.btn-success1:hover {
+  background-color: rgba(179, 226, 1, 0.6);
 }
-.btn-success1:active{
-  border: rgba(179,226,1, 0.6);
+
+.btn-success1:active {
+  border: rgba(179, 226, 1, 0.6);
 }
-.btn-success:focus{
-  border: rgba(179,226,1, 0.6);
+
+.btn-success:focus {
+  border: rgba(179, 226, 1, 0.6);
 }
-.btn-success:not(:disabled):not(.disabled).active, 
-.show>.btn-success.dropdown-toggle {
+
+.btn-success:not(:disabled):not(.disabled).active, .show>.btn-success.dropdown-toggle {
   color: #fff;
-  background-color: rgba(179,226,1, 0.6);
-  border-color: rgba(179,226,1, 0.6);
+  background-color: rgba(179, 226, 1, 0.6);
+  border-color: rgba(179, 226, 1, 0.6);
 }
-.quotation .MuiTypography-root.MuiTypography-body1 li{
+
+.quotation .MuiTypography-root.MuiTypography-body1 li {
   font-size: 22px;
-  padding-top:auto;
-  padding-bottom:auto;
+  padding-top: auto;
+  padding-bottom: auto;
   height: 50px;
   font-family: myfont1;
-  color:black
+  color: black
 }
-.quotation .MuiTypography-root.MuiTypography-body1 li:hover{
+
+.quotation .MuiTypography-root.MuiTypography-body1 li:hover {
   background-color: azure;
   cursor: hand;
 }
-.quotation .MuiTypography-root.MuiTypography-body1 li img{
+
+.quotation .MuiTypography-root.MuiTypography-body1 li img {
   position: absolute;
-  top:10%; 
-  left:2%;
+  top: 10%;
+  left: 2%;
   width: 70px;
   height: 40px;
 }
-.quotation .MuiTypography-root li:nth-last-child(){
+
+.quotation .MuiTypography-root li:nth-last-child() {
   margin-top: 15px;
 }
-.quotation .MuiPaper-root.MuiAccordion-root.MuiAccordion-rounded.MuiPaper-elevation1.MuiPaper-rounded{
+
+.quotation .MuiPaper-root.MuiAccordion-root.MuiAccordion-rounded.MuiPaper-elevation1.MuiPaper-rounded {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  color:black
+  color: black
 }
-.quotation .MuiAccordionSummary-content.Mui-expanded{
-  padding:none;
-  margin:0;
+
+.quotation .MuiAccordionSummary-content.Mui-expanded {
+  padding: none;
+  margin: 0;
 }
-.quotation .mark_sign{
+
+.quotation .mark_sign {
   width: 80px;
   height: 50px;
 }
+
 .MuiAccordionDetails-root {
   padding: 0px 16px 0px 16px!important;
 }
-.quotation .MuiTypography-root.MuiTypography-body1 li svg{
-  position:absolute!important;
-  right:3%;
-  top:auto;
+
+.quotation .MuiTypography-root.MuiTypography-body1 li svg {
+  position: absolute!important;
+  right: 3%;
+  top: auto;
   bottom: auto;
 }
-.quotation .confirm button{
+
+.quotation .confirm button {
   margin-left: 20px;
   margin-right: 20px;
 }
-.quotation .col-md-6 div{
+
+.quotation .col-md-6 div {
   font-family: myfont1!important;
   letter-spacing: 2px;
-  cursor:pointer;
+  cursor: pointer;
 }
-.quotation .Name{
+
+.quotation .Name {
   text-align: left;
 }
 
@@ -173,150 +206,159 @@
     height: 40px;
     padding-top: 3px;
   }
-  .quotation .navbar-brand{
+  .quotation .navbar-brand {
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 0px;
   }
-  .quotation .col-md-6 div{
+  .quotation .col-md-6 div {
     letter-spacing: 1px;
   }
-  .quotation .selecttag{
+  .quotation .selecttag {
     margin-right: auto;
-    margin-top:1px
+    margin-top: 1px
   }
-  .quotation .selecttag .input-group{
+  .quotation .selecttag .input-group {
     height: 40px;
     margin-right: auto;
   }
-  .quotation .selecttag .input-group .input-group-prepend{
+  .quotation .selecttag .input-group .input-group-prepend {
     height: 30px;
     width: 30px;
   }
-  .quotation .selecttag .input-group .input-group-prepend span{
+  .quotation .selecttag .input-group .input-group-prepend span {
     padding-left: 8px;
   }
-  .quotation .selecttag .input-group .select.form-control{
+  .quotation .selecttag .input-group .select.form-control {
     font-size: 12px;
     width: 90px;
     padding-top: 3px;
   }
-  .quotation .collapse:not(.show){
+  .quotation .collapse:not(.show) {
     display: block;
   }
-  .quotation .collapse.navbar-collapse li .btn{
+  .quotation .collapse.navbar-collapse li .btn {
     font-size: 12px;
-    position:absolute;
-    top:1px;
-    right: 20px;    
+    position: absolute;
+    top: 1px;
+    right: 20px;
     height: 30px;
     padding-right: auto;
     width: 88px;
     padding-top: auto;
     padding-bottom: auto;
   }
-  .quotation .MuiTypography-root.MuiTypography-body1 li{
+  .quotation .MuiTypography-root.MuiTypography-body1 li {
     font-size: 18px;
   }
-  .quotation .MuiTypography-root.MuiTypography-body1 li svg{
-    position:absolute!important;
-    right:3%;
-    top:35%
+  .quotation .MuiTypography-root.MuiTypography-body1 li svg {
+    position: absolute!important;
+    right: 3%;
+    top: 35%
   }
-  .quotation .MuiTypography-root.MuiTypography-body1 li img{
+  .quotation .MuiTypography-root.MuiTypography-body1 li img {
     width: 60px;
     height: 30px;
-    top:20%;
+    top: 20%;
     margin-right: 20px;
   }
-  .quotation .MuiPaper-root.MuiAccordion-root.MuiAccordion-rounded.MuiPaper-elevation1.MuiPaper-rounded{
+  .quotation .MuiPaper-root.MuiAccordion-root.MuiAccordion-rounded.MuiPaper-elevation1.MuiPaper-rounded {
     width: 100%;
   }
-  .quotation .confirm button{
+  .quotation .confirm button {
     margin-left: 10px;
     margin-right: 0px;
     margin-bottom: 20px;
   }
-  .quotation .confirm button:first-child{
+  .quotation .confirm button:first-child {
     width: 227px;
   }
-  .quotation .MuiTypography-root.MuiTypography-body1 li:hover{
+  .quotation .MuiTypography-root.MuiTypography-body1 li:hover {
     background-color: azure;
     cursor: hand;
   }
-  .quotation .col-md-6{
+  .quotation .col-md-6 {
     padding-left: 0px;
     padding-right: 0px;
   }
 }
 
 /* services */
-.quotation .services .row:first-child{
+
+.quotation .services .row:first-child {
   width: 70%;
 }
 
-.quotation .services img{
+.quotation .services img {
   width: 65px;
   height: 65px;
 }
 
-.quotation .services input,.quotation .services .input-group-append{
-  border-color:rgb(179,226,1);
+.quotation .services input, .quotation .services .input-group-append {
+  border-color: rgb(179, 226, 1);
 }
 
-.quotation .services .horizal-card{
-  border: 3px solid rgba(179,226,1, 0.6);
+.quotation .services .horizal-card {
+  border: 3px solid rgba(179, 226, 1, 0.6);
   border-radius: 15px;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
   line-height: 1;
-  padding-top:7px;
+  padding-top: 7px;
   padding-bottom: 7px;
   width: 80%;
 }
-.quotation .services .text-default{
+
+.quotation .services .text-default {
   text-align: left;
 }
-.quotation .services hr{
+
+.quotation .services hr {
   border-top: 1px solid gainsboro!important;
   width: 100%;
   margin-top: -8px;
 }
-.quotation .services .recommand{
+
+.quotation .services .recommand {
   width: 100%;
-  padding-top:10px;
-  padding-bottom:10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.quotation .services .recommand .col-md-4, .quotation .services .review .col-md-4{
+.quotation .services .recommand .col-md-4, .quotation .services .review .col-md-4 {
   max-width: 130px;
   min-width: 120px;
   max-height: 200px;
   margin: 0px;
 }
-.quotation .services .recommand .card-header .close{
+
+.quotation .services .recommand .card-header .close {
   margin-top: 'auto';
 }
-.quotation .services .recommand .card-body, .quotation .services .mechine .card-body{
-  padding:0;
+
+.quotation .services .recommand .card-body, .quotation .services .mechine .card-body {
+  padding: 0;
   font-size: 14px;
   font-style: unset;
   margin-top: auto;
   margin-bottom: auto;
 }
-.quotation .services .recommand .card-body p.card-text, .quotation .services .mechine .card-body p.card-text{
+
+.quotation .services .recommand .card-body p.card-text, .quotation .services .mechine .card-body p.card-text {
   line-height: 1;
   font-size: 18px;
-  color:rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
   font-family: myfont2;
   font-style: bold;
-}  
-.quotation .services img{
+}
+
+.quotation .services img {
   margin-left: auto;
   margin-right: auto;
 }
-.quotation .services .recommand .card, .quotation .electronic .card{
+
+.quotation .services .recommand .card, .quotation .electronic .card {
   border-radius: 10px;
   min-width: 120px;
   max-width: 140px;
@@ -325,366 +367,405 @@
 }
 
 /* select data */
-.quotation .SelectData .react-datepicker-top{
-  background-color: rgb(179,226,1);
+
+.quotation .SelectData .react-datepicker-top {
+  background-color: rgb(179, 226, 1);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  color:rgba(0,0,0,0.9); 
+  color: rgba(0, 0, 0, 0.9);
 }
 
-.quotation .SelectData{
-  color:rgba(0,0,0,0.4);
+.quotation .SelectData {
+  color: rgba(0, 0, 0, 0.4);
 }
 
-.quotation .SelectData .current{
-  color:rgba(0,0,0,0.9); 
+.quotation .SelectData .current {
+  color: rgba(0, 0, 0, 0.9);
 }
 
-.quotation .SelectData .disabled{
-  color:rgba(0,0,0,0.4);
+.quotation .SelectData .disabled {
+  color: rgba(0, 0, 0, 0.4);
 }
-.quotation .SelectData .selected{
-  color:rgb(179,226,1); 
+
+.quotation .SelectData .selected {
+  color: rgb(179, 226, 1);
   border-radius: 50%;
-  border:1px solid rgb(179,226,1);  
+  border: 1px solid rgb(179, 226, 1);
 }
-.quotation .SelectData hr{
-    border-top: 1px solid rgb(179,226,1)!important;
-    text-align: center;
-    width: 60%;
-    margin-top: -8px;
+
+.quotation .SelectData hr {
+  border-top: 1px solid rgb(179, 226, 1)!important;
+  text-align: center;
+  width: 60%;
+  margin-top: -8px;
 }
-.quotation .SelectData .react-datepicker.my-react-datepicker{
-  font-size:24px; 
-  width:600px
+
+.quotation .SelectData .react-datepicker.my-react-datepicker {
+  font-size: 24px;
+  width: 600px
 }
-.quotation .SelectData img{
+
+.quotation .SelectData img {
   width: 50px!important;
 }
-.quotation .SelectData .MuiDialog-root .MuiButtonBase-root.MuiIconButton-root:focus, .quotation .SelectData .MuiDialog-root .MuiButtonBase-root.MuiIconButton-root:active{
+
+.quotation .SelectData .MuiDialog-root .MuiButtonBase-root.MuiIconButton-root:focus, .quotation .SelectData .MuiDialog-root .MuiButtonBase-root.MuiIconButton-root:active {
   outline: 0!important;
 }
+
 .MuiDialog-root .MuiPickersToolbar-toolbar {
-  background-color: rgb(179,226,1)!important;
+  background-color: rgb(179, 226, 1)!important;
 }
-.MuiDialog-root .MuiPickersTimePickerToolbar-hourMinuteLabel h2, .MuiDialog-root h6, .MuiDialog-root span{
-  color:black!important
+
+.MuiDialog-root .MuiPickersTimePickerToolbar-hourMinuteLabel h2, .MuiDialog-root h6, .MuiDialog-root span {
+  color: black!important
 }
-.quotation .services .horizal-card button{
-  background-color:rgb(179,226,1);
-  width:'70px';
-  padding-top:'2px';
-  padding-bottom:'2px';
+
+.quotation .services .horizal-card button {
+  background-color: rgb(179, 226, 1);
+  width: '70px';
+  padding-top: '2px';
+  padding-bottom: '2px';
 }
-.quotation .services .horizal-card small{
+
+.quotation .services .horizal-card small {
   font-family: myfont2!important;
-  font-size:14px!important
+  font-size: 14px!important
 }
+
 @media only screen and (max-width: 992px) {
-  .quotation .services .row:first-child{
+  .quotation .services .row:first-child {
     width: 100%;
   }
-  .quotation .services .horizal-card{
+  .quotation .services .horizal-card {
     width: 100%;
     font-size: 15px;
   }
-  .quotation .services .horizal-card img{
+  .quotation .services .horizal-card img {
     width: 50px;
     height: 50px;
   }
-  
-  .quotation .services .horizal-card button{
+  .quotation .services .horizal-card button {
     width: 50px;
-    padding-top:0;
-    padding-bottom:0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
-  .quotation .services .recommand{
+  .quotation .services .recommand {
     width: 100%;
   }
-  .quotation .services .recommand .row{
+  .quotation .services .recommand .row {
     padding: 3px!important;
   }
-  .quotation .services .col-4{
-    padding:10px;
+  .quotation .services .col-4 {
+    padding: 10px;
   }
-  .quotation .services .recommand .col-4 .card, .quotation .services .mechine .col-4 .card{
+  .quotation .services .recommand .col-4 .card, .quotation .services .mechine .col-4 .card {
     border-radius: 10px;
-    padding:5px
+    padding: 5px
   }
-  .quotation .services .recommand .card-body, .quotation .services .mechine .card-body{
+  .quotation .services .recommand .card-body, .quotation .services .mechine .card-body {
     font-size: 14px;
     font-style: unset;
     margin-top: auto;
     margin-bottom: auto;
   }
-  .quotation .services .recommand .card-body p, .quotation .services .mechine .card-body p{
+  .quotation .services .recommand .card-body p, .quotation .services .mechine .card-body p {
     line-height: 1;
   }
-  .quotation .services img{
+  .quotation .services img {
     margin-left: auto;
     margin-right: auto;
   }
-  .quotation .SelectData hr{
-    border-top: 1px solid rgb(179,226,1)!important;
+  .quotation .SelectData hr {
+    border-top: 1px solid rgb(179, 226, 1)!important;
     text-align: center;
     width: 100%;
-    padding:0px
+    padding: 0px
   }
-  .quotation .SelectData .react-datepicker.my-react-datepicker{
+  .quotation .SelectData .react-datepicker.my-react-datepicker {
     width: 100%!important;
   }
-  .quotation .SelectData .locationGroup{
+  .quotation .SelectData .locationGroup {
     width: 93%;
   }
-  .quotation .SelectData h5{
+  .quotation .SelectData h5 {
     width: 100%!important;
   }
-  .quotation .services .recommand .col-md-4, .quotation .services .review .col-md-4{
+  .quotation .services .recommand .col-md-4, .quotation .services .review .col-md-4 {
     max-width: 120px;
     min-width: 80px;
     margin: 0px;
   }
-  .quotation .services .recommand .col-md-4 img, .quotation .services .review .col-md-4 img{
+  .quotation .services .recommand .col-md-4 img, .quotation .services .review .col-md-4 img {
     width: 60px;
     height: 60px;
   }
-  .quotation .services .recommand .col-md-4 .card, .quotation .services .review .col-md-4 .card{
+  .quotation .services .recommand .col-md-4 .card, .quotation .services .review .col-md-4 .card {
     max-width: 120px;
     min-width: 90px;
     max-height: 100px;
     min-height: 100px;
   }
-  .quotation .services .threeRow.card-text{
+  .quotation .services .threeRow.card-text {
     font-size: 13px!important;
   }
-  .quotation .services .recommand .col-md-4 .card .card-body p.card-text, .quotation .services .review .col-md-4 .card .card-body p.card-text{
+  .quotation .services .recommand .col-md-4 .card .card-body p.card-text, .quotation .services .review .col-md-4 .card .card-body p.card-text {
     font-size: 14px;
   }
 }
 
 /* mechine */
-.quotation .mechine .item{
-  background-color: rgb(253,253,253);
-  margin:10px;
-  margin-left:0px;
+
+.quotation .mechine .item {
+  background-color: rgb(253, 253, 253);
+  margin: 10px;
+  margin-left: 0px;
   min-height: 50px;
   min-width: 190px;
-  color:black;
+  color: black;
 }
-.quotation .mechine .item .col-7{
+
+.quotation .mechine .item .col-7 {
   font-family: myfont2;
   font-size: 17px;
 }
-.quotation .mechine .item .col-5{
- margin-left:-15px!important;
+
+.quotation .mechine .item .col-5 {
+  margin-left: -15px!important;
 }
 
-.quotation .bucket{
-  position:fixed;
-  bottom:0;
-  right:10px; 
-  width: 385px;  
-  background-color: rgba(179,226,1, 0.8);
-  min-height:45px;
-  max-height:600px;
-  border-top-left-radius:15px;
-  border-top-right-radius:15px;
+.quotation .bucket {
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  width: 385px;
+  background-color: rgba(179, 226, 1, 0.8);
+  min-height: 45px;
+  max-height: 600px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   overflow-y: auto;
   overflow-x: hidden;
 }
 
-.modal-body .list:hover{
-  color:rgb(179, 226, 1);
+.modal-body .list:hover {
+  color: rgb(179, 226, 1);
   cursor: pointer;
 }
-#table td{
+
+#table td {
   vertical-align: middle!important;
 }
 
-.select_battery:hover{
+.select_battery:hover {
   border: 2px solid rgb(179, 226, 1)
 }
 
 @media only screen and (max-width: 992px) {
-  .quotation .bucket{
-    width:100%; 
-    bottom:0;
-    left:0; 
+  .quotation .bucket {
+    width: 100%;
+    bottom: 0;
+    left: 0;
   }
-  .quotation .mechine .item{
+  .quotation .mechine .item {
     min-width: 150px;
   }
-  .quotation .mechine .item img{
+  .quotation .mechine .item img {
     width: 60px;
     height: 60px;
   }
-  .quotation .mechine .item .col-7{
+  .quotation .mechine .item .col-7 {
     font-size: 13px;
-    margin-top:auto!important;
-    margin-bottom:auto!important;
+    margin-top: auto!important;
+    margin-bottom: auto!important;
     margin-left: 4px;
   }
 }
 
 /* modal */
+
 .modal-footer {
   justify-content: center!important;
-} 
-.modal-footer .btn{
+}
+
+.modal-footer .btn {
   background-color: rgb(255, 255, 255);
   box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
 }
-.modal-body{
+
+.modal-body {
   font-size: 16px;
-} 
+}
 
-
-.model-card{
+.model-card {
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
 }
-.model-card .card{
+
+.model-card .card {
   border-radius: 10px;
-  padding:10px  
+  padding: 10px
 }
-.model-card hr{
+
+.model-card hr {
   border-top: 1px solid black!important;
 }
+
 /* sendData */
-.quotation .sendData div, .quotation .sendData input{
+
+.quotation .sendData div, .quotation .sendData input {
   font-family: myfont2!important;
 }
-.quotation .sendData input{
-  border:none;
+
+.quotation .sendData input {
+  border: none;
   border-radius: 20px;
   border-bottom: 1px solid black
 }
-.quotation .sendData textarea{
+
+.quotation .sendData textarea {
   border-radius: 20px;
   border: 1px solid black
 }
 
-.quotation .btn-outline-green{
-  color:rgb(179,226,1);
-  border:1px solid rgb(179,226,1);
+.quotation .btn-outline-green {
+  color: rgb(179, 226, 1);
+  border: 1px solid rgb(179, 226, 1);
 }
 
-.quotation .bxivhb{
+.quotation .bxivhb {
   width: 110px!important;
   margin-right: 20px;
 }
 
-
 /* carsel */
-.quotation .carsel1{
+
+.quotation .carsel1 {
   padding: 0 22px;
-  padding-top:13px;
-  padding-bottom:13px;
-  margin-left:-15px;
-  margin-right:-15px;
-  background-color:#EAEAEA;
-  border-radius:10px
+  padding-top: 13px;
+  padding-bottom: 13px;
+  margin-left: -15px;
+  margin-right: -15px;
+  background-color: #EAEAEA;
+  border-radius: 10px
 }
+
 @media only screen and (max-width: 1204px) {
   .quotation .services .row:first-child {
     width: 100%;
   }
 }
+
 @media only screen and (max-width: 992px) {
-  .quotation .carsel1{
+  .quotation .carsel1 {
     padding: 0 12px;
-    padding-top:13px;
-    padding-bottom:13px;
-    margin-left:-15px;
-    margin-right:-15px;
-    background-color:rgb(243, 243, 243);
-    border-radius:10px
+    padding-top: 13px;
+    padding-bottom: 13px;
+    margin-left: -15px;
+    margin-right: -15px;
+    background-color: rgb(243, 243, 243);
+    border-radius: 10px
   }
-  .quotation .carsel1 .card{
+  .quotation .carsel1 .card {
     max-width: 120px!important;
     min-width: 90px!important;
     max-height: 100px!important;
     min-height: 100px!important;
   }
-  .quotation .carsel1 .card p.card-text{
+  .quotation .carsel1 .card p.card-text {
     font-family: myfont2;
     font-size: 14px!important;
   }
 }
+
 @media only screen and (max-width: 768px) {
   .quotation .services .row:first-child {
     width: 100%;
   }
 }
 
-
-
-
-
-.modal-header{
-  background:rgb(179,226,1); 
-  text-transform :uppercase;
+.modal-header {
+  background: rgb(179, 226, 1);
+  text-transform: uppercase;
 }
-.modal-title{
-  font-size:18px;
+
+.modal-title {
+  font-size: 18px;
 }
-.circle_icon{
+
+.circle_icon {
   width: 50px!important;
   height: 50px!important;
   padding-top: 5px;
   margin-left: 20px;
 }
-.card hr{
-  margin-top:-8px;
-  width:95%;
-  border-width:1px!important;
-  border-color:rgb(160, 160, 160)!important
-  }
-.btn-group button{
-  background-color: rgb(179,226,1); /* Green background */
-  border: 1px solid rgb(139, 231, 139); /* Green border */
-  color: black; /* White text */
-  padding: 10px 24px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
-  float: left; /* Float the buttons side by side */
+
+.card hr {
+  margin-top: -8px;
+  width: 95%;
+  border-width: 1px!important;
+  border-color: rgb(160, 160, 160)!important
 }
+
+.btn-group button {
+  background-color: rgb(179, 226, 1);
+  /* Green background */
+  border: 1px solid rgb(139, 231, 139);
+  /* Green border */
+  color: black;
+  /* White text */
+  padding: 10px 24px;
+  /* Some padding */
+  cursor: pointer;
+  /* Pointer/hand icon */
+  float: left;
+  /* Float the buttons side by side */
+}
+
 .btn-group button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
+  border-right: none;
+  /* Prevent double borders */
 }
-.btn-group button.active, .btn.btn-success.active{
+
+.btn-group button.active, .btn.btn-success.active {
   background-color: rgb(4, 216, 4)!important;
 }
-.btn-group button:hover{
+
+.btn-group button:hover {
   background-color: rgb(4, 216, 4);
 }
+
 .btn-group:after {
   content: "";
   clear: both;
   display: table;
 }
-.btn-success{
-  background-color: rgb(179,226,1); /* Green background */
-  border: 1px solid rgb(139, 231, 139); /* Green border */
+
+.btn-success {
+  background-color: rgb(179, 226, 1);
+  /* Green background */
+  border: 1px solid rgb(139, 231, 139);
+  /* Green border */
 }
-.btn-success:hover{
+
+.btn-success:hover {
   background-color: rgb(4, 216, 4);
-   /* Green background */
+  /* Green background */
 }
-@media (min-width: 576px){
+
+@media (min-width: 576px) {
   .modal-dialog {
-      max-width: 700px;
+    max-width: 700px;
   }
 }
 
-
-.quotation .green_box{
+.quotation .green_box {
   background-color: rgb(179, 226, 1);
-  height: 300px;  
+  height: 300px;
 }
 
-.quotation .locationGroup .row.mt-2.mb-2.active{
+.quotation .locationGroup .row.mt-2.mb-2.active {
   border-color: rgb(179, 226, 1)!important;
   border-width: 3px!important;
-
 }
