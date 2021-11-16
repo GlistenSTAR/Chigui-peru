@@ -5,7 +5,7 @@ import carReducer from './carReducer';
 import serivceReducer from './servicesReducer';
 
 export default combineReducers({
-  auth: authReducer,
+  // auth: authReducer,
   errors: errorReducer,
   car: carReducer,
   serivce: serivceReducer

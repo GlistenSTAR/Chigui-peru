@@ -7,8 +7,8 @@ import {
 } from '../actions/types';
 
 const initialState = {
-  posts: [],
-  post: {},
+  // posts: [],
+  // post: {},
   loading: false
 };
 
