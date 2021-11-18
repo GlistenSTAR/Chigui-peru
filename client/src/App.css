@@ -226,6 +226,11 @@ hr {
 
 /*}*/
 
+button:hover, button:focus{
+  border:1px solid transparent!important
+}
+
+
 .btn-outline-success {
   color: #ad1;
   background-color: transparent;

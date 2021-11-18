@@ -76,7 +76,7 @@ export default ({ addCart }) => {
                   color='green'
                   onClick={
                     () => {
-                      addCart(item.price, item.name, 30);
+                      addCart(item.price, item.name, 30, null);
                       index === 0 ? setflag1(!flag1) : index === 1 ? setflag2(!flag2) : setflag3(!flag3);
                     }}
                 />

@@ -16,7 +16,7 @@ class OilChange extends Component {
     super(props);
     this.state = {
       oil: [],
-      price: 21,
+      price: 'POR COTIZAR',
       time: 0,
       flag: false,
       type_referr: '',
@@ -24,7 +24,7 @@ class OilChange extends Component {
       name: 'MOBIL',
       referr: '20W-50',
       show_again: false,
-      flag1: false
+      flag1: false,
     }
   }
   componentDidMount() {
@@ -41,7 +41,8 @@ class OilChange extends Component {
   chooseOil = () => {
     this.setState({ show_oil_list: false })
     if (this.state.flag) {
-      this.props.onClick(this.state.price, "updatePrice", '15');
+      const kind_oil = {name: this.state.name, referr: this.state.referr}
+      this.props.onClick(this.state.price, "updatePrice", '15', kind_oil);
     }
   }
   render() {
@@ -108,7 +109,8 @@ class OilChange extends Component {
                         color='green'
                         onClick={
                           () => {
-                            this.props.onClick(this.state.price, "Cambio de Aceite", '15');
+                            const kind_oil = {name: this.state.name, referr: this.state.referr}
+                            this.props.onClick(this.state.price, "Cambio de Aceite", '15', kind_oil);
                             this.setState({ flag: !this.state.flag })
                           }}
                       />

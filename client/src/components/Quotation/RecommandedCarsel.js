@@ -84,8 +84,8 @@ export default ({ addCart, addFreeServices }) => {
       <OilChange
         show={chagneOil}
         hide={() => setChangeOil(false)}
-        onClick={(price, name, time) => {
-          addCart(price, name, time);
+        onClick={(price, name, time, data) => {
+          addCart(price, name, time, data);
         }}
       />
       <Modal show={froznShow} onHide={() => setFrzonShow(false)}>
@@ -109,7 +109,7 @@ export default ({ addCart, addFreeServices }) => {
                     <FontAwesomeIcon icon={flag ? faCheckCircle : faPlusCircle} className="ml-3" color='green'
                       onClick={
                         () => {
-                          addCart(20, "Líquido de Frenos", 35);
+                          addCart(20, "Líquido de Frenos", 35, null);
                           setFlag(!flag);
                         }}
                     />
@@ -148,7 +148,7 @@ export default ({ addCart, addFreeServices }) => {
                     <FontAwesomeIcon icon={flag ? faCheckCircle : faPlusCircle} className="ml-3" color='green'
                       onClick={
                         () => {
-                          addCart(20, "Líquido de Frenos", 35);
+                          addCart(20, "Líquido de Frenos", 35, null);
                           setFlag(!flag);
                         }}
                     />
@@ -229,17 +229,17 @@ export default ({ addCart, addFreeServices }) => {
               </div>
             </div>
 
-            <h5 style={{ color: 'rgb(179,226,1)' }}>AMABLE</h5>
+            <h5 className="mt-3 mb-3 ml-3" style={{ color: 'rgb(179,226,1)' }}>CANTIDAD DE LLANTAS</h5>
             <div className="row">
-              <div className="btn-group" style={{ width: '90%', marginLeft: 'auto', marginRight: 'auto', borderRadius: '10px' }}>
-                <button className={button === 14 ? 'active' : ''} style={{ width: '50%' }} onClick={() => { setButton(1) }}>*1</button>
-                <button className={button === 15 ? 'active' : ''} style={{ width: '50%' }} onClick={() => { setButton(2) }}>*2</button>
+              <div className="btn-group" style={{ width: '90%', marginLeft: 'auto', marginRight: 'auto', }}>
+                <button className={button === 1 ? 'active' : ''} style={{ width: '50%' }} onClick={() => { setButton(1) }}>*1</button>
+                <button className={button === 2 ? 'active' : ''} style={{ width: '50%' }} onClick={() => { setButton(2) }}>*2</button>
               </div>
             </div>
           </div>
           <div className="mt-4 mb-4" style={{ width: '95%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'space-around' }}>
             <button
-              className="btn btn-primary"
+              className="btn btn-primary text-center mb-4"
               onClick={() => {
                 let tempRin = [];
                 let tempRin_cart = {}
@@ -253,13 +253,13 @@ export default ({ addCart, addFreeServices }) => {
                   tempRin_cart.content = tempRin_cart.content + "[Cantidad:" + button.toString() + "]";
                 }
                 if (tempRin.length > 0) {
-                  addFreeServices(0, 'Cambio de Llanta', 45, tempRin);
-                  addCart("POR COTIZAR", tempRin_cart, 45);
+                  addCart("POR COTIZAR", "ELIGE EL RIN", 45, tempRin_cart);
                 }
-              }
-              }
+              }}
+              style={{ width: '200px' }}
+              disabled={button && button_top ? false: true}
             >AGREGAR</button>
-            <button className="btn btn-info">POR COTIZAR</button>
+            {/* <button className="btn btn-info">POR COTIZAR</button> */}
             <div className="ring-number">
 
             </div>
@@ -308,7 +308,7 @@ export default ({ addCart, addFreeServices }) => {
                     <FontAwesomeIcon icon={flag ? faCheckCircle : faPlusCircle} className="ml-3" color='green'
                       onClick={
                         () => {
-                          addCart(25, "Cambio de Refrigerante de Motor", 45);
+                          addCart(25, "Cambio de Refrigerante de Motor", 45, null);
                           setFlag(!flag);
                         }}
                     />

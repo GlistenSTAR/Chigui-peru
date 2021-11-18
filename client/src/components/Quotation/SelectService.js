@@ -22,7 +22,8 @@ class SelectService extends Component {
       amount: 0,
       carts: [],
       cart_show: false,
-      free_cart: []
+      free_cart: [],
+      additional_tag: {}
     }
   }
 
@@ -30,7 +31,24 @@ class SelectService extends Component {
     this.props.getServices();
   }
 
-  onChange = (price, name, time) => {
+  onChange = (price, name, time, data) => {
+    if (data !== null) {
+      if (data.content) {
+        const temp = {
+          content: data.content,
+          name: this.state.additional_tag.data ? this.state.additional_tag.data.name : null,
+          referr: this.state.additional_tag.data ? this.state.additional_tag.data.referr : null
+        };
+        this.setState({ additional_tag: { name: name, data: temp } })
+      } else {
+        const temp = {
+          content: this.state.additional_tag.data ? this.state.additional_tag.data.content : null,
+          name: data.name,
+          referr: data.referr
+        };
+        this.setState({ additional_tag: { name: name, data: temp } })
+      }
+    }
     if (name === "updatePrice") {
       if (this.state.carts.length > 0) {
         let total_price = 0;
@@ -49,18 +67,14 @@ class SelectService extends Component {
       }
     } else {
       let price1 = Number(price);
+
       if (price1 >= 0) {
         price = price1;
       }
+
       let new_cart = { service_name: name, price: price, time: time };
       let amount, same_flag = 0, index = 0;
       let carts_temp = this.state.carts;
-
-      //free_services
-      if (new_cart.price === 0) {
-        let new_free_cart = this.state.free_cart.push(new_cart);
-        this.setState({ free_cart: new_free_cart });
-      }
 
       //price_services
       if (this.state.carts.length >= 0) {
@@ -107,11 +121,6 @@ class SelectService extends Component {
         this.setState({ price: price, amount: amount });
       }
     }
-
-  }
-
-  onFreeChange = (price, name, time, Rin) => {
-    console.log(price, '?????????????????', name, '>>>>>>>>>>>>>>>', time, 'llllllllllllllllllllllllllll', Rin);
   }
 
   show_cart = () => {
@@ -134,6 +143,7 @@ class SelectService extends Component {
     this.setState({ carts: temp, amount: this.state.amount - 1 });
     this.setState({ price: this.state.price - deleted_price });
   }
+
   go_nextStep = () => {
     localStorage.setItem('sevices', JSON.stringify(this.state.carts));
     localStorage.setItem('price', JSON.stringify(this.state.price));
@@ -141,39 +151,37 @@ class SelectService extends Component {
   }
 
   render() {
-    let free_services;
     const { serivces } = this.props;
     let tableContent = this.state.carts.map((cart, index) => (
       <tr key={index} align="center" style={{ fontSize: '13px' }}>
-        {/* {this.gjk==""?(<>):()} */}
-        {typeof cart.service_name === 'string' ? (
-          <td style={{ textTransform: 'uppercase' }}>{' '}{cart.service_name}<br /><span style={{ fontFamily: 'serif' }}>{cart.time}{' '}mins</span></td>
-        ) : (
-          <td style={{ textTransform: 'uppercase' }}>{' '}{cart.service_name.title}<br />{cart.service_name.content}<br /><span style={{ fontFamily: 'serif' }}>{cart.time}{' '}mins</span></td>
-        )}
-        {/* <td style={{textTransform: 'uppercase'}}>{' '}{typeof cart.service_name =="object"?(cart.service_name.title<br>cart.service_name.content):(cart.service_name)}<br/><span style={{fontFamily:'serif'}}>{cart.time}{' '}mins</span></td> */}
-        <td>{typeof cart.price === "number" ? 'S/.' : ''} {cart.price}
-          {/* S/.{cart.price} */}
-          <br /></td>
+        <td style={{ textTransform: 'uppercase' }}>
+          {' '}{cart.service_name}<br />
+          {
+            this.state.additional_tag !== null && (cart.service_name.toUpperCase() === "CAMBIO DE ACEITE" || cart.service_name.toUpperCase() === "ELIGE EL RIN" || this.state.additional_tag.name === "updatePrice") ? (
+              <span>
+                {
+                  cart.service_name.toUpperCase() === "CAMBIO DE ACEITE" || this.state.additional_tag.name === "updatePrice" ?
+                    "[" + this.state.additional_tag.data.name + "] [" + this.state.additional_tag.data.referr + "]"
+                    :
+                    this.state.additional_tag.data.content
+                }
+                <br />
+              </span>
+            ) : ''
+          }
+          <span style={{ fontFamily: 'serif' }}>
+            {cart.time}{' '}mins
+          </span>
+        </td>
+        <td>
+          {typeof cart.price === "number" ? 'S/.' : ''}
+          {cart.price}
+          <br />
+        </td>
         <td><FontAwesomeIcon icon={faTrashAlt} size="2x" onClick={() => this.deleteRow(index)} /></td>
       </tr>
     ));
-    if (this.state.free_cart.length > 0) {
-      // free_services = this.state.free_cart.map((cart, key)=>(
-      //   <div className="row" key={key}>
-      //     <div className="col-md-2">
-      //       <FontAwesomeIcon icon={faRecycle} size="2x"/>
-      //     </div>
-      //     <div className="col-md-5">
-      //       {cart.name} <br/>
-      //       <span style={{fontFamily:'serif'}}>{cart.time}</span>
-      //     </div>
-      //     <div className="col-md-5">
 
-      //     </div>
-      //   </div>
-      // ));
-    }
 
     return (
       <div className="services container" align="center">
@@ -203,21 +211,20 @@ class SelectService extends Component {
           <div className="recommand mt-4" align="left">
             <h6 style={{ color: 'grey' }}>DESTACADOS</h6><hr />
             <HighlightCarsel
-              addCart={(price, name, time) => { this.onChange(price, name, time) }}
+              addCart={(price, name, time, data) => { this.onChange(price, name, time, data) }}
               style={{ backgroundColor: '#FEFEFE' }} />
 
             <div className="review mt-3">
               <h6 style={{ color: 'grey' }}>REVISIONES</h6><hr />
               <ReviewCarsel
-                addCart={(price, name, time) => { this.onChange(price, name, time) }}
+                addCart={(price, name, time) => { this.onChange(price, name, time, null) }}
               />
             </div>
 
             <div className="review mt-3">
               <h6 style={{ color: 'grey' }}>SERVICIOS EXPRESS</h6><hr />
               <RecommandedCarsel
-                addCart={(price, name, time) => { this.onChange(price, name, time) }}
-                addFreeServices={(price, name, time, Rin) => { this.onFreeChange(price, name, time, Rin) }}
+                addCart={(price, name, time, data) => { this.onChange(price, name, time, data) }}
               />
             </div>
           </div>
@@ -226,7 +233,7 @@ class SelectService extends Component {
             <div className="recommand clone" align="left">
               <h6 style={{ color: 'grey' }}>ELECTRICIDAD</h6><hr />
               <ElectronicCarsel
-                addCart={(price, name, time) => { this.onChange(price, name, time) }}
+                addCart={(price, name, time) => { this.onChange(price, name, time, null) }}
               />
             </div>
             <h6 align="left" style={{ color: 'grey' }}>MECANICA</h6><hr />
@@ -292,17 +299,7 @@ class SelectService extends Component {
               </div>
               {this.state.cart_show ? (
                 <div className="text-grey bg-white" align="center" style={{ lineHeight: '1', marginTop: '10px' }}>
-                  {/* <h3 className="pt-3">Precio total : <span>{this.state.price?'S/.':''}{this.state.price?this.state.price:this.state.name}</span></h3> */}
-                  <hr />
-                  {free_services}
                   <table className="table table-bordered" id="table" style={{ width: '90%', marginLeft: 'auto', marginRight: 'auto', border: '1px sold whitesmoke' }}>
-                    {/* <thead>
-                    <tr align="center">
-                      <th width="60%">Nombre</th>
-                      <th width="30%">Precio</th>
-                      <th width="10%">Acción</th>
-                    </tr>
-                    </thead> */}
                     <tbody className="pb-5">
                       {tableContent}
                     </tbody>
@@ -360,7 +357,7 @@ class SelectService extends Component {
           hideSecond={() => this.setState({ batteryChangeShow: false })}
           hidethird={() => this.setState({ gernalMainShow: false })}
           hideFourth={() => this.setState({ premiunMainShow: false })}
-          addCart={(price, name, time) => { this.onChange(price, name, time) }}
+          addCart={(price, name, time) => { this.onChange(price, name, time, null) }}
         />
       </div>
     );

@@ -141,7 +141,7 @@ export default ({ addCart }) => {
                     onClick={
                       () => {
                         setFlag(!flag);
-                        addCart(scanData.price, "Servicio de Escaner", scanData.time);
+                        addCart(scanData.price, "Servicio de Escaner", scanData.time, null);
                         // if(this.state[item.subname]!==1){
                         //   this.setState({[item.subname] : 1})
                         // } else{
@@ -167,14 +167,15 @@ export default ({ addCart }) => {
         data={mileageData}
         show={mileage}
         hide={() => setMileage(false)}
-        onClick={(price, name, time) => addCart(price, name, time)}
+        onClick={(price, name, time) => addCart(price, name, time, null)}
       />
 
       <OilChange
         show={chagneOil}
         hide={() => setChangeOil(false)}
-        onClick={(price, name, time) => {
-          addCart(price, name, time);
+        onClick={(price, name, time, data) => {
+          console.log(data);
+          addCart(price, name, time, data);
         }}
       />
     </div>

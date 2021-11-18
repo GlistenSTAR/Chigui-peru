@@ -41,7 +41,7 @@ export default ({ addCart }) => {
                 onClick={
                   () => {
                     index === 0 ? setFlag2_1(!flag2_1) : setFlag2_2(!flag2_2);
-                    addCart(item.price, item.subname, item.time);
+                    addCart(item.price, item.subname, item.time, null);
                   }}
               />
             </h6>
@@ -130,7 +130,7 @@ export default ({ addCart }) => {
                     <FontAwesomeIcon icon={flag1 ? faCheckCircle : faPlusCircle} className="ml-3" color='green'
                       onClick={
                         () => {
-                          addCart(battery ? battery.data[0].price : 0, "REVISIÓN DE BATERÍA", battery ? battery.data[0].time : 0);
+                          addCart(battery ? battery.data[0].price : 0, "REVISIÓN DE BATERÍA", battery ? battery.data[0].time : 0, null);
                           setFlag1(!flag1)
                         }}
                     />

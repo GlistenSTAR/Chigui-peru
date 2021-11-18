@@ -171,7 +171,7 @@ class ElectronicModal extends Component {
                           this.setState({
                             flag: !this.state.flag
                           });
-                          this.props.addCart(25, "Pastilla de frenos", 20);
+                          this.props.addCart(25, "Pastilla de frenos", 20, null);
                         }
                       } />
                   </h6>
@@ -291,7 +291,7 @@ class ElectronicModal extends Component {
                               color='green'
                               onClick={
                                 () => {
-                                  this.props.addCart(this.state.selected_battery_price, this.state.selected_battery_name + "-" + this.state.selected_battery_referr, 15);
+                                  this.props.addCart(this.state.selected_battery_price, this.state.selected_battery_name + "-" + this.state.selected_battery_referr, 15, null);
                                   this.setState({
                                     flag1: !this.state.flag1
                                   })
@@ -348,7 +348,7 @@ class ElectronicModal extends Component {
                     }
                     onClick={
                       () => {
-                        this.props.addCart(this.state.totalprice, "Mantenimiento General", 60);
+                        this.props.addCart(this.state.totalprice, "Mantenimiento General", 60, null);
                         this.setState({
                           flag6: !this.state.flag6
                         })
@@ -557,7 +557,7 @@ class ElectronicModal extends Component {
                     }
                     onClick={
                       () => {
-                        this.props.addCart(this.state.totalprice, "Mantenimiento General", 60);
+                        this.props.addCart(this.state.totalprice, "Mantenimiento General", 60, null);
                         this.setState({
                           flag6: !this.state.flag6
                         })

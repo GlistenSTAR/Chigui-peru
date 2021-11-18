@@ -252,7 +252,6 @@ class SelectInfo extends Component {
                     <div align="left" className="ml-3 row">
                       <div className="col-md-6">
                         <h4>TOTAL<br /></h4>
-                        <span>(IVA incluido)</span>
                       </div>
                       <div className="col-md-6" align="center">
                         <span align="right" style={{ fontSize: '24px', color: 'green' }}>{'S/. '}{price}</span>
