@@ -16,7 +16,8 @@ class SelectInfo extends Component {
       email: '',
       name: '',
       phonenum: '',
-      detail: ''
+      detail: '',
+      secondRow : JSON.parse(localStorage.getItem('secondRow'))
     };
 
     this.onChange = this.onChange.bind(this);
@@ -36,9 +37,8 @@ class SelectInfo extends Component {
       date: localStorage.getItem('date'),
       time: localStorage.getItem('time'),
       sevices: JSON.parse(localStorage.getItem('sevices')),
-      total_price: localStorage.getItem('price')
+      total_price: localStorage.getItem('price'),
     };
-    console.log(this.props);
     this.props.saveServices(seviceData, this.props.history);
   }
 
@@ -54,6 +54,8 @@ class SelectInfo extends Component {
     const price = localStorage.getItem('price');
 
     let sevices;
+
+    console.log(this.state.secondRow);
 
     sevices = sevice.map((item, index) => (
       <div
@@ -72,6 +74,20 @@ class SelectInfo extends Component {
         >
           <FontAwesomeIcon color="rgb(179,226,1)" icon={faCogs} />{' '}
           <p className="ml-2" style={{ marginTop: 'auto', marginBottom: 'auto' }}>{item.service_name}<br />
+            { this.state.secondRow?(
+              <span style={{fontSize:'14px'}}>
+                {
+                  item.service_name.toUpperCase() === "CAMBIO DE ACEITE" ?
+                    "[" + this.state.secondRow.name + "] [" + this.state.secondRow.referr + "]"
+                    :
+                  item.service_name.toUpperCase() === "ELIGE EL RIN" ?
+                    this.state.secondRow.content
+                    :
+                    null
+                } <br/>
+              </span>)
+              :''
+            }
             <span style={{ color: 'grey', fontSize: '14px' }}>{item.time}mins</span></p>
         </div>
 

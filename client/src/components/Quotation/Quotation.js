@@ -17,7 +17,7 @@ class Quotation extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      step: 1,
+      step: 0,
       showModal: false,
     }
   }
@@ -64,7 +64,7 @@ class Quotation extends Component {
         <div className="container">
           <div className="row" align="center">
             <div className="col-md-3"></div>
-            <div className="col-md-6 mb-4">
+            <div className="col-md-6 mb-4" style={{fontFamily:'myfont'}}>
               <Stepper
                 steps={[
                   { title: 'ELIGE TU VEHÍCULO', onClick: () => this.setState({ step: 0 }) },

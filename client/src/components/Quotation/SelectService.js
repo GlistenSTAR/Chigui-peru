@@ -147,6 +147,7 @@ class SelectService extends Component {
   go_nextStep = () => {
     localStorage.setItem('sevices', JSON.stringify(this.state.carts));
     localStorage.setItem('price', JSON.stringify(this.state.price));
+    localStorage.setItem('secondRow', JSON.stringify(this.state.additional_tag.data||''))
     this.props.nextclick();
   }
 
